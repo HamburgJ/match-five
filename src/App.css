@@ -162,14 +162,14 @@
 .slot-card {
   background: white;
   border-radius: 4px;
-  padding: 8px;
-  min-width: 120px;
-  min-height: 100px;
+  padding: 6px;
+  width: 120px;
+  height: 100px;
   display: flex;
   flex-direction: column;
-  cursor: default;
   transition: all 0.2s ease;
   border: 1px solid var(--border);
+  margin: 0 4px;
 }
 
 .slot-card.correct {
@@ -345,22 +345,27 @@
 
 .slot-container {
   display: flex;
-  gap: 4px;
-  padding: 4px;
+  flex-direction: row;
   justify-content: center;
   flex-wrap: nowrap;
+  gap: 8px;
+  margin: 1rem 0;
+  width: 100%;
 }
 
 .slot-card {
+  flex: 1;
+  min-width: 120px;
+  max-width: 300px;
+  height: 100px;
   background: white;
   border-radius: 4px;
   padding: 6px;
-  min-width: 100px;
-  height: 70px;
   display: flex;
   flex-direction: column;
   transition: all 0.2s ease;
   border: 1px solid var(--border);
+  margin: 0;
 }
 
 .slot-card.correct {

@@ -9,9 +9,7 @@ import { setCurrentWorld, setCurrentLevel } from '../store/gameSlice';
 interface ExpandedState {
   [key: string]: {
     isExpanded: boolean;
-    levels: {
-      [key: string]: boolean;
-    };
+    expandedLevels: Set<string>;
   };
 }
 
@@ -22,13 +20,7 @@ const WorldSelector: React.FC = () => {
   const currentLevel = useSelector((state: RootState) => state.game.currentLevel);
   const [expandedStates, setExpandedStates] = useState<ExpandedState>({});
 
-  console.log('Current worlds:', worlds);
-  console.log('Current expandedStates:', expandedStates);
-
   useEffect(() => {
-    console.log('useEffect triggered, worlds length:', worlds.length);
-    console.log('expandedStates empty?:', Object.keys(expandedStates).length === 0);
-
     if (worlds.length > 0 && Object.keys(expandedStates).length === 0) {
       const firstWorld = worlds[0];
       dispatch(setCurrentWorld(firstWorld.id));
@@ -36,34 +28,45 @@ const WorldSelector: React.FC = () => {
       const initialStates: ExpandedState = {
         [firstWorld.id]: {
           isExpanded: true,
-          levels: firstWorld.levels.reduce((acc, level: Level) => ({
-            ...acc,
-            [level.id]: false
-          }), {})
+          expandedLevels: new Set()
         }
       };
       
-      console.log('Setting initial states:', initialStates);
       setExpandedStates(initialStates);
     }
   }, [worlds, dispatch]);
 
   const toggleWorld = (worldId: string) => {
-    console.log('toggleWorld called with:', worldId);
-    console.log('Current expanded state for world:', expandedStates[worldId]);
-    
     dispatch(setCurrentWorld(worldId));
+    setExpandedStates(prev => ({
+      ...prev,
+      [worldId]: {
+        ...prev[worldId],
+        isExpanded: !prev[worldId]?.isExpanded,
+        expandedLevels: prev[worldId]?.expandedLevels || new Set()
+      }
+    }));
+  };
+
+  const toggleLevel = (worldId: string, levelId: string) => {
+    dispatch(setCurrentLevel(levelId));
     setExpandedStates(prev => {
-      const newState = {
+      const worldState = prev[worldId] || { isExpanded: true, expandedLevels: new Set() };
+      const newExpandedLevels = new Set(worldState.expandedLevels);
+      
+      if (newExpandedLevels.has(levelId)) {
+        newExpandedLevels.delete(levelId);
+      } else {
+        newExpandedLevels.add(levelId);
+      }
+
+      return {
         ...prev,
         [worldId]: {
-          ...prev[worldId],
-          isExpanded: !prev[worldId]?.isExpanded,
-          levels: prev[worldId]?.levels || {}
+          ...worldState,
+          expandedLevels: newExpandedLevels
         }
       };
-      console.log('New expanded state:', newState);
-      return newState;
     });
   };
 
@@ -99,7 +102,7 @@ const WorldSelector: React.FC = () => {
                 <Card 
                   onClick={() => {
                     if (level.isUnlocked) {
-                      dispatch(setCurrentLevel(level.id));
+                      toggleLevel(world.id, level.id);
                     }
                   }}
                   className={`level-card ${isLevelCurrentlyComplete(level) ? 'completed' : ''} ${!level.isUnlocked ? 'locked' : ''}`}
@@ -109,7 +112,7 @@ const WorldSelector: React.FC = () => {
                   </Card.Body>
                 </Card>
 
-                {level.isUnlocked && level.id === currentLevel && (
+                {level.isUnlocked && expandedStates[world.id]?.expandedLevels.has(level.id) && (
                   <div className="game-board-section">
                     <GameBoard worldId={world.id} levelId={level.id} />
                   </div>

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { RootState } from '../store/store';
-import { placeWord, addToInventory, unlockNextLevel, checkSolution } from '../store/gameSlice';
+import { placeWord, addToInventory, checkSolution } from '../store/gameSlice';
 import { Word, Slot } from '../store/types';
 
 interface GameBoardProps {
@@ -22,7 +22,6 @@ const GameBoard: React.FC<GameBoardProps> = ({ worldId, levelId }) => {
       slot.currentWord && slot.acceptedWords.includes(slot.currentWord.text)
     )) {
       dispatch(checkSolution());
-      dispatch(unlockNextLevel({ worldId, levelId }));
     }
   }, [level?.slots, dispatch, worldId, levelId]);
 
@@ -32,18 +31,43 @@ const GameBoard: React.FC<GameBoardProps> = ({ worldId, levelId }) => {
     e.preventDefault();
     e.currentTarget.classList.remove('drag-over');
     const word = JSON.parse(e.dataTransfer.getData('word')) as Word;
-    dispatch(placeWord({ worldId, levelId, slotId, word }));
+    const sourceWorldId = e.dataTransfer.getData('sourceWorldId');
+    const sourceLevelId = e.dataTransfer.getData('sourceLevelId');
+    
+    dispatch(placeWord({ 
+      worldId, 
+      levelId, 
+      slotId, 
+      word,
+      sourceWorldId,
+      sourceLevelId
+    }));
   };
 
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>, word: Word) => {
     e.dataTransfer.setData('word', JSON.stringify(word));
+    e.dataTransfer.setData('sourceWorldId', worldId);
+    e.dataTransfer.setData('sourceLevelId', levelId);
   };
 
   const handleWordClick = (word: Word, fromSlot: boolean = false) => {
     if (fromSlot) {
-      dispatch(placeWord({ worldId, levelId, slotId: 'inventory', word }));
+      dispatch(placeWord({ 
+        worldId, 
+        levelId, 
+        slotId: 'inventory', 
+        word,
+        sourceWorldId: worldId,
+        sourceLevelId: levelId 
+      }));
     } else {
-      dispatch(addToInventory({ worldId, levelId, word }));
+      dispatch(addToInventory({ 
+        worldId, 
+        levelId, 
+        word,
+        sourceWorldId: worldId,
+        sourceLevelId: levelId
+      }));
     }
   };
 
@@ -80,38 +104,41 @@ const GameBoard: React.FC<GameBoardProps> = ({ worldId, levelId }) => {
       )}
       
       <Row className="g-4">
-        {level.slots.map((slot) => (
-          <Col key={slot.id} xs={12} sm={6}>
-            <div 
-              className={`slot-card ${slot.currentWord && isWordAccepted(slot.currentWord, slot) ? 'correct' : ''} 
-                         ${slot.currentWord && !isWordAccepted(slot.currentWord, slot) ? 'incorrect' : ''}`}
-              onDragOver={(e) => {
-                e.preventDefault();
-                e.currentTarget.classList.add('drag-over');
-              }}
-              onDragLeave={(e) => {
-                e.currentTarget.classList.remove('drag-over');
-              }}
-              onDrop={(e) => handleDrop(e, slot.id)}
-            >
-              <div className="hint-word">{slot.hintWord}</div>
-              <div className="word-container">
-                {slot.currentWord ? (
-                  <div 
-                    className="word-tile"
-                    draggable
-                    onDragStart={(e) => handleDragStart(e, slot.currentWord!)}
-                    onClick={() => handleWordClick(slot.currentWord!, true)}
-                  >
-                    {slot.currentWord.text}
-                  </div>
-                ) : (
-                  <div className="empty-slot-text">Drop word here</div>
-                )}
+        <Col>
+          <div className="slot-container">
+            {level.slots.map((slot) => (
+              <div 
+                key={slot.id}
+                className={`slot-card ${slot.currentWord && isWordAccepted(slot.currentWord, slot) ? 'correct' : ''} 
+                           ${slot.currentWord && !isWordAccepted(slot.currentWord, slot) ? 'incorrect' : ''}`}
+                onDragOver={(e) => {
+                  e.preventDefault();
+                  e.currentTarget.classList.add('drag-over');
+                }}
+                onDragLeave={(e) => {
+                  e.currentTarget.classList.remove('drag-over');
+                }}
+                onDrop={(e) => handleDrop(e, slot.id)}
+              >
+                <div className="hint-word">{slot.hintWord}</div>
+                <div className="word-container">
+                  {slot.currentWord ? (
+                    <div 
+                      className="word-tile"
+                      draggable
+                      onDragStart={(e) => handleDragStart(e, slot.currentWord!)}
+                      onClick={() => handleWordClick(slot.currentWord!, true)}
+                    >
+                      {slot.currentWord.text}
+                    </div>
+                  ) : (
+                    <div className="empty-slot-text">Drop word here</div>
+                  )}
+                </div>
               </div>
-            </div>
-          </Col>
-        ))}
+            ))}
+          </div>
+        </Col>
       </Row>
     </Container>
   );
