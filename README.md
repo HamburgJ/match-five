@@ -4,7 +4,7 @@ A simple React-based word matching game where you solve puzzles by matching item
 
 ## Demo 🎯
 
-[Play Match 5](https://your-demo-link-here) 
+[Play Match 5](https://hamburgj.github.io/match-five/) 
 
 ## About the Game 📖
 
