@@ -1,7 +1,7 @@
 {
   "name": "match-five",
   "version": "0.1.0",
-  "homepage": "https://{your-github-username}.github.io/match-five",
+  "homepage": "https://hamburgj.github.io/match-five",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.3.0",
