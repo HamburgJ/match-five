@@ -3,33 +3,62 @@ export interface Word {
   text: string;
 }
 
+export interface Hint {
+  accepts: string[];
+  emojis?: { [word: string]: string };
+}
+
+export interface HintDictionary {
+  [key: string]: Hint;
+}
+
 export interface Slot {
   id: string;
-  acceptedWords: string[];
+  hintId: string;
   currentWord: Word | null;
-  hintWord: string;
+}
+
+export interface Section {
+  id: string;
+  name: string;
+  slots: Slot[];
+  availableWords: Word[];
+  isComplete?: boolean;
+  isUnlocked?: boolean;
 }
 
 export interface Level {
   id: string;
   name: string;
-  isUnlocked: boolean;
-  isCompleted: boolean;
-  slots: Slot[];
-  availableWords: Word[];
-}
-
-export interface World {
-  id: string;
-  name: string;
-  isUnlocked: boolean;
-  isCompleted: boolean;
-  levels: Level[];
+  sections: Section[];
+  isComplete?: boolean;
+  inventory: Word[];
 }
 
 export interface GameState {
-  worlds: World[];
-  currentWorld: string | null;
+  levels: Level[];
   currentLevel: string | null;
+  currentSection: string | null;
   inventory: Word[];
+  hints: HintDictionary;
+}
+
+// Raw data interfaces (before transformation)
+export type RawSlot = string;
+
+export interface RawSection {
+  name: string;
+  slots: RawSlot[];
+  words: string[];
+}
+
+export interface RawLevel {
+  name: string;
+  sections: RawSection[];
+}
+
+export interface RawGameData {
+  hints: HintDictionary;
+  levels: RawLevel[];
+  wordEmojis: { [word: string]: string };
 } 

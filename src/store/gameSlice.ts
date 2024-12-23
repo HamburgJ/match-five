@@ -1,220 +1,198 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { GameState, Word } from './types';
-import { initialGameState } from './initialState';
+import gameData from '../data/gameData.json';
+import { Word, GameState, Section, Level, Slot, RawGameData } from './types';
+
+function generateLevelId(levelIndex: number): string {
+  return `level_${levelIndex + 1}`;
+}
+
+function generateSectionId(levelIndex: number, sectionIndex: number): string {
+  return `section_${levelIndex + 1}_${sectionIndex + 1}`;
+}
+
+function generateSlotId(levelIndex: number, sectionIndex: number, slotIndex: number): string {
+  return `slot_${levelIndex + 1}_${sectionIndex + 1}_${slotIndex + 1}`;
+}
+
+function generateWordId(levelIndex: number, sectionIndex: number, wordIndex: number): string {
+  return `word_${levelIndex + 1}_${sectionIndex + 1}_${wordIndex + 1}`;
+}
+
+function transformGameData(data: RawGameData): Level[] {
+  return data.levels.map((level, levelIndex) => ({
+    id: generateLevelId(levelIndex),
+    name: level.name,
+    sections: level.sections.map((section, sectionIndex) => ({
+      id: generateSectionId(levelIndex, sectionIndex),
+      name: section.name,
+      slots: section.slots.map((hintId, slotIndex) => ({
+        id: generateSlotId(levelIndex, sectionIndex, slotIndex),
+        hintId,
+        currentWord: null
+      })),
+      availableWords: section.words.map((word, wordIndex) => ({
+        id: generateWordId(levelIndex, sectionIndex, wordIndex),
+        text: word
+      })),
+      isComplete: false,
+      // Only first section of first level is unlocked initially
+      isUnlocked: levelIndex === 0 && sectionIndex === 0
+    })),
+    isComplete: false,
+    inventory: []
+  }));
+}
+
+const initialState: GameState = {
+  levels: transformGameData(gameData as RawGameData),
+  currentLevel: null,
+  currentSection: null,
+  hints: gameData.hints,
+  inventory: []
+};
 
 const gameSlice = createSlice({
   name: 'game',
-  initialState: initialGameState,
+  initialState,
   reducers: {
-    setCurrentWorld: (state, action: PayloadAction<string | null>) => {
-      state.currentWorld = action.payload;
-      state.currentLevel = null;
-    },
-    setCurrentLevel: (state, action: PayloadAction<string | null>) => {
+    setCurrentLevel: (state, action: PayloadAction<string>) => {
       state.currentLevel = action.payload;
     },
-    addToInventory: (state, action: PayloadAction<{
-      worldId: string,
-      levelId: string,
-      word: Word,
-      sourceWorldId?: string,
-      sourceLevelId?: string
-    }>) => {
-      const { worldId, levelId, word, sourceWorldId, sourceLevelId } = action.payload;
-      const world = state.worlds.find(w => w.id === worldId);
-      const level = world?.levels.find(l => l.id === levelId);
-      
-      if (level) {
-        // Clean up source location if provided
-        if (sourceWorldId && sourceLevelId) {
-          const sourceWorld = state.worlds.find(w => w.id === sourceWorldId);
-          const sourceLevel = sourceWorld?.levels.find(l => l.id === sourceLevelId);
-          if (sourceLevel) {
-            // Clean up from slots
-            sourceLevel.slots.forEach(slot => {
-              if (slot.currentWord?.id === word.id) {
-                slot.currentWord = null;
-              }
-            });
-            // Clean up from available words
-            sourceLevel.availableWords = sourceLevel.availableWords.filter(w => w.id !== word.id);
-          }
-        }
-
-        // Remove word from available words
-        level.availableWords = level.availableWords.filter(w => w.id !== word.id);
-        // Add to inventory if not already there
-        if (!state.inventory.some(w => w.id === word.id)) {
-          state.inventory.push(word);
-        }
-      }
-    },
-    removeFromInventory: (state, action: PayloadAction<string>) => {
-      state.inventory = state.inventory.filter(word => word.id !== action.payload);
+    setCurrentSection: (state, action: PayloadAction<string>) => {
+      state.currentSection = action.payload;
     },
     placeWord: (state, action: PayloadAction<{
-      worldId: string,
-      levelId: string,
-      slotId: string,
-      word: Word,
-      sourceWorldId?: string,
-      sourceLevelId?: string
+      levelId: string;
+      sectionId: string;
+      slotId: string;
+      word: Word;
+      sourceLevelId: string;
+      sourceSectionId: string;
     }>) => {
-      const { worldId, levelId, slotId, word, sourceWorldId, sourceLevelId } = action.payload;
+      const { levelId, sectionId, slotId, word, sourceLevelId, sourceSectionId } = action.payload;
       
-      const world = state.worlds.find(w => w.id === worldId);
-      const level = world?.levels.find(l => l.id === levelId);
+      // Remove from source location first
+      const sourceLevel = state.levels.find(w => w.id === sourceLevelId);
+      const sourceSection = sourceLevel?.sections.find(l => l.id === sourceSectionId);
       
-      if (!level) return;
-      
-      // Clean up source location
-      if (sourceWorldId && sourceLevelId) {
-        const sourceWorld = state.worlds.find(w => w.id === sourceWorldId);
-        const sourceLevel = sourceWorld?.levels.find(l => l.id === sourceLevelId);
-        if (sourceLevel) {
-          // Clean up from slots
-          sourceLevel.slots.forEach(slot => {
-            if (slot.currentWord?.id === word.id) {
-              slot.currentWord = null;
-            }
-          });
-          // Clean up from available words
-          sourceLevel.availableWords = sourceLevel.availableWords.filter(w => w.id !== word.id);
+      // Remove from level inventory if it was there
+      if (sourceLevel) {
+        sourceLevel.inventory = sourceLevel.inventory.filter(w => w.id !== word.id);
+      }
+
+      // Remove from source section if applicable
+      if (sourceSection) {
+        // Remove from slots if it was in a slot
+        sourceSection.slots = sourceSection.slots.map(slot => ({
+          ...slot,
+          currentWord: slot.currentWord?.id === word.id ? null : slot.currentWord
+        }));
+        // Remove from available words if it was there
+        sourceSection.availableWords = sourceSection.availableWords.filter(w => w.id !== word.id);
+      }
+
+      // Handle moving to inventory
+      if (slotId === 'inventory') {
+        const targetLevel = state.levels.find(w => w.id === levelId);
+        if (targetLevel && !targetLevel.inventory.some(w => w.id === word.id)) {
+          targetLevel.inventory.push(word);
         }
+        return;
+      }
+
+      // Handle placing in slot
+      const targetLevel = state.levels.find(w => w.id === levelId);
+      const targetSection = targetLevel?.sections.find(l => l.id === sectionId);
+      if (targetSection) {
+        // Place in new slot
+        targetSection.slots = targetSection.slots.map(slot => ({
+          ...slot,
+          currentWord: slot.id === slotId ? word : slot.currentWord
+        }));
+      }
+    },
+    addToInventory: (state, action: PayloadAction<{
+      levelId: string;
+      sectionId: string;
+      word: Word;
+      sourceLevelId: string;
+      sourceSectionId: string;
+    }>) => {
+      const { word, sourceLevelId, sourceSectionId, levelId } = action.payload;
+      
+      // Add to target level's inventory if not already there
+      const targetLevel = state.levels.find(w => w.id === levelId);
+      if (targetLevel && !targetLevel.inventory.some(w => w.id === word.id)) {
+        targetLevel.inventory.push(word);
       }
       
-      // Remove from available words if it's there
-      level.availableWords = level.availableWords.filter(w => w.id !== word.id);
+      // Remove from source section's available words
+      const sourceLevel = state.levels.find(w => w.id === sourceLevelId);
+      const sourceSection = sourceLevel?.sections.find(l => l.id === sourceSectionId);
+      if (sourceSection) {
+        sourceSection.availableWords = sourceSection.availableWords.filter(w => w.id !== word.id);
+      }
+    },
+    removeFromInventory: (state, action: PayloadAction<{
+      word: Word;
+      targetLevelId: string;
+      targetSectionId: string;
+    }>) => {
+      const { word, targetLevelId, targetSectionId } = action.payload;
       
-      // Remove from inventory if it's there
-      state.inventory = state.inventory.filter(w => w.id !== word.id);
+      // Remove from level inventory
+      const level = state.levels.find(w => w.id === targetLevelId);
+      if (level) {
+        level.inventory = level.inventory.filter(w => w.id !== word.id);
+      }
       
-      // Remove from any slot in the target level
-      level.slots.forEach(slot => {
-        if (slot.currentWord?.id === word.id) {
-          slot.currentWord = null;
-        }
-      });
-
-      // Place word in new location
-      if (slotId === 'inventory') {
-        if (!state.inventory.some(w => w.id === word.id)) {
-          state.inventory.push(word);
-        }
-      } else {
-        const slot = level.slots.find(s => s.id === slotId);
-        if (slot) {
-          if (slot.currentWord) {
-            state.inventory.push(slot.currentWord);
-          }
-          slot.currentWord = word;
-        }
+      // Add back to target section's available words
+      const targetSection = level?.sections.find(l => l.id === targetSectionId);
+      if (targetSection && !targetSection.availableWords.some(w => w.id === word.id)) {
+        targetSection.availableWords.push(word);
       }
     },
     checkSolution: (state) => {
-      const world = state.worlds.find(w => w.id === state.currentWorld);
-      const level = world?.levels.find(l => l.id === state.currentLevel);
+      // Solution checking is now handled in the component
+    },
+    markSectionComplete: (state, action: PayloadAction<{
+      levelId: string;
+      sectionId: string;
+    }>) => {
+      const { levelId, sectionId } = action.payload;
+      const level = state.levels.find(w => w.id === levelId);
+      if (!level) return;
       
-      if (!level || !world) return;
+      const section = level.sections.find(l => l.id === sectionId);
+      if (!section) return;
+
+      section.isComplete = true;
       
-      const levelIndex = world.levels.findIndex(l => l.id === level.id);
-      
-      // Check if current level is completed
-      const isCurrentLevelComplete = level.slots.every(slot => 
-        slot.currentWord && slot.acceptedWords.includes(slot.currentWord.text)
-      );
-
-      if (isCurrentLevelComplete) {
-        // Mark current level as completed
-        level.isCompleted = true;
-        
-        // Check if all previous levels are completed
-        const allPreviousLevelsCompleted = world.levels
-          .slice(0, levelIndex + 1)
-          .every(level => 
-            level.slots.every(slot => 
-              slot.currentWord && slot.acceptedWords.includes(slot.currentWord.text)
-            )
-          );
-
-        if (allPreviousLevelsCompleted) {
-          // Unlock next level if exists
-          if (levelIndex >= 0 && levelIndex < world.levels.length - 1) {
-            world.levels[levelIndex + 1].isUnlocked = true;
-          }
-          
-          // Check if all levels in world are completed
-          const allLevelsCompleted = world.levels.every(l => 
-            l.slots.every(slot => 
-              slot.currentWord && slot.acceptedWords.includes(slot.currentWord.text)
-            )
-          );
-
-          if (allLevelsCompleted) {
-            world.isCompleted = true;
-            
-            // Find and unlock next world if exists
-            const worldIndex = state.worlds.findIndex(w => w.id === world.id);
-            if (worldIndex >= 0 && worldIndex < state.worlds.length - 1) {
-              state.worlds[worldIndex + 1].isUnlocked = true;
-            }
-          }
-
-          // Save progress to localStorage
-          const gameState = {
-            completedLevels: world.levels
-              .filter(l => l.isCompleted)
-              .map(l => ({ worldId: world.id, levelId: l.id })),
-            unlockedLevels: world.levels
-              .filter(l => l.isUnlocked)
-              .map(l => ({ worldId: world.id, levelId: l.id }))
-          };
-          localStorage.setItem('gameProgress', JSON.stringify(gameState));
+      // Unlock next section in the same level if it exists
+      const sectionIndex = level.sections.findIndex(l => l.id === sectionId);
+      if (sectionIndex < level.sections.length - 1) {
+        level.sections[sectionIndex + 1].isUnlocked = true;
+      } else {
+        // If this was the last section in the level
+        level.isComplete = true;
+        // Find and unlock first section of next level if it exists
+        const levelIndex = state.levels.findIndex(w => w.id === levelId);
+        if (levelIndex < state.levels.length - 1) {
+          state.levels[levelIndex + 1].sections[0].isUnlocked = true;
         }
       }
-    },
-    goBack: (state) => {
-      if (state.currentLevel) {
-        state.currentLevel = null;
-      } else if (state.currentWorld) {
-        state.currentWorld = null;
-      }
-    },
-    loadSavedProgress: (state) => {
-      const savedProgress = localStorage.getItem('gameProgress');
-      if (savedProgress) {
-        const { completedLevels, unlockedLevels } = JSON.parse(savedProgress);
-        
-        // Restore completed and unlocked states
-        completedLevels.forEach(({ worldId, levelId }: { worldId: string, levelId: string }) => {
-          const world = state.worlds.find(w => w.id === worldId);
-          const level = world?.levels.find(l => l.id === levelId);
-          if (level) {
-            level.isCompleted = true;
-          }
-        });
-
-        unlockedLevels.forEach(({ worldId, levelId }: { worldId: string, levelId: string }) => {
-          const world = state.worlds.find(w => w.id === worldId);
-          const level = world?.levels.find(l => l.id === levelId);
-          if (level) {
-            level.isUnlocked = true;
-          }
-        });
-      }
-    },
+    }
   }
 });
 
 export const { 
-  setCurrentWorld, 
   setCurrentLevel, 
-  addToInventory, 
+  setCurrentSection, 
+  placeWord, 
+  addToInventory,
   removeFromInventory,
-  placeWord,
   checkSolution,
-  goBack,
-  loadSavedProgress,
+  markSectionComplete 
 } = gameSlice.actions;
 
 export default gameSlice.reducer; 

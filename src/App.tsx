@@ -1,42 +1,29 @@
-import React, { useEffect } from 'react';
-import { Provider, useDispatch } from 'react-redux';
-import { Container, Row, Col } from 'react-bootstrap';
+import React from 'react';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import { store } from './store/store';
-import WorldSelector from './components/WorldSelector';
-import Inventory from './components/Inventory';
-import { loadSavedProgress } from './store/gameSlice';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import LevelSelector from './components/LevelSelector';
+import GameBoard from './components/GameBoard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-const GameContent: React.FC = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(loadSavedProgress());
-  }, [dispatch]);
-
+function App() {
   return (
-    <div className="App">
-      <Container fluid>
-        <Row>
-          <Col md={8}>
-            <WorldSelector />
-          </Col>
-          <Col md={4}>
-            <div className="inventory-floating">
-              <Inventory />
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+    <Provider store={store}>
+      <HashRouter>
+        <div className="app">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/levels" element={<LevelSelector />} />
+            <Route path="/play/:levelId" element={<GameBoard />} />
+          </Routes>
+        </div>
+      </HashRouter>
+    </Provider>
   );
-};
-
-const App: React.FC = () => (
-  <Provider store={store}>
-    <GameContent />
-  </Provider>
-);
+}
 
 export default App;

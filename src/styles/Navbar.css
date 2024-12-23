@@ -1,0 +1,29 @@
+.custom-navbar {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.brand-link {
+  color: #1a237e !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+}
+
+.brand-link:hover {
+  color: #151b60 !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .custom-navbar {
+    padding: 0.75rem;
+  }
+  
+  .brand-link {
+    font-size: 1.2rem;
+  }
+} 

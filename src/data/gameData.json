@@ -1,0 +1,349 @@
+{
+  "wordEmojis": {
+    "Air": "💨",
+    "Above": "⬆️",
+    "Answer": "✅",
+    "Apple": "🍎",
+    "Average": "📊",
+    "Ball": "⚽",
+    "Banana": "🍌",
+    "Bark": "🌳",
+    "Bat": "🦇",
+    "Bean": "🫘",
+    "Bear": "🐻",
+    "Below": "⬇️",
+    "Blackberry": "🫐",
+    "Blood": "🩸",
+    "Blueberry": "🫐",
+    "Book": "📚",
+    "Brain": "🧠",
+    "Broccoli": "🥦",
+    "Cardinal": "🐦",
+    "Carrot": "🥕",
+    "Cave": "🕳️",
+    "Center": "⚪",
+    "Cherry": "🍒",
+    "Chocolate": "🍫",
+    "Circle": "⭕",
+    "Cloud": "☁️",
+    "Coal": "🪨",
+    "Coffee": "☕",
+    "Corn": "🌽",
+    "Crane": "🏗️",
+    "Daisy": "🌼",
+    "Dance": "💃",
+    "Date": "📅",
+    "Diamond": "💎",
+    "Dog": "🐕",
+    "Down": "⬇️",
+    "Drum": "🥁",
+    "Duck": "🦆",
+    "Earth": "🌍",
+    "Eggplant": "🍆",
+    "Eye": "👁️",
+    "Fact": "📝",
+    "Fall": "🍂",
+    "Feather": "🪶",
+    "Fig": "🪪",
+    "Fire": "🔥",
+    "Fish": "🐟",
+    "Five": "5️⃣",
+    "Flute": "🎵",
+    "Garlic": "🧄",
+    "Glue": "🫠",
+    "Gold": "🥇",
+    "Grape": "🍇",
+    "Grass": "🌱",
+    "Guitar": "🎸",
+    "Heart": "❤️",
+    "High": "⬆️",
+    "Ice": "🧊",
+    "Ink": "🖋️",
+    "Iris": "🌸",
+    "Kiwi": "🥝",
+    "Leaf": "🍃",
+    "Left": "⬅️",
+    "Lemon": "🍋",
+    "Lettuce": "🥬",
+    "Light": "💡",
+    "Lime": "🟢",
+    "Low": "⬇️",
+    "Love": "❤️",
+    "Metal": "🔩",
+    "Middle": "⏺️",
+    "Mirror": "🪞",
+    "Money": "💰",
+    "Moon": "🌙",
+    "Mountain": "⛰️",
+    "Mouse": "🐁",
+    "Mud": "🟫",
+    "Music": "🎵",
+    "Night": "🌙",
+    "Ocean": "🌊",
+    "Orange": "🍊",
+    "Pea": "🟢",
+    "Pear": "🍐",
+    "Penguin": "🐧",
+    "Pepper": "🌶️",
+    "Piano": "🎹",
+    "Pig": "🐷",
+    "Plum": "🟣",
+    "Potato": "🥔",
+    "Pumpkin": "🎃",
+    "Puzzle Game": "🧩",
+    "Rage": "😠",
+    "Right": "➡️",
+    "River": "🌊",
+    "Rock": "🪨",
+    "Rope": "➰",
+    "Rose": "🌹",
+    "Rude": "😤",
+    "Sadness": "😢",
+    "Salmon": "🐟",
+    "Salt": "🧂",
+    "Saxophone": "🎷",
+    "Science": "🧪",
+    "Score": "💯",
+    "Seal": "🦭",
+    "Seed": "🌱",
+    "Shadow": "👥",
+    "Sky": "🌤️",
+    "Snake": "🐍",
+    "Snow": "❄️",
+    "Spring": "🌸",
+    "Star": "⭐",
+    "Stone": "🪨",
+    "Strawberry": "🍓",
+    "Stream": "💫",
+    "Student": "👨‍🎓",
+    "Summer": "☀️",
+    "Sun": "☀️",
+    "Swan": "🦢",
+    "Time": "⏰",
+    "Tomato": "🍅",
+    "Tower": "🗼",
+    "Traffic": "🚦",
+    "Tree": "🌳",
+    "Up": "⬆️",
+    "Violet": "🟣",
+    "Window": "🪟",
+    "Wine": "🍷",
+    "Winter": "⛄",
+    "Wrench": "🔧"
+  },
+  "hints": {
+    "Red": {
+      "accepts": ["Strawberry", "Apple", "Rage", "Rose", "Blood", "Cherry", "Tomato", "Fire", "Cardinal"]
+    },
+    "Purple": {
+      "accepts": ["Eggplant", "Grape", "Blueberry", "Blackberry", "Plum", "Violet", "Wine"]
+    },
+    "Yellow": {
+      "accepts": ["Banana", "Garlic", "Potato", "Lemon", "Sun", "Gold", "Corn", "Star"]
+    },
+    "Green": {
+      "accepts": ["Lettuce", "Kiwi", "Strawberry", "Money", "Grass", "Lime", "Pear", "Leaf", "Apple", "Broccoli", "Tree"]
+    },
+    "Black": {
+      "accepts": ["Blackberry", "Night", "Coal", "Ink", "Shadow", "Coffee"]
+    },
+    "Orange": {
+      "accepts": ["Apple", "Pumpkin", "Orange", "Carrot", "Fire", "Sun"]
+    },
+    "Blue": {
+      "accepts": ["Blueberry", "Sadness", "Sky", "Ocean", "River", "Ice"]
+    },
+    "White": {
+      "accepts": ["Garlic", "Strawberry", "Potato", "Snow", "Cloud", "Ice", "Salt", "Moon"]
+    },
+    "Brown": {
+      "accepts": ["Kiwi", "Potato", "Banana", "Coffee", "Chocolate", "Earth", "Bark", "Bear"]
+    },
+    "Fruit": {
+      "accepts": ["Apple", "Banana", "Grape", "Kiwi", "Blackberry", "Blueberry", "Eggplant", "Strawberry", "Lemon", "Orange", "Cherry", "Plum", "Pear", "Lime", "Fig", "Date", "Tomato"]
+    },
+    "Vegetable": {
+      "accepts": ["Lettuce", "Garlic", "Eggplant", "Potato", "Pumpkin", "Carrot", "Corn", "Tomato", "Pepper", "Bean", "Broccoli"]
+    },
+    "Berry": {
+      "accepts": ["Strawberry", "Blackberry", "Kiwi", "Blueberry", "Cherry", "Grape", "Tomato"]
+    },
+    "Flower": {
+      "accepts": ["Rose", "River", "Violet", "Iris", "Spring", "Daisy"]
+    },
+    "Plant": {
+      "accepts": ["Strawberry", "Kiwi", "Garlic", "Potato", "Pumpkin", "Eggplant", "Apple", "Blueberry", "Grape", "Banana", "Blackberry", "Rose", "Lemon", "Tree", "Grass", "Corn", "Bean", "Violet", "Iris", "Daisy", "Broccoli", "Lettuce", "Pepper", "Tomato"]
+    },
+    "Animal": {
+      "accepts": ["Dog", "Kiwi", "Snake", "Bear", "Mouse", "Fish", "Duck", "Seal", "Bat", "Penguin", "Bear", "Fish", "Snake"]
+    },
+    "Bird": {
+      "accepts": ["Kiwi", "Duck", "Crane", "Swan", "Cardinal", "Penguin"]
+    },
+    "Mammal": {
+      "accepts": ["Dog", "Bear", "Mouse", "Seal", "Bat"]
+    },
+    "Pink": {
+      "accepts": ["Strawberry", "Rose", "Pig", "Salmon", "Heart"]
+    },
+    "Round": {
+      "accepts": ["Apple", "Blueberry", "Grape", "Orange", "Moon", "Sun", "Ball", "Earth", "Tomato", "Pumpkin", "Kiwi", "Lemon", "Banana", "Cherry", "Plum", "Pear", "Lime", "Fig", "Date"]
+    },
+    "Long": {
+      "accepts": ["Snake", "River", "Banana", "Time", "Bean", "Rope"]
+    },
+    "Small": {
+      "accepts": ["Blueberry", "Grape", "Blackberry", "Mouse", "Seed", "Bean", "Pea"]
+    },
+    "Music": {
+      "accepts": ["Rock", "Dance"]
+    },
+    "Bright": {
+      "accepts": ["Sun", "Star", "Light", "Fire", "Student"]
+    },
+    "Mean": {
+      "accepts": ["Rude", "Average"]
+    },
+    "Direction": {
+      "accepts": ["Left", "Right", "Up", "Down", "Cardinal", "Duck"]
+    },
+    "Correct": {
+      "accepts": ["Right"]
+    },
+    "Bark": {
+      "accepts": ["Dog", "Tree"]
+    },
+    "Jam": {
+      "accepts": ["Strawberry", "Traffic", "Music"]
+    },
+    "Position": {
+      "accepts": ["Up", "Down", "Left", "Right", "Above", "Below", "Center", "Middle"]
+    },
+    "Mood": {
+      "accepts": ["Up", "Down", "High", "Low", "Sadness", "Rage", "Love", "Heart"]
+    },
+    "Season": {
+      "accepts": ["Summer", "Winter", "Spring", "Fall"]
+    },
+    "Smart": {
+      "accepts": ["Brain", "Money", "Book", "Student"]
+    },
+    "True": {
+      "accepts": ["Fact", "Answer", "Science"]
+    },
+    "Perfect": {
+      "accepts": ["Circle", "Score", "Diamond"]
+    },
+    "Look": {
+      "accepts": ["Eye", "Window", "Mirror"]
+    },
+    "Flow": {
+      "accepts": ["River", "Stream", "Blood"]
+    },
+    "Stuck": {
+      "accepts": ["Traffic", "Glue", "Mud"]
+    },
+    "Heavy": {
+      "accepts": ["Stone", "Metal", "Pumpkin"]
+    },
+    "Light": {
+      "accepts": ["Feather", "Cloud", "Air"]
+    },
+    "Dark": {
+      "accepts": ["Night", "Shadow", "Cave"]
+    },
+    "High": {
+      "accepts": ["Mountain", "Tower", "Sky"]
+    },
+    "Instrument": {
+      "accepts": ["Drum", "Guitar", "Piano", "Flute", "Saxophone", "Wrench"]
+    },
+    "Verb": {
+      "accepts": ["Dog", "Duck", "Bear", "Fish", "Snake"]
+    },
+    "Noun": {
+      "accepts": [
+        "Tomato", "Orange", "Banana", "Blueberry", "Daisy", "Dog", "Duck", "Bear", "Fish", "Snake", "Penguin"
+      ]
+    },
+    "Reptile": {
+      "accepts": ["Snake"]
+    }
+  },
+  "levels": [   
+    {
+        "sections": [
+          {
+            "slots": ["Fruit", "Vegetable", "Berry", "Flower", "Plant"],
+            "words": ["Apple", "Broccoli", "Strawberry", "Rose", "Tree"]
+          },
+          {
+            "slots": ["Red", "Orange", "Yellow", "Blue", "Green"],
+            "words": ["Tomato", "Orange", "Banana", "Blueberry", "Daisy"]
+          }
+        ]
+      },
+      {
+        "sections": [
+          {
+            "slots": ["Verb","Animal", "Bird", "Mammal", "Reptile"],
+            "words": ["Dog", "Penguin", "Bear", "Fish", "Snake"]
+          },
+          {
+            "slots": ["Verb", "Noun", "Verb", "Noun", "Verb"],
+            "words": ["Dog", "Penguin", "Bear", "Fish", "Snake"]
+          },
+          {
+            "slots": ["Verb", "Verb", "Verb", "Verb", "Verb"],
+            "words": ["Dog", "Penguin", "Bear", "Fish", "Snake"]
+          }
+        ]
+      },
+      {
+        "sections": [
+          {
+            "slots": ["Direction", "Direction", "Direction", "Direction", "Animal"],
+            "words": ["Left", "Right", "Up", "Down", "Dog"]
+          },
+          {
+            "slots": ["Mood", "Bird", "Correct", "Verb", "Noun"],
+            "words": ["Cardinal", "Penguin", "Duck", "Fish", "Snake"]
+          },
+          {
+            "slots": ["Red", "Red", "Mood", "Verb", "Noun"],
+            "words": ["Cardinal", "Rage", "Tomato", "Penguin", "Bear"]
+          }
+        ]
+      },
+    {
+      "name": "Elements",
+      "sections": [
+        {
+          "name": "Basic Elements",
+          "slots": ["Red", "Purple", "Yellow", "Green", "Black"],
+          "words": ["Strawberry", "Eggplant", "Banana", "Kiwi", "Blackberry"]
+        },
+        {
+          "name": "Fruits",
+          "slots": ["Orange", "Blue", "Purple", "White", "Brown"],
+          "words": ["Apple", "Blueberry", "Grape", "Garlic", "Lettuce"]
+        },
+        {
+          "name": "Vegetables",
+          "slots": ["Fruit", "Vegetable", "Berry", "Vegetable", "Fruit"],
+          "words": ["Sadness", "Money", "Rage", "Potato", "Pumpkin"]
+        },
+        {
+          "name": "Animals",
+          "slots": ["Flower", "Plant", "Animal", "Bird", "Mammal"],
+          "words": ["Rose", "Lemon", "Dog", "River", "Snake"]
+        },
+        {
+          "name": "Plants",
+          "slots": ["Orange", "Blue", "Purple", "White", "Brown"],
+          "words": ["Apple", "Blueberry", "Grape", "Garlic", "Lettuce"]
+        }
+      ]
+    }
+  ]
+} 
