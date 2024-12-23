@@ -142,6 +142,16 @@ const FallingWords: React.FC = () => {
             transform: `scale(${ANIMATION_CONFIG.WORD_SCALE})`,
             transition: 'none',
             willChange: 'transform',
+            background: 'var(--primary)',
+            color: 'var(--on-primary)',
+            padding: '0.15rem 0.75rem',
+            borderRadius: '0.25rem',
+            fontSize: '0.8rem',
+            boxShadow: 'var(--elevation-1)',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            width: 'fit-content',
           }}
         >
           {word.text}
