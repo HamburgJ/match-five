@@ -137,7 +137,7 @@ const GameBoard: React.FC = () => {
     {
       targetSelector: '.slots-grid',
       message: 'With more slots unlocked, you have more possible combinations! Try moving words between different slots to find new solutions. Be careful, some words have multiple possible matches!',
-      position: 'top'
+      position: 'bottom'
     }
   ];
 
