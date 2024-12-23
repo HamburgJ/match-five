@@ -2,6 +2,7 @@
   "name": "match-five",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/match-five",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
     "@types/node": "^16.18.68",
