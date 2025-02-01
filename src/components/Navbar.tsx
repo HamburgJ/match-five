@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { Navbar as BootstrapNavbar, Container, Button, Modal, Nav } from 'react-bootstrap';
 import { FaInfoCircle, FaTrash, FaList } from 'react-icons/fa';
+import WordTile from './WordTile';
 import '../styles/Navbar.css';
 
 const Navbar: React.FC = () => {
@@ -38,18 +39,44 @@ const Navbar: React.FC = () => {
         </Container>
       </BootstrapNavbar>
 
-      <Modal show={showInfoModal} onHide={() => setShowInfoModal(false)}>
+      <Modal show={showInfoModal} onHide={() => setShowInfoModal(false)} size="lg">
         <Modal.Header closeButton>
           <Modal.Title>How to Play</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h5>Game Rules:</h5>
-          <ul>
-            <li>Complete each level by matching five words correctly</li>
-            <li>Drag and drop words into the correct slots</li>
-            <li>Click words to add them to your inventory for later use</li>
-            <li>Complete all levels in a pack to unlock new challenges</li>
-          </ul>
+          <div className="how-to-play-content">
+            <section>
+              <h5>Game Rules:</h5>
+              <ul>
+                <li>Words and slots are given 5 at a time</li>
+                <li>Drag and drop words into slots that match their hints</li>
+                <li>Unlock new sections by completing the current ones</li>
+                <li>Complete a level by filling all slots correctly</li>
+              </ul>
+            </section>
+            <section>
+              <h5>Example:</h5>
+              <br/>
+              <ul>
+                <li>
+                  <WordTile word="Rose" /> matches the hint "Red"
+                </li>
+                <br/>
+                <li>
+                  <WordTile word="Rose" /> also matches the hint "Flower"
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h5>Tips:</h5>
+              <ul>
+                <li>Words can match multiple different hints</li>
+                <li>Sometimes you'll need to rethink your previous choices</li>
+                <li>If you get stuck, try returning words to your inventory and starting fresh</li>
+                <li>New sections bring new words and possibilities!</li>
+              </ul>
+            </section>
+          </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={() => setShowInfoModal(false)}>

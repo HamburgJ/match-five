@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import gameData from '../data/gameData.json';
 
 interface WordTileProps {
@@ -18,13 +18,25 @@ const WordTile: React.FC<WordTileProps> = ({
   onDragStart,
   onClick
 }) => {
+  const [isDragging, setIsDragging] = useState(false);
+
+  const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
+    setIsDragging(true);
+    if (onDragStart) onDragStart(e);
+  };
+
+  const handleDragEnd = () => {
+    setIsDragging(false);
+  };
+
   const emoji = gameData.wordEmojis[word];
 
   return (
     <div
-      className={className}
+      className={`${className} ${isDragging ? 'dragging' : ''}`}
       draggable={!disableHover}
-      onDragStart={onDragStart}
+      onDragStart={handleDragStart}
+      onDragEnd={handleDragEnd}
       onClick={onClick}
       style={{
         display: 'inline-flex',

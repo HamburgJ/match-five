@@ -4,56 +4,38 @@ import { useNavigate } from 'react-router-dom';
 import { Card, Container } from 'react-bootstrap';
 import { RootState } from '../store/store';
 import { FaLock, FaCheck, FaChevronRight } from 'react-icons/fa';
-
-interface LevelCompletion {
-  isComplete: boolean;
-  uniqueSolutions: string[];
-}
-
-interface SectionCompletion {
-  isComplete: boolean;
-}
+import { DEVELOPER_MODE } from '../constants/storage';
 
 const LevelSelector: React.FC = () => {
   const navigate = useNavigate();
   const levels = useSelector((state: RootState) => state.game.levels);
+  const levelProgress = useSelector((state: RootState) => state.game.levelProgress);
 
   const isLevelAccessible = (levelIndex: number): boolean => {
+    if (DEVELOPER_MODE) return true; // Allow all levels in developer mode
     if (levelIndex === 0) return true;
-    const previousLevel = levels[levelIndex - 1];
-    return isLevelComplete(`level_${levelIndex}`);
+    // To check if level N is accessible, we need to check if level N-1 is complete
+    // levelIndex is 0-based but level IDs are 1-based
+    const previousLevelId = `level_${levelIndex}`; // For level 2 (index 1), check level_1
+    const solutionsCount = levelProgress[previousLevelId]?.solutions?.length ?? 0;
+    return solutionsCount > 0;
   };
 
   const isLevelComplete = (levelId: string): boolean => {
-    const saved = localStorage.getItem(`level_completion_${levelId}`);
-    if (!saved) return false;
-    const completion: LevelCompletion = JSON.parse(saved);
-    return completion.isComplete;
+    return (levelProgress[levelId]?.solutions?.length ?? 0) > 0;
   };
 
-  const getLevelSolutions = (levelId: string): string[] => {
-    const saved = localStorage.getItem(`level_completion_${levelId}`);
-    if (!saved) return [];
-    const completion: LevelCompletion = JSON.parse(saved);
-    return completion.uniqueSolutions;
-  };
+  const getCompletedSectionsCount = (levelId: string): number => {
+    const progress = levelProgress[levelId];
+    if (!progress?.sections) return 0;
 
-  const isSectionComplete = (levelId: string, sectionId: string): boolean => {
-    const level = levels.find(l => l.id === levelId);
-    if (!level) return false;
-
-    const targetSectionIndex = level.sections.findIndex(s => s.id === sectionId);
-    if (targetSectionIndex === -1) return false;
-
-    for (let i = 0; i <= targetSectionIndex; i++) {
-      const section = level.sections[i];
-      const saved = localStorage.getItem(`completion_${levelId}_${section.id}`);
-      if (!saved) return false;
-      const completion: SectionCompletion = JSON.parse(saved);
-      if (!completion.isComplete) return false;
-    }
-
-    return true;
+    // A section is complete if all its slots have correct words
+    return Object.values(progress.sections)
+        .filter(section => {
+            // Check if all slots in this section have correct words
+            return Object.values(section.slots)
+                .every(slot => slot.currentWord !== null);
+        }).length;
   };
 
   return (
@@ -64,10 +46,6 @@ const LevelSelector: React.FC = () => {
           const levelId = `level_${index + 1}`;
           const isLevelUnlocked = isLevelAccessible(index);
           const isComplete = isLevelComplete(levelId);
-          const solutions = getLevelSolutions(levelId);
-          const completedSections = level.sections.filter((section, sectionIndex) => 
-            isSectionComplete(levelId, `section_${index + 1}_${sectionIndex + 1}`)
-          ).length;
 
           return (
             <Card 
@@ -80,7 +58,10 @@ const LevelSelector: React.FC = () => {
                   <div className="level-info">
                     <h3 className="level-name">{level.name || `Level ${index + 1}`}</h3>
                     <div className="level-progress">
-                      {completedSections} / {level.sections.length} sections
+                      {isComplete ? 
+                        'Completed' :
+                        `${level.sections.length} sections`
+                      }
                     </div>
                   </div>
                   {!isLevelUnlocked ? (
@@ -97,14 +78,6 @@ const LevelSelector: React.FC = () => {
                     </div>
                   )}
                 </div>
-                
-                {solutions.length > 0 && (
-                  <div className="solutions-row">
-                    <div className="solutions-stars">
-                      {Array(solutions.length).fill('⭐').join(' ')}
-                    </div>
-                  </div>
-                )}
                 
                 {!isLevelUnlocked && (
                   <div className="locked-message">

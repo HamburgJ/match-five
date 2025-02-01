@@ -23,42 +23,96 @@ export interface Section {
   name: string;
   slots: Slot[];
   availableWords: Word[];
-  isComplete?: boolean;
-  isUnlocked?: boolean;
+  isUnlocked: boolean;
 }
 
 export interface Level {
   id: string;
   name: string;
   sections: Section[];
-  isComplete?: boolean;
   inventory: Word[];
+  solutions: string[];
 }
 
 export interface GameState {
   levels: Level[];
   currentLevel: string | null;
-  currentSection: string | null;
-  inventory: Word[];
   hints: HintDictionary;
+  inventory: Word[];
+  tutorials: {
+    mainTutorialCompleted: boolean;
+    sectionTutorialCompleted: boolean;
+    hintTutorialCompleted: boolean;
+  };
+  levelProgress: {
+    [levelId: string]: {
+      solutions: string[];
+      sections: {
+        [sectionId: string]: {
+          isUnlocked: boolean;
+          slots: {
+            [slotId: string]: {
+              currentWord: Word | null;
+            };
+          };
+          availableWords: Word[];
+        };
+      };
+      inventory: Word[];
+    };
+  };
 }
 
 // Raw data interfaces (before transformation)
 export type RawSlot = string;
 
 export interface RawSection {
-  name: string;
+  name?: string;
   slots: RawSlot[];
   words: string[];
 }
 
 export interface RawLevel {
-  name: string;
+  name?: string;
   sections: RawSection[];
 }
 
 export interface RawGameData {
+  levels: {
+    name?: string;
+    sections: {
+      name?: string;
+      words: Word[];
+      slots: string[];
+    }[];
+  }[];
   hints: HintDictionary;
-  levels: RawLevel[];
-  wordEmojis: { [word: string]: string };
+  wordEmojis: {
+    [key: string]: string;
+  };
+}
+
+export interface GameProgress {
+  levels: {
+    [levelId: string]: {
+      solutions: string[];
+      sections: {
+        [sectionId: string]: {
+          slots: {
+            [slotId: string]: {
+              currentWord: Word | null;
+            }
+          };
+          availableWords: Word[];
+          isUnlocked: boolean;
+        }
+      };
+      inventory: Word[];
+    }
+  };
+  tutorials: {
+    mainTutorialCompleted: boolean;
+    sectionTutorialCompleted: boolean;
+    hintTutorialCompleted: boolean;
+  }
 } 

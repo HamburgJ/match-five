@@ -34,6 +34,15 @@
   color: #424242;
 }
 
+.word-tile {
+  /* ... existing styles ... */
+}
+
+.word-tile.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .game-board-container {
