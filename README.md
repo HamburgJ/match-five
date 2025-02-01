@@ -2,9 +2,7 @@
 
 A simple React-based word matching game where you solve puzzles by matching items to their correct categories.
 
-## Demo 🎯
-
-[Play Match 5](https://hamburgj.github.io/match-five/) 
+## [👉 Play Now!](https://burgerfun.tech/match-five/) 
 
 ## About the Game 📖
 
