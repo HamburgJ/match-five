@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/match-five/static/css/main.39ece105.css",
+    "main.js": "/match-five/static/js/main.09eadebe.js",
+    "static/js/453.35e9a3b5.chunk.js": "/match-five/static/js/453.35e9a3b5.chunk.js",
+    "index.html": "/match-five/index.html",
+    "main.39ece105.css.map": "/match-five/static/css/main.39ece105.css.map",
+    "main.09eadebe.js.map": "/match-five/static/js/main.09eadebe.js.map",
+    "453.35e9a3b5.chunk.js.map": "/match-five/static/js/453.35e9a3b5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39ece105.css",
+    "static/js/main.09eadebe.js"
+  ]
+}
