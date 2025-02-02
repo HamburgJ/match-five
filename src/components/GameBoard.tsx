@@ -216,26 +216,19 @@ const GameBoard: React.FC = () => {
     const nextLevelNum = parseInt(levelId.split('_')[1]) + 1;
     const nextLevelId = `level_${nextLevelNum}`;
     
-    console.log(`[GameBoard] Preparing to unlock first section of next level ${nextLevelId}`);
+    console.log(`[GameBoard] Navigating to next level ${nextLevelId}`);
     
-    // Ensure next level is unlocked in Redux state before navigating
-    const nextLevelProgress = levelProgress[nextLevelId] || {
-      solutions: [],
-      sections: {},
-      inventory: []
-    };
-    
-    // Make sure first section is unlocked
-    if (!nextLevelProgress.sections[`section_${nextLevelNum}_1`]) {
-      console.log(`[GameBoard] Creating and unlocking first section of level ${nextLevelId}`);
-      nextLevelProgress.sections[`section_${nextLevelNum}_1`] = {
-        isUnlocked: true,
-        slots: {},
-        availableWords: []
-      };
-    } else {
-      console.log(`[GameBoard] Unlocking existing first section of level ${nextLevelId}`);
-      nextLevelProgress.sections[`section_${nextLevelNum}_1`].isUnlocked = true;
+    // If the level doesn't exist in progress yet, initialize it
+    if (!levelProgress[nextLevelId]) {
+      const firstSection = level.sections[0];
+      if (firstSection) {
+        dispatch(setCurrentSection({
+          levelId: nextLevelId,
+          sectionId: `section_${nextLevelNum}_1`,
+          isUnlocked: true,
+          wordsToAdd: firstSection.availableWords.map(word => ({ ...word }))
+        }));
+      }
     }
     
     setShowLevelCompleteModal(false);
