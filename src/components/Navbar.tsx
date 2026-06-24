@@ -20,6 +20,10 @@ const Navbar: React.FC = () => {
     <>
       <BootstrapNavbar fixed="top" bg="light" expand="lg" className="custom-navbar">
         <Container>
+          <a href="/" className="burgerfun-home-link" aria-label="burger fun home">
+            <img src="/burger-icon-simple.svg" alt="" draggable="false" />
+            <span>burger fun</span>
+          </a>
           <BootstrapNavbar.Brand as={NavLink} to="/" className="brand-link">
             Match Five
           </BootstrapNavbar.Brand>
@@ -105,4 +109,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;
