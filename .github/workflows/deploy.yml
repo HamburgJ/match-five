@@ -1,11 +1,11 @@
-name: Deploy to GitHub Pages
+name: Build and deploy
 
 on:
+  pull_request:
   push:
     branches:
       - main
 
-# Add these permissions
 permissions:
   contents: write
   pages: write
@@ -18,22 +18,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version-file: '.node-version'
           cache: 'npm'
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
+      - name: Check
+        run: npm run check
         env:
-          CI: false
+          VITE_BASE_URL: /match-five/
 
       - name: Deploy to GitHub Pages
+        if: github.event_name == 'push'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: build 
+          folder: dist

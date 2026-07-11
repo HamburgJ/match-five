@@ -3,6 +3,46 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.burgerfun-home-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.25rem;
+  margin-right: 0.85rem;
+  padding: 0.25rem 0.7rem 0.25rem 0.38rem;
+  border: 2px solid #1a237e;
+  border-radius: 999px;
+  color: #1a237e;
+  background: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.burgerfun-home-link img {
+  display: block;
+  width: 1.45rem;
+  height: 1.45rem;
+  user-select: none;
+}
+
+.burgerfun-home-link span {
+  display: block;
+}
+
+.burgerfun-home-link:hover,
+.burgerfun-home-link:focus {
+  color: #ffffff;
+  background: #1a237e;
+  outline: none;
+  transform: translateY(-1px);
+}
+
 .brand-link {
   color: #1a237e !important;
   text-decoration: none;
@@ -26,4 +66,10 @@
   .brand-link {
     font-size: 1.2rem;
   }
-} 
+
+  .burgerfun-home-link {
+    margin-right: 0.55rem;
+    padding-inline: 0.6rem;
+    font-size: 0.78rem;
+  }
+}

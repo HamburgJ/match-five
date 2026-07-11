@@ -1,27 +1,17 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Row, Col, Modal, Button } from 'react-bootstrap';
 import { RootState } from '../store/store';
-import { placeWord, setCurrentSection, saveSolution, completeTutorial, checkSectionUnlocks, resetLevel } from '../store/gameSlice';
-import { Word, Slot, Section, Hint, HintDictionary, GameProgress } from '../store/types';
-import { GAME_PROGRESS_KEY, DEVELOPER_MODE } from '../constants/storage';
+import { placeWord, setCurrentSection, completeTutorial, checkSectionUnlocks, resetLevel } from '../store/gameSlice';
+import { Word, Slot, Section } from '../store/types';
 import TutorialOverlay from './TutorialOverlay';
-import gameData from '../data/gameData.json';
 import '../styles/GameBoard.css';
 import WordTile from './WordTile';
+import { logGameEvent } from '../utils/analytics';
 
 interface SectionWithId extends Section {
   id: string;
-}
-
-interface SectionCompletion {
-  isComplete: boolean;
-}
-
-interface LevelCompletion {
-  isComplete: boolean;
-  uniqueSolutions: Set<string>;
 }
 
 interface TutorialStep {
@@ -38,8 +28,7 @@ const GameBoard: React.FC = () => {
   const [showTutorial, setShowTutorial] = useState(false);
   const [showHintTutorial, setShowHintTutorial] = useState(false);
   const [tutorialStep, setTutorialStep] = useState(0);
-  const [showSettings, setShowSettings] = useState(false);
-  const [showLevelSelector, setShowLevelSelector] = useState(false);
+  const completionStateRef = useRef<Record<string, boolean>>({});
   
   // Get the current level and hints from Redux store
   const levelIndex = useMemo(() => parseInt(levelId.split('_')[1]) - 1, [levelId]);
@@ -49,8 +38,9 @@ const GameBoard: React.FC = () => {
   const tutorials = useSelector((state: RootState) => state.game.tutorials);
   const levelProgress = useSelector((state: RootState) => state.game.levelProgress);
 
-  // Track if level has been initialized
-  const [isInitialized, setIsInitialized] = useState(false);
+  useEffect(() => {
+    if (levelId) logGameEvent('level_view', { level_id: levelId });
+  }, [levelId]);
 
   // Get all unlocked sections
   const sections = useMemo(() => {
@@ -114,8 +104,6 @@ const GameBoard: React.FC = () => {
 
     // Only initialize if this level has never been loaded before
     if (!hasExistingProgress) {
-        console.log(`[GameBoard] First time loading level ${levelId}, initializing from game data`);
-        
         // Initialize first section
         const firstSection = level.sections[0];
         if (firstSection) {
@@ -126,12 +114,8 @@ const GameBoard: React.FC = () => {
                 wordsToAdd: firstSection.availableWords.map(word => ({ ...word }))
             }));
         }
-        
-        console.log(`[GameBoard] Initialized first section for level ${levelId}`);
-    } else {
-        console.log(`[GameBoard] Level ${levelId} already exists in Redux state, no initialization needed`);
     }
-  }, [levelId, level, dispatch]);
+  }, [levelId, level, levelProgress, dispatch]);
 
   // Check for section unlocks only when words are placed
   const checkForUnlocks = () => {
@@ -164,7 +148,7 @@ const GameBoard: React.FC = () => {
     if (allSlotsFilled && hasIncorrectWord) {
       setShowHintTutorial(true);
     }
-  }, [allSlots, level, levelId, tutorials.hintTutorialCompleted]);
+  }, [allSlots, level, levelId, hints, tutorials.hintTutorialCompleted]);
 
   const handleTutorialComplete = () => {
     if (sections.length === 1) {
@@ -203,36 +187,49 @@ const GameBoard: React.FC = () => {
       })
     );
 
-    // Show modal only when current state is complete
-    if (allSectionsUnlocked && allSectionsCorrect) {
-      setShowLevelCompleteModal(true);
-    } else {
-      setShowLevelCompleteModal(false);
+    const isComplete = allSectionsUnlocked && allSectionsCorrect;
+    const previousCompletion = completionStateRef.current[levelId];
+
+    if (previousCompletion === false && isComplete) {
+      logGameEvent('level_complete', {
+        level_id: levelId,
+        completed_levels: Object.values(levelProgress).filter(progress => progress.solutions.length > 0).length,
+      });
     }
-  }, [levelId, level, hints, setShowLevelCompleteModal]);
+
+    completionStateRef.current[levelId] = isComplete;
+    setShowLevelCompleteModal(isComplete);
+  }, [levelId, level, hints, levelProgress]);
 
   // Modify the next level button handler
   const handleNextLevel = () => {
     const nextLevelNum = parseInt(levelId.split('_')[1]) + 1;
     const nextLevelId = `level_${nextLevelNum}`;
     
-    console.log(`[GameBoard] Navigating to next level ${nextLevelId}`);
-    
-    // If the level doesn't exist in progress yet, initialize it
-    if (!levelProgress[nextLevelId]) {
-      const firstSection = level.sections[0];
-      if (firstSection) {
-        dispatch(setCurrentSection({
-          levelId: nextLevelId,
-          sectionId: `section_${nextLevelNum}_1`,
-          isUnlocked: true,
-          wordsToAdd: firstSection.availableWords.map(word => ({ ...word }))
-        }));
-      }
-    }
-    
+    logGameEvent('level_start', { level_id: nextLevelId, source: 'next_level' });
     setShowLevelCompleteModal(false);
     navigate(`/play/${nextLevelId}`);
+  };
+
+  const handleShare = async () => {
+    const shareData = {
+      title: 'Match Five',
+      text: `I completed Match Five ${levelId.replace('_', ' ')}!`,
+      url: 'https://burgerfun.ca/match-five/',
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+        logGameEvent('result_shared', { level_id: levelId, method: 'native' });
+        return;
+      }
+      await navigator.clipboard.writeText(`${shareData.text} ${shareData.url}`);
+      logGameEvent('result_shared', { level_id: levelId, method: 'clipboard' });
+    } catch (error) {
+      if (error instanceof Error && error.name === 'AbortError') return;
+      console.warn('Unable to share Match Five result:', error);
+    }
   };
 
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>, word: Word) => {
@@ -242,9 +239,7 @@ const GameBoard: React.FC = () => {
 
     const wordData = JSON.stringify(word);
     e.dataTransfer.setData('text/plain', wordData);
-    e.dataTransfer.setData('text/plain', wordData);
     e.dataTransfer.setData('word', wordData);
-    e.dataTransfer.setData('sourceLevelId', levelId);
     
     // Find the section and slot that contains this word
     let sourceSection;
@@ -264,10 +259,6 @@ const GameBoard: React.FC = () => {
     }
   };
 
-  const handleDragEnd = () => {
-    cleanupDragStates();
-  };
-
   const handleDrop = (e: React.DragEvent<HTMLDivElement>, slotId: string) => {
     if (!levelId || !level) return;
 
@@ -278,7 +269,6 @@ const GameBoard: React.FC = () => {
     if (!wordData) return;
 
     const word = JSON.parse(wordData) as Word;
-    const sourceLevelId = e.dataTransfer.getData('sourceLevelId');
     const sourceSectionId = e.dataTransfer.getData('sourceSectionId');
     const sourceSlotId = e.dataTransfer.getData('sourceSlotId');
     
@@ -301,7 +291,6 @@ const GameBoard: React.FC = () => {
         sectionId: sourceSectionId,
         slotId: sourceSlotId, 
         word: existingWord,
-        sourceLevelId: levelId,
         sourceSectionId: targetSectionId
       }));
     } else if (existingWord) {
@@ -310,7 +299,6 @@ const GameBoard: React.FC = () => {
         sectionId: targetSectionId,
         slotId: 'inventory', 
         word: existingWord,
-        sourceLevelId: levelId,
         sourceSectionId: targetSectionId
       }));
     }
@@ -320,7 +308,6 @@ const GameBoard: React.FC = () => {
       sectionId: targetSectionId,
       slotId, 
       word,
-      sourceLevelId,
       sourceSectionId
     }));
 
@@ -349,7 +336,6 @@ const GameBoard: React.FC = () => {
     }
 
     const word = JSON.parse(wordData) as Word;
-    const sourceLevelId = e.dataTransfer.getData('sourceLevelId');
     const sourceSectionId = e.dataTransfer.getData('sourceSectionId');
 
     // Prevent inventory to inventory drops
@@ -363,7 +349,6 @@ const GameBoard: React.FC = () => {
       sectionId: sections[0].id,
       slotId: 'inventory', 
       word,
-      sourceLevelId,
       sourceSectionId
     }));
   };
@@ -397,7 +382,6 @@ const GameBoard: React.FC = () => {
         sectionId: sourceSection.id, 
         slotId: 'inventory', 
         word,
-        sourceLevelId: levelId,
         sourceSectionId: sourceSection.id 
       }));
     } else {
@@ -410,7 +394,6 @@ const GameBoard: React.FC = () => {
         sectionId: firstSection.id,
         slotId: 'inventory', 
         word,
-        sourceLevelId: levelId,
         sourceSectionId: firstSection.id
       }));
     }
@@ -450,14 +433,9 @@ const GameBoard: React.FC = () => {
         sectionId: sections[0].id,
         slotId: 'inventory', 
         word,
-        sourceLevelId: levelId,
         sourceSectionId: sectionId
       }));
     });
-  };
-
-  const getWordEmoji = (word: Word): string | null => {
-    return gameData.wordEmojis[word.text] || null;
   };
 
   if (!level || sections.length === 0) return null;
@@ -611,13 +589,23 @@ const GameBoard: React.FC = () => {
             <Button 
               variant="secondary" 
               onClick={() => {
+                logGameEvent('level_replay', { level_id: levelId });
                 dispatch(resetLevel({ levelId }));
                 setShowLevelCompleteModal(false);
               }}
             >
               Play Again
             </Button>
-            <Button variant="secondary" onClick={() => navigate('/levels')}>
+            <Button variant="outline-primary" onClick={handleShare}>
+              Share Result
+            </Button>
+            <Button
+              variant="secondary"
+              onClick={() => {
+                logGameEvent('level_select_open', { source: 'completion', level_id: levelId });
+                navigate('/levels');
+              }}
+            >
               Level Select
             </Button>
             {nextLevel && (
@@ -635,4 +623,4 @@ const GameBoard: React.FC = () => {
   );
 };
 
-export default GameBoard; 
+export default GameBoard;
