@@ -5,6 +5,7 @@ import { Card, Container } from 'react-bootstrap';
 import { RootState } from '../store/store';
 import { FaLock, FaCheck, FaChevronRight } from 'react-icons/fa';
 import { DEVELOPER_MODE } from '../constants/storage';
+import { logGameEvent } from '../utils/analytics';
 
 const LevelSelector: React.FC = () => {
   const navigate = useNavigate();
@@ -25,17 +26,10 @@ const LevelSelector: React.FC = () => {
     return (levelProgress[levelId]?.solutions?.length ?? 0) > 0;
   };
 
-  const getCompletedSectionsCount = (levelId: string): number => {
-    const progress = levelProgress[levelId];
-    if (!progress?.sections) return 0;
-
-    // A section is complete if all its slots have correct words
-    return Object.values(progress.sections)
-        .filter(section => {
-            // Check if all slots in this section have correct words
-            return Object.values(section.slots)
-                .every(slot => slot.currentWord !== null);
-        }).length;
+  const openLevel = (levelId: string, isUnlocked: boolean) => {
+    if (!isUnlocked) return;
+    logGameEvent('level_start', { level_id: levelId, source: 'level_selector' });
+    navigate(`/play/${levelId}`);
   };
 
   return (
@@ -50,7 +44,7 @@ const LevelSelector: React.FC = () => {
           return (
             <Card 
               key={levelId}
-              onClick={() => isLevelUnlocked && navigate(`/play/${levelId}`)}
+              onClick={() => openLevel(levelId, isLevelUnlocked)}
               className={`level-select-card ${isComplete ? 'completed' : ''} ${!isLevelUnlocked ? 'locked' : ''}`}
             >
               <Card.Body>
@@ -110,4 +104,4 @@ const LevelSelector: React.FC = () => {
   );
 };
 
-export default LevelSelector; 
+export default LevelSelector;

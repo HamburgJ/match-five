@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import gameData from '../data/gameData.json';
 
 // Animation configuration constants
@@ -23,21 +23,20 @@ interface FallingWord {
   delay: number;
 }
 
+const getRandomWord = () => {
+  const wordList = Object.entries(gameData.wordEmojis);
+  const [text, emoji] = wordList[Math.floor(Math.random() * wordList.length)];
+  return { text, emoji };
+};
+
 const FallingWords: React.FC = () => {
   const [words, setWords] = useState<FallingWord[]>([]);
   const [dimensions, setDimensions] = useState({ width: window.innerWidth, height: window.innerHeight });
   const lastTimeRef = useRef<number>(0);
   const animationFrameRef = useRef<number>();
 
-  // Get a random word and its emoji from the game data
-  const getRandomWord = () => {
-    const wordList = Object.entries(gameData.wordEmojis);
-    const [text, emoji] = wordList[Math.floor(Math.random() * wordList.length)];
-    return { text, emoji };
-  };
-
   // Create a new falling word with random position and speed
-  const createFallingWord = (id: number, isInitial: boolean = false): FallingWord => {
+  const createFallingWord = useCallback((id: number, isInitial: boolean = false): FallingWord => {
     const { text, emoji } = getRandomWord();
     return {
       id,
@@ -50,7 +49,7 @@ const FallingWords: React.FC = () => {
       // No delay for initial words, normal delay for new words
       delay: isInitial ? 0 : ANIMATION_CONFIG.MIN_DELAY + Math.random() * (ANIMATION_CONFIG.MAX_DELAY - ANIMATION_CONFIG.MIN_DELAY),
     };
-  };
+  }, [dimensions.height, dimensions.width]);
 
   // Update window dimensions on resize
   useEffect(() => {
@@ -81,7 +80,7 @@ const FallingWords: React.FC = () => {
     );
     setWords(initialWords);
     lastTimeRef.current = performance.now();
-  }, []);
+  }, [createFallingWord]);
 
   // Animate words using delta time
   useEffect(() => {
@@ -117,7 +116,7 @@ const FallingWords: React.FC = () => {
         cancelAnimationFrame(animationFrameRef.current);
       }
     };
-  }, [dimensions.height]);
+  }, [createFallingWord, dimensions.height]);
 
   return (
     <div style={{
@@ -164,4 +163,4 @@ const FallingWords: React.FC = () => {
   );
 };
 
-export default FallingWords; 
+export default FallingWords;

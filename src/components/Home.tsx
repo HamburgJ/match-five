@@ -5,14 +5,12 @@ import { RootState } from '../store/store';
 import FallingWords from './FallingWords';
 import WordTile from './WordTile';
 import '../styles/Home.css';
-
-interface LevelCompletion {
-  isComplete: boolean;
-}
+import { logGameEvent } from '../utils/analytics';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
   const levels = useSelector((state: RootState) => state.game.levels);
+  const levelProgress = useSelector((state: RootState) => state.game.levelProgress);
 
   const findLastUnlockedLevel = () => {
     // Go through levels in reverse to find the last unlocked one
@@ -28,14 +26,12 @@ const Home: React.FC = () => {
   };
 
   const isLevelComplete = (levelId: string): boolean => {
-    const saved = localStorage.getItem(`level_completion_${levelId}`);
-    if (!saved) return false;
-    const completion = JSON.parse(saved);
-    return completion.isComplete;
+    return (levelProgress[levelId]?.solutions.length ?? 0) > 0;
   };
 
   const handlePlayClick = () => {
     const lastUnlockedLevelId = findLastUnlockedLevel();
+    logGameEvent('level_start', { level_id: lastUnlockedLevelId, source: 'home' });
     navigate(`/play/${lastUnlockedLevelId}`);
   };
 
@@ -63,4 +59,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home; 
+export default Home;

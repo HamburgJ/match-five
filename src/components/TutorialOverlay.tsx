@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 interface TutorialStep {
   targetSelector: string;
@@ -126,4 +125,4 @@ const TutorialOverlay: React.FC<TutorialOverlayProps> = ({
   );
 };
 
-export default TutorialOverlay; 
+export default TutorialOverlay;

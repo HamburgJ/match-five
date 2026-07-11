@@ -3,7 +3,6 @@ import gameData from '../data/gameData.json';
 
 interface WordTileProps {
   word: string;
-  hint?: string;
   disableHover?: boolean;
   className?: string;
   onDragStart?: (e: React.DragEvent<HTMLDivElement>) => void;
@@ -12,7 +11,6 @@ interface WordTileProps {
 
 const WordTile: React.FC<WordTileProps> = ({ 
   word, 
-  hint, 
   disableHover = false, 
   className = 'word-tile',
   onDragStart,
@@ -68,4 +66,4 @@ const WordTile: React.FC<WordTileProps> = ({
   );
 };
 
-export default WordTile; 
+export default WordTile;

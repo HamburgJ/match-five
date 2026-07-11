@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 import { Navbar as BootstrapNavbar, Container, Button, Modal, Nav } from 'react-bootstrap';
 import { FaInfoCircle, FaTrash, FaList } from 'react-icons/fa';
 import WordTile from './WordTile';
 import '../styles/Navbar.css';
+import { persistor } from '../store/store';
+import { GAME_PROGRESS_KEY } from '../constants/storage';
+import { logGameEvent } from '../utils/analytics';
 
 const Navbar: React.FC = () => {
-  const dispatch = useDispatch();
   const [showInfoModal, setShowInfoModal] = useState(false);
   const [showResetModal, setShowResetModal] = useState(false);
 
-  const handleResetData = () => {
-    localStorage.clear();
+  const handleResetData = async () => {
+    await persistor.purge();
+    localStorage.removeItem(GAME_PROGRESS_KEY);
+    for (const key of Object.keys(localStorage)) {
+      if (key.startsWith('level_completion_level_')) localStorage.removeItem(key);
+    }
+    logGameEvent('progress_reset');
     window.location.reload();
   };
 
@@ -20,7 +26,12 @@ const Navbar: React.FC = () => {
     <>
       <BootstrapNavbar fixed="top" bg="light" expand="lg" className="custom-navbar">
         <Container>
-          <a href="/" className="burgerfun-home-link" aria-label="burger fun home">
+          <a
+            href="/"
+            className="burgerfun-home-link"
+            aria-label="burger fun home"
+            onClick={() => logGameEvent('burgerfun_home_click')}
+          >
             <img src="/burger-icon-simple.svg" alt="" draggable="false" />
             <span>burger fun</span>
           </a>
@@ -34,10 +45,9 @@ const Navbar: React.FC = () => {
             <Nav.Link as={NavLink} to="/levels">
               <FaList className="me-2" /> Level Select
             </Nav.Link>
-            {/*
             <Nav.Link as={Button} variant="link" onClick={() => setShowResetModal(true)}>
               <FaTrash className="me-2" /> Reset
-            </Nav.Link> */}
+            </Nav.Link>
 
           </Nav>
         </Container>

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import gameData from '../data/gameData.json';
-import { Word, GameState, Section, Level, Slot, RawGameData } from './types';
+import { Word, GameState, Level, RawGameData } from './types';
 
 function generateLevelId(levelIndex: number): string {
   return `level_${levelIndex + 1}`;
@@ -90,7 +90,6 @@ function checkLevelCompletion(level: Level, state: GameState): { isComplete: boo
   // First check if all sections are unlocked
   const allSectionsUnlocked = level.sections.every(section => section.isUnlocked);
   if (!allSectionsUnlocked) {
-    console.log(`[Level Check] Level not complete - not all sections unlocked`);
     return { isComplete: false, solution: null };
   }
 
@@ -109,11 +108,9 @@ function checkLevelCompletion(level: Level, state: GameState): { isComplete: boo
       .map(slot => slot.currentWord?.text)
       .join(',');
     
-    console.log(`[Level Check] Level complete - all sections unlocked and correct`);
     return { isComplete: true, solution };
   }
-  
-  console.log(`[Level Check] Level not complete - some sections have incorrect words`);
+
   return { isComplete: false, solution: null };
 }
 
@@ -198,48 +195,12 @@ const gameSlice = createSlice({
       sectionId: string;
       slotId: string;
       word: Word;
-      sourceLevelId: string;
       sourceSectionId: string;
     }>) => {
-      const { levelId, sectionId, slotId, word, sourceLevelId, sourceSectionId } = action.payload;
+      const { levelId, sectionId, slotId, word, sourceSectionId } = action.payload;
       
       const level = state.levels.find(l => l.id === levelId);
       if (!level) return;
-
-      // Helper function to check if all words in a section are correct
-      const areSectionWordsCorrect = (section: Section): boolean => {
-        return section.slots.every(slot => {
-          const hint = state.hints[slot.hintId];
-          return slot.currentWord && hint && hint.accepts.includes(slot.currentWord.text);
-        });
-      };
-
-      // Helper function to check if we have a new solution
-      const checkForNewSolution = (level: Level): boolean => {
-        // Check if all sections have correct words
-        const allSectionsCorrect = level.sections.every(areSectionWordsCorrect);
-        
-        if (allSectionsCorrect) {
-          // Create solution string from current arrangement
-          const solution = level.sections
-            .flatMap(section => section.slots)
-            .map(slot => slot.currentWord?.text)
-            .join(',');
-          
-          // Check if this is a new solution
-          if (!level.solutions.includes(solution)) {
-            level.solutions.push(solution);
-            
-            // Unlock next level's first section if it exists
-            const levelIndex = state.levels.findIndex(l => l.id === levelId);
-            if (levelIndex < state.levels.length - 1) {
-              state.levels[levelIndex + 1].sections[0].isUnlocked = true;
-            }
-            return true;
-          }
-        }
-        return false;
-      };
 
       // Handle destination placement
       const section = level.sections.find(s => s.id === sectionId);
@@ -344,19 +305,6 @@ const gameSlice = createSlice({
             });
           });
 
-        console.log(`[Section Unlock Check] Validating sections 0 to ${sectionIndex}:`, {
-          levelId,
-          sectionId,
-          allPreviousSectionsValid,
-          sectionsState: level.sections.slice(0, sectionIndex + 1).map((s, i) => ({
-            sectionIndex: i,
-            isComplete: s.slots.every(slot => {
-              const hint = state.hints[slot.hintId];
-              return slot.currentWord && hint && hint.accepts.includes(slot.currentWord.text);
-            })
-          }))
-        });
-        
         if (allPreviousSectionsValid) {
           const nextSection = level.sections[sectionIndex + 1];
           if (nextSection && !nextSection.isUnlocked) {
@@ -364,15 +312,6 @@ const gameSlice = createSlice({
             const originalWords = gameData.levels[levelNum].sections[sectionIndex + 1].words;
             
             nextSection.isUnlocked = true;
-            console.log(`[Section Unlock] Level ${levelId}, Section ${nextSection.id} unlocked`);
-            console.log(`[Section Unlock] Current level state:`, {
-              levelId,
-              currentSectionId: sectionId,
-              nextSectionId: nextSection.id,
-              allPreviousSectionsValid,
-              levelProgress: state.levelProgress[levelId]
-            });
-            
             // Safely add each word to inventory
             originalWords.forEach(word => {
               safeAddToInventory(level.inventory, word);
@@ -428,20 +367,6 @@ const gameSlice = createSlice({
             });
           });
 
-        console.log(`[Section Unlock Check] Validating sections 0 to ${sectionIndex}:`, {
-          levelId,
-          sectionIndex,
-          allPreviousSectionsValid,
-          sectionsState: level.sections.slice(0, sectionIndex + 1).map((s, i) => ({
-            sectionIndex: i,
-            id: s.id,
-            isComplete: s.slots.every(slot => {
-              const hint = state.hints[slot.hintId];
-              return slot.currentWord && hint && hint.accepts.includes(slot.currentWord.text);
-            })
-          }))
-        });
-
         if (allPreviousSectionsValid) {
           const nextSection = level.sections[sectionIndex + 1];
           if (nextSection && !nextSection.isUnlocked) {
@@ -449,8 +374,6 @@ const gameSlice = createSlice({
             const originalWords = gameData.levels[levelNum].sections[sectionIndex + 1].words;
             
             nextSection.isUnlocked = true;
-            console.log(`[Section Unlock] Level ${levelId}, Section ${nextSection.id} unlocked`);
-            
             // Safely add each word to inventory
             originalWords.forEach(word => {
               safeAddToInventory(level.inventory, word);
@@ -478,8 +401,6 @@ const gameSlice = createSlice({
       // Check for level completion
       const { isComplete: levelIsComplete, solution: levelSolution } = checkLevelCompletion(level, state);
       if (levelIsComplete && levelSolution) {
-        console.log(`[Level Complete] Solution found for level ${levelId}:`, levelSolution);
-        
         // Always add the current solution to track current state
         level.solutions = [levelSolution];
         
@@ -543,22 +464,6 @@ const gameSlice = createSlice({
   }
 });
 
-// Create a separate logging middleware
-export const loggingMiddleware = (store: any) => (next: any) => (action: any) => {
-  const result = next(action);
-  const state = store.getState().game;
-  
-  if (!action.type.includes('@@redux/INIT') && !action.type.includes('persist')) {
-    console.log(`[STATE CHANGE] Action: ${action.type}`);
-    state.levels.forEach((level: Level, levelIndex: number) => {
-      console.log(`Level ${levelIndex + 1} sections unlock state:`, 
-        level.sections.map((s, i) => `Section ${i + 1}: ${s.isUnlocked}`));
-    });
-  }
-  
-  return result;
-};
-
 export const { 
   setCurrentLevel, 
   setCurrentSection, 
@@ -569,4 +474,4 @@ export const {
   resetLevel
 } = gameSlice.actions;
 
-export default gameSlice.reducer; 
+export default gameSlice.reducer;

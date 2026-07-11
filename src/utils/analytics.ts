@@ -1,64 +1,37 @@
 import ReactGA from 'react-ga4';
 
-const GA_ID = process.env.REACT_APP_GA_ID || process.env.VITE_GA_ID || process.env.CF_GA_ID;
-const isProduction = process.env.NODE_ENV === 'production';
+const GA_ID = import.meta.env.VITE_GA_ID || import.meta.env.CF_GA_ID;
+const isProduction = import.meta.env.PROD;
+
+type AnalyticsValue = string | number | boolean | undefined;
+export type GameEventParameters = Record<string, AnalyticsValue>;
 
 export const initGA = () => {
   if (!GA_ID) {
-    if (!isProduction) {
-      console.log('Analytics disabled: No measurement ID available');
-    }
+    if (!isProduction) console.log('Analytics disabled: no measurement ID available');
     return;
   }
 
   try {
-    ReactGA.initialize(GA_ID, {
-      gaOptions: {
-        debug_mode: !isProduction
-      }
-    });
-    // Send initial pageview
-    ReactGA.send({
-      hitType: "pageview",
-      page: window.location.pathname,
-      title: "Match Five - Word Association Game"
-    });
+    ReactGA.initialize(GA_ID, { gaOptions: { debug_mode: !isProduction } });
   } catch (error) {
-    if (!isProduction) {
-      console.warn('Failed to initialize Google Analytics:', error);
-    }
+    if (!isProduction) console.warn('Failed to initialize Google Analytics:', error);
   }
 };
 
 export const logPageView = (page: string) => {
   if (!GA_ID) return;
-
-  try {
-    ReactGA.send({
-      hitType: "pageview",
-      page,
-      title: "Match Five - Word Association Game"
-    });
-  } catch (error) {
-    if (!isProduction) {
-      console.warn('Failed to log page view:', error);
-    }
-  }
+  ReactGA.send({
+    hitType: 'pageview',
+    page,
+    title: 'Match Five - Word Association Game',
+  });
 };
 
-export const logGameEvent = (action: string, label?: string, value?: number) => {
+export const logGameEvent = (action: string, parameters: GameEventParameters = {}) => {
   if (!GA_ID) return;
-
-  try {
-    ReactGA.event({
-      category: 'Game',
-      action,
-      label,
-      value
-    });
-  } catch (error) {
-    if (!isProduction) {
-      console.warn('Failed to log game event:', error);
-    }
-  }
-}; 
+  ReactGA.event(action, {
+    game_name: 'Match Five',
+    ...parameters,
+  });
+};
