@@ -6,15 +6,17 @@ interface WordTileProps {
   hint?: string;
   disableHover?: boolean;
   className?: string;
+  selected?: boolean;
   onDragStart?: (e: React.DragEvent<HTMLDivElement>) => void;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
-const WordTile: React.FC<WordTileProps> = ({ 
-  word, 
-  hint, 
-  disableHover = false, 
+const WordTile: React.FC<WordTileProps> = ({
+  word,
+  hint,
+  disableHover = false,
   className = 'word-tile',
+  selected = false,
   onDragStart,
   onClick
 }) => {
@@ -33,7 +35,7 @@ const WordTile: React.FC<WordTileProps> = ({
 
   return (
     <div
-      className={`${className} ${isDragging ? 'dragging' : ''}`}
+      className={`${className} ${isDragging ? 'dragging' : ''} ${selected ? 'selected' : ''}`}
       draggable={!disableHover}
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
@@ -44,10 +46,10 @@ const WordTile: React.FC<WordTileProps> = ({
         padding: '0.25rem 0.5rem',
         margin: '0 0.25rem',
         borderRadius: '0.25rem',
-        background: 'var(--primary)',
+        background: selected ? 'var(--primary-variant)' : 'var(--primary)',
         color: 'var(--on-primary)',
         fontSize: '0.95rem',
-        boxShadow: 'var(--elevation-1)',
+        boxShadow: selected ? '0 0 0 3px rgba(33, 150, 243, 0.6), var(--elevation-2)' : 'var(--elevation-1)',
         verticalAlign: 'middle',
         gap: '0.25rem',
         cursor: disableHover ? 'default' : 'grab',
