@@ -174,6 +174,17 @@ body {
   background: rgba(74, 74, 74, 0.05);
 }
 
+/* Tap-to-place: highlight slots that can accept the currently selected word */
+.slot-card.slot-tappable {
+  cursor: pointer;
+  border: 2px dashed rgba(33, 150, 243, 0.5);
+}
+
+.word-tile.selected {
+  outline: 2px solid #2196f3;
+  outline-offset: 1px;
+}
+
 /* Make sure the word tile maintains its size in slots */
 .slot-card .word-tile {
   width: fit-content;
@@ -508,6 +519,11 @@ body {
   bottom: 0;
   background: none;
   z-index: 10000;
+  pointer-events: none;
+}
+
+.tutorial-overlay button {
+  pointer-events: auto;
 }
 
 .tutorial-spotlight {

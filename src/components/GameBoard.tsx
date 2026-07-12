@@ -40,6 +40,8 @@ const GameBoard: React.FC = () => {
   const [tutorialStep, setTutorialStep] = useState(0);
   const [showSettings, setShowSettings] = useState(false);
   const [showLevelSelector, setShowLevelSelector] = useState(false);
+  // Selected word for tap-to-place (touch-friendly alternative to drag-and-drop)
+  const [selectedWordId, setSelectedWordId] = useState<string | null>(null);
   
   // Get the current level and hints from Redux store
   const levelIndex = useMemo(() => parseInt(levelId.split('_')[1]) - 1, [levelId]);
@@ -383,32 +385,41 @@ const GameBoard: React.FC = () => {
     }
   };
 
+  // Tap-to-place: tapping a word that is already placed in a slot returns it
+  // to the inventory (matches previous click behavior, kept for desktop/mouse).
   const handleWordClick = (word: Word, fromSlot: boolean = false) => {
     if (!levelId || !level) return;
 
+    // If this word is currently selected, tapping it again just deselects it
+    // instead of also returning it to inventory.
+    if (selectedWordId === word.id) {
+      setSelectedWordId(null);
+      return;
+    }
+
     if (fromSlot) {
-      const sourceSection = sections.find(section => 
+      const sourceSection = sections.find(section =>
         section.slots.some(slot => slot.currentWord?.id === word.id)
       );
       if (!sourceSection) return;
 
-      dispatch(placeWord({ 
-        levelId, 
-        sectionId: sourceSection.id, 
-        slotId: 'inventory', 
+      dispatch(placeWord({
+        levelId,
+        sectionId: sourceSection.id,
+        slotId: 'inventory',
         word,
         sourceLevelId: levelId,
-        sourceSectionId: sourceSection.id 
+        sourceSectionId: sourceSection.id
       }));
     } else {
       // For words from inventory, use the first unlocked section as target
       const firstSection = sections[0];
       if (!firstSection) return;
 
-      dispatch(placeWord({ 
-        levelId, 
+      dispatch(placeWord({
+        levelId,
         sectionId: firstSection.id,
-        slotId: 'inventory', 
+        slotId: 'inventory',
         word,
         sourceLevelId: levelId,
         sourceSectionId: firstSection.id
@@ -416,6 +427,113 @@ const GameBoard: React.FC = () => {
     }
 
     // Check section unlocks after word placement
+    checkForUnlocks();
+  };
+
+  // Tap-to-place (touch-friendly alternative to native drag-and-drop):
+  // - Tap an unselected word (from inventory/available words or a slot) to select it.
+  // - Tap the selected word again to deselect it (handled in handleWordClick above).
+  // - Tap a placed word that ISN'T selected to send it back to inventory (handleWordClick).
+  // - Tap a hint slot while a word is selected to place that word into that slot.
+  const handleWordTap = (word: Word) => {
+    if (selectedWordId === word.id) {
+      setSelectedWordId(null);
+      return;
+    }
+    setSelectedWordId(word.id);
+  };
+
+  const findWordLocation = (word: Word): { sourceSectionId: string; sourceSlotId?: string } | null => {
+    // Word currently sitting in a slot?
+    for (const section of sections) {
+      const slot = section.slots.find(s => s.currentWord?.id === word.id);
+      if (slot) {
+        return { sourceSectionId: section.id, sourceSlotId: slot.id };
+      }
+    }
+    // Word currently in inventory or available words of some section
+    for (const section of sections) {
+      if (section.availableWords.some(w => w.id === word.id)) {
+        return { sourceSectionId: section.id };
+      }
+    }
+    if (level.inventory.some(w => w.id === word.id)) {
+      return { sourceSectionId: '' };
+    }
+    return null;
+  };
+
+  const handleSlotTap = (slotId: string) => {
+    if (!levelId || !level || !selectedWordId) return;
+
+    // Find the selected word's full data (from a slot, available words, or inventory)
+    let selectedWord: Word | undefined;
+    for (const section of sections) {
+      selectedWord = section.slots.find(s => s.currentWord?.id === selectedWordId)?.currentWord ?? undefined;
+      if (selectedWord) break;
+    }
+    if (!selectedWord) {
+      for (const section of sections) {
+        selectedWord = section.availableWords.find(w => w.id === selectedWordId);
+        if (selectedWord) break;
+      }
+    }
+    if (!selectedWord) {
+      selectedWord = level.inventory.find(w => w.id === selectedWordId);
+    }
+    if (!selectedWord) {
+      setSelectedWordId(null);
+      return;
+    }
+
+    const location = findWordLocation(selectedWord);
+
+    // Find the section that owns the target slot
+    const targetSection = sections.find(section =>
+      section.slots.some(slot => slot.id === slotId)
+    );
+    if (!targetSection) return;
+
+    const levelNum = parseInt(levelId.split('_')[1]);
+    const sectionIndex = sections.indexOf(targetSection);
+    const targetSectionId = `section_${levelNum}_${sectionIndex + 1}`;
+
+    // If the target slot already has a word, move it out first (swap/return to inventory),
+    // mirroring the native drag-and-drop behavior in handleDrop.
+    const existingWord = targetSection.slots.find(slot => slot.id === slotId)?.currentWord;
+
+    if (existingWord && existingWord.id !== selectedWord.id) {
+      if (location?.sourceSlotId) {
+        dispatch(placeWord({
+          levelId,
+          sectionId: location.sourceSectionId,
+          slotId: location.sourceSlotId,
+          word: existingWord,
+          sourceLevelId: levelId,
+          sourceSectionId: targetSectionId
+        }));
+      } else {
+        dispatch(placeWord({
+          levelId,
+          sectionId: targetSectionId,
+          slotId: 'inventory',
+          word: existingWord,
+          sourceLevelId: levelId,
+          sourceSectionId: targetSectionId
+        }));
+      }
+    }
+
+    dispatch(placeWord({
+      levelId,
+      sectionId: targetSectionId,
+      slotId,
+      word: selectedWord,
+      sourceLevelId: levelId,
+      sourceSectionId: location?.sourceSectionId ?? ''
+    }));
+
+    setSelectedWordId(null);
     checkForUnlocks();
   };
 
@@ -523,28 +641,31 @@ const GameBoard: React.FC = () => {
                     <WordTile
                       key={word.id}
                       word={word.text}
+                      selected={selectedWordId === word.id}
                       onDragStart={(e) => handleDragStart(e, word)}
-                      onClick={() => handleWordClick(word)}
+                      onClick={() => handleWordTap(word)}
                     />
                   ))}
                   {level.inventory.map((word) => (
                     <WordTile
                       key={word.id}
                       word={word.text}
+                      selected={selectedWordId === word.id}
                       onDragStart={(e) => handleDragStart(e, word)}
-                      onClick={() => handleWordClick(word, true)}
+                      onClick={() => handleWordTap(word)}
                     />
                   ))}
                 </div>
               </div>
-              
+
               {/* Slots grid */}
               <div className="slots-grid">
                 {allSlots.map((slot) => (
-                  <div 
+                  <div
                     key={slot.id}
-                    className={`slot-card ${slot.currentWord && isWordAccepted(slot.currentWord, slot) ? 'correct' : ''} 
-                               ${slot.currentWord && !isWordAccepted(slot.currentWord, slot) ? 'incorrect' : ''}`}
+                    className={`slot-card ${slot.currentWord && isWordAccepted(slot.currentWord, slot) ? 'correct' : ''}
+                               ${slot.currentWord && !isWordAccepted(slot.currentWord, slot) ? 'incorrect' : ''}
+                               ${selectedWordId && slot.currentWord?.id !== selectedWordId ? 'slot-tappable' : ''}`}
                     onDragOver={(e) => {
                       e.preventDefault();
                       const card = e.currentTarget;
@@ -569,14 +690,26 @@ const GameBoard: React.FC = () => {
                       cleanupDragStates();
                       handleDrop(e, slot.id);
                     }}
+                    onClick={() => {
+                      // Only handle slot-level taps when a word is selected and the tap
+                      // target is the slot card itself (not the word tile, which has its
+                      // own onClick to select/deselect/return-to-inventory).
+                      if (selectedWordId) {
+                        handleSlotTap(slot.id);
+                      }
+                    }}
                   >
                     <div className="hint-word">{getHintText(slot.hintId)}</div>
                     <div className="word-container">
                       {slot.currentWord ? (
                         <WordTile
                           word={slot.currentWord.text}
+                          selected={selectedWordId === slot.currentWord.id}
                           onDragStart={(e) => handleDragStart(e, slot.currentWord!)}
-                          onClick={() => handleWordClick(slot.currentWord!, true)}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleWordClick(slot.currentWord!, true);
+                          }}
                         />
                       ) : (
                         <div className="empty-slot-text">Drop word here</div>

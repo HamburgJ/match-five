@@ -23,19 +23,22 @@ const Navbar: React.FC = () => {
           <BootstrapNavbar.Brand as={NavLink} to="/" className="brand-link">
             Match Five
           </BootstrapNavbar.Brand>
-          <Nav className="ms-auto">
-            <Nav.Link as={Button} variant="link" onClick={() => setShowInfoModal(true)}>
-              <FaInfoCircle className="me-2" /> Info
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/levels">
-              <FaList className="me-2" /> Level Select
-            </Nav.Link>
-            {/*
-            <Nav.Link as={Button} variant="link" onClick={() => setShowResetModal(true)}>
-              <FaTrash className="me-2" /> Reset
-            </Nav.Link> */}
+          <BootstrapNavbar.Toggle aria-controls="main-navbar-nav" />
+          <BootstrapNavbar.Collapse id="main-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link as={Button} variant="link" onClick={() => setShowInfoModal(true)}>
+                <FaInfoCircle className="me-2" /> Info
+              </Nav.Link>
+              <Nav.Link as={NavLink} to="/levels">
+                <FaList className="me-2" /> Level Select
+              </Nav.Link>
+              {/*
+              <Nav.Link as={Button} variant="link" onClick={() => setShowResetModal(true)}>
+                <FaTrash className="me-2" /> Reset
+              </Nav.Link> */}
 
-          </Nav>
+            </Nav>
+          </BootstrapNavbar.Collapse>
         </Container>
       </BootstrapNavbar>
 
