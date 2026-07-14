@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState, useMemo, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Row, Col, Modal, Button } from 'react-bootstrap';
@@ -10,6 +10,7 @@ import TutorialOverlay from './TutorialOverlay';
 import gameData from '../data/gameData.json';
 import '../styles/GameBoard.css';
 import WordTile from './WordTile';
+import { logMatchFiveLevelSolved, logMatchFiveRetry, logMatchFiveStart } from '../utils/analytics';
 
 interface SectionWithId extends Section {
   id: string;
@@ -40,6 +41,7 @@ const GameBoard: React.FC = () => {
   const [tutorialStep, setTutorialStep] = useState(0);
   const [showSettings, setShowSettings] = useState(false);
   const [showLevelSelector, setShowLevelSelector] = useState(false);
+  const completionStateRef = useRef<Record<string, boolean>>({});
   // Selected word for tap-to-place (touch-friendly alternative to drag-and-drop)
   const [selectedWordId, setSelectedWordId] = useState<string | null>(null);
   
@@ -205,13 +207,21 @@ const GameBoard: React.FC = () => {
       })
     );
 
-    // Show modal only when current state is complete
+    const wasComplete = completionStateRef.current[levelId];
+    completionStateRef.current[levelId] = Boolean(allSectionsUnlocked && allSectionsCorrect);
+
+    // Only count a solve on the incomplete -> complete transition. Loading a
+    // previously completed level must not manufacture another conversion.
     if (allSectionsUnlocked && allSectionsCorrect) {
       setShowLevelCompleteModal(true);
+      if (wasComplete === false) {
+        const levelNumber = parseInt(levelId.split('_')[1]);
+        logMatchFiveLevelSolved(levelNumber, !nextLevel);
+      }
     } else {
       setShowLevelCompleteModal(false);
     }
-  }, [levelId, level, hints, setShowLevelCompleteModal]);
+  }, [levelId, level, hints, nextLevel, setShowLevelCompleteModal]);
 
   // Modify the next level button handler
   const handleNextLevel = () => {
@@ -241,6 +251,8 @@ const GameBoard: React.FC = () => {
     if (!levelId || !level || sections.length === 0) {
       return;
     }
+
+    logMatchFiveStart('level', levelId);
 
     const wordData = JSON.stringify(word);
     e.dataTransfer.setData('text/plain', wordData);
@@ -436,6 +448,7 @@ const GameBoard: React.FC = () => {
   // - Tap a placed word that ISN'T selected to send it back to inventory (handleWordClick).
   // - Tap a hint slot while a word is selected to place that word into that slot.
   const handleWordTap = (word: Word) => {
+    logMatchFiveStart('level', levelId);
     if (selectedWordId === word.id) {
       setSelectedWordId(null);
       return;
@@ -744,6 +757,7 @@ const GameBoard: React.FC = () => {
             <Button 
               variant="secondary" 
               onClick={() => {
+                logMatchFiveRetry(parseInt(levelId.split('_')[1]));
                 dispatch(resetLevel({ levelId }));
                 setShowLevelCompleteModal(false);
               }}
@@ -768,4 +782,4 @@ const GameBoard: React.FC = () => {
   );
 };
 
-export default GameBoard; 
+export default GameBoard;

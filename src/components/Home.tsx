@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../store/store';
 import FallingWords from './FallingWords';
 import WordTile from './WordTile';
+import { logMatchFiveStart } from '../utils/analytics';
 import '../styles/Home.css';
 
 interface LevelCompletion {
@@ -36,6 +37,7 @@ const Home: React.FC = () => {
 
   const handlePlayClick = () => {
     const lastUnlockedLevelId = findLastUnlockedLevel();
+    logMatchFiveStart('home', lastUnlockedLevelId);
     navigate(`/play/${lastUnlockedLevelId}`);
   };
 
@@ -63,4 +65,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home; 
+export default Home;
