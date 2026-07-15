@@ -1,34 +1,48 @@
 const fs = require('fs');
 const path = require('path');
-const { v4: uuidv4 } = require('uuid');
+const { v5: uuidv5 } = require('uuid');
 
 // Read the raw game data
 const rawGameDataPath = path.join(__dirname, '../src/data/rawGameData.json');
 const outputPath = path.join(__dirname, '../src/data/gameData.json');
 
-function generateGameData() {
-  // Read the raw game data
-  const rawData = JSON.parse(fs.readFileSync(rawGameDataPath, 'utf-8'));
+function stableWordId(levelIndex, sectionIndex, wordIndex, wordText) {
+  return uuidv5(
+    `burgerfun:match-five:word:${levelIndex + 1}:${sectionIndex + 1}:${wordIndex + 1}:${wordText}`,
+    uuidv5.URL
+  );
+}
 
-  // Process the data and add UUIDs
-  const processedData = {
+function processGameData(rawData) {
+  return {
     ...rawData,
-    levels: rawData.levels.map(level => ({
+    levels: rawData.levels.map((level, levelIndex) => ({
       ...level,
-      sections: level.sections.map(section => ({
+      sections: level.sections.map((section, sectionIndex) => ({
         ...section,
-        // Convert string[] to Word[]
-        words: section.words.map(wordText => ({
-          id: uuidv4(),
+        // Stable IDs keep generated data and production asset hashes reproducible.
+        words: section.words.map((wordText, wordIndex) => ({
+          id: stableWordId(levelIndex, sectionIndex, wordIndex, wordText),
           text: wordText
         }))
       }))
     }))
   };
+}
+
+function generateGameData() {
+  // Read the raw game data
+  const rawData = JSON.parse(fs.readFileSync(rawGameDataPath, 'utf-8'));
+  const processedData = processGameData(rawData);
 
   // Write the processed data
   fs.writeFileSync(outputPath, JSON.stringify(processedData, null, 2));
-  console.log('Generated game data with UUIDs at:', outputPath);
+  console.log('Generated game data with stable UUIDs at:', outputPath);
+  return processedData;
 }
 
-generateGameData(); 
+if (require.main === module) {
+  generateGameData();
+}
+
+module.exports = { generateGameData, processGameData, stableWordId };
