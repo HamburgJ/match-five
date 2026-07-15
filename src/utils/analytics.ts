@@ -31,6 +31,11 @@ export const initGA = () => {
     ReactGA.initialize(GA_ID, {
       gaOptions: {
         debug_mode: !isProduction
+      },
+      gtagOptions: {
+        // ReactGA.send below owns the initial page view. Without this, the
+        // config call and the explicit send both record the same visit.
+        send_page_view: false
       }
     });
     // Send initial pageview

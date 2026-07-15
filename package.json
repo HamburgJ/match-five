@@ -35,7 +35,8 @@
     "eject": "react-scripts eject",
     "generate-game-data": "node scripts/generateGameData.js",
     "test:data": "node scripts/generateGameData.test.js",
-    "postinstall": "npm run test:data"
+    "test:analytics": "node scripts/validateAnalytics.test.js",
+    "postinstall": "npm run test:data && npm run test:analytics"
   },
   "eslintConfig": {
     "extends": [
