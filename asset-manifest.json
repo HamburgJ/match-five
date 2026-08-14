@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/match-five/static/css/main.38d0e86e.css",
-    "main.js": "/match-five/static/js/main.e2d3310d.js",
+    "main.css": "/match-five/static/css/main.954494d1.css",
+    "main.js": "/match-five/static/js/main.01d70e1e.js",
     "static/js/206.6a600b1a.chunk.js": "/match-five/static/js/206.6a600b1a.chunk.js",
     "index.html": "/match-five/index.html"
   },
   "entrypoints": [
-    "static/css/main.38d0e86e.css",
-    "static/js/main.e2d3310d.js"
+    "static/css/main.954494d1.css",
+    "static/js/main.01d70e1e.js"
   ]
 }
