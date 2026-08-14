@@ -68,6 +68,22 @@ assert.equal(enabled.calls.send.length, 1, 'analytics must send one explicit ini
 assert.equal(enabled.calls.send[0][0].hitType, 'pageview');
 assert.equal(enabled.calls.event.length, 0, 'initialization must not emit a game event');
 
+enabled.analytics.logMatchFiveShare('copy');
+enabled.analytics.logMatchFiveShare('web_share');
+enabled.analytics.logMatchFiveCrossClick('/word-games/');
+// JSON round-trip: event params are created inside the vm sandbox, so their
+// prototypes differ from this realm's and strict deep-equality would fail on
+// otherwise identical objects.
+assert.deepEqual(
+  JSON.parse(JSON.stringify(enabled.calls.event)),
+  [
+    ['share', { game: 'match_five', method: 'copy' }],
+    ['share', { game: 'match_five', method: 'web_share' }],
+    ['cross_game_click', { game: 'match_five', dest: '/word-games/' }],
+  ],
+  'share and cross-game events must match the parent site taxonomy (game slug + method/dest params)'
+);
+
 const disabled = loadAnalytics();
 disabled.analytics.initGA();
 disabled.analytics.logPageView('/other/');
@@ -75,6 +91,8 @@ disabled.analytics.logGameEvent('test');
 disabled.analytics.logMatchFiveStart('home');
 disabled.analytics.logMatchFiveLevelSolved(1, true);
 disabled.analytics.logMatchFiveRetry(1);
+disabled.analytics.logMatchFiveShare('copy');
+disabled.analytics.logMatchFiveCrossClick('/word-games/');
 
 assert.deepEqual(
   Object.fromEntries(Object.entries(disabled.calls).map(([name, calls]) => [name, calls.length])),

@@ -38,14 +38,48 @@
       ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Match Five",
+      "genre": "Word Puzzle",
+      "description": "Play Match Five, a free word association game: fit five words to five clues, then find the one arrangement where every match works. No download or sign up.",
+      "url": "https://burgerfun.ca/match-five/",
+      "image": "https://burgerfun.ca/generated/og/cards/match-five.png",
+      "gamePlatform": ["Web Browser", "Mobile Browser", "Desktop Browser"],
+      "applicationCategory": "GameApplication",
+      "operatingSystem": ["Windows", "MacOS", "Linux", "Android", "iOS"],
+      "isAccessibleForFree": true,
+      "isFamilyFriendly": true,
+      "publisher": {
+        "@type": "Organization",
+        "name": "burger fun",
+        "logo": {"@type": "ImageObject", "url": "https://burgerfun.ca/favicon.svg"}
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
-      <!-- Crawlable prerender body: shown to the HTML-only crawl pass, cleared by
-           React createRoot() on mount so players never see it (mirrors burgerfun's
-           #bf-prerender shell convention for submodule-served pages). -->
-      <div id="bf-prerender" style="display:none">
+      <!-- Delayed-reveal prerender body (mirrors burgerfun's renderCrawlerShell
+           convention): the baked copy exists in the HTML source so crawlers get
+           the links + content on the JS-free pass, and it is REAL user-visible
+           content — after 300ms it fades in for anyone whose React bundle hasn't
+           mounted yet (slow connections, JS disabled, bots). On a normal load
+           React's createRoot() wipes #root before the delay elapses, so players
+           never see a flash. This replaces the old permanent display:none
+           treatment, which served rich copy to crawlers that no human could ever
+           see — the classic hidden-text pattern Google's guidelines warn about. -->
+      <style>@keyframes bf-prerender-reveal{to{opacity:1}}</style>
+      <div id="bf-prerender" style="opacity:0;animation:bf-prerender-reveal 120ms ease 300ms forwards">
         <h1>Match Five</h1>
         <p>Match Five is a word puzzle. You get five words and five clues at a time, and the catch is that every word honestly fits more than one clue. The answer is the single arrangement where all five words land on a clue at once.</p>
         <h2>How to play</h2>
@@ -62,6 +96,8 @@
         <p>Yes. It plays in your browser with no download, no account, and no payment.</p>
         <h3>How do I win a level?</h3>
         <p>Match all five words to the correct clues at the same time. Because each word fits several clues, you usually have to revise earlier guesses before every slot is right.</p>
+        <h2>More word games</h2>
+        <p>Match Five is part of <a href="/">burger fun</a>, a collection of free browser games. If five words at a time is your speed, the <a href="/word-games/">word games shelf</a> has the rest — and the <a href="/weird-browser-games/">weird directory</a> has everything else.</p>
       </div>
     </div>
   </body>

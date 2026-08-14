@@ -101,3 +101,16 @@ export const logMatchFiveLevelSolved = (level: number, isFinalLevel: boolean) =>
 export const logMatchFiveRetry = (level: number) => {
   logStandardEvent('retry', { level });
 };
+
+// Matches the parent site's logShare taxonomy (event 'share' with a `method`
+// param). Call sites only fire this on a successful copy or a completed native
+// share — a dismissed share sheet logs nothing.
+export const logMatchFiveShare = (method: 'copy' | 'web_share') => {
+  logStandardEvent('share', { method });
+};
+
+// Matches the parent site's cross_game_click taxonomy: fired when a player
+// follows a link out of the game back into the burgerfun portfolio.
+export const logMatchFiveCrossClick = (dest: string) => {
+  logStandardEvent('cross_game_click', { dest });
+};

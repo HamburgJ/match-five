@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../store/store';
 import FallingWords from './FallingWords';
 import WordTile from './WordTile';
-import { logMatchFiveStart } from '../utils/analytics';
+import { logMatchFiveCrossClick, logMatchFiveStart } from '../utils/analytics';
 import '../styles/Home.css';
 
 interface LevelCompletion {
@@ -53,13 +53,24 @@ const Home: React.FC = () => {
         </div>
         
         <div className="cta-buttons">
-          <button 
+          <button
             className="play-button"
             onClick={handlePlayClick}
           >
             Play Now
           </button>
         </div>
+
+        {/* Plain same-origin link on purpose: it exits the CRA app back into
+            the parent site (HashRouter never sees it). */}
+        <p className="home-footer-link">
+          <a
+            href="/word-games/"
+            onClick={() => logMatchFiveCrossClick('/word-games/')}
+          >
+            more word games at burgerfun.ca
+          </a>
+        </p>
       </div>
     </div>
   );
