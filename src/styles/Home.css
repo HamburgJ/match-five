@@ -164,3 +164,18 @@
   animation: fall linear infinite;
   pointer-events: none;
 } 
+/* Quiet route back into the parent site */
+.home-footer-link {
+  margin: 1.75rem 0 0;
+  font-size: 0.9rem;
+}
+
+.home-footer-link a {
+  color: #666;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.home-footer-link a:hover {
+  color: #1a237e;
+}

@@ -10,7 +10,8 @@ import TutorialOverlay from './TutorialOverlay';
 import gameData from '../data/gameData.json';
 import '../styles/GameBoard.css';
 import WordTile from './WordTile';
-import { logMatchFiveLevelSolved, logMatchFiveRetry, logMatchFiveStart } from '../utils/analytics';
+import { logMatchFiveLevelSolved, logMatchFiveRetry, logMatchFiveShare, logMatchFiveStart } from '../utils/analytics';
+import { canWebShare, webShareText } from '../utils/webShare';
 
 interface SectionWithId extends Section {
   id: string;
@@ -194,6 +195,44 @@ const GameBoard: React.FC = () => {
     return currentLevelNum < levels.length ? levels[currentLevelNum] : undefined;
   });
 
+  const totalLevels = useSelector((state: RootState) => state.game.levels.length);
+
+  // Share result: 'idle' until a copy attempt, then feedback text under the buttons.
+  const [shareStatus, setShareStatus] = useState<'idle' | 'copied' | 'copy_failed'>('idle');
+
+  useEffect(() => {
+    setShareStatus('idle');
+  }, [levelId]);
+
+  // The all-levels-complete variant fires when there is no next level — the
+  // same condition that makes logMatchFiveLevelSolved fire game_complete.
+  const shareText = nextLevel
+    ? `Match Five — level ${parseInt(levelId.split('_')[1])} of ${totalLevels} cleared\nPlay free: https://burgerfun.ca/match-five/`
+    : `Match Five — all ${totalLevels} levels cleared\nPlay free: https://burgerfun.ca/match-five/`;
+
+  const handleCopyShare = async () => {
+    try {
+      await navigator.clipboard.writeText(shareText);
+      setShareStatus('copied');
+      // Only a successful copy counts as a share.
+      logMatchFiveShare('copy');
+    } catch {
+      setShareStatus('copy_failed');
+    }
+  };
+
+  // Native share sheet where the platform has one; the copy button stays for
+  // everyone. A dismissed sheet is not a share — only 'shared' logs, and
+  // 'failed' falls back to the clipboard path.
+  const handleNativeShare = async () => {
+    const outcome = await webShareText(shareText);
+    if (outcome === 'shared') {
+      logMatchFiveShare('web_share');
+    } else if (outcome === 'failed') {
+      await handleCopyShare();
+    }
+  };
+
   // Watch for level completion
   useEffect(() => {
     if (!levelId || !level) return;
@@ -217,6 +256,7 @@ const GameBoard: React.FC = () => {
       if (wasComplete === false) {
         const levelNumber = parseInt(levelId.split('_')[1]);
         logMatchFiveLevelSolved(levelNumber, !nextLevel);
+        setShareStatus('idle');
       }
     } else {
       setShowLevelCompleteModal(false);
@@ -738,7 +778,7 @@ const GameBoard: React.FC = () => {
         <Modal show={showLevelCompleteModal} onHide={() => setShowLevelCompleteModal(false)} centered backdrop="static" keyboard={false}>
           <Modal.Header>
             <Modal.Title>
-              {nextLevel ? 'Level Complete!' : 'Congratulations! 🎉'}
+              {nextLevel ? 'Level Complete!' : 'Congratulations!'}
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -751,6 +791,24 @@ const GameBoard: React.FC = () => {
             </div>
             <div className="level-complete-submessage">
               {!nextLevel && 'More levels coming soon! Stay tuned for new challenges.'}
+            </div>
+            <div className="level-complete-share">
+              <pre className="level-complete-share-text">{shareText}</pre>
+              <div className="level-complete-share-buttons">
+                {canWebShare() && (
+                  <Button variant="outline-primary" size="sm" onClick={handleNativeShare}>
+                    Share
+                  </Button>
+                )}
+                <Button variant="outline-primary" size="sm" onClick={handleCopyShare}>
+                  Copy result
+                </Button>
+              </div>
+              {shareStatus !== 'idle' && (
+                <div className="level-complete-share-status" role="status">
+                  {shareStatus === 'copied' ? 'Copied to clipboard.' : 'Copy failed — select the text above and copy it manually.'}
+                </div>
+              )}
             </div>
           </Modal.Body>
           <Modal.Footer>

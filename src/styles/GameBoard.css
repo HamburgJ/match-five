@@ -57,3 +57,34 @@
     padding: 0.5rem;
   }
 } 
+/* Level-complete share block */
+.level-complete-share {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.level-complete-share-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  color: #424242;
+  background: #f5f7fa;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  user-select: all;
+}
+
+.level-complete-share-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.level-complete-share-status {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #666;
+}
