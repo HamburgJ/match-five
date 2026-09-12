@@ -84,20 +84,21 @@ assert.deepEqual(
   'share and cross-game events must match the parent site taxonomy (game slug + method/dest params)'
 );
 
-const disabled = loadAnalytics();
-disabled.analytics.initGA();
-disabled.analytics.logPageView('/other/');
-disabled.analytics.logGameEvent('test');
-disabled.analytics.logMatchFiveStart('home');
-disabled.analytics.logMatchFiveLevelSolved(1, true);
-disabled.analytics.logMatchFiveRetry(1);
-disabled.analytics.logMatchFiveShare('copy');
-disabled.analytics.logMatchFiveCrossClick('/word-games/');
+// A build with no measurement id in the environment must NOT ship dark: the
+// module falls back to burgerfun.ca's public GA4 id. Match Five, This Game,
+// Tiny Worlds and ME3 reported nothing from 2026-09-03 to 2026-09-11 because
+// the Pages build had no env var and the old code went inert.
+const fallback = loadAnalytics();
+fallback.analytics.initGA();
+fallback.analytics.logMatchFiveStart('home');
 
-assert.deepEqual(
-  Object.fromEntries(Object.entries(disabled.calls).map(([name, calls]) => [name, calls.length])),
-  { event: 0, initialize: 0, send: 0 },
-  'analytics must remain inert when no measurement ID is configured'
+assert.equal(fallback.calls.initialize.length, 1, 'a build with no env var must still initialize analytics');
+assert.equal(
+  fallback.calls.initialize[0][0],
+  'G-3ZP8KNH2V1',
+  'a build with no env var must fall back to the public burgerfun.ca measurement id'
 );
+assert.equal(fallback.calls.send.length, 1, 'the fallback build must send its initial page view');
+assert.equal(fallback.calls.event.length, 1, 'the fallback build must emit game events');
 
-console.log('Verified one environment-gated Match Five page view and no duplicate bootstrap.');
+console.log('Verified one Match Five page view, no duplicate bootstrap, and the no-env-var fallback id.');
