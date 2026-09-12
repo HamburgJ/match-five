@@ -1,6 +1,11 @@
 import ReactGA from 'react-ga4';
 
-const GA_ID = process.env.REACT_APP_GA_ID || process.env.VITE_GA_ID || process.env.CF_GA_ID;
+// Create React App only inlines REACT_APP_* at build time; the other names are
+// kept for builds that export them. The literal is burgerfun.ca's public GA4
+// measurement id — the fallback so a build with no env var still reports
+// instead of shipping dark (what happened from 2026-09-03 to 2026-09-11).
+const GA_ID =
+  process.env.REACT_APP_GA_ID || process.env.VITE_GA_ID || process.env.CF_GA_ID || 'G-3ZP8KNH2V1';
 const isProduction = process.env.NODE_ENV === 'production';
 const gameSlug = 'match_five';
 let gameStarted = false;
