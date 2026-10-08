@@ -387,13 +387,16 @@ body {
   font-weight: 500;
 }
 
-/* Modal styles */
+/* Modal styles. Dialogs open under the fixed navbar, which carries the
+   burger fun logo on burgerfun.ca, so the logo stays visible and clickable. */
 .modal {
-  z-index: 10000;
+  z-index: 9991;
+  top: var(--navbar-height);
+  height: calc(100% - var(--navbar-height));
 }
 
 .modal-backdrop {
-  z-index: 9999;
+  z-index: 9990;
 }
 
 .modal-content {
@@ -510,7 +513,7 @@ body {
   margin-top: calc(-1 * var(--navbar-height)); /* Offset the body padding */
 }
 
-/* Tutorial overlay styles */
+/* Tutorial overlay styles. Below the navbar, like the modals. */
 .tutorial-overlay {
   position: fixed;
   top: 0;
@@ -518,7 +521,7 @@ body {
   right: 0;
   bottom: 0;
   background: none;
-  z-index: 10000;
+  z-index: 9995;
   pointer-events: none;
 }
 
@@ -530,7 +533,7 @@ body {
   position: fixed;
   border-radius: 8px;
   box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
-  z-index: 10000;
+  z-index: 9995;
   pointer-events: none;
   transition: all 0.3s ease;
 }

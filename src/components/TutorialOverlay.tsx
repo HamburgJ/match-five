@@ -67,6 +67,9 @@ const TutorialOverlay: React.FC<TutorialOverlayProps> = ({
 
           const viewportWidth = window.innerWidth;
           const viewportHeight = window.innerHeight;
+          // The fixed navbar stays above the tutorial; keep the message below it.
+          const navbarBottom = document.querySelector('.custom-navbar')?.getBoundingClientRect().bottom ?? 0;
+          const topLimit = navbarBottom + viewportPadding;
 
           if (left < viewportPadding) {
             left = viewportPadding;
@@ -74,8 +77,8 @@ const TutorialOverlay: React.FC<TutorialOverlayProps> = ({
             left = viewportWidth - messageWidth - viewportPadding;
           }
 
-          if (top < viewportPadding) {
-            top = viewportPadding;
+          if (top < topLimit) {
+            top = topLimit;
           } else if (top + messageHeight > viewportHeight - viewportPadding) {
             top = viewportHeight - messageHeight - viewportPadding;
           }
