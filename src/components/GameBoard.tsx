@@ -12,6 +12,7 @@ import '../styles/GameBoard.css';
 import WordTile from './WordTile';
 import { logMatchFiveLevelSolved, logMatchFiveRetry, logMatchFiveShare, logMatchFiveStart } from '../utils/analytics';
 import { canWebShare, webShareText } from '../utils/webShare';
+import { prefersReducedMotion } from '../utils/motion';
 
 interface SectionWithId extends Section {
   id: string;
@@ -775,7 +776,7 @@ const GameBoard: React.FC = () => {
           </Col>
         </Row>
 
-        <Modal show={showLevelCompleteModal} onHide={() => setShowLevelCompleteModal(false)} centered backdrop="static" keyboard={false}>
+        <Modal show={showLevelCompleteModal} onHide={() => setShowLevelCompleteModal(false)} centered backdrop="static" keyboard={false} animation={!prefersReducedMotion()}>
           <Modal.Header>
             <Modal.Title>
               {nextLevel ? 'Level Complete!' : 'Congratulations!'}

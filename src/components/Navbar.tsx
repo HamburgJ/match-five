@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Navbar as BootstrapNavbar, Container, Button, Modal, Nav } from 'react-bootstrap';
 import { FaInfoCircle, FaTrash, FaList } from 'react-icons/fa';
 import WordTile from './WordTile';
+import { prefersReducedMotion } from '../utils/motion';
 import '../styles/Navbar.css';
 
 const Navbar: React.FC = () => {
@@ -42,7 +43,7 @@ const Navbar: React.FC = () => {
         </Container>
       </BootstrapNavbar>
 
-      <Modal show={showInfoModal} onHide={() => setShowInfoModal(false)} size="lg">
+      <Modal show={showInfoModal} onHide={() => setShowInfoModal(false)} size="lg" animation={!prefersReducedMotion()}>
         <Modal.Header closeButton>
           <Modal.Title>How to Play</Modal.Title>
         </Modal.Header>
@@ -88,7 +89,7 @@ const Navbar: React.FC = () => {
         </Modal.Footer>
       </Modal>
 
-      <Modal show={showResetModal} onHide={() => setShowResetModal(false)}>
+      <Modal show={showResetModal} onHide={() => setShowResetModal(false)} animation={!prefersReducedMotion()}>
         <Modal.Header closeButton>
           <Modal.Title>Reset Game Progress</Modal.Title>
         </Modal.Header>
