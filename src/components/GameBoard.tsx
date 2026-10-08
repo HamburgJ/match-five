@@ -238,6 +238,9 @@ const GameBoard: React.FC = () => {
     }
   };
 
+  // Leaving the board any other way (the browser's Back) ends a pause too.
+  useEffect(() => () => announceResume(), []);
+
   // Watch for level completion
   useEffect(() => {
     if (!levelId || !level) return;
@@ -258,10 +261,12 @@ const GameBoard: React.FC = () => {
     // previously completed level must not manufacture another conversion.
     if (allSectionsUnlocked && allSectionsCorrect) {
       setShowLevelCompleteModal(true);
+      // The completion modal is a pause point every time it opens, including on
+      // a level that was already solved when it loaded (Next Level through saved levels).
+      if (wasComplete !== true) announcePause(nextLevel ? 'level-complete' : 'game-complete');
       if (wasComplete === false) {
         const levelNumber = parseInt(levelId.split('_')[1]);
         logMatchFiveLevelSolved(levelNumber, !nextLevel);
-        announcePause(nextLevel ? 'level-complete' : 'game-complete');
         setShareStatus('idle');
       }
     } else {
@@ -827,7 +832,13 @@ const GameBoard: React.FC = () => {
             >
               Play Again
             </Button>
-            <Button variant="secondary" onClick={() => navigate('/levels')}>
+            <Button
+              variant="secondary"
+              onClick={() => {
+                announceResume();
+                navigate('/levels');
+              }}
+            >
               Level Select
             </Button>
             {nextLevel && (
