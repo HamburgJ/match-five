@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/match-five/static/css/main.155ede5d.css",
+    "main.js": "/match-five/static/js/main.f47ec75f.js",
+    "static/js/206.6a600b1a.chunk.js": "/match-five/static/js/206.6a600b1a.chunk.js",
+    "index.html": "/match-five/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.155ede5d.css",
+    "static/js/main.f47ec75f.js"
+  ]
+}
