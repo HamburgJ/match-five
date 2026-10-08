@@ -12,6 +12,7 @@ import '../styles/GameBoard.css';
 import WordTile from './WordTile';
 import { logMatchFiveLevelSolved, logMatchFiveRetry, logMatchFiveShare, logMatchFiveStart } from '../utils/analytics';
 import { canWebShare, webShareText } from '../utils/webShare';
+import { announcePause, announceResume } from '../utils/nextUp';
 import { prefersReducedMotion } from '../utils/motion';
 
 interface SectionWithId extends Section {
@@ -257,6 +258,7 @@ const GameBoard: React.FC = () => {
       if (wasComplete === false) {
         const levelNumber = parseInt(levelId.split('_')[1]);
         logMatchFiveLevelSolved(levelNumber, !nextLevel);
+        announcePause(nextLevel ? 'level-complete' : 'game-complete');
         setShareStatus('idle');
       }
     } else {
@@ -285,6 +287,7 @@ const GameBoard: React.FC = () => {
     }
     
     setShowLevelCompleteModal(false);
+    announceResume();
     navigate(`/play/${nextLevelId}`);
   };
 
@@ -819,6 +822,7 @@ const GameBoard: React.FC = () => {
                 logMatchFiveRetry(parseInt(levelId.split('_')[1]));
                 dispatch(resetLevel({ levelId }));
                 setShowLevelCompleteModal(false);
+                announceResume();
               }}
             >
               Play Again
@@ -835,6 +839,11 @@ const GameBoard: React.FC = () => {
               </Button>
             )}
           </Modal.Footer>
+          {/* burgerfun.ca's "Next up" row, after every control above. Empty and
+              zero-size until the site's runtime fills it; inert elsewhere. */}
+          <div className="level-complete-next">
+            <burger-next-cards kind={nextLevel ? 'level-complete' : 'game-complete'} game="match-five" />
+          </div>
         </Modal>
       </div>
     </div>

@@ -88,3 +88,14 @@
   font-size: 0.85rem;
   color: #666;
 }
+
+/* burgerfun.ca's "Next up" row under the dialog's own buttons. The slot has
+   no box until the site fills it, so the wrapper takes no height until then. */
+.level-complete-next {
+  margin: 0 1.5rem;
+}
+
+.level-complete-next:has(> burger-next-cards[shown]) {
+  border-top: 1px solid #e0e0e0;
+  padding-bottom: 1.5rem;
+}
