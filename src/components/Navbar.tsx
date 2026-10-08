@@ -13,10 +13,13 @@ import '../styles/Navbar.css';
 
 const Navbar: React.FC = () => {
   const [showInfoModal, setShowInfoModal] = useState(false);
+  // Controlled so a choice closes the phone menu: left open, its links sat over the
+  // dialog's header (Level Select over Info's close button).
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <>
-      <BootstrapNavbar fixed="top" bg="light" expand="lg" className="custom-navbar">
+      <BootstrapNavbar fixed="top" bg="light" expand="lg" className="custom-navbar" expanded={expanded} onToggle={setExpanded}>
         <Container>
           <BootstrapNavbar.Brand as={NavLink} to="/" className="brand-link">
             Match Five
@@ -24,10 +27,10 @@ const Navbar: React.FC = () => {
           <BootstrapNavbar.Toggle aria-controls="main-navbar-nav" />
           <BootstrapNavbar.Collapse id="main-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link as={Button} variant="link" onClick={() => setShowInfoModal(true)}>
+              <Nav.Link as={Button} variant="link" onClick={() => { setExpanded(false); setShowInfoModal(true); }}>
                 <FaInfoCircle className="me-2" /> Info
               </Nav.Link>
-              <Nav.Link as={NavLink} to="/levels">
+              <Nav.Link as={NavLink} to="/levels" onClick={() => setExpanded(false)}>
                 <FaList className="me-2" /> Level Select
               </Nav.Link>
             </Nav>
