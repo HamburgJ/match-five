@@ -27,17 +27,6 @@
   padding: 0.5rem;
 }
 
-.hint-word {
-  font-size: 2rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: #424242;
-}
-
-.word-tile {
-  /* ... existing styles ... */
-}
-
 .word-tile.dragging {
   opacity: 0.5;
   cursor: grabbing;
@@ -56,7 +45,24 @@
   .level-content {
     padding: 0.5rem;
   }
-} 
+}
+
+/* Phones: give the five slot columns every pixel the card can spare. */
+@media (max-width: 480px) {
+  /* .game-board's own phone padding is set in App.css, which loads later. */
+  .game-board-container {
+    padding: 0.5rem;
+  }
+
+  .game-board {
+    border-radius: 16px;
+  }
+
+  .level-content {
+    padding: 0;
+  }
+}
+
 /* Level-complete share block */
 .level-complete-share {
   margin-top: 1rem;

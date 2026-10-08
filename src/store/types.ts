@@ -5,7 +5,8 @@ export interface Word {
 
 export interface Hint {
   accepts: string[];
-  emojis?: { [word: string]: string };
+  /** The list was generated from the clue's rule (scripts/clueRules.js). */
+  computed?: boolean;
 }
 
 export interface HintDictionary {
@@ -87,9 +88,6 @@ export interface RawGameData {
     }[];
   }[];
   hints: HintDictionary;
-  wordEmojis: {
-    [key: string]: string;
-  };
 }
 
 export interface GameProgress {

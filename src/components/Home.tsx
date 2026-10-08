@@ -48,7 +48,7 @@ const Home: React.FC = () => {
         <h1 className="title">Match Five</h1>
         <div className="subtitle">
           <p className="word-line">
-            A <WordTile word="Puzzle Game" disableHover className="home-word-tile" /> where you match <WordTile word="Five" disableHover className="home-word-tile" /> words to their hints. When all your <WordTile word="Answers" disableHover className="home-word-tile" /> are <WordTile word="Right" disableHover className="home-word-tile" />, more words are revealed. Is your <WordTile word="Brain" disableHover className="home-word-tile" /> feeling <WordTile word="Smart" disableHover className="home-word-tile" /> today?
+            A <WordTile word="Puzzle Game" disableHover className="home-word-tile" /> where you match <WordTile word="Five" disableHover className="home-word-tile" /> words to their headings. When all your <WordTile word="Answers" disableHover className="home-word-tile" /> are <WordTile word="Right" disableHover className="home-word-tile" />, more words are revealed. Is your <WordTile word="Brain" disableHover className="home-word-tile" /> feeling <WordTile word="Smart" disableHover className="home-word-tile" /> today?
           </p>
         </div>
         

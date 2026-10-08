@@ -10,10 +10,30 @@ const isProduction = process.env.NODE_ENV === 'production';
 const gameSlug = 'match_five';
 let gameStarted = false;
 
+// GA starts only on the production site, and never under automation, so local
+// dev, preview deploys, any copy on another host (the old GitHub Pages site)
+// and Playwright runs stay out of burgerfun.ca's GA4 property. The id is
+// hard-coded above, so without this guard every build anywhere reports.
+const PRODUCTION_HOSTNAME = 'burgerfun.ca';
+let analyticsStarted = false;
+
+const isProductionVisit = (): boolean => {
+  try {
+    if (typeof window === 'undefined' || window.location.hostname !== PRODUCTION_HOSTNAME) return false;
+    if (typeof navigator !== 'undefined' && navigator.webdriver) return false;
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+/** True once initGA has started GA on burgerfun.ca; every logger is a no-op until then. */
+export const isAnalyticsActive = () => analyticsStarted;
+
 type EventParams = Record<string, string | number | boolean | undefined>;
 
 const logStandardEvent = (eventName: string, params: EventParams = {}) => {
-  if (!GA_ID) return;
+  if (!analyticsStarted) return;
 
   try {
     ReactGA.event(eventName, { game: gameSlug, ...params });
@@ -25,9 +45,16 @@ const logStandardEvent = (eventName: string, params: EventParams = {}) => {
 };
 
 export const initGA = () => {
+  if (analyticsStarted) return;
   if (!GA_ID) {
     if (!isProduction) {
       console.log('Analytics disabled: No measurement ID available');
+    }
+    return;
+  }
+  if (!isProductionVisit()) {
+    if (!isProduction) {
+      console.log(`Analytics off: only ${PRODUCTION_HOSTNAME}, and never under automation`);
     }
     return;
   }
@@ -43,6 +70,7 @@ export const initGA = () => {
         send_page_view: false
       }
     });
+    analyticsStarted = true;
     // Send initial pageview
     ReactGA.send({
       hitType: "pageview",
@@ -57,7 +85,7 @@ export const initGA = () => {
 };
 
 export const logPageView = (page: string) => {
-  if (!GA_ID) return;
+  if (!analyticsStarted) return;
 
   try {
     ReactGA.send({
@@ -73,7 +101,7 @@ export const logPageView = (page: string) => {
 };
 
 export const logGameEvent = (action: string, label?: string, value?: number) => {
-  if (!GA_ID) return;
+  if (!analyticsStarted) return;
 
   try {
     ReactGA.event({

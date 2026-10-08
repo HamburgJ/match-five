@@ -7,13 +7,13 @@ import { placeWord, setCurrentSection, saveSolution, completeTutorial, checkSect
 import { Word, Slot, Section, Hint, HintDictionary, GameProgress } from '../store/types';
 import { GAME_PROGRESS_KEY, DEVELOPER_MODE } from '../constants/storage';
 import TutorialOverlay from './TutorialOverlay';
-import gameData from '../data/gameData.json';
 import '../styles/GameBoard.css';
 import WordTile from './WordTile';
 import { logMatchFiveLevelSolved, logMatchFiveRetry, logMatchFiveShare, logMatchFiveStart } from '../utils/analytics';
 import { canWebShare, webShareText } from '../utils/webShare';
 import { announcePause, announceResume } from '../utils/nextUp';
 import { prefersReducedMotion } from '../utils/motion';
+import { fitStyle, useWebFontsMeasured, widestWordEm } from '../utils/fitText';
 
 interface SectionWithId extends Section {
   id: string;
@@ -56,6 +56,9 @@ const GameBoard: React.FC = () => {
   const tutorials = useSelector((state: RootState) => state.game.tutorials);
   const levelProgress = useSelector((state: RootState) => state.game.levelProgress);
 
+  // Slot words and headings are sized to their columns once the fonts load.
+  useWebFontsMeasured();
+
   // Track if level has been initialized
   const [isInitialized, setIsInitialized] = useState(false);
 
@@ -80,12 +83,12 @@ const GameBoard: React.FC = () => {
   const tutorialSteps: TutorialStep[] = [
     {
       targetSelector: '.available-words-section',
-      message: 'Welcome to Match Five! These are your available words and inventory. Click or drag them to fill the slots below.',
+      message: 'These are your words. Tap one, then tap the heading it belongs under. Dragging works too.',
       position: 'bottom'
     },
     {
       targetSelector: '.slots-grid',
-      message: 'Drop words into these slots. Each slot accepts specific words based on its hint.',
+      message: 'A slot turns green when its word fits the heading above it and red when it does not.',
       position: 'bottom'
     }
   ];
@@ -94,12 +97,12 @@ const GameBoard: React.FC = () => {
   const sectionTutorialSteps: TutorialStep[] = [
     {
       targetSelector: '.available-words-section',
-      message: 'New words are now available! You can use these new words along with your existing words.',
+      message: 'Five more words, and five more headings below.',
       position: 'bottom'
     },
     {
       targetSelector: '.slots-grid',
-      message: 'With more slots unlocked, you have more possible combinations! Try moving words between different slots to find new solutions. Be careful, some words have multiple possible matches!',
+      message: 'A new word may only fit a slot you already filled. Move words around until every slot is green.',
       position: 'bottom'
     }
   ];
@@ -108,7 +111,7 @@ const GameBoard: React.FC = () => {
   const hintTutorialSteps: TutorialStep[] = [
     {
       targetSelector: '.slots-grid',
-      message: 'Remember that each slot can accept multiple different words! Think creatively about different ways words could fit the hint. Sometimes the first word that comes to mind isn\'t the right one.',
+      message: 'A red slot holds a word that does not fit its heading. Many words fit more than one heading, so try it somewhere else.',
       position: 'top'
     }
   ];
@@ -209,8 +212,8 @@ const GameBoard: React.FC = () => {
   // The all-levels-complete variant fires when there is no next level — the
   // same condition that makes logMatchFiveLevelSolved fire game_complete.
   const shareText = nextLevel
-    ? `Match Five — level ${parseInt(levelId.split('_')[1])} of ${totalLevels} cleared\nPlay free: https://burgerfun.ca/match-five/`
-    : `Match Five — all ${totalLevels} levels cleared\nPlay free: https://burgerfun.ca/match-five/`;
+    ? `Match Five: level ${parseInt(levelId.split('_')[1])} of ${totalLevels} cleared\nPlay free: https://burgerfun.ca/match-five/`
+    : `Match Five: all ${totalLevels} levels cleared\nPlay free: https://burgerfun.ca/match-five/`;
 
   const handleCopyShare = async () => {
     try {
@@ -631,10 +634,6 @@ const GameBoard: React.FC = () => {
     });
   };
 
-  const getWordEmoji = (word: Word): string | null => {
-    return gameData.wordEmojis[word.text] || null;
-  };
-
   if (!level || sections.length === 0) return null;
 
   return (
@@ -756,11 +755,12 @@ const GameBoard: React.FC = () => {
                       }
                     }}
                   >
-                    <div className="hint-word">{getHintText(slot.hintId)}</div>
+                    <div className="hint-word" style={fitStyle(widestWordEm(getHintText(slot.hintId), 'heading'))}>{getHintText(slot.hintId)}</div>
                     <div className="word-container">
                       {slot.currentWord ? (
                         <WordTile
                           word={slot.currentWord.text}
+                          fit
                           selected={selectedWordId === slot.currentWord.id}
                           onDragStart={(e) => handleDragStart(e, slot.currentWord!)}
                           onClick={(e) => {
@@ -769,7 +769,7 @@ const GameBoard: React.FC = () => {
                           }}
                         />
                       ) : (
-                        <div className="empty-slot-text">Drop word here</div>
+                        <div className="empty-slot-well" aria-hidden="true" />
                       )}
                     </div>
                   </div>
@@ -810,7 +810,7 @@ const GameBoard: React.FC = () => {
               </div>
               {shareStatus !== 'idle' && (
                 <div className="level-complete-share-status" role="status">
-                  {shareStatus === 'copied' ? 'Copied to clipboard.' : 'Copy failed — select the text above and copy it manually.'}
+                  {shareStatus === 'copied' ? 'Copied to clipboard.' : 'Copy failed. Select the text above and copy it.'}
                 </div>
               )}
             </div>

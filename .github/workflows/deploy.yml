@@ -1,39 +1,35 @@
 name: Deploy to GitHub Pages
 
+# GitHub Pages serves only a redirect to https://burgerfun.ca/match-five/, the
+# canonical home of Match Five, as Four Nines' repo does. The playable game is
+# built by the burgerfun site, which vendors this repo as a submodule, so
+# nothing about that build changes here. Publishing the build to Pages put the
+# full game on a second host, and would publish the daily's code and boards
+# before burgerfun serves them.
+#
+# This repo's Pages site deploys from the gh-pages branch, so the redirect
+# pages (pages-redirect/index.html, and 404.html for every other old URL) are
+# published to that branch. `clean` removes the old build from it.
+
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
-# Add these permissions
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
-  build-and-deploy:
+  publish-redirect:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-        env:
-          CI: false
-
-      - name: Deploy to GitHub Pages
+      - name: Publish the redirect pages to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: build 
+          folder: pages-redirect
+          clean: true
