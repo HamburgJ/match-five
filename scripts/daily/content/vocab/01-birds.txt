@@ -1,0 +1,179 @@
+# Birds. Format: see build-key.mjs. Pilot judgments by the M1 lane (model in the loop), conservative.
+# Bird defaults (classes.json): lays eggs, feathers, wings, beak, legs, tail, can fly, no teeth.
+
+Crane | a | | the machine reading comes first
+  machine | L | the lifting machine | object | has:hook has:arm:S"the crane's long arm" is:vehicle:A"mobile cranes drive" is:tool:n"a machine, not a tool" has:engine:A
+  bird | S | the wading bird | bird:S | has:neck"a long neck"
+
+Kiwi | a | engine
+  fruit | L | the fruit | fruit | has:fur:n"fuzzy skin" grows-on-trees:n"they grow on vines" grows-on-vine:O"kiwis grow on vines" has:seeds
+  bird | S | the New Zealand bird | bird:S | can:fly:n"some think kiwis fly" has:wings:O"tiny hidden wings" has:wing:O"tiny hidden wings" has:beak"a long beak" has:tail:N
+
+Swallow | a | | noun: the bird first; the verb is the second life
+  bird | L | the bird | bird | has:tail"a forked tail"
+  gulp | S | a gulp | abstract |
+
+Duck | a | | verb 'duck someone' (dunk) is arguable
+  bird | L | the bird | bird | has:bill"a duck's bill" can:swim lays-eggs is:pet:A"pet ducks"
+  * | verb:A"duck someone, dunk them"
+
+Turkey | a |
+  bird | L | the bird | bird | can:fly:A"wild turkeys fly" has:beard:O"a tuft of chest feathers" has:comb:n"the red snood"
+  flop | S | a flop | abstract |
+
+Swift | a |
+  bird | S | the fast bird | bird:S | can:fly"they barely land"
+
+Rook | a | engine
+  bird | S | the crow-like bird | bird:S |
+  chess | L | the chess castle | chess-piece |
+  * | verb:O"to rook someone, cheat"
+
+Kite | a |
+  toy | L | the toy | toy | has:tail:S"a kite's tail" can:fly"in the wind" has:strings:n"one string" has:string:L
+  bird | O | a bird of prey | bird-of-prey:O |
+
+Lark | a |
+  bird | L | the songbird | bird |
+  prank | S | something done for fun | abstract |
+
+Cardinal | a |
+  bird | L | the red songbird | bird | has:crest"a pointed crest"
+  priest | S | the church official | person | has:hat:A
+
+Hawk | a |
+  bird | L | the bird of prey | bird-of-prey |
+
+Eagle | an |
+  bird | L | the bird of prey | bird-of-prey |
+  golf | O | two under par in golf | abstract |
+
+Crow | a |
+  bird | L | the black bird | bird |
+
+Quail | a |
+  bird | L | the small game bird | bird | can:fly:A"short bursts only"
+
+Grouse | a |
+  bird | L | the game bird | bird | can:fly:A"short bursts only"
+  gripe | S | a complaint | abstract |
+
+Snipe | a |
+  bird | S | the marsh bird | bird:S |
+  * | verb:A"snipe at someone"
+
+Robin | a |
+  bird | L | the red-breasted bird | bird |
+
+Jay | a |
+  bird | L | the blue jay | bird | has:crest:A"blue jays have crests"
+
+Pigeon | a |
+  bird | L | the city bird | bird |
+
+Parrot | a |
+  bird | L | the talking bird | bird | can:talk:A"they mimic words" has:beak"a hooked beak" is:pet:A
+  * | verb:S"to parrot someone, copy them"
+
+Owl | an |
+  bird | L | the night bird | bird-of-prey | has:eyes"huge eyes"
+
+Swan | a |
+  bird | L | the bird | bird | has:neck"a long neck" can:swim has:bill:A
+
+Hen | a |
+  bird | L | the female chicken | bird | can:fly:A"only a flutter" has:comb"the red crest"
+
+Chicken | a |
+  bird | L | the farm bird | bird | can:fly:A"only a flutter" has:comb"the red crest" is:pet:A
+  coward | S | a coward | person |
+
+Penguin | a | brand | Penguin paperbacks are a brand reading: n
+  bird | L | the bird | bird | can:fly:N can:swim lives-in-sea:A"land and sea"
+  * | @has-a-spine-no-bones:n"Penguin paperbacks (a brand)"
+
+Ostrich | an |
+  bird | L | the big bird | bird | can:fly:N has:neck"a long neck"
+
+Emu | an |
+  bird | L | the big bird | bird | can:fly:N
+
+Flamingo | a |
+  bird | L | the pink bird | bird | has:bill:A has:legs"long legs"
+
+Peacock | a |
+  bird | L | the bird | bird | can:fly:A"short flights only" has:tail"the famous tail" has:crest"a little crest" has:eyes:A"eye spots on the tail" lays-eggs:A"peahens lay them"
+
+Pelican | a |
+  bird | L | the big-billed bird | bird | has:bill"a huge bill" has:pouch:S"the pouch under its bill" can:swim
+
+Puffin | a |
+  bird | L | the sea bird | bird | can:swim has:bill:A lives-in-sea:A
+
+Stork | a |
+  bird | L | the bird | bird | has:legs"long legs"
+
+Heron | a |
+  bird | L | the wading bird | bird |
+
+Vulture | a |
+  bird | L | the scavenging bird | bird, bird-of-prey:A |
+  greedy | S | a greedy person | person |
+
+Falcon | a |
+  bird | L | the bird of prey | bird-of-prey |
+
+Sparrow | a |
+  bird | L | the small bird | bird |
+
+Wren | a |
+  bird | L | the tiny bird | bird |
+
+Canary | a |
+  bird | L | the yellow songbird | bird | is:pet:A
+
+Toucan | a |
+  bird | L | the big-billed bird | bird | has:bill"a huge bill" has:beak"a huge beak"
+
+Cuckoo | a |
+  bird | L | the bird | bird |
+  clock | O | a cuckoo clock | object | has:face"a clock face" has:hands"clock hands" can:ring:A
+
+Magpie | a |
+  bird | L | the black and white bird | bird |
+  hoarder | S | a collector of trinkets | person |
+
+Dove | a |
+  bird | L | the bird | bird |
+
+Goose | a |
+  bird | L | the bird | bird | has:bill:A can:swim
+  * | verb:A"a rude poke"
+
+Raven | a |
+  bird | L | the big black bird | bird |
+
+Gull | a |
+  bird | L | the seagull | bird | lives-in-sea:A
+  * | verb:O"to gull someone, fool them"
+
+Dodo | a |
+  bird | L | the extinct bird | bird | can:fly:N
+
+Condor | a |
+  bird | L | the huge vulture | bird, bird-of-prey:A |
+
+Osprey | an |
+  bird | L | the fish hawk | bird-of-prey |
+
+Buzzard | a |
+  bird | L | the bird of prey | bird, bird-of-prey:A |
+
+Finch | a |
+  bird | L | the small songbird | bird |
+
+Rooster | a |
+  bird | L | the male chicken | bird | can:fly:A"only a flutter" has:comb"the red crest" lays-eggs:N
+
+Starling | a |
+  bird | L | the bird | bird |

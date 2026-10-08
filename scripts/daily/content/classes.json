@@ -1,0 +1,930 @@
+{
+ "about": "Class taxonomy for word senses. A sense lists its classes; it inherits every ancestor's default facts, and its own facts override them. A fact is predicate -> tier (L, S, O, A, n, N). Anchors ('Bird') match a sense whose class is the anchor's class or a descendant of it. Defaults are pilot judgments by the M1 lane (model in the loop), conservative: anything a reasonable player could argue is A or n.",
+ "classes": {
+  "living": {
+   "parent": null,
+   "facts": {
+    "is:living": "L"
+   }
+  },
+  "animal": {
+   "parent": "living",
+   "facts": {
+    "is:animal": "L",
+    "has:head": "L",
+    "has:brain": "L",
+    "has:mouth": "L",
+    "has:eyes": "L",
+    "has:eye": "L",
+    "has:face": [
+     "S",
+     "an animal's face"
+    ],
+    "has:skin": "L",
+    "has:blood": "L",
+    "has:pulse": "L",
+    "has:heart": "L",
+    "has:body": "L",
+    "can:eat": "L",
+    "can:see": "L",
+    "can:hear": "L",
+    "can:taste": "L",
+    "can:smell": "L",
+    "can:swallow": "L",
+    "can:sleep": "L",
+    "can:learn": "S",
+    "can:hide": "L",
+    "can:smile": "A",
+    "can:hug": "A",
+    "can:kiss": "A",
+    "can:watch": "A",
+    "can:blink": "A",
+    "can:sit": "A",
+    "can:jump": "A",
+    "can:run": "A",
+    "can:stand": "A",
+    "can:sweat": "A",
+    "can:wiggle": "A",
+    "can:fish": "A",
+    "can:cut": "A"
+   }
+  },
+  "vertebrate": {
+   "parent": "animal",
+   "facts": {
+    "has:bones": "L",
+    "has:spine": "L",
+    "has:tongue": "L",
+    "has:tail": "A",
+    "can:bite": "A",
+    "has:teeth": "A",
+    "has:neck": "A",
+    "has:ears": "A",
+    "has:nose": "A",
+    "has:lip": "A",
+    "has:legs": "A",
+    "can:walk": "A",
+    "has:veins": "L"
+   }
+  },
+  "mammal": {
+   "parent": "vertebrate",
+   "facts": {
+    "is:mammal": "L",
+    "has:fur": "L",
+    "has:hair": "L",
+    "has:teeth": "L",
+    "can:bite": "L",
+    "has:ears": "L",
+    "has:nose": "L",
+    "has:legs": "L",
+    "can:walk": "L",
+    "has:neck": "L",
+    "lays-eggs": "N",
+    "can:blink": "L",
+    "has:whiskers": "A",
+    "has:tail": "A",
+    "has:lip": "L",
+    "has:hide": "A",
+    "can:swim": "A",
+    "can:run": "L",
+    "can:jump": "A"
+   }
+  },
+  "dog": {
+   "parent": "mammal",
+   "facts": {
+    "has:tail": "L",
+    "has:whiskers": "L",
+    "has:claws": "L",
+    "can:swim": "A",
+    "has:collar": "A",
+    "is:pet": "L",
+    "can:jump": "L",
+    "can:sweat": "A"
+   }
+  },
+  "dog-breed": {
+   "parent": "dog",
+   "facts": {}
+  },
+  "horse": {
+   "parent": "mammal",
+   "facts": {
+    "has:mane": "L",
+    "has:hooves": "L",
+    "has:tail": "L",
+    "is:horse": "L",
+    "is:pet": "A",
+    "has:fur": [
+     "A",
+     "hair or fur?"
+    ]
+   }
+  },
+  "cow": {
+   "parent": "mammal",
+   "facts": {
+    "is:cow": "L",
+    "has:hooves": "L",
+    "has:tail": "L",
+    "has:horns": "A",
+    "has:spots": "A",
+    "has:fur": [
+     "A",
+     "hair or fur?"
+    ]
+   }
+  },
+  "whale": {
+   "parent": "mammal",
+   "facts": {
+    "is:whale": "L",
+    "has:fur": "N",
+    "has:hair": "A",
+    "has:legs": "N",
+    "can:walk": "N",
+    "has:fins": "L",
+    "has:tail": "L",
+    "can:swim": "L",
+    "lives-in-sea": "L",
+    "has:neck": "A",
+    "has:ears": "A",
+    "has:nose": "A",
+    "has:teeth": "A",
+    "can:bite": "A",
+    "has:lip": "A",
+    "has:spout": "A",
+    "can:jump": "A"
+   }
+  },
+  "person": {
+   "parent": "mammal",
+   "facts": {
+    "is:mammal": "A",
+    "is:person": "L",
+    "has:fur": "N",
+    "has:tail": "N",
+    "has:hands": "L",
+    "has:hand": "L",
+    "has:arms": "L",
+    "has:fingers": "L",
+    "has:toe": "L",
+    "has:heel": "L",
+    "has:foot": "L",
+    "has:sole": [
+     "S",
+     "the sole of the foot"
+    ],
+    "can:talk": "L",
+    "can:smile": "L",
+    "can:clap": "L",
+    "can:hug": "L",
+    "can:kiss": "L",
+    "can:pay": "L",
+    "can:sew": "L",
+    "can:shave": "L",
+    "can:watch": "L",
+    "can:learn": "L",
+    "can:sit": "L",
+    "can:jump": "L",
+    "can:run": "L",
+    "can:stand": "L",
+    "can:sweat": "L",
+    "can:cut": "L",
+    "can:fish": "L",
+    "can:wiggle": "L",
+    "can:swim": "L",
+    "has:money": "A",
+    "has:pockets": "A",
+    "is:pet": "N",
+    "has:pupil": "A",
+    "has:crown": [
+     "O",
+     "the crown of the head"
+    ],
+    "has:throne": "N",
+    "is:royal": "N",
+    "has:whiskers": "A",
+    "has:face": "L"
+   }
+  },
+  "bird": {
+   "parent": "vertebrate",
+   "facts": {
+    "is:bird": "L",
+    "lays-eggs": "L",
+    "has:feathers": "L",
+    "has:wings": "L",
+    "has:wing": "L",
+    "has:beak": "L",
+    "has:bill": [
+     "O",
+     "a beak is also a bill"
+    ],
+    "has:legs": "L",
+    "can:walk": "L",
+    "has:tail": "L",
+    "can:fly": "L",
+    "has:teeth": "N",
+    "can:bite": "A",
+    "has:neck": "L",
+    "has:ears": [
+     "O",
+     "hidden ear holes"
+    ],
+    "has:tongue": [
+     "O",
+     "birds have tongues"
+    ],
+    "has:claws": [
+     "S",
+     "claws on its toes"
+    ],
+    "has:crest": "A",
+    "has:fur": "N",
+    "has:lip": "N",
+    "has:nose": "A",
+    "can:swim": "A",
+    "has:scales": [
+     "O",
+     "scaly legs"
+    ],
+    "can:blink": "L",
+    "has:comb": "N",
+    "has:mouth": "A",
+    "can:sweat": "N"
+   }
+  },
+  "bird-of-prey": {
+   "parent": "bird",
+   "facts": {
+    "has:claws": "L"
+   }
+  },
+  "fish": {
+   "parent": "vertebrate",
+   "facts": {
+    "is:fish": "L",
+    "lays-eggs": "L",
+    "has:scales": "L",
+    "has:fins": "L",
+    "has:tail": "L",
+    "can:swim": "L",
+    "has:legs": "N",
+    "can:walk": "N",
+    "has:neck": "N",
+    "has:teeth": "A",
+    "can:bite": "A",
+    "has:ears": [
+     "O",
+     "inner ears"
+    ],
+    "has:tongue": [
+     "O",
+     "a bony tongue"
+    ],
+    "has:lip": "A",
+    "lives-in-sea": "A",
+    "has:fur": "N",
+    "has:nose": "A",
+    "can:blink": "N",
+    "has:lid": "N",
+    "has:gills": "L"
+   }
+  },
+  "reptile": {
+   "parent": "vertebrate",
+   "facts": {
+    "is:reptile": "L",
+    "lays-eggs": "L",
+    "has:scales": "L",
+    "has:tail": "L",
+    "can:bite": "L",
+    "has:teeth": "A",
+    "has:legs": "L",
+    "can:walk": "L",
+    "has:fur": "N",
+    "has:feathers": "N",
+    "has:claws": "A",
+    "can:swim": "A",
+    "has:ears": "A"
+   }
+  },
+  "snake": {
+   "parent": "reptile",
+   "facts": {
+    "is:snake": "L",
+    "has:legs": "N",
+    "can:walk": "N",
+    "has:neck": "A",
+    "has:fangs": "L",
+    "has:teeth": "A",
+    "has:ears": "N",
+    "has:lid": "N",
+    "can:blink": "N",
+    "has:claws": "N"
+   }
+  },
+  "lizard": {
+   "parent": "reptile",
+   "facts": {
+    "has:claws": "L"
+   }
+  },
+  "turtle": {
+   "parent": "reptile",
+   "facts": {
+    "has:shell": "L",
+    "has:beak": [
+     "S",
+     "a horny beak"
+    ],
+    "has:teeth": "N",
+    "can:swim": "A",
+    "has:mouth": "A",
+    "has:claws": [
+     "S",
+     "clawed feet"
+    ]
+   }
+  },
+  "amphibian": {
+   "parent": "vertebrate",
+   "facts": {
+    "lays-eggs": "L",
+    "has:scales": "N",
+    "can:swim": "L",
+    "has:legs": "L",
+    "can:jump": "A",
+    "has:fur": "N"
+   }
+  },
+  "invertebrate": {
+   "parent": "animal",
+   "facts": {
+    "has:bones": "N",
+    "has:spine": "N",
+    "has:fur": "N",
+    "has:feathers": "N",
+    "has:neck": "N",
+    "has:nose": "N",
+    "has:lip": "N",
+    "has:ears": "N",
+    "has:tongue": "N",
+    "can:blink": "N"
+   }
+  },
+  "insect": {
+   "parent": "invertebrate",
+   "facts": {
+    "is:insect": "L",
+    "lays-eggs": "L",
+    "has:six-legs": "L",
+    "has:legs": "L",
+    "can:walk": "L",
+    "has:wings": "A",
+    "has:wing": "A",
+    "can:fly": "A",
+    "has:brain": "A",
+    "has:blood": "A",
+    "has:pulse": "A",
+    "has:heart": "A",
+    "has:skin": "A",
+    "has:mouth": "A",
+    "has:teeth": "N",
+    "can:bite": "A",
+    "has:tail": "N",
+    "can:sting": "N",
+    "has:veins": "A"
+   }
+  },
+  "arachnid": {
+   "parent": "invertebrate",
+   "facts": {
+    "is:insect": [
+     "n",
+     "not an insect: eight legs"
+    ],
+    "has:eight-legs": "L",
+    "has:legs": "L",
+    "lays-eggs": "L",
+    "can:walk": "L",
+    "has:wings": "N",
+    "can:fly": "N",
+    "has:brain": "A",
+    "has:blood": "A",
+    "has:pulse": "A",
+    "has:heart": "A",
+    "has:skin": "A",
+    "has:teeth": "N",
+    "can:bite": "A"
+   }
+  },
+  "crustacean": {
+   "parent": "invertebrate",
+   "facts": {
+    "has:shell": "L",
+    "has:legs": "L",
+    "can:walk": "L",
+    "lays-eggs": [
+     "S",
+     "they lay eggs"
+    ],
+    "has:claws": "L",
+    "is:fish": "n",
+    "has:brain": "A",
+    "has:pulse": "A",
+    "has:skin": "A",
+    "has:teeth": "N",
+    "can:bite": "A",
+    "can:swim": "A",
+    "has:tail": "A"
+   }
+  },
+  "mollusc": {
+   "parent": "invertebrate",
+   "facts": {
+    "has:legs": "N",
+    "can:walk": "N",
+    "lays-eggs": [
+     "S",
+     "they lay eggs"
+    ],
+    "has:brain": "A",
+    "has:teeth": "N",
+    "can:bite": "N",
+    "has:pulse": "A",
+    "has:skin": "A",
+    "has:foot": [
+     "O",
+     "a muscular foot"
+    ],
+    "has:tail": "N",
+    "has:head": "A",
+    "has:face": "A",
+    "has:eyes": "A",
+    "has:eye": "A",
+    "has:mouth": "A",
+    "has:lip": "N",
+    "can:hear": "A",
+    "can:see": "A",
+    "can:taste": "A",
+    "can:smell": "A"
+   }
+  },
+  "soft-sea-animal": {
+   "parent": "invertebrate",
+   "facts": {
+    "lives-in-sea": "L",
+    "has:shell": "N",
+    "has:legs": "N",
+    "can:walk": "N",
+    "has:head": "A",
+    "has:brain": "A",
+    "has:eyes": "A",
+    "has:eye": "A",
+    "has:face": "A",
+    "has:mouth": "A",
+    "has:skin": "A",
+    "can:see": "A",
+    "can:hear": "N",
+    "can:taste": "A",
+    "can:smell": "A",
+    "has:blood": "A",
+    "has:pulse": "A",
+    "has:heart": "A",
+    "has:teeth": "N",
+    "can:bite": "N",
+    "can:swim": "A",
+    "has:tail": "N"
+   }
+  },
+  "worm": {
+   "parent": "invertebrate",
+   "facts": {
+    "has:legs": "N",
+    "can:walk": "N",
+    "has:eyes": "A",
+    "has:eye": "A",
+    "has:face": "N",
+    "has:brain": "A",
+    "has:head": "A",
+    "can:see": "A",
+    "can:hear": "N",
+    "has:skin": "L",
+    "has:teeth": "N",
+    "can:bite": "N",
+    "has:tail": "A"
+   }
+  },
+  "plant": {
+   "parent": "living",
+   "facts": {
+    "is:plant": "L",
+    "has:roots": "L",
+    "has:leaves": "L",
+    "has:stem": "A",
+    "has:veins": [
+     "O",
+     "veins in the leaves"
+    ],
+    "has:skin": "N",
+    "has:brain": "N"
+   }
+  },
+  "tree": {
+   "parent": "plant",
+   "facts": {
+    "is:tree": "L",
+    "has:trunk": "L",
+    "has:bark": "L",
+    "has:branches": "L",
+    "has:rings": [
+     "S",
+     "growth rings in the wood"
+    ],
+    "has:knot": [
+     "S",
+     "knots in the wood"
+    ],
+    "has:crown": [
+     "O",
+     "the tree's leafy top"
+    ],
+    "has:stem": "N",
+    "has:wood": "L",
+    "grows-on-trees": "N",
+    "has:limbs": [
+     "S",
+     "big branches are limbs"
+    ]
+   }
+  },
+  "flower": {
+   "parent": "plant",
+   "facts": {
+    "is:flower": "L",
+    "has:petals": "L",
+    "has:stem": "L"
+   }
+  },
+  "food": {
+   "parent": null,
+   "facts": {
+    "is:food": "L",
+    "is:living": "N"
+   }
+  },
+  "fruit": {
+   "parent": "food",
+   "facts": {
+    "is:fruit": "L",
+    "has:skin": "L",
+    "has:seeds": "A",
+    "has:stem": "A",
+    "has:bones": "N"
+   }
+  },
+  "vegetable": {
+   "parent": "food",
+   "facts": {
+    "is:vegetable": "L",
+    "has:bones": "N",
+    "has:roots": [
+     "n",
+     "the plant has roots"
+    ]
+   }
+  },
+  "nut": {
+   "parent": "food",
+   "facts": {
+    "is:nut": "L",
+    "has:shell": "L",
+    "has:legs": "N",
+    "can:swim": "N",
+    "has:bones": "N"
+   }
+  },
+  "herb-spice": {
+   "parent": "food",
+   "facts": {}
+  },
+  "drink": {
+   "parent": "food",
+   "facts": {}
+  },
+  "dessert": {
+   "parent": "food",
+   "facts": {}
+  },
+  "bread": {
+   "parent": "food",
+   "facts": {
+    "is:bread": "L",
+    "has:crust": "L"
+   }
+  },
+  "sandwich": {
+   "parent": "food",
+   "facts": {
+    "is:sandwich": "L"
+   }
+  },
+  "dish": {
+   "parent": "food",
+   "facts": {
+    "is:dish": "L"
+   }
+  },
+  "object": {
+   "parent": null,
+   "facts": {}
+  },
+  "tool": {
+   "parent": "object",
+   "facts": {
+    "is:tool": "L"
+   }
+  },
+  "weapon": {
+   "parent": "object",
+   "facts": {
+    "is:weapon": "L",
+    "can:cut": "A"
+   }
+  },
+  "musical-instrument": {
+   "parent": "object",
+   "facts": {
+    "is:musical-instrument": "L"
+   }
+  },
+  "clothing": {
+   "parent": "object",
+   "facts": {
+    "is:clothing": "L"
+   }
+  },
+  "footwear": {
+   "parent": "clothing",
+   "facts": {
+    "has:sole": "L",
+    "has:heel": "L",
+    "has:toe": [
+     "S",
+     "the shoe's toe"
+    ],
+    "has:tongue": "A",
+    "has:laces": "A",
+    "is:clothing": [
+     "A",
+     "footwear, but clothing?"
+    ]
+   }
+  },
+  "hat": {
+   "parent": "clothing",
+   "facts": {
+    "has:crown": [
+     "O",
+     "the top of a hat"
+    ],
+    "has:brim": "A",
+    "is:clothing": [
+     "A",
+     "a hat, but clothing?"
+    ]
+   }
+  },
+  "jewelry": {
+   "parent": "object",
+   "facts": {
+    "is:jewelry": "L"
+   }
+  },
+  "furniture": {
+   "parent": "object",
+   "facts": {
+    "is:furniture": "L"
+   }
+  },
+  "vehicle": {
+   "parent": "object",
+   "facts": {
+    "is:vehicle": "L"
+   }
+  },
+  "boat": {
+   "parent": "vehicle",
+   "facts": {
+    "is:boat": "L",
+    "has:deck": "A",
+    "has:hull": "L",
+    "has:bow": [
+     "S",
+     "the front of a boat"
+    ],
+    "can:swim": "N",
+    "is:vehicle": [
+     "A",
+     "a boat, but a vehicle?"
+    ]
+   }
+  },
+  "container": {
+   "parent": "object",
+   "facts": {
+    "is:container": "L"
+   }
+  },
+  "kitchen-tool": {
+   "parent": "object",
+   "facts": {
+    "is:kitchen-tool": "L",
+    "is:tool": [
+     "A",
+     "a kitchen tool, but a tool?"
+    ]
+   }
+  },
+  "toy": {
+   "parent": "object",
+   "facts": {
+    "is:toy": "L"
+   }
+  },
+  "computer-part": {
+   "parent": "object",
+   "facts": {
+    "is:computer-part": "L"
+   }
+  },
+  "coin": {
+   "parent": "object",
+   "facts": {
+    "is:coin": "L",
+    "has:face": [
+     "S",
+     "the coin's face"
+    ],
+    "has:head": [
+     "O",
+     "the heads side"
+    ],
+    "has:tail": [
+     "O",
+     "the tails side"
+    ],
+    "has:hole-middle": "N",
+    "is:metal": "A"
+   }
+  },
+  "golf-equipment": {
+   "parent": "object",
+   "facts": {
+    "is:golf-equipment": "L"
+   }
+  },
+  "baseball-equipment": {
+   "parent": "object",
+   "facts": {
+    "is:baseball-equipment": "L"
+   }
+  },
+  "body-part": {
+   "parent": null,
+   "facts": {
+    "is:body-part": "L"
+   }
+  },
+  "gem": {
+   "parent": null,
+   "facts": {
+    "is:gem": "L"
+   }
+  },
+  "metal": {
+   "parent": null,
+   "facts": {
+    "is:metal": "L"
+   }
+  },
+  "shape": {
+   "parent": null,
+   "facts": {
+    "is:shape": "L"
+   }
+  },
+  "weather": {
+   "parent": null,
+   "facts": {
+    "is:weather": "L"
+   }
+  },
+  "body-of-water": {
+   "parent": null,
+   "facts": {
+    "is:body-of-water": "L"
+   }
+  },
+  "sport": {
+   "parent": null,
+   "facts": {
+    "is:sport": "L"
+   }
+  },
+  "dance": {
+   "parent": null,
+   "facts": {
+    "is:dance": "L"
+   }
+  },
+  "card-game": {
+   "parent": null,
+   "facts": {
+    "is:card-game": "L"
+   }
+  },
+  "unit-length": {
+   "parent": null,
+   "facts": {
+    "is:unit-length": "L"
+   }
+  },
+  "unit-weight": {
+   "parent": null,
+   "facts": {
+    "is:unit-weight": "L"
+   }
+  },
+  "unit-time": {
+   "parent": null,
+   "facts": {
+    "is:unit-time": "L"
+   }
+  },
+  "month": {
+   "parent": null,
+   "facts": {
+    "is:month": "L"
+   }
+  },
+  "planet": {
+   "parent": null,
+   "facts": {
+    "is:planet": "L",
+    "has:rings": "A"
+   }
+  },
+  "card-suit": {
+   "parent": null,
+   "facts": {
+    "is:card-suit": "L"
+   }
+  },
+  "chess-piece": {
+   "parent": "object",
+   "facts": {
+    "is:chess-piece": "L",
+    "has:head": [
+     "A",
+     "the top of the piece"
+    ]
+   }
+  },
+  "playing-card": {
+   "parent": "object",
+   "facts": {
+    "is:playing-card": "L",
+    "has:face": [
+     "O",
+     "a face card"
+    ]
+   }
+  },
+  "place": {
+   "parent": null,
+   "facts": {}
+  },
+  "abstract": {
+   "parent": null,
+   "facts": {}
+  },
+  "material": {
+   "parent": null,
+   "facts": {}
+  },
+  "sound": {
+   "parent": null,
+   "facts": {}
+  },
+  "rope": {
+   "parent": "object",
+   "facts": {
+    "is:rope": "L"
+   }
+  }
+ }
+}

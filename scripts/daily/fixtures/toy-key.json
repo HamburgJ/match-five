@@ -1,0 +1,1747 @@
+{
+ "schema": 1,
+ "version": "toy-v2",
+ "pilot": true,
+ "provenance": "dossier v2 toy key (hand-judged), converted by fixtures/make-toy-key.mjs",
+ "words": {
+  "kiwi": {
+   "text": "Kiwi",
+   "article": "a",
+   "engine": true,
+   "senses": {}
+  },
+  "bat": {
+   "text": "Bat",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "seal": {
+   "text": "Seal",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "crane": {
+   "text": "Crane",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "duck": {
+   "text": "Duck",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "swan": {
+   "text": "Swan",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "owl": {
+   "text": "Owl",
+   "article": "an",
+   "engine": false,
+   "senses": {}
+  },
+  "penguin": {
+   "text": "Penguin",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "turtle": {
+   "text": "Turtle",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "snail": {
+   "text": "Snail",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "mouse": {
+   "text": "Mouse",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "dog": {
+   "text": "Dog",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "elephant": {
+   "text": "Elephant",
+   "article": "an",
+   "engine": false,
+   "senses": {}
+  },
+  "bass": {
+   "text": "Bass",
+   "article": "a",
+   "engine": true,
+   "senses": {}
+  },
+  "crab": {
+   "text": "Crab",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "apple": {
+   "text": "Apple",
+   "article": "an",
+   "engine": false,
+   "senses": {}
+  },
+  "banana": {
+   "text": "Banana",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "date": {
+   "text": "Date",
+   "article": "a",
+   "engine": true,
+   "senses": {}
+  },
+  "lemon": {
+   "text": "Lemon",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "plum": {
+   "text": "Plum",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "cherry": {
+   "text": "Cherry",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "coconut": {
+   "text": "Coconut",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "potato": {
+   "text": "Potato",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "corn": {
+   "text": "Corn",
+   "article": "",
+   "engine": false,
+   "senses": {}
+  },
+  "egg": {
+   "text": "Egg",
+   "article": "an",
+   "engine": false,
+   "senses": {}
+  },
+  "taco": {
+   "text": "Taco",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "clock": {
+   "text": "Clock",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "watch": {
+   "text": "Watch",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "comb": {
+   "text": "Comb",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "saw": {
+   "text": "Saw",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "zipper": {
+   "text": "Zipper",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "needle": {
+   "text": "Needle",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "bottle": {
+   "text": "Bottle",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "piano": {
+   "text": "Piano",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "keyboard": {
+   "text": "Keyboard",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "map": {
+   "text": "Map",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "book": {
+   "text": "Book",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "shoe": {
+   "text": "Shoe",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "bell": {
+   "text": "Bell",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "tent": {
+   "text": "Tent",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "ball": {
+   "text": "Ball",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "hammer": {
+   "text": "Hammer",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "nail": {
+   "text": "Nail",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "tree": {
+   "text": "Tree",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "river": {
+   "text": "River",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "palm": {
+   "text": "Palm",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "storm": {
+   "text": "Storm",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "knight": {
+   "text": "Knight",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "bishop": {
+   "text": "Bishop",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "queen": {
+   "text": "Queen",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "club": {
+   "text": "Club",
+   "article": "a",
+   "engine": true,
+   "senses": {}
+  },
+  "spade": {
+   "text": "Spade",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "heart": {
+   "text": "Heart",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  },
+  "diamond": {
+   "text": "Diamond",
+   "article": "a",
+   "engine": false,
+   "senses": {}
+  }
+ },
+ "headings": {
+  "bird": {
+   "label": "Bird",
+   "spoken": "Bird",
+   "family": "anchor",
+   "closedSet": null,
+   "rule": null,
+   "negative": "isn't a bird",
+   "status": "toy"
+  },
+  "mammal": {
+   "label": "Mammal",
+   "spoken": "Mammal",
+   "family": "anchor",
+   "closedSet": null,
+   "rule": null,
+   "negative": "isn't a mammal",
+   "status": "toy"
+  },
+  "fruit": {
+   "label": "Fruit",
+   "spoken": "Fruit",
+   "family": "anchor",
+   "closedSet": null,
+   "rule": null,
+   "negative": "isn't a fruit",
+   "status": "toy"
+  },
+  "vegetable": {
+   "label": "Vegetable",
+   "spoken": "Vegetable",
+   "family": "anchor",
+   "closedSet": null,
+   "rule": null,
+   "negative": "isn't a vegetable",
+   "status": "toy"
+  },
+  "fish": {
+   "label": "Fish",
+   "spoken": "Fish",
+   "family": "anchor",
+   "closedSet": null,
+   "rule": null,
+   "negative": "isn't a fish",
+   "status": "toy"
+  },
+  "chess-piece": {
+   "label": "Chess piece",
+   "spoken": "Chess piece",
+   "family": "anchor",
+   "closedSet": "chess-piece",
+   "rule": null,
+   "negative": "isn't a chess piece",
+   "status": "toy"
+  },
+  "card-suit": {
+   "label": "Card suit",
+   "spoken": "Card suit",
+   "family": "anchor",
+   "closedSet": "card-suit",
+   "rule": null,
+   "negative": "isn't a card suit",
+   "status": "toy"
+  },
+  "musical-instrument": {
+   "label": "Musical instrument",
+   "spoken": "Musical instrument",
+   "family": "anchor",
+   "closedSet": null,
+   "rule": null,
+   "negative": "isn't a musical instrument",
+   "status": "toy"
+  },
+  "tool": {
+   "label": "Tool",
+   "spoken": "Tool",
+   "family": "anchor",
+   "closedSet": null,
+   "rule": null,
+   "negative": "isn't a tool",
+   "status": "toy"
+  },
+  "gem": {
+   "label": "Gem",
+   "spoken": "Gem",
+   "family": "anchor",
+   "closedSet": null,
+   "rule": null,
+   "negative": "isn't a gem",
+   "status": "toy"
+  },
+  "body-part": {
+   "label": "Body part",
+   "spoken": "Body part",
+   "family": "anchor",
+   "closedSet": null,
+   "rule": null,
+   "negative": "isn't a body part",
+   "status": "toy"
+  },
+  "baseball-equipment": {
+   "label": "Baseball equipment",
+   "spoken": "Baseball equipment",
+   "family": "anchor",
+   "closedSet": null,
+   "rule": null,
+   "negative": "isn't a baseball equipment",
+   "status": "toy"
+  },
+  "can-fly": {
+   "label": "Can fly",
+   "spoken": "Can fly",
+   "family": "property",
+   "closedSet": null,
+   "rule": null,
+   "negative": "can't fly",
+   "status": "toy"
+  },
+  "lays-eggs": {
+   "label": "Lays eggs",
+   "spoken": "Lays eggs",
+   "family": "property",
+   "closedSet": null,
+   "rule": null,
+   "negative": "doesn't lay eggs",
+   "status": "toy"
+  },
+  "has-a-shell": {
+   "label": "Has a shell",
+   "spoken": "Has a shell",
+   "family": "property",
+   "closedSet": null,
+   "rule": null,
+   "negative": "has no a shell",
+   "status": "toy"
+  },
+  "has-a-pit": {
+   "label": "Has a pit",
+   "spoken": "Has a pit",
+   "family": "property",
+   "closedSet": null,
+   "rule": null,
+   "negative": "has no a pit",
+   "status": "toy"
+  },
+  "grows-on-trees": {
+   "label": "Grows on trees",
+   "spoken": "Grows on trees",
+   "family": "property",
+   "closedSet": null,
+   "rule": null,
+   "negative": "doesn't grow on trees",
+   "status": "toy"
+  },
+  "has-hands-no-fingers": {
+   "label": "Has hands, no fingers",
+   "spoken": "Has hands, no fingers",
+   "family": "property",
+   "closedSet": null,
+   "rule": null,
+   "negative": "has no hands, no fingers",
+   "status": "toy"
+  },
+  "has-teeth-can-t-bite": {
+   "label": "Has teeth, can't bite",
+   "spoken": "Has teeth, can't bite",
+   "family": "joke",
+   "closedSet": null,
+   "rule": null,
+   "negative": {
+    "has": "has no teeth",
+    "not": "can bite"
+   },
+   "status": "toy"
+  },
+  "has-an-eye-can-t-see": {
+   "label": "Has an eye, can't see",
+   "spoken": "Has an eye, can't see",
+   "family": "joke",
+   "closedSet": null,
+   "rule": null,
+   "negative": {
+    "has": "has no eye",
+    "not": "can see"
+   },
+   "status": "toy"
+  },
+  "has-a-mouth-can-t-eat": {
+   "label": "Has a mouth, can't eat",
+   "spoken": "Has a mouth, can't eat",
+   "family": "joke",
+   "closedSet": null,
+   "rule": null,
+   "negative": {
+    "has": "has no mouth",
+    "not": "can eat"
+   },
+   "status": "toy"
+  },
+  "has-a-tongue-can-t-taste": {
+   "label": "Has a tongue, can't taste",
+   "spoken": "Has a tongue, can't taste",
+   "family": "joke",
+   "closedSet": null,
+   "rule": null,
+   "negative": {
+    "has": "has no tongue",
+    "not": "can taste"
+   },
+   "status": "toy"
+  },
+  "has-keys-opens-nothing": {
+   "label": "Has keys, opens nothing",
+   "spoken": "Has keys, opens nothing",
+   "family": "joke",
+   "closedSet": null,
+   "rule": null,
+   "negative": {
+    "has": "has no keys",
+    "not": "opens something"
+   },
+   "status": "toy"
+  },
+  "has-a-trunk": {
+   "label": "Has a trunk",
+   "spoken": "Has a trunk",
+   "family": "property",
+   "closedSet": null,
+   "rule": null,
+   "negative": "has no a trunk",
+   "status": "toy"
+  },
+  "has-a-spine-no-bones": {
+   "label": "Has a spine, no bones",
+   "spoken": "Has a spine, no bones",
+   "family": "joke",
+   "closedSet": null,
+   "rule": null,
+   "negative": {
+    "has": "has no spine",
+    "not": "has bones"
+   },
+   "status": "toy"
+  },
+  "has-ears-can-t-hear": {
+   "label": "Has ears, can't hear",
+   "spoken": "Has ears, can't hear",
+   "family": "joke",
+   "closedSet": null,
+   "rule": null,
+   "negative": {
+    "has": "has no ears",
+    "not": "can hear"
+   },
+   "status": "toy"
+  },
+  "has-a-head-no-brain": {
+   "label": "Has a head, no brain",
+   "spoken": "Has a head, no brain",
+   "family": "joke",
+   "closedSet": null,
+   "rule": null,
+   "negative": {
+    "has": "has no head",
+    "not": "has a brain"
+   },
+   "status": "toy"
+  },
+  "can-be-pitched": {
+   "label": "Can be pitched",
+   "spoken": "Can be pitched",
+   "family": "property",
+   "closedSet": null,
+   "rule": null,
+   "negative": "can't be pitched",
+   "status": "toy"
+  },
+  "you-can-someone": {
+   "label": "You can ___ someone",
+   "spoken": "You can blank someone",
+   "family": "verb",
+   "closedSet": null,
+   "rule": null,
+   "negative": "isn't a you can ___ someone",
+   "status": "toy"
+  },
+  "three-letters": {
+   "label": "Three letters",
+   "spoken": "Three letters",
+   "family": "computed",
+   "closedSet": null,
+   "rule": "letters-3",
+   "negative": "isn't a three letters",
+   "status": "toy"
+  },
+  "same-letter-twice-in-a-row": {
+   "label": "Same letter twice in a row",
+   "spoken": "Same letter twice in a row",
+   "family": "computed",
+   "closedSet": null,
+   "rule": "double-adjacent",
+   "negative": "isn't a same letter twice in a row",
+   "status": "toy"
+  }
+ },
+ "cells": {
+  "bird": {
+   "duck": [
+    "L",
+    null,
+    null
+   ],
+   "swan": [
+    "L",
+    null,
+    null
+   ],
+   "owl": [
+    "L",
+    null,
+    null
+   ],
+   "penguin": [
+    "L",
+    null,
+    null
+   ],
+   "kiwi": [
+    "S",
+    null,
+    "the New Zealand bird"
+   ],
+   "crane": [
+    "S",
+    null,
+    "the wading bird"
+   ],
+   "turtle": [
+    "O",
+    null,
+    "old word for a turtledove"
+   ],
+   "bat": [
+    "n",
+    null,
+    "v1 soft no"
+   ]
+  },
+  "mammal": {
+   "bat": [
+    "L",
+    null,
+    null
+   ],
+   "seal": [
+    "L",
+    null,
+    null
+   ],
+   "mouse": [
+    "L",
+    null,
+    null
+   ],
+   "dog": [
+    "L",
+    null,
+    null
+   ],
+   "elephant": [
+    "L",
+    null,
+    null
+   ],
+   "knight": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "bishop": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "queen": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ]
+  },
+  "fruit": {
+   "apple": [
+    "L",
+    null,
+    null
+   ],
+   "banana": [
+    "L",
+    null,
+    null
+   ],
+   "date": [
+    "L",
+    null,
+    null
+   ],
+   "lemon": [
+    "L",
+    null,
+    null
+   ],
+   "plum": [
+    "L",
+    null,
+    null
+   ],
+   "cherry": [
+    "L",
+    null,
+    null
+   ],
+   "kiwi": [
+    "L",
+    null,
+    null
+   ],
+   "coconut": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "corn": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ]
+  },
+  "vegetable": {
+   "potato": [
+    "L",
+    null,
+    null
+   ],
+   "corn": [
+    "L",
+    null,
+    null
+   ]
+  },
+  "fish": {
+   "bass": [
+    "L",
+    null,
+    null
+   ],
+   "crab": [
+    "n",
+    null,
+    "v1 soft no"
+   ]
+  },
+  "chess-piece": {
+   "knight": [
+    "L",
+    null,
+    null
+   ],
+   "bishop": [
+    "L",
+    null,
+    null
+   ],
+   "queen": [
+    "L",
+    null,
+    null
+   ]
+  },
+  "card-suit": {
+   "club": [
+    "L",
+    null,
+    null
+   ],
+   "spade": [
+    "L",
+    null,
+    null
+   ],
+   "heart": [
+    "L",
+    null,
+    null
+   ],
+   "diamond": [
+    "L",
+    null,
+    null
+   ]
+  },
+  "musical-instrument": {
+   "piano": [
+    "L",
+    null,
+    null
+   ],
+   "keyboard": [
+    "S",
+    null,
+    "an electronic keyboard"
+   ],
+   "bass": [
+    "S",
+    null,
+    "a bass guitar"
+   ],
+   "bell": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "comb": [
+    "n",
+    null,
+    "v1 soft no"
+   ]
+  },
+  "tool": {
+   "saw": [
+    "L",
+    null,
+    null
+   ],
+   "hammer": [
+    "L",
+    null,
+    null
+   ],
+   "spade": [
+    "L",
+    null,
+    null
+   ],
+   "needle": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "comb": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "map": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "nail": [
+    "n",
+    null,
+    "v1 soft no"
+   ],
+   "club": [
+    "n",
+    null,
+    "v1 soft no"
+   ],
+   "watch": [
+    "n",
+    null,
+    "v1 soft no"
+   ]
+  },
+  "gem": {
+   "diamond": [
+    "L",
+    null,
+    null
+   ]
+  },
+  "body-part": {
+   "heart": [
+    "L",
+    null,
+    null
+   ],
+   "palm": [
+    "S",
+    null,
+    "the palm of your hand"
+   ],
+   "nail": [
+    "S",
+    null,
+    "the one on your finger"
+   ],
+   "hammer": [
+    "O",
+    null,
+    "the hammer bone, in the ear"
+   ],
+   "corn": [
+    "n",
+    null,
+    "v1 soft no"
+   ]
+  },
+  "baseball-equipment": {
+   "bat": [
+    "L",
+    null,
+    null
+   ],
+   "ball": [
+    "L",
+    null,
+    null
+   ],
+   "diamond": [
+    "n",
+    null,
+    "v1 soft no"
+   ],
+   "club": [
+    "n",
+    null,
+    "v1 soft no"
+   ]
+  },
+  "can-fly": {
+   "duck": [
+    "L",
+    null,
+    null
+   ],
+   "swan": [
+    "L",
+    null,
+    null
+   ],
+   "owl": [
+    "L",
+    null,
+    null
+   ],
+   "bat": [
+    "L",
+    null,
+    null
+   ],
+   "crane": [
+    "S",
+    null,
+    "the bird, not the machine"
+   ],
+   "ball": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "kiwi": [
+    "n",
+    null,
+    "v1 soft no"
+   ]
+  },
+  "lays-eggs": {
+   "duck": [
+    "L",
+    null,
+    null
+   ],
+   "swan": [
+    "L",
+    null,
+    null
+   ],
+   "owl": [
+    "L",
+    null,
+    null
+   ],
+   "penguin": [
+    "L",
+    null,
+    null
+   ],
+   "turtle": [
+    "L",
+    null,
+    null
+   ],
+   "snail": [
+    "L",
+    null,
+    null
+   ],
+   "kiwi": [
+    "S",
+    null,
+    "the bird"
+   ],
+   "crane": [
+    "S",
+    null,
+    "the bird"
+   ],
+   "bass": [
+    "S",
+    null,
+    "the fish"
+   ],
+   "crab": [
+    "S",
+    null,
+    "crabs do"
+   ],
+   "queen": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ]
+  },
+  "has-a-shell": {
+   "turtle": [
+    "L",
+    null,
+    null
+   ],
+   "snail": [
+    "L",
+    null,
+    null
+   ],
+   "crab": [
+    "L",
+    null,
+    null
+   ],
+   "egg": [
+    "L",
+    null,
+    null
+   ],
+   "coconut": [
+    "L",
+    null,
+    null
+   ],
+   "taco": [
+    "S",
+    null,
+    "a hard taco shell"
+   ]
+  },
+  "has-a-pit": {
+   "date": [
+    "L",
+    null,
+    null
+   ],
+   "plum": [
+    "L",
+    null,
+    null
+   ],
+   "cherry": [
+    "L",
+    null,
+    null
+   ],
+   "coconut": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "lemon": [
+    "n",
+    null,
+    "v1 soft no"
+   ],
+   "apple": [
+    "n",
+    null,
+    "v1 soft no"
+   ]
+  },
+  "grows-on-trees": {
+   "apple": [
+    "L",
+    null,
+    null
+   ],
+   "cherry": [
+    "L",
+    null,
+    null
+   ],
+   "plum": [
+    "L",
+    null,
+    null
+   ],
+   "lemon": [
+    "L",
+    null,
+    null
+   ],
+   "coconut": [
+    "L",
+    null,
+    null
+   ],
+   "date": [
+    "L",
+    null,
+    null
+   ],
+   "banana": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "kiwi": [
+    "n",
+    null,
+    "v1 soft no"
+   ]
+  },
+  "has-hands-no-fingers": {
+   "clock": [
+    "L",
+    null,
+    null
+   ],
+   "watch": [
+    "L",
+    null,
+    null
+   ]
+  },
+  "has-teeth-can-t-bite": {
+   "comb": [
+    "L",
+    null,
+    null
+   ],
+   "saw": [
+    "L",
+    null,
+    null
+   ],
+   "zipper": [
+    "L",
+    null,
+    null
+   ],
+   "elephant": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "snail": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "clock": [
+    "n",
+    null,
+    "v1 soft no"
+   ],
+   "watch": [
+    "n",
+    null,
+    "v1 soft no"
+   ],
+   "crab": [
+    "n",
+    null,
+    "v1 soft no"
+   ]
+  },
+  "has-an-eye-can-t-see": {
+   "needle": [
+    "L",
+    null,
+    null
+   ],
+   "potato": [
+    "L",
+    null,
+    null
+   ],
+   "storm": [
+    "S",
+    null,
+    "the eye of a storm"
+   ],
+   "coconut": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ]
+  },
+  "has-a-mouth-can-t-eat": {
+   "river": [
+    "L",
+    null,
+    null
+   ],
+   "bottle": [
+    "S",
+    null,
+    "the neck opening"
+   ],
+   "bell": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ]
+  },
+  "has-a-tongue-can-t-taste": {
+   "shoe": [
+    "L",
+    null,
+    null
+   ],
+   "bell": [
+    "S",
+    null,
+    "the clapper"
+   ]
+  },
+  "has-keys-opens-nothing": {
+   "piano": [
+    "L",
+    null,
+    null
+   ],
+   "keyboard": [
+    "L",
+    null,
+    null
+   ],
+   "map": [
+    "S",
+    null,
+    "the key explains the symbols"
+   ],
+   "clock": [
+    "n",
+    null,
+    "v1 soft no"
+   ]
+  },
+  "has-a-trunk": {
+   "elephant": [
+    "L",
+    null,
+    null
+   ],
+   "tree": [
+    "L",
+    null,
+    null
+   ],
+   "palm": [
+    "S",
+    null,
+    "a palm tree"
+   ]
+  },
+  "has-a-spine-no-bones": {
+   "book": [
+    "S",
+    null,
+    "the back of a book"
+   ],
+   "penguin": [
+    "n",
+    null,
+    "Penguin paperbacks (a brand)"
+   ]
+  },
+  "has-ears-can-t-hear": {
+   "corn": [
+    "L",
+    null,
+    null
+   ]
+  },
+  "has-a-head-no-brain": {
+   "hammer": [
+    "L",
+    null,
+    null
+   ],
+   "nail": [
+    "L",
+    null,
+    null
+   ],
+   "club": [
+    "S",
+    null,
+    "a golf club"
+   ],
+   "bass": [
+    "O",
+    null,
+    "a bass guitar's headstock"
+   ],
+   "river": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ]
+  },
+  "can-be-pitched": {
+   "tent": [
+    "L",
+    null,
+    null
+   ],
+   "ball": [
+    "L",
+    null,
+    null
+   ],
+   "piano": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "bell": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "bass": [
+    "n",
+    null,
+    "v1 soft no"
+   ]
+  },
+  "you-can-someone": {
+   "watch": [
+    "L",
+    null,
+    null
+   ],
+   "date": [
+    "L",
+    null,
+    null
+   ],
+   "book": [
+    "L",
+    null,
+    null
+   ],
+   "club": [
+    "L",
+    null,
+    null
+   ],
+   "hammer": [
+    "L",
+    null,
+    null
+   ],
+   "nail": [
+    "L",
+    null,
+    null
+   ],
+   "needle": [
+    "L",
+    null,
+    null
+   ],
+   "knight": [
+    "S",
+    null,
+    "to knight someone"
+   ],
+   "clock": [
+    "S",
+    null,
+    "to clock someone"
+   ],
+   "egg": [
+    "S",
+    null,
+    "to egg someone"
+   ],
+   "dog": [
+    "S",
+    null,
+    "to dog someone, follow"
+   ],
+   "comb": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "bottle": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "shoe": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "saw": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "bell": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "palm": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "bat": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "duck": [
+    "A",
+    null,
+    "arguable (toy key)"
+   ],
+   "crab": [
+    "n",
+    null,
+    "v1 soft no"
+   ],
+   "tree": [
+    "n",
+    null,
+    "v1 soft no"
+   ],
+   "seal": [
+    "n",
+    null,
+    "v1 soft no"
+   ],
+   "ball": [
+    "n",
+    null,
+    "v1 soft no"
+   ],
+   "heart": [
+    "n",
+    null,
+    "\"I heart you\" (slang)"
+   ]
+  },
+  "three-letters": {
+   "bat": [
+    "L",
+    null,
+    "has exactly three letters"
+   ],
+   "owl": [
+    "L",
+    null,
+    "has exactly three letters"
+   ],
+   "dog": [
+    "L",
+    null,
+    "has exactly three letters"
+   ],
+   "egg": [
+    "L",
+    null,
+    "has exactly three letters"
+   ],
+   "saw": [
+    "L",
+    null,
+    "has exactly three letters"
+   ],
+   "map": [
+    "L",
+    null,
+    "has exactly three letters"
+   ]
+  },
+  "same-letter-twice-in-a-row": {
+   "kiwi": [
+    "n",
+    null,
+    "misreading: some letter appears twice, not necessarily in a row"
+   ],
+   "penguin": [
+    "n",
+    null,
+    "misreading: some letter appears twice, not necessarily in a row"
+   ],
+   "turtle": [
+    "n",
+    null,
+    "misreading: some letter appears twice, not necessarily in a row"
+   ],
+   "elephant": [
+    "n",
+    null,
+    "misreading: some letter appears twice, not necessarily in a row"
+   ],
+   "bass": [
+    "L",
+    null,
+    "has the same letter twice in a row"
+   ],
+   "apple": [
+    "L",
+    null,
+    "has the same letter twice in a row"
+   ],
+   "banana": [
+    "n",
+    null,
+    "misreading: some letter appears twice, not necessarily in a row"
+   ],
+   "cherry": [
+    "L",
+    null,
+    "has the same letter twice in a row"
+   ],
+   "coconut": [
+    "n",
+    null,
+    "misreading: some letter appears twice, not necessarily in a row"
+   ],
+   "potato": [
+    "n",
+    null,
+    "misreading: some letter appears twice, not necessarily in a row"
+   ],
+   "egg": [
+    "L",
+    null,
+    "has the same letter twice in a row"
+   ],
+   "clock": [
+    "n",
+    null,
+    "misreading: some letter appears twice, not necessarily in a row"
+   ],
+   "zipper": [
+    "L",
+    null,
+    "has the same letter twice in a row"
+   ],
+   "needle": [
+    "L",
+    null,
+    "has the same letter twice in a row"
+   ],
+   "bottle": [
+    "L",
+    null,
+    "has the same letter twice in a row"
+   ],
+   "book": [
+    "L",
+    null,
+    "has the same letter twice in a row"
+   ],
+   "bell": [
+    "L",
+    null,
+    "has the same letter twice in a row"
+   ],
+   "tent": [
+    "n",
+    null,
+    "misreading: some letter appears twice, not necessarily in a row"
+   ],
+   "ball": [
+    "L",
+    null,
+    "has the same letter twice in a row"
+   ],
+   "hammer": [
+    "L",
+    null,
+    "has the same letter twice in a row"
+   ],
+   "tree": [
+    "L",
+    null,
+    "has the same letter twice in a row"
+   ],
+   "river": [
+    "n",
+    null,
+    "misreading: some letter appears twice, not necessarily in a row"
+   ],
+   "queen": [
+    "L",
+    null,
+    "has the same letter twice in a row"
+   ],
+   "diamond": [
+    "n",
+    null,
+    "misreading: some letter appears twice, not necessarily in a row"
+   ]
+  }
+ },
+ "coverage": {
+  "words": [
+   "kiwi",
+   "bat",
+   "seal",
+   "crane",
+   "duck",
+   "swan",
+   "owl",
+   "penguin",
+   "turtle",
+   "snail",
+   "mouse",
+   "dog",
+   "elephant",
+   "bass",
+   "crab",
+   "apple",
+   "banana",
+   "date",
+   "lemon",
+   "plum",
+   "cherry",
+   "coconut",
+   "potato",
+   "corn",
+   "egg",
+   "taco",
+   "clock",
+   "watch",
+   "comb",
+   "saw",
+   "zipper",
+   "needle",
+   "bottle",
+   "piano",
+   "keyboard",
+   "map",
+   "book",
+   "shoe",
+   "bell",
+   "tent",
+   "ball",
+   "hammer",
+   "nail",
+   "tree",
+   "river",
+   "palm",
+   "storm",
+   "knight",
+   "bishop",
+   "queen",
+   "club",
+   "spade",
+   "heart",
+   "diamond"
+  ],
+  "headings": [
+   "bird",
+   "mammal",
+   "fruit",
+   "vegetable",
+   "fish",
+   "chess-piece",
+   "card-suit",
+   "musical-instrument",
+   "tool",
+   "gem",
+   "body-part",
+   "baseball-equipment",
+   "can-fly",
+   "lays-eggs",
+   "has-a-shell",
+   "has-a-pit",
+   "grows-on-trees",
+   "has-hands-no-fingers",
+   "has-teeth-can-t-bite",
+   "has-an-eye-can-t-see",
+   "has-a-mouth-can-t-eat",
+   "has-a-tongue-can-t-taste",
+   "has-keys-opens-nothing",
+   "has-a-trunk",
+   "has-a-spine-no-bones",
+   "has-ears-can-t-hear",
+   "has-a-head-no-brain",
+   "can-be-pitched",
+   "you-can-someone",
+   "three-letters",
+   "same-letter-twice-in-a-row"
+  ]
+ }
+}

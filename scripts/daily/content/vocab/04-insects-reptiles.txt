@@ -1,0 +1,132 @@
+# Insects, spiders, reptiles. Insect defaults: lays eggs, six legs, no bones; wings and flying arguable.
+
+Fly | a |
+  insect | L | the housefly | insect | has:wings has:wing can:fly has:eyes"huge compound eyes"
+  zip | S | the fly on trousers | object | has:zipper
+
+Cricket | a |
+  insect | L | the chirping insect | insect | can:jump has:wings:A"most have wings" has:wing:A can:fly:A"some can fly" has:legs
+  sport | L | the bat and ball sport | sport |
+
+Bug | a |
+  insect | L | an insect | insect | has:wings:A has:wing:A can:fly:A
+  error | S | a computer bug | abstract |
+  spy | S | a hidden microphone | object |
+  * | verb:L"to bug someone, annoy them"
+
+Butterfly | a |
+  insect | L | the butterfly | insect | has:wings has:wing can:fly has:spots:A"many have spots" has:scales:O"tiny wing scales" has:tongue:O"a coiled feeding tube" has:mouth:A
+  stroke | S | the swimming stroke | sport:A"a stroke, not a sport" |
+
+Moth | a |
+  insect | L | the moth | insect | has:wings has:wing can:fly has:scales:O"tiny wing scales"
+
+Bee | a |
+  insect | L | the honeybee | insect | has:wings has:wing can:fly can:sting has:stripes"black and yellow stripes"
+  contest | S | a spelling bee | abstract |
+
+Ant | an |
+  insect | L | the ant | insect | has:wings:A"queens have wings" has:wing:A can:fly:A"queens fly" can:sting:A"some ants sting" can:bite:A
+
+Wasp | a |
+  insect | L | the wasp | insect | has:wings has:wing can:fly can:sting has:stripes"yellow stripes"
+
+Hornet | a |
+  insect | L | the big wasp | insect | has:wings has:wing can:fly can:sting has:stripes:A
+
+Beetle | a | brand
+  insect | L | the beetle | insect | has:wings:S"wings under hard covers" has:wing:S can:fly:A"most can fly" has:shell:A"a hard shell"
+  * | @vehicle:n"the car brand"
+
+Flea | a |
+  insect | L | the flea | insect | can:jump has:wings:N has:wing:N can:fly:N can:bite
+
+Mantis | a |
+  insect | L | the praying mantis | insect | has:wings:A has:wing:A can:fly:A has:arms:A"grabbing front legs"
+
+Ladybug | a |
+  insect | L | the ladybug | insect | has:wings:S"wings under its spotted shell" has:wing:S can:fly has:spots"black spots" has:shell:A
+
+Dragonfly | a |
+  insect | L | the dragonfly | insect | has:wings has:wing can:fly has:eyes"huge eyes"
+
+Grasshopper | a |
+  insect | L | the grasshopper | insect | has:wings has:wing can:fly:A"some can fly" can:jump
+
+Termite | a |
+  insect | L | the termite | insect | has:wings:A"swarmers have wings" has:wing:A can:fly:A
+
+Mosquito | a |
+  insect | L | the mosquito | insect | has:wings has:wing can:fly can:bite:A"it pierces" can:sting:n"some call it a sting" has:needle:n"a needle-like mouth"
+
+Locust | a |
+  insect | L | the locust | insect | has:wings has:wing can:fly can:jump
+
+Firefly | a |
+  insect | L | the glowing beetle | insect | has:wings has:wing can:fly has:light"a glowing tail" has:bulb:n"a glowing tail"
+
+Caterpillar | a |
+  insect | L | the caterpillar | invertebrate, insect:A"a young insect" | has:legs"lots of legs" has:six-legs:A"six real legs, plus stumps" has:wings:N has:wing:N can:fly:N lays-eggs:N
+
+Tick | a |
+  animal | L | the tick | arachnid | can:bite
+  mark | S | a check mark | abstract |
+  sound | S | a clock's tick | sound |
+
+Spider | a |
+  animal | L | the spider | arachnid | has:fangs can:bite has:eyes"eight eyes" has:hairs:A is:pet:A"pet tarantulas"
+
+Scorpion | a |
+  animal | L | the scorpion | arachnid | lays-eggs:n"scorpions give birth to live young" can:sting has:tail"a stinging tail" has:claws"pincers" has:shell:A
+
+Turtle | a |
+  animal | L | the turtle | turtle | can:swim lives-in-sea:A"sea turtles do" has:legs"flippers or legs"
+  dove | O | old word for a turtledove | bird:O"old word for a turtledove" |
+
+Tortoise | a |
+  animal | L | the tortoise | turtle | can:swim:N has:legs"stumpy legs" lives-in-sea:N is:pet:A
+
+Python | a |
+  animal | L | the python | snake |
+  code | S | the programming language | abstract |
+
+Cobra | a |
+  animal | L | the cobra | snake | has:hood"a flared hood" can:bite
+
+Viper | a |
+  animal | L | the viper | snake | lays-eggs:A"many vipers give birth to live young" can:bite has:fangs
+
+Boa | a |
+  animal | L | the boa | snake | can:bite:A lays-eggs:n"boas give birth to live young" has:claws:O"tiny hind spurs"
+  scarf | S | a feather boa | clothing:S | has:feathers"a feathery scarf"
+
+Rattlesnake | a |
+  animal | L | the rattlesnake | snake | lays-eggs:n"rattlesnakes give birth to live young" can:bite has:tail"a rattling tail"
+
+Lizard | a |
+  animal | L | the lizard | lizard |
+
+Gecko | a |
+  animal | L | the gecko | lizard | has:claws:A"sticky toe pads" is:pet:A
+
+Iguana | an |
+  animal | L | the iguana | lizard | has:crest:S"a spiny crest" is:pet:A
+
+Chameleon | a |
+  animal | L | the colour-changing lizard | lizard | has:tongue"a long sticky tongue" has:tail is:pet:A
+  person | S | someone who keeps changing | person |
+
+Crocodile | a |
+  animal | L | the crocodile | reptile | has:teeth"lots of teeth" can:bite can:swim has:claws
+
+Alligator | an |
+  animal | L | the alligator | reptile | has:teeth"lots of teeth" can:bite can:swim has:claws
+
+Monitor | a |
+  screen | L | a computer screen | computer-part | has:screen"it is a screen" has:buttons:A
+  lizard | S | the monitor lizard | lizard:S |
+
+Dragon | a |
+  myth | L | the fire-breathing dragon | abstract | has:wings:A"most dragons do" has:wing:A can:fly:A has:scales:A has:tail:A is:reptile:A is:animal:A is:living:A has:claws:A
+  kite | O | a dragon kite | toy |
+

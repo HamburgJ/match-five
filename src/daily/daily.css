@@ -1,0 +1,970 @@
+/* Match Five Daily. Geometry from layout.json (DOSSIER-v2 4.1), set as custom
+   properties on .m5d; tokens from 5.2. No all-caps, no colour-only meaning, and
+   nothing differs between a right and a wrong placement before a check. */
+
+body.m5d-body {
+  margin: 0;
+  background: #ffffff;
+  -webkit-text-size-adjust: 100%;
+}
+
+.m5d {
+  --ink: #1a1a1a;
+  --ink-soft: #5f5f5f;
+  --tile: #2d2d2d;
+  --card: #f5f5f5;
+  --edge: #8a8a8a;
+  --edge-strong: #4a4a4a;
+  --well: #858585;
+  --navy: #1a237e;
+  --navy-soft: #e8e9f3;
+  --right: #2e7d32;
+  --f-label: 'M5 Outfit', Outfit, 'M5 Outfit Fallback', system-ui, sans-serif;
+  --f-ui: 'M5 Roboto', Roboto, 'M5 Roboto Fallback', system-ui, sans-serif;
+  --label-px: 0.9375rem;
+  --word-px: 1.0625rem;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: var(--f-ui);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.m5d *,
+.m5d *::before,
+.m5d *::after {
+  box-sizing: border-box;
+}
+@media (max-width: 359px) {
+  .m5d {
+    --label-px: 0.875rem;
+    --word-px: 0.9375rem;
+  }
+}
+@media (min-width: 600px) {
+  .m5d {
+    --label-px: 1rem;
+  }
+}
+
+:where(.m5d) button {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+}
+.m5d :focus-visible {
+  outline: 3px solid #267cce;
+  outline-offset: 2px;
+}
+.m5d-sr {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ------------------------------------------------------------ play column */
+
+.m5d-play {
+  max-width: var(--g-column-max);
+  margin: 0 auto;
+  padding: 0 var(--g-gutter);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+  container-type: inline-size;
+  container-name: play;
+  touch-action: manipulation;
+}
+.m5d-play.is-ended,
+.m5d-play.is-archive {
+  min-height: 0;
+}
+@media (min-width: 600px) {
+  .m5d-play {
+    min-height: 0;
+  }
+}
+
+.m5d-header {
+  height: var(--g-header);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  column-gap: 8px;
+  flex: none;
+}
+.m5d-brand {
+  justify-self: start;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  display: flex;
+  align-items: center;
+}
+.m5d-title {
+  text-align: center;
+  min-width: 0;
+}
+.m5d-title h1 {
+  margin: 0;
+  font: 700 1.0625rem/1.25rem var(--f-label);
+  color: var(--navy);
+  white-space: nowrap;
+}
+.m5d-title p {
+  margin: 0;
+  font: 400 0.8125rem/1rem var(--f-ui);
+  color: var(--ink-soft);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.m5d-iconbtn {
+  justify-self: end;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+  background: #ffffff;
+  color: var(--navy);
+  cursor: pointer;
+  padding: 0;
+}
+.m5d-iconbtn svg {
+  width: 20px;
+  height: 20px;
+}
+.m5d-iconbtn[aria-pressed='true'] {
+  background: var(--navy);
+  color: #ffffff;
+  border-color: var(--navy);
+}
+
+.m5d-main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.m5d-play.is-ended .m5d-main {
+  flex: none;
+}
+/* Spare height goes above the board, so the headings sit nearer the thumb. */
+.m5d-above {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
+.m5d-play.is-ended .m5d-above {
+  flex: none;
+}
+.m5d-note {
+  margin: 0 0 8px;
+  font: 400 0.875rem/1.125rem var(--f-ui);
+  color: var(--ink);
+}
+.m5d-note.is-soft {
+  color: var(--ink-soft);
+}
+.m5d-note a,
+.m5d-link {
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+.m5d-rules p {
+  margin: 0 0 4px;
+}
+
+/* ------------------------------------------------------------ the board */
+
+.m5d-band {
+  margin-bottom: var(--g-band-gap);
+}
+.m5d-sechead {
+  height: var(--g-sec-head);
+  margin: 0;
+  font: 500 0.8125rem/1.25rem var(--f-ui);
+  color: var(--ink-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.m5d-sechead-wide {
+  display: none;
+}
+.m5d-gridwrap {
+  container-type: inline-size;
+  container-name: grid;
+  font-size: var(--label-px);
+}
+.m5d-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--g-gap);
+  font-size: 1rem;
+}
+@media (min-width: 600px) {
+  .m5d-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .m5d-sechead-wide {
+    display: inline;
+  }
+  .m5d-arrive-cell {
+    display: none !important;
+  }
+}
+/* Columns follow whether the labels fit, not the viewport: at 125-200% text the
+   grid drops to fewer, wider columns (DOSSIER-v2 4.1). */
+@container grid (max-width: 31em) {
+  .m5d-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@container grid (max-width: 19.5em) {
+  .m5d-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.m5d-card {
+  position: relative;
+  min-height: var(--g-card);
+  min-width: 0;
+  padding: var(--g-card-pad);
+  border: 1px solid var(--edge);
+  border-radius: 8px;
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.m5d-label {
+  min-height: calc(var(--g-label-lh) * 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 600 var(--label-px) / var(--g-label-lh) var(--f-label);
+  color: var(--ink);
+  overflow-wrap: anywhere;
+  hyphens: none;
+  text-wrap: balance;
+  perspective: 300px;
+}
+.m5d-label > span {
+  display: block;
+}
+.m5d-well {
+  margin-top: auto;
+  height: var(--g-well);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px dashed var(--well);
+  border-radius: 6px;
+  min-width: 0;
+}
+.m5d-well.is-filled {
+  border-color: transparent;
+}
+.m5d-card.is-placeholder {
+  cursor: default;
+  background: transparent;
+  border-style: dashed;
+  border-color: var(--well);
+}
+.m5d-card.is-placeholder .m5d-well {
+  border-color: transparent;
+}
+.m5d-arrive-cell {
+  min-height: var(--g-card);
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+  font: 400 0.75rem/0.9375rem var(--f-ui);
+  color: var(--ink-soft);
+}
+.m5d-rules-band {
+  min-height: calc(var(--g-card) * 2 + var(--g-gap));
+  border: 1px dashed var(--well);
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  font: 400 0.9375rem/1.25rem var(--f-ui);
+  color: var(--ink);
+}
+.m5d-rules-band p {
+  margin: 0;
+}
+@media (min-width: 600px) {
+  .m5d-rules-band {
+    min-height: var(--g-card);
+  }
+}
+
+/* A word is selected: every live card shows the same "ready" outline. */
+.m5d-board.is-armed .m5d-card:not(.is-placeholder):not(.is-pinned) {
+  border-color: var(--navy);
+  box-shadow: inset 0 0 0 1px var(--navy);
+}
+.m5d-card.is-pinned {
+  cursor: default;
+}
+.m5d-pin {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  color: var(--navy);
+}
+.m5d-mark {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.m5d-mark svg {
+  width: 10px;
+  height: 10px;
+}
+.m5d-mark.is-right {
+  background: var(--right);
+  color: #ffffff;
+}
+.m5d-mark.is-missed {
+  background: #ffffff;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+.m5d-card.is-locked {
+  cursor: default;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .m5d-card:not(.is-placeholder):not(.is-pinned):not(.is-locked):hover {
+    border-color: var(--edge-strong);
+  }
+  .m5d-board.is-armed .m5d-card:not(.is-placeholder):not(.is-pinned):hover {
+    background: var(--navy-soft);
+  }
+  .m5d-traycell.is-filled:hover .m5d-tile:not(.is-selected) {
+    background: #000000;
+  }
+  .m5d-textbtn:hover,
+  .m5d-link:hover {
+    color: #000000;
+  }
+}
+
+.m5d-tile {
+  display: inline-block;
+  max-width: 100%;
+  height: var(--g-tile);
+  padding: 0 8px;
+  border-radius: 5px;
+  background: var(--tile);
+  color: #ffffff;
+  font: 500 var(--word-px) / var(--g-tile) var(--f-ui);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+.m5d-tile.is-selected {
+  background: #ffffff;
+  color: var(--navy);
+  box-shadow: 0 0 0 3px var(--navy);
+  transform: translateY(-2px);
+}
+.m5d-tile.is-dragging {
+  position: relative;
+  z-index: 50;
+  box-shadow: 0 0 0 3px var(--navy), 0 10px 22px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+/* ------------------------------------------------------------ the dock */
+
+.m5d-dock {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  flex: none;
+  background: #ffffff;
+  border-top: 1px solid #d0d0d0;
+  padding: var(--g-dock-pad-top) 0 calc(var(--g-dock-pad-bottom) + env(safe-area-inset-bottom));
+}
+@container play (max-width: 15.5em) {
+  .m5d-dock {
+    position: static;
+  }
+}
+.m5d-status {
+  height: var(--g-status-row);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.m5d-status-text {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font: 400 0.875rem/1rem var(--f-ui);
+  color: var(--ink);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.m5d-textbtn {
+  flex: none;
+  min-height: var(--g-min-secondary);
+  min-width: 2.75rem;
+  padding: 0 6px;
+  border: none;
+  background: none;
+  color: var(--navy);
+  font: 500 0.875rem/1 var(--f-ui);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.m5d-tray {
+  margin-top: 4px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--g-tray-gap) var(--g-gap);
+}
+@media (min-width: 600px) {
+  .m5d-tray {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .m5d-bar-left {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+@media (max-width: 359px) {
+  .m5d-act {
+    font-size: 0.875rem;
+  }
+}
+.m5d-traycell {
+  height: var(--g-tray-cell);
+  min-width: 0;
+  padding: 0;
+  border: 1px dashed var(--well);
+  border-radius: 6px;
+  background: transparent;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.m5d-traycell.is-filled {
+  border-color: transparent;
+  cursor: pointer;
+}
+.m5d-traycell .m5d-tile {
+  width: 100%;
+  height: 100%;
+  line-height: calc(var(--g-tray-cell) - 0px);
+  border-radius: 6px;
+  text-align: center;
+  padding: 0 4px;
+}
+.m5d-bar {
+  margin-top: var(--g-tray-gap);
+  height: var(--g-bar);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: var(--g-gap);
+}
+.m5d-bar-left {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: stretch;
+  min-width: 0;
+}
+.m5d-act {
+  height: var(--g-bar);
+  min-width: 0;
+  padding: 0 2px;
+  border: none;
+  background: none;
+  color: var(--navy);
+  font: 500 0.9375rem/1.125rem var(--f-ui);
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.m5d-act > span {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.m5d-act small {
+  font: 400 0.6875rem/0.75rem var(--f-ui);
+  color: var(--ink-soft);
+  display: block;
+  white-space: normal;
+  text-align: center;
+  max-width: 4.5rem;
+}
+.m5d-act.is-quiet {
+  color: var(--ink);
+}
+.m5d-primary {
+  height: var(--g-bar);
+  border: none;
+  border-radius: 8px;
+  background: var(--navy);
+  color: #ffffff;
+  font: 600 1rem/1 var(--f-ui);
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+  padding: 0 8px;
+  white-space: nowrap;
+}
+.m5d-primary[aria-disabled='true'] {
+  background: #e3e4ee;
+  color: #4f5161;
+  cursor: default;
+}
+.m5d-secondary {
+  height: var(--g-bar);
+  border: 1px solid var(--navy);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--navy);
+  font: 600 1rem/1 var(--f-ui);
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+.m5d-dock.is-result {
+  padding-top: 8px;
+}
+.m5d-resultbar {
+  height: var(--g-bar);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: var(--g-gap);
+  align-items: center;
+}
+.m5d-resultbar strong {
+  font: 600 1rem/1.25rem var(--f-label);
+  color: var(--navy);
+}
+
+/* ------------------------------------------------------------ result card */
+
+.m5d-result {
+  margin: 8px 0 20px;
+  border-top: 1px solid #d0d0d0;
+  padding-top: 14px;
+}
+.m5d-glance h2 {
+  margin: 0;
+  font: 600 0.9375rem/1.25rem var(--f-label);
+  color: var(--ink-soft);
+}
+.m5d-glance .m5d-score {
+  margin: 4px 0 0;
+  font: 700 1.5rem/1.875rem var(--f-label);
+  color: var(--navy);
+}
+.m5d-glance .m5d-trail {
+  margin: 2px 0 0;
+  font: 500 1.125rem/1.5rem var(--f-ui);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+.m5d-glance .m5d-record {
+  margin: 4px 0 0;
+  font: 400 0.875rem/1.25rem var(--f-ui);
+  color: var(--ink-soft);
+}
+.m5d-glance-actions {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.m5d-glance-actions .m5d-primary,
+.m5d-glance-actions .m5d-secondary {
+  min-width: 120px;
+}
+.m5d-feedback {
+  margin: 6px 0 0;
+  min-height: 20px;
+  font: 400 0.875rem/1.25rem var(--f-ui);
+  color: var(--ink-soft);
+}
+.m5d-block {
+  margin-top: 22px;
+}
+.m5d-block h3 {
+  margin: 0 0 8px;
+  font: 600 1rem/1.375rem var(--f-label);
+  color: var(--ink);
+}
+.m5d-lives {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.m5d-lives li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 12px;
+  align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px solid #ececec;
+}
+.m5d-lives .m5d-pair {
+  font: 600 1.1875rem/1.5rem var(--f-label);
+}
+.m5d-lives .m5d-pair span {
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.m5d-lives .m5d-gloss {
+  grid-column: 1;
+  font: 400 1rem/1.375rem var(--f-ui);
+  color: var(--ink);
+}
+.m5d-lives .m5d-textbtn,
+.m5d-pairs .m5d-textbtn,
+.m5d-misses .m5d-textbtn {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  font-size: 0.8125rem;
+  color: var(--ink-soft);
+}
+.m5d-pairs,
+.m5d-misses {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.m5d-pairs li,
+.m5d-misses li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 12px;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid #ececec;
+  font: 400 0.9375rem/1.25rem var(--f-ui);
+}
+.m5d-pairs li b {
+  font-weight: 500;
+}
+.m5d-misses li {
+  align-items: start;
+  padding: 8px 0;
+}
+.m5d-misses li .m5d-textbtn {
+  grid-row: 1;
+}
+.m5d-fine {
+  margin: 10px 0 0;
+  font: 400 0.875rem/1.25rem var(--f-ui);
+  color: var(--ink-soft);
+}
+.m5d-sharebox {
+  margin: 8px 0 0;
+  padding: 10px 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  background: #fafafa;
+  font: 400 0.875rem/1.25rem ui-monospace, 'Cascadia Mono', Menlo, Consolas, monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  user-select: text;
+  -webkit-user-select: text;
+}
+.m5d-next {
+  margin-top: 18px;
+}
+.m5d-next:has(> burger-next-cards[shown]) {
+  border-top: 1px solid #ececec;
+  padding-top: 8px;
+}
+[data-burger-pickup-slot] {
+  display: inline-flex;
+  align-items: center;
+  min-height: 0;
+}
+
+/* ------------------------------------------------------------ archive */
+
+.m5d-archive {
+  padding: 8px 0 24px;
+}
+.m5d-archive-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.m5d-archive-top h2 {
+  margin: 0;
+  font: 600 1.125rem/1.5rem var(--f-label);
+}
+.m5d-month {
+  margin: 14px 0 0;
+}
+.m5d-month h3 {
+  margin: 0 0 6px;
+  font: 600 0.9375rem/1.25rem var(--f-label);
+  color: var(--ink);
+}
+.m5d-cal {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 4px;
+}
+.m5d-cal-dow {
+  text-align: center;
+  font: 500 0.75rem/1.125rem var(--f-ui);
+  color: var(--ink-soft);
+}
+.m5d-day {
+  height: 3rem;
+  border-radius: 6px;
+  border: 1px solid #d6d6d6;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font: 400 0.6875rem/0.8125rem var(--f-ui);
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-variant-numeric: tabular-nums;
+}
+.m5d-day b {
+  font: 600 1.0625rem/1.25rem var(--f-ui);
+  color: var(--ink);
+}
+a.m5d-day {
+  cursor: pointer;
+}
+.m5d-day.is-empty {
+  border-color: transparent;
+  background: transparent;
+}
+.m5d-day.is-today {
+  border: 2px solid var(--navy);
+}
+.m5d-day.is-future {
+  border-color: transparent;
+  color: #8a8a8a;
+}
+.m5d-day.is-empty {
+  color: #8a8a8a;
+}
+.m5d-legend {
+  margin: 12px 0 0;
+  font: 400 0.8125rem/1.125rem var(--f-ui);
+  color: var(--ink-soft);
+}
+.m5d-daylist {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.m5d-daylist a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 4px;
+  border-bottom: 1px solid #ececec;
+  color: var(--ink);
+  text-decoration: none;
+  font: 400 0.9375rem/1.25rem var(--f-ui);
+}
+@media (max-width: 359px) {
+  .m5d-cal {
+    display: none;
+  }
+  .m5d-daylist {
+    display: block;
+  }
+}
+
+.m5d-message {
+  padding: 40px 0;
+  text-align: center;
+  font: 400 1rem/1.5rem var(--f-ui);
+}
+.m5d-message p {
+  margin: 0 0 14px;
+}
+
+/* ------------------------------------------------------------ motion */
+
+@keyframes m5d-flip-in {
+  from {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.m5d-card.is-arriving .m5d-label > span {
+  animation: m5d-flip-in 200ms ease-out both;
+  animation-delay: calc(var(--i, 0) * 30ms);
+}
+@keyframes m5d-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.m5d-traycell.is-arriving .m5d-tile {
+  animation: m5d-fade-in 200ms ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .m5d *,
+  .m5d *::before,
+  .m5d *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ------------------------------------------------------------ landscape phones */
+
+@media (orientation: landscape) and (max-height: 499px) and (min-aspect-ratio: 7/5) {
+  .m5d-play {
+    max-width: none;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-rows: var(--g-header) minmax(0, 1fr);
+    grid-template-areas: 'head head' 'main dock';
+    column-gap: 20px;
+    height: 100vh;
+    height: 100svh;
+    min-height: 0;
+    padding-left: max(var(--g-gutter), env(safe-area-inset-left));
+    padding-right: max(var(--g-gutter), env(safe-area-inset-right));
+  }
+  .m5d-play.is-ended,
+  .m5d-play.is-archive {
+    height: 100svh;
+  }
+  .m5d-header {
+    grid-area: head;
+  }
+  .m5d-main {
+    grid-area: main;
+    overflow-y: auto;
+    min-height: 0;
+    overscroll-behavior: contain;
+  }
+  .m5d-above {
+    flex: none;
+  }
+  .m5d-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .m5d-dock {
+    grid-area: dock;
+    position: static;
+    border-top: none;
+    border-left: 1px solid #d0d0d0;
+    padding-left: 14px;
+    overflow-y: auto;
+    min-height: 0;
+    align-self: start;
+    max-height: 100%;
+  }
+  .m5d-tray {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .m5d-sechead-wide {
+    display: inline;
+  }
+  .m5d-arrive-cell {
+    display: none !important;
+  }
+  .m5d-archive {
+    grid-column: 1 / -1;
+    overflow-y: auto;
+    min-height: 0;
+  }
+}
+
+.m5d-textbtn.m5d-inline {
+  display: inline;
+  min-height: 0;
+  min-width: 0;
+  padding: 8px 2px;
+  font-size: inherit;
+  color: var(--navy);
+}
+
+.m5d-legend-line {
+  margin: 0 0 4px;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+}
+.m5d-legend-line .m5d-mark {
+  display: inline-flex;
+  vertical-align: -3px;
+}
+
+/* The pickup slot holds the golden ticket in flow. The ticket's own fixed-corner
+   offsets would push it over the card title once it is position: relative. */
+[data-burger-pickup-slot] > .bv-page-ticket {
+  right: auto;
+  bottom: auto;
+}

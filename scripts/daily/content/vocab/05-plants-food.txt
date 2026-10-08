@@ -1,0 +1,585 @@
+# Plants and food. Fruit defaults: skin; seeds and stem arguable. Tree defaults: trunk, bark, branches, leaves, roots.
+
+Date | a | engine
+  fruit | L | the fruit | fruit | has:pit grows-on-trees"date palms" has:stem:A
+  day | L | a day on the calendar | abstract |
+  outing | S | a romantic outing | abstract |
+  * | verb:L"to date someone"
+
+Orange | an |
+  fruit | L | the fruit | fruit | grows-on-trees has:seeds:A"some are seedless" has:pit:n"pips, not a pit"
+  colour | L | the colour | abstract |
+
+Lime | a |
+  fruit | L | the fruit | fruit | grows-on-trees has:pit:n"pips, not a pit"
+  colour | S | the green colour | abstract |
+  mineral | O | the white mineral | material |
+
+Plum | a |
+  fruit | L | the fruit | fruit | has:pit grows-on-trees
+  colour | S | a dark purple colour | abstract |
+
+Peach | a |
+  fruit | L | the fruit | fruit | has:pit grows-on-trees has:fur:n"fuzzy skin"
+
+Lemon | a |
+  fruit | L | the fruit | fruit | grows-on-trees has:pit:n"pips, not a pit" has:seeds
+  dud | S | a dud, like a bad car | abstract |
+
+Prune | a |
+  fruit | L | a dried plum | fruit | has:pit:A"some still have stones" grows-on-trees:A"dried plums from trees" has:skin
+
+Currant | a |
+  fruit | L | the small berry | fruit | grows-on-trees:N grows-on-vine:N
+
+Fig | a |
+  fruit | L | the fruit | fruit | grows-on-trees has:seeds"lots of tiny seeds"
+
+Apple | an | brand
+  fruit | L | the fruit | fruit | grows-on-trees has:seeds"pips" has:stem has:pit:n"a core, not a pit" has:core
+  * | @computer-part:n"the computer brand"
+
+Cherry | a |
+  fruit | L | the fruit | fruit | has:pit grows-on-trees has:stem"a cherry stem"
+  colour | S | the bright red colour | abstract |
+
+Banana | a |
+  fruit | L | the fruit | fruit | grows-on-trees:A"a banana plant isn't a tree" has:skin"a banana skin" has:seeds:A has:hand:O"a bunch is a hand"
+
+Grape | a | exclude | the Rename America filter flags it (substring); excluded per 7.1
+  fruit | L | the fruit | fruit | grows-on-vine has:seeds:A"some are seedless" has:stem:A grows-on-trees:N
+
+Melon | a |
+  fruit | L | the fruit | fruit | grows-on-vine:A"a sprawling vine" has:seeds has:skin:A"a thick rind"
+
+Pear | a |
+  fruit | L | the fruit | fruit | grows-on-trees has:stem has:seeds has:pit:n"a core, not a pit"
+
+Mango | a |
+  fruit | L | the fruit | fruit | has:pit"a big flat stone" grows-on-trees
+
+Olive | an |
+  fruit | L | the olive | fruit:A"a fruit, but eaten like a vegetable" | has:pit grows-on-trees is:vegetable:A
+  colour | S | the dull green colour | abstract |
+
+Tomato | a |
+  fruit | L | the tomato | fruit:A"a fruit to botanists" | is:vegetable:A"a vegetable in the kitchen" grows-on-vine:A has:seeds has:skin
+
+Avocado | an |
+  fruit | L | the avocado | fruit:A"a fruit, eaten as a vegetable" | has:pit"a big stone" grows-on-trees is:vegetable:A
+
+Pineapple | a |
+  fruit | L | the pineapple | fruit | has:crown:S"the leafy top" grows-on-trees:N has:skin:A"a spiky rind" has:eyes:O"the spots on the rind"
+
+Coconut | a |
+  fruit | L | the coconut | fruit:A"fruit or nut?" | has:shell grows-on-trees is:nut:A"fruit or nut?" has:fur:n"a hairy shell" has:pit:A has:eyes:O"three dark spots" has:legs:N can:swim:N
+
+Apricot | an |
+  fruit | L | the fruit | fruit | has:pit grows-on-trees has:fur:n"fuzzy skin"
+
+Strawberry | a |
+  fruit | L | the fruit | fruit | has:seeds"seeds on the outside" grows-on-trees:N grows-on-vine:A"runners, not a vine"
+
+Raspberry | a |
+  fruit | L | the fruit | fruit | grows-on-trees:N grows-on-vine:A"canes, not vines"
+  noise | S | a rude blowing noise | sound |
+
+Watermelon | a |
+  fruit | L | the fruit | fruit | grows-on-vine:A"a sprawling vine" has:seeds has:stripes:A"many are striped" has:skin:A"a thick rind"
+
+Squash | a |
+  vegetable | L | the vegetable | vegetable | grows-on-vine:A has:seeds has:skin:A is:fruit:n"a fruit to botanists"
+  sport | S | the racket sport | sport |
+  drink | O | a fruit cordial, in Britain | drink:O"a fruit cordial, in Britain" |
+  * | verb:S"to squash someone"
+
+Pepper | a |
+  vegetable | L | the vegetable | vegetable | has:seeds has:skin has:stem is:fruit:n"a fruit to botanists"
+  spice | L | the spice | herb-spice |
+  * | verb:O"pepper someone with questions"
+
+Corn | - | mass
+  vegetable | L | the vegetable | vegetable | has:ears"ears of corn" has:ear is:fruit:A"botanically a grain"
+  foot | S | a corn on your foot | abstract | is:body-part:n"a sore spot, not a part"
+
+Carrot | a |
+  vegetable | L | the vegetable | vegetable | grows-under-the-soil has:roots:A"it is a root" has:skin:A"peel or skin?"
+  reward | S | a reward or bribe | abstract |
+
+Marrow | a |
+  vegetable | L | the big vegetable | vegetable | grows-on-vine:A has:seeds
+  bone | S | bone marrow | body-part:A"inside the bone" |
+
+Sprout | a |
+  vegetable | L | a Brussels sprout | vegetable |
+  shoot | S | a new shoot | plant |
+
+Beet | a |
+  vegetable | L | the beet | vegetable | grows-under-the-soil has:skin:A"peel or skin?"
+
+Pumpkin | a |
+  vegetable | L | the pumpkin | vegetable | grows-on-vine:A"a sprawling vine" has:seeds has:stem is:fruit:n"a fruit to botanists" has:skin:A
+
+Turnip | a |
+  vegetable | L | the turnip | vegetable | grows-under-the-soil has:skin:A"peel or skin?"
+
+Leek | a |
+  vegetable | L | the leek | vegetable | grows-under-the-soil:A"half underground"
+
+Pea | a |
+  vegetable | L | the pea | vegetable | grows-on-vine:A"a climbing vine" has:pod has:shell:n"a pod, not a shell"
+
+Bean | a |
+  vegetable | L | the bean | vegetable | grows-on-vine:A"some beans climb" has:pod has:shell:n"a pod you shell"
+
+Cabbage | a |
+  vegetable | L | the cabbage | vegetable | has:head:S"a head of cabbage" has:heart:A"the heart of a cabbage" has:leaves
+
+Lettuce | a |
+  vegetable | L | the lettuce | vegetable | has:head:S"a head of lettuce" has:heart:S"the heart of a lettuce" has:leaves
+
+Onion | an |
+  vegetable | L | the onion | vegetable | grows-under-the-soil has:skin"papery skin" has:rings:S"onion rings" has:bulb:S"an onion is a bulb" has:layers
+
+Potato | a |
+  vegetable | L | the potato | vegetable | grows-under-the-soil has:eyes"potato eyes" has:eye"potato eyes" has:skin"potato skin" has:jacket:O"a jacket potato"
+
+Radish | a |
+  vegetable | L | the radish | vegetable | grows-under-the-soil has:skin:A"peel or skin?"
+
+Celery | - | mass
+  vegetable | L | the celery | vegetable | has:heart:S"the celery heart" has:stalks has:leaves
+
+Spinach | - | mass
+  vegetable | L | the spinach | vegetable | has:leaves
+
+Artichoke | an |
+  vegetable | L | the artichoke | vegetable | has:heart:S"the artichoke heart" has:leaves:S"tough leaves" is:flower:O"a flower bud"
+
+Cucumber | a |
+  vegetable | L | the cucumber | vegetable | grows-on-vine has:seeds has:skin is:fruit:n"a fruit to botanists"
+
+Parsnip | a |
+  vegetable | L | the parsnip | vegetable | grows-under-the-soil has:skin:A"peel or skin?"
+
+Broccoli | - | mass
+  vegetable | L | the broccoli | vegetable | has:head:S"a head of broccoli" has:stem"a thick stem" has:branches:O"tree-like florets"
+
+Garlic | - | mass
+  vegetable | L | the garlic | vegetable, herb-spice:A"used like a spice" | grows-under-the-soil has:bulb:S"a garlic bulb" has:head:S"a head of garlic" has:skin"papery skin" has:cloves
+
+Ginger | - | mass
+  root | L | the spicy root | herb-spice | grows-under-the-soil:S"it's an underground stem" has:skin
+  hair | S | ginger hair | abstract |
+
+Mushroom | a |
+  fungus | L | the mushroom | vegetable:A"a fungus, eaten as a vegetable" | has:cap:S"the mushroom cap" has:stem"the mushroom stalk" has:hair:N grows-under-the-soil:A is:plant:n"a fungus, not a plant" has:gills:O"under the cap"
+
+Palm | a |
+  tree | S | a palm tree | tree:S | has:trunk:S"a palm tree" has:branches:N"fronds, not branches" has:leaves:S"palm fronds" has:bark:A has:heart:O"hearts of palm" has:rings:N has:knot:N
+  hand | S | the palm of your hand | body-part:S"the palm of your hand" |
+  * | verb:n"palm someone off"
+
+Oak | an |
+  tree | L | the oak | tree | has:acorns
+
+Pine | a |
+  tree | L | the pine | tree | has:needles"pine needles" has:needle"pine needles" has:cones has:leaves:n"needles, not leaves"
+
+Ash | an |
+  tree | L | the ash tree | tree |
+  dust | L | what's left after fire | material |
+
+Elm | an |
+  tree | L | the elm | tree |
+
+Birch | a |
+  tree | L | the birch | tree | has:bark"white peeling bark"
+
+Maple | a |
+  tree | L | the maple | tree | has:leaves"the maple leaf"
+
+Willow | a |
+  tree | L | the willow | tree | has:branches"drooping branches"
+
+Fir | a |
+  tree | L | the fir | tree | has:needles"fir needles" has:needle"fir needles" has:leaves:n"needles, not leaves"
+
+Cedar | a |
+  tree | L | the cedar | tree | has:needles:A"scale-like leaves" has:needle:A
+
+Spruce | a |
+  tree | L | the spruce | tree | has:needles"spruce needles" has:needle"spruce needles" has:leaves:n"needles, not leaves"
+
+Beech | a |
+  tree | L | the beech | tree |
+
+Yew | a |
+  tree | L | the yew | tree | has:needles:A"flat needles" has:needle:A
+
+Poplar | a |
+  tree | L | the poplar | tree |
+
+Holly | a |
+  plant | L | the prickly holly | plant, tree:A"a shrub or a tree" | has:thorns:n"prickly leaves, not thorns" has:berries
+
+Rose | a |
+  flower | L | the rose | flower | has:thorns
+  colour | S | a pink colour | abstract |
+
+Daisy | a |
+  flower | L | the daisy | flower |
+
+Lily | a |
+  flower | L | the lily | flower | has:bulb:S"lilies grow from bulbs"
+
+Tulip | a |
+  flower | L | the tulip | flower | has:bulb:S"tulips grow from bulbs"
+
+Iris | an |
+  flower | L | the iris | flower | has:bulb:A"many grow from bulbs" has:beard:O"bearded irises"
+  eye | S | the coloured part of the eye | body-part:S"part of your eye" |
+
+Violet | a |
+  flower | L | the violet | flower |
+  colour | L | the purple colour | abstract |
+
+Poppy | a |
+  flower | L | the poppy | flower | has:seeds
+
+Orchid | an |
+  flower | L | the orchid | flower |
+
+Sunflower | a |
+  flower | L | the sunflower | flower | has:seeds"sunflower seeds" has:head:S"a big flower head" has:face:O"a sunflower face"
+
+Lilac | a |
+  flower | L | the lilac | plant, flower:A"a flowering shrub" | is:tree:A"a shrub or small tree"
+  colour | S | a pale purple colour | abstract |
+
+Daffodil | a |
+  flower | L | the daffodil | flower | has:bulb:S"daffodils grow from bulbs"
+
+Dandelion | a |
+  flower | L | the dandelion | flower | has:seeds
+
+Buttercup | a |
+  flower | L | the buttercup | flower |
+
+Lotus | a | brand
+  flower | L | the lotus | flower |
+  * | @vehicle:n"the car brand"
+
+Peanut | a |
+  nut | L | the peanut | nut | grows-under-the-soil:S"peanuts grow underground" grows-on-trees:N has:shell"a papery shell" is:vegetable:n"a legume, really"
+
+Walnut | a |
+  nut | L | the walnut | nut | grows-on-trees has:shell
+
+Almond | an |
+  nut | L | the almond | nut | grows-on-trees has:shell:A"sold shelled mostly" has:pit:O"an almond is a pit"
+
+Cashew | a |
+  nut | L | the cashew | nut | grows-on-trees has:shell:A"never sold in its shell"
+
+Pecan | a |
+  nut | L | the pecan | nut | grows-on-trees has:shell
+
+Acorn | an |
+  nut | L | the oak nut | nut | grows-on-trees has:cap:S"the acorn's cap" has:shell has:hair:N
+
+Hazelnut | a |
+  nut | L | the hazelnut | nut | grows-on-trees:A"bushes, mostly" has:shell
+
+Chestnut | a |
+  nut | L | the chestnut | nut | grows-on-trees has:shell has:spines:A"a spiky case"
+  colour | S | a reddish-brown colour | abstract |
+
+Brazil | a |
+  nut | S | a Brazil nut | nut:S | grows-on-trees has:shell
+
+Pistachio | a |
+  nut | L | the pistachio | nut | grows-on-trees has:shell
+
+Mint | - | mass
+  herb | L | the herb | herb-spice | has:leaves
+  sweet | S | a mint sweet | dessert:A"a sweet, not a dessert" |
+  money | S | where coins are made | place |
+
+Sage | - | mass
+  herb | L | the herb | herb-spice | has:leaves
+  wise | S | a wise person | person |
+
+Clove | a |
+  spice | L | the spice | herb-spice |
+  garlic | S | a clove of garlic | vegetable:A"part of a garlic bulb" |
+
+Bay | a |
+  water | L | a bay of the sea | body-of-water |
+  leaf | S | a bay leaf | herb-spice:S"a bay leaf" |
+  tree | O | the bay tree | tree:O |
+
+Nutmeg | a |
+  spice | L | the spice | herb-spice | has:shell:A is:nut:n"not actually a nut"
+
+Basil | - | mass
+  herb | L | the herb | herb-spice | has:leaves
+
+Thyme | - | mass
+  herb | L | the herb | herb-spice | has:leaves
+
+Dill | - | mass
+  herb | L | the herb | herb-spice | has:leaves
+
+Parsley | - | mass
+  herb | L | the herb | herb-spice | has:leaves
+
+Cinnamon | - | mass
+  spice | L | the spice | herb-spice | has:bark:S"cinnamon is tree bark"
+
+Saffron | - | mass
+  spice | L | the spice | herb-spice |
+  colour | S | an orange-yellow colour | abstract |
+
+Mustard | - | mass
+  sauce | L | the yellow sauce | herb-spice:A"a spice or a sauce" |
+  colour | S | a dull yellow colour | abstract |
+
+Vanilla | - | mass
+  flavour | L | the flavour | herb-spice:A"a flavouring, from a pod" |
+
+Tea | - | mass
+  drink | L | the drink | drink | has:leaves:A"tea leaves"
+
+Coffee | - | mass
+  drink | L | the drink | drink | has:beans
+
+Milk | - | mass
+  drink | L | the drink | drink | has:skin:O"skin on hot milk"
+  * | verb:S"to milk someone for money"
+
+Juice | - | mass
+  drink | L | the drink | drink |
+
+Water | - | mass
+  drink | L | water | drink:A"a drink? it's water" | is:body-of-water:n"a body of water, loosely"
+  * | verb:n"water someone down"
+
+Punch | a |
+  drink | L | the party drink | drink |
+  hit | L | a punch | abstract |
+  * | verb:L"to punch someone"
+
+Shake | a |
+  drink | L | a milkshake | drink |
+
+Soda | - | mass
+  drink | L | a fizzy drink | drink |
+
+Cocoa | - | mass
+  drink | L | hot chocolate | drink |
+
+Lemonade | - | mass
+  drink | L | the drink | drink |
+
+Smoothie | a |
+  drink | L | the fruit drink | drink |
+
+Pie | a |
+  dessert | L | the pie | dessert:A"sweet or savoury" | has:crust"a pie crust" is:dish:A has:lid:O"a pie lid"
+  * | @shape:n"pi, not pie"
+
+Cake | a |
+  dessert | L | the cake | dessert | has:layers:A
+
+Tart | a |
+  dessert | L | the tart | dessert | has:crust"a pastry crust"
+
+Pudding | a |
+  dessert | L | the pudding | dessert |
+
+Trifle | a |
+  dessert | L | the trifle | dessert | has:layers
+  small | S | something unimportant | abstract |
+  * | verb:n"trifle with someone"
+
+Crumble | a |
+  dessert | L | the crumble | dessert | has:crust:A"a crumbly topping"
+
+Sundae | a |
+  dessert | L | the ice cream sundae | dessert |
+
+Mousse | a |
+  dessert | L | the mousse | dessert |
+  hair | S | hair mousse | object |
+
+Jelly | a |
+  dessert | L | the wobbly jelly | dessert:A"a dessert in Britain, jam in America" |
+
+Brownie | a |
+  dessert | L | the chocolate brownie | dessert |
+  scout | S | a young Girl Guide | person |
+
+Cobbler | a |
+  dessert | L | the fruit cobbler | dessert | has:crust:A"a biscuit topping"
+  shoemaker | S | a shoemaker | person |
+
+Sorbet | a |
+  dessert | L | the sorbet | dessert |
+
+Custard | - | mass
+  dessert | L | the custard | dessert:A"a sauce or a dessert" | has:skin:O"skin on hot custard"
+
+Cookie | a |
+  dessert | L | the cookie | dessert:A"a snack or a dessert" |
+  web | S | a website cookie | abstract |
+
+Donut | a |
+  dessert | L | the doughnut | dessert:A"a snack or a dessert" | has:hole-middle has:sprinkles
+
+Fudge | - | mass
+  sweet | L | the sweet | dessert:A"a sweet, not a dessert" |
+
+Waffle | a |
+  food | L | the waffle | dessert:A"breakfast or dessert" | has:squares
+
+Pancake | a |
+  food | L | the pancake | dessert:A"breakfast or dessert" |
+
+Muffin | a |
+  cake | L | the muffin | bread:A"a cake or a bread" | is:dessert:A
+
+Cupcake | a |
+  cake | L | the cupcake | dessert |
+
+Toffee | - | mass
+  sweet | L | the sweet | dessert:A"a sweet, not a dessert" |
+
+Roll | a |
+  bread | L | a bread roll | bread |
+  * | verb:S"to roll someone, rob them"
+
+Loaf | a |
+  bread | L | a loaf of bread | bread | has:heel:S"the end slice" has:crust
+
+Bun | a |
+  bread | L | a bread bun | bread |
+  hair | S | a hair bun | abstract |
+
+Bagel | a |
+  bread | L | the bagel | bread | has:hole-middle
+
+Toast | - | mass
+  bread | L | toasted bread | bread |
+  salute | S | a toast to someone | abstract |
+  * | verb:L"to toast someone"
+
+Pita | a |
+  bread | L | pita bread | bread | has:pocket:S"a pita pocket"
+
+Naan | a |
+  bread | L | naan bread | bread |
+
+Baguette | a |
+  bread | L | the French loaf | bread | has:crust
+
+Pretzel | a |
+  bread | L | the twisted pretzel | bread:A"a snack or a bread" | has:knot:S"a knot-shaped twist" has:crust:A
+
+Croissant | a |
+  bread | L | the croissant | bread:A"a pastry or a bread" |
+
+Cracker | a |
+  biscuit | L | a cracker biscuit | bread:A"a biscuit, not bread" |
+  firework | S | a firecracker | object |
+
+Crumpet | a |
+  bread | L | the crumpet | bread:A"a griddle cake" | has:holes
+
+Scone | a |
+  bread | L | the scone | bread:A"a cake or a bread" | is:dessert:A
+
+Club | a | engine
+  society | L | a club you join | abstract |
+  stick | L | a heavy stick | weapon | has:head:A"a clubbed end" has:handle:A
+  golf | S | a golf club | golf-equipment | has:head"the club head" has:toe:O"the end of the club head" has:heel:O"part of the club head" has:handle:A"a grip"
+  suit | L | the card suit | card-suit | has:leaves:O"a three-leaf shape"
+  sandwich | S | a club sandwich | sandwich:S |
+  * | verb:L"to club someone"
+
+Sub | a |
+  sandwich | L | a sub sandwich | sandwich |
+  boat | S | a submarine | boat:S"a submarine" | is:vehicle:A"a boat, so a vehicle?"
+  * | verb:A"to sub someone in"
+
+Hero | a |
+  person | L | a hero | person |
+  sandwich | O | a hero sandwich | sandwich:O |
+
+Wrap | a |
+  sandwich | L | a wrap | sandwich |
+  * | verb:n"wrap someone in a blanket"
+
+Taco | a |
+  food | L | the taco | dish | has:shell:S"a hard taco shell"
+
+Pizza | a |
+  food | L | the pizza | dish | has:crust is:bread:A"a flatbread?" has:slices
+
+Burger | a |
+  food | L | the burger | dish, sandwich:A"a sandwich?" | has:bun
+
+Soup | - | mass
+  food | L | the soup | dish |
+
+Stew | a |
+  food | L | the stew | dish |
+
+Curry | a |
+  food | L | the curry | dish | is:herb-spice:n"curry powder"
+
+Noodle | a |
+  food | L | a noodle | dish |
+  head | S | your head, slang | body-part:n"slang for head" |
+
+Salad | a |
+  food | L | the salad | dish | has:leaves
+
+Omelette | an |
+  food | L | the omelette | dish |
+
+Sushi | - | mass
+  food | L | sushi | dish |
+
+Quiche | a |
+  food | L | the quiche | dish | has:crust"a pastry crust"
+
+Sausage | a |
+  food | L | the sausage | dish | has:skin"a sausage skin" has:bones:N
+
+Bacon | - | mass
+  food | L | bacon | dish |
+
+Egg | an |
+  food | L | the egg | food | has:shell has:yolk has:legs:N can:swim:N is:animal:A"a future chick?" is:living:A has:bones:N
+  * | verb:S"to egg someone on"
+
+Nugget | a |
+  food | L | a chicken nugget | dish |
+  gold | S | a gold nugget | material | is:metal:A"a lump of gold"
+
+Pickle | a |
+  food | L | a pickle | dish |
+  trouble | S | a tricky situation | abstract |
+
+Popcorn | - | mass
+  food | L | popcorn | dish |
+
+Honey | - | mass
+  food | L | honey | food |
+  dear | S | a pet name | abstract |
+
+Jam | a |
+  food | L | fruit jam | food |
+  traffic | S | a traffic jam | abstract |
+  * | verb:A"to jam someone in"

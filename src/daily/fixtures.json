@@ -1,0 +1,482 @@
+{
+ "about": "Dossier v2 worked boards on the toy key. Development fixtures only; never served on burgerfun.ca. Built by make-fixtures.mjs.",
+ "launch": "2026-10-05",
+ "boards": {
+  "A": {
+   "id": "example-A-monday",
+   "sections": [
+    {
+     "headings": [
+      "Can fly",
+      "Has a trunk",
+      "Has a head, no brain",
+      "Lays eggs",
+      "Bird"
+     ],
+     "words": [
+      "Crane",
+      "Elephant",
+      "Penguin",
+      "Hammer",
+      "Bat"
+     ]
+    },
+    {
+     "headings": [
+      "Has a tongue, can't taste",
+      "Has ears, can't hear",
+      "Body part",
+      "Baseball equipment",
+      "Mammal"
+     ],
+     "words": [
+      "Shoe",
+      "Palm",
+      "Corn",
+      "Bass",
+      "Heart"
+     ]
+    }
+   ],
+   "answer": {
+    "Crane": "Can fly",
+    "Elephant": "Mammal",
+    "Penguin": "Bird",
+    "Hammer": "Has a head, no brain",
+    "Bat": "Baseball equipment",
+    "Shoe": "Has a tongue, can't taste",
+    "Palm": "Has a trunk",
+    "Corn": "Has ears, can't hear",
+    "Bass": "Lays eggs",
+    "Heart": "Body part"
+   },
+   "proofOrder": [
+    "Bat",
+    "Shoe",
+    "Corn",
+    "Crane",
+    "Elephant",
+    "Penguin",
+    "Palm",
+    "Bass",
+    "Hammer",
+    "Heart"
+   ],
+   "cells": {
+    "Bat|Can fly": "L",
+    "Crane|Can fly": "S",
+    "Elephant|Has a trunk": "L",
+    "Palm|Has a trunk": "S",
+    "Hammer|Has a head, no brain": "L",
+    "Bass|Has a head, no brain": "O",
+    "Penguin|Lays eggs": "L",
+    "Crane|Lays eggs": "S",
+    "Bass|Lays eggs": "S",
+    "Penguin|Bird": "L",
+    "Crane|Bird": "S",
+    "Bat|Bird": "n",
+    "Shoe|Has a tongue, can't taste": "L",
+    "Corn|Has ears, can't hear": "L",
+    "Heart|Body part": "L",
+    "Palm|Body part": "S",
+    "Hammer|Body part": "O",
+    "Corn|Body part": "n",
+    "Bat|Baseball equipment": "L",
+    "Bat|Mammal": "L",
+    "Elephant|Mammal": "L"
+   },
+   "gloss": {
+    "Crane|Can fly": "the bird, not the machine",
+    "Palm|Has a trunk": "a palm tree",
+    "Bass|Has a head, no brain": "a bass guitar's headstock",
+    "Crane|Lays eggs": "the bird",
+    "Bass|Lays eggs": "the fish",
+    "Crane|Bird": "the wading bird",
+    "Palm|Body part": "the palm of your hand",
+    "Hammer|Body part": "the hammer bone, in the ear"
+   },
+   "reading": {
+    "Bat|Bird": "it flies like one",
+    "Corn|Body part": "a corn on your foot"
+   },
+   "negative": {
+    "Can fly": "can't fly",
+    "Has a trunk": "has no trunk",
+    "Has a head, no brain": [
+     "has no head",
+     "has a brain"
+    ],
+    "Lays eggs": "doesn't lay eggs",
+    "Bird": "isn't a bird",
+    "Has a tongue, can't taste": [
+     "has no tongue",
+     "can taste"
+    ],
+    "Has ears, can't hear": [
+     "has no ears",
+     "can hear"
+    ],
+    "Body part": "isn't a body part",
+    "Baseball equipment": "isn't baseball equipment",
+    "Mammal": "isn't a mammal"
+   },
+   "failsHalf": {
+    "Crane|Has a head, no brain": 1,
+    "Elephant|Has a head, no brain": 1,
+    "Penguin|Has a head, no brain": 1,
+    "Bat|Has a head, no brain": 1,
+    "Shoe|Has a head, no brain": 0,
+    "Palm|Has a head, no brain": 0,
+    "Corn|Has a head, no brain": 0,
+    "Heart|Has a head, no brain": 0,
+    "Crane|Has a tongue, can't taste": 1,
+    "Elephant|Has a tongue, can't taste": 1,
+    "Hammer|Has a tongue, can't taste": 0,
+    "Bat|Has a tongue, can't taste": 1,
+    "Palm|Has a tongue, can't taste": 0,
+    "Corn|Has a tongue, can't taste": 0,
+    "Heart|Has a tongue, can't taste": 0,
+    "Crane|Has ears, can't hear": 1,
+    "Elephant|Has ears, can't hear": 1,
+    "Penguin|Has ears, can't hear": 1,
+    "Hammer|Has ears, can't hear": 0,
+    "Bat|Has ears, can't hear": 1,
+    "Shoe|Has ears, can't hear": 0,
+    "Palm|Has ears, can't hear": 0,
+    "Bass|Has ears, can't hear": 1
+   },
+   "computed": {},
+   "articles": {
+    "Crane": "a",
+    "Elephant": "an",
+    "Penguin": "a",
+    "Hammer": "a",
+    "Bat": "a",
+    "Shoe": "a",
+    "Palm": "a",
+    "Corn": "",
+    "Bass": "a",
+    "Heart": "a"
+   },
+   "nudge": "Bass",
+   "harder": false,
+   "bruteForce": {
+    "orders": 3628800,
+    "strict": 1,
+    "generous": 1
+   }
+  },
+  "B": {
+   "id": "example-B-wednesday",
+   "sections": [
+    {
+     "headings": [
+      "Same letter twice in a row",
+      "Lays eggs",
+      "Musical instrument",
+      "You can ___ someone",
+      "Mammal"
+     ],
+     "words": [
+      "Dog",
+      "Bass",
+      "Egg",
+      "Book",
+      "Owl"
+     ]
+    },
+    {
+     "headings": [
+      "Has a mouth, can't eat",
+      "Has a spine, no bones",
+      "Fruit",
+      "Has a shell",
+      "Bird"
+     ],
+     "words": [
+      "Snail",
+      "Needle",
+      "River",
+      "Mouse",
+      "Kiwi"
+     ]
+    }
+   ],
+   "answer": {
+    "Dog": "You can ___ someone",
+    "Bass": "Musical instrument",
+    "Egg": "Has a shell",
+    "Book": "Has a spine, no bones",
+    "Owl": "Bird",
+    "Snail": "Lays eggs",
+    "Needle": "Same letter twice in a row",
+    "River": "Has a mouth, can't eat",
+    "Mouse": "Mammal",
+    "Kiwi": "Fruit"
+   },
+   "proofOrder": [
+    "Bass",
+    "Book",
+    "River",
+    "Kiwi",
+    "Owl",
+    "Snail",
+    "Egg",
+    "Needle",
+    "Dog",
+    "Mouse"
+   ],
+   "cells": {
+    "Bass|Same letter twice in a row": "L",
+    "Egg|Same letter twice in a row": "L",
+    "Needle|Same letter twice in a row": "L",
+    "Book|Same letter twice in a row": "L",
+    "Kiwi|Same letter twice in a row": "n",
+    "River|Same letter twice in a row": "n",
+    "Owl|Lays eggs": "L",
+    "Snail|Lays eggs": "L",
+    "Kiwi|Lays eggs": "S",
+    "Bass|Lays eggs": "S",
+    "Bass|Musical instrument": "S",
+    "Book|You can ___ someone": "L",
+    "Needle|You can ___ someone": "L",
+    "Egg|You can ___ someone": "S",
+    "Dog|You can ___ someone": "S",
+    "Mouse|Mammal": "L",
+    "Dog|Mammal": "L",
+    "River|Has a mouth, can't eat": "L",
+    "Book|Has a spine, no bones": "S",
+    "Kiwi|Fruit": "L",
+    "Snail|Has a shell": "L",
+    "Egg|Has a shell": "L",
+    "Owl|Bird": "L",
+    "Kiwi|Bird": "S"
+   },
+   "gloss": {
+    "Kiwi|Lays eggs": "the bird",
+    "Bass|Lays eggs": "the fish",
+    "Bass|Musical instrument": "a bass guitar",
+    "Egg|You can ___ someone": "to egg someone",
+    "Dog|You can ___ someone": "to dog someone, follow",
+    "Book|Has a spine, no bones": "the back of a book",
+    "Kiwi|Bird": "the New Zealand bird"
+   },
+   "reading": {},
+   "negative": {
+    "Lays eggs": "doesn't lay eggs",
+    "Musical instrument": "isn't a musical instrument",
+    "You can ___ someone": "you can't {word} someone",
+    "Mammal": "isn't a mammal",
+    "Has a mouth, can't eat": [
+     "has no mouth",
+     "can eat"
+    ],
+    "Has a spine, no bones": [
+     "has no spine",
+     "has bones"
+    ],
+    "Fruit": "isn't a fruit",
+    "Has a shell": "has no shell",
+    "Bird": "isn't a bird"
+   },
+   "failsHalf": {
+    "Dog|Has a mouth, can't eat": 1,
+    "Bass|Has a mouth, can't eat": 1,
+    "Egg|Has a mouth, can't eat": 0,
+    "Book|Has a mouth, can't eat": 0,
+    "Owl|Has a mouth, can't eat": 1,
+    "Snail|Has a mouth, can't eat": 1,
+    "Needle|Has a mouth, can't eat": 0,
+    "Mouse|Has a mouth, can't eat": 1,
+    "Kiwi|Has a mouth, can't eat": 1,
+    "Dog|Has a spine, no bones": 1,
+    "Bass|Has a spine, no bones": 1,
+    "Egg|Has a spine, no bones": 0,
+    "Owl|Has a spine, no bones": 1,
+    "Snail|Has a spine, no bones": 0,
+    "Needle|Has a spine, no bones": 0,
+    "River|Has a spine, no bones": 0,
+    "Mouse|Has a spine, no bones": 1,
+    "Kiwi|Has a spine, no bones": 1
+   },
+   "computed": {
+    "Same letter twice in a row": "same-letter-twice-in-a-row"
+   },
+   "articles": {
+    "Dog": "a",
+    "Bass": "a",
+    "Egg": "an",
+    "Book": "a",
+    "Owl": "an",
+    "Snail": "a",
+    "Needle": "a",
+    "River": "a",
+    "Mouse": "a",
+    "Kiwi": "a"
+   },
+   "nudge": "Dog",
+   "harder": false,
+   "bruteForce": {
+    "orders": 3628800,
+    "strict": 1,
+    "generous": 1
+   }
+  },
+  "C": {
+   "id": "example-C-friday",
+   "sections": [
+    {
+     "headings": [
+      "Lays eggs",
+      "Has a shell",
+      "Bird",
+      "Has a pit",
+      "You can ___ someone"
+     ],
+     "words": [
+      "Club",
+      "Swan",
+      "Crab",
+      "Penguin",
+      "Date"
+     ]
+    },
+    {
+     "headings": [
+      "Chess piece",
+      "Fruit",
+      "Has teeth, can't bite",
+      "Can fly",
+      "Has a head, no brain"
+     ],
+     "words": [
+      "Egg",
+      "Taco",
+      "Zipper",
+      "Kiwi",
+      "Knight"
+     ]
+    }
+   ],
+   "answer": {
+    "Club": "Has a head, no brain",
+    "Swan": "Can fly",
+    "Crab": "Lays eggs",
+    "Penguin": "Bird",
+    "Date": "Has a pit",
+    "Egg": "You can ___ someone",
+    "Taco": "Has a shell",
+    "Zipper": "Has teeth, can't bite",
+    "Kiwi": "Fruit",
+    "Knight": "Chess piece"
+   },
+   "proofOrder": [
+    "Club",
+    "Swan",
+    "Date",
+    "Zipper",
+    "Knight",
+    "Kiwi",
+    "Egg",
+    "Penguin",
+    "Crab",
+    "Taco"
+   ],
+   "cells": {
+    "Swan|Lays eggs": "L",
+    "Penguin|Lays eggs": "L",
+    "Kiwi|Lays eggs": "S",
+    "Crab|Lays eggs": "S",
+    "Crab|Has a shell": "L",
+    "Egg|Has a shell": "L",
+    "Taco|Has a shell": "S",
+    "Swan|Bird": "L",
+    "Penguin|Bird": "L",
+    "Kiwi|Bird": "S",
+    "Date|Has a pit": "L",
+    "Date|You can ___ someone": "L",
+    "Club|You can ___ someone": "L",
+    "Knight|You can ___ someone": "S",
+    "Egg|You can ___ someone": "S",
+    "Crab|You can ___ someone": "n",
+    "Knight|Chess piece": "L",
+    "Date|Fruit": "L",
+    "Kiwi|Fruit": "L",
+    "Zipper|Has teeth, can't bite": "L",
+    "Crab|Has teeth, can't bite": "n",
+    "Swan|Can fly": "L",
+    "Kiwi|Can fly": "n",
+    "Club|Has a head, no brain": "S"
+   },
+   "gloss": {
+    "Kiwi|Lays eggs": "the bird",
+    "Crab|Lays eggs": "crabs do",
+    "Taco|Has a shell": "a hard taco shell",
+    "Kiwi|Bird": "the New Zealand bird",
+    "Knight|You can ___ someone": "to knight someone",
+    "Egg|You can ___ someone": "to egg someone",
+    "Club|Has a head, no brain": "a golf club"
+   },
+   "reading": {
+    "Crab|You can ___ someone": "to crab is to grumble",
+    "Crab|Has teeth, can't bite": "its claws pinch",
+    "Kiwi|Can fly": "it's a bird"
+   },
+   "negative": {
+    "Lays eggs": "doesn't lay eggs",
+    "Has a shell": "has no shell",
+    "Bird": "isn't a bird",
+    "Has a pit": "has no pit",
+    "You can ___ someone": "you can't {word} someone",
+    "Chess piece": "isn't a chess piece",
+    "Fruit": "isn't a fruit",
+    "Has teeth, can't bite": [
+     "has no teeth",
+     "can bite"
+    ],
+    "Can fly": "can't fly",
+    "Has a head, no brain": [
+     "has no head",
+     "has a brain"
+    ]
+   },
+   "failsHalf": {
+    "Club|Has teeth, can't bite": 0,
+    "Swan|Has teeth, can't bite": 0,
+    "Penguin|Has teeth, can't bite": 0,
+    "Date|Has teeth, can't bite": 0,
+    "Egg|Has teeth, can't bite": 0,
+    "Taco|Has teeth, can't bite": 0,
+    "Kiwi|Has teeth, can't bite": 0,
+    "Knight|Has teeth, can't bite": 1,
+    "Swan|Has a head, no brain": 1,
+    "Penguin|Has a head, no brain": 1,
+    "Date|Has a head, no brain": 0,
+    "Egg|Has a head, no brain": 0,
+    "Taco|Has a head, no brain": 0,
+    "Zipper|Has a head, no brain": 0,
+    "Kiwi|Has a head, no brain": 1
+   },
+   "computed": {},
+   "articles": {
+    "Club": "a",
+    "Swan": "a",
+    "Crab": "a",
+    "Penguin": "a",
+    "Date": "a",
+    "Egg": "an",
+    "Taco": "a",
+    "Zipper": "a",
+    "Kiwi": "a",
+    "Knight": "a"
+   },
+   "nudge": "Egg",
+   "harder": true,
+   "bruteForce": {
+    "orders": 3628800,
+    "strict": 1,
+    "generous": 1
+   }
+  }
+ }
+}

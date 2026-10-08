@@ -1,0 +1,852 @@
+# Objects, part 2: furniture, vehicles, boats, containers, kitchen, toys, computer and sports gear, household.
+
+Table | a |
+  furniture | L | a table | furniture | has:legs"table legs" has:leaf:O"an extra table leaf" has:leaves:O"extra table leaves" has:top can:walk:N
+  data | L | a table of data | abstract |
+
+Chair | a |
+  furniture | L | a chair | furniture | has:legs"chair legs" has:back"a chair back" has:arms:A"armchairs do" has:seat"it's a seat" has:hands:N can:hug:N can:sit:N
+  * | verb:n"to chair a meeting"
+
+Bed | a |
+  furniture | L | a bed | furniture | has:legs:A"most beds" has:head:S"the head of the bed" has:foot:S"the foot of the bed" has:springs:A"a sprung mattress" has:headboard can:sleep:N
+  garden | S | a flower bed | place |
+
+Desk | a |
+  furniture | L | a desk | furniture | has:legs"desk legs" has:drawers has:top
+
+Sofa | a |
+  furniture | L | a sofa | furniture | has:arms"sofa arms" has:legs:A"short legs" has:back"a sofa back" has:seat"seat cushions" has:springs:S"springs inside" has:hands:N can:hug:N can:sit:N
+
+Couch | a |
+  furniture | L | a couch | furniture | has:arms"couch arms" has:legs:A"short legs" has:back has:seat"seat cushions" has:springs:S"springs inside" has:hands:N can:hug:N can:sit:N
+
+Bench | a |
+  furniture | L | a bench | furniture | has:legs"bench legs" has:seat has:back:A
+  court | S | a judge's bench | abstract |
+
+Stool | a |
+  furniture | L | a stool | furniture | has:legs"stool legs" has:seat"it's a seat" has:back:N
+
+Chest | a |
+  furniture | L | a wooden chest | furniture, container | has:lid"a chest lid" has:lock:A has:locks:A has:handles:A
+  body | L | your chest | body-part |
+
+Cabinet | a |
+  furniture | L | a cabinet | furniture, container:A | has:doors has:handle:A has:legs:A
+  ministers | S | a government cabinet | abstract |
+
+Dresser | a |
+  furniture | L | a dresser | furniture | has:drawers has:legs:A has:mirror:A
+  person | O | someone who dresses | person |
+
+Wardrobe | a |
+  furniture | L | a wardrobe | furniture | has:doors has:hanger
+  clothes | S | all your clothes | abstract |
+
+Ottoman | an |
+  furniture | L | a padded footstool | furniture | has:lid:A"storage ottomans" has:legs:A has:seat:A
+  empire | S | the Ottoman Empire | place |
+
+Hammock | a |
+  furniture | L | a hammock | furniture:A"a bed you hang" | has:strings:A"rope ends"
+
+Cradle | a |
+  furniture | L | a baby's cradle | furniture |
+  * | verb:n"to cradle someone"
+
+Crib | a |
+  furniture | L | a baby's crib | furniture | has:bars has:legs:A has:foot:n"the foot of the crib"
+  * | verb:n"crib from someone"
+
+Throne | a |
+  furniture | L | a royal throne | furniture | has:arms"throne arms" has:back has:seat"it's a seat" has:legs:A is:royal:A
+
+Shelf | a |
+  furniture | L | a shelf | furniture |
+
+Car | a |
+  vehicle | L | a car | vehicle | has:wheels has:engine has:horn"a car horn" has:hood:S"the car hood" has:trunk:S"the car trunk" has:boot:S"the car boot" has:seat"car seats" has:seats has:body:S"the car body" has:nose:A"the car's front" has:keys:A"car keys" has:lights has:wing:O"a car wing panel" has:wings:O"wing panels, in Britain" has:tail:N has:belt:A"seatbelts"
+
+Bus | a |
+  vehicle | L | a bus | vehicle | has:wheels has:engine has:horn"a bus horn" has:seat"bus seats" has:seats has:deck:A"double-deckers" has:body:A has:nose:N has:hood:A"school buses do"
+
+Train | a |
+  vehicle | L | a train | vehicle | has:wheels has:engine has:horn:A"a whistle or horn" has:seat"train seats" has:seats has:carriages
+  * | verb:L"to train someone"
+
+Truck | a |
+  vehicle | L | a truck | vehicle | has:wheels has:engine has:horn"a truck horn" has:bed:S"a truck bed" has:seat has:body:A has:nose:A
+
+Van | a |
+  vehicle | L | a van | vehicle | has:wheels has:engine has:horn has:seat has:body:A has:nose:A"the van's front" has:hood:S"the van's hood" has:keys:A"van keys"
+
+Bike | a |
+  vehicle | L | a bicycle | vehicle | has:wheels has:chain"a bike chain" has:seat"a bike seat" has:pedals has:handlebars has:bell:A has:horn:A"some have horns" has:engine:N has:spokes has:springs:A
+
+Tank | a |
+  army | L | an army tank | vehicle, weapon:A"a weapon on tracks" | has:engine has:wheels:A"tracks over wheels" has:gun has:seat:A"crew seats inside"
+  fish | L | a fish tank | container | has:lid:A
+
+Jet | a |
+  plane | L | a jet plane | vehicle | can:fly has:wings has:wing has:engine has:nose:S"the jet's nose" has:tail:S"the jet's tail" has:wheels:A has:seat:A"seats inside"
+  stream | S | a jet of water | abstract |
+  stone | O | the black gemstone | gem:O |
+
+Cab | a |
+  vehicle | L | a taxi cab | vehicle | has:wheels has:engine has:horn has:seat has:keys:A"car keys" has:nose:A"the car's front"
+
+Taxi | a |
+  vehicle | L | a taxi | vehicle | has:wheels has:engine has:horn has:seat has:keys:A"car keys" has:nose:A"the car's front"
+
+Coach | a |
+  bus | L | a long-distance bus | vehicle | has:wheels has:engine has:horn:A has:seat has:seats
+  trainer | L | a sports coach | person |
+  * | verb:L"to coach someone"
+
+Scooter | a |
+  vehicle | L | a scooter | vehicle:A"a toy or a vehicle" | has:wheels has:handlebars has:engine:A"motor scooters"
+
+Tractor | a |
+  vehicle | L | a tractor | vehicle | has:wheels has:engine has:seat has:hood:S"the tractor's hood" has:horn:A"most have one"
+
+Wagon | a |
+  vehicle | L | a wagon | vehicle | has:wheels has:engine:N
+
+Cart | a |
+  vehicle | L | a cart | vehicle | has:wheels has:handle:A
+  * | verb:n"to cart someone off"
+
+Sled | a |
+  vehicle | L | a sled | vehicle:A"a toy or a vehicle" | has:wheels:N has:runners has:blade:O"a sled runner"
+
+Rocket | a |
+  craft | L | a space rocket | vehicle | can:fly has:engine has:fins:S"rocket fins" has:nose:S"the nose cone" has:tail:A has:wings:N
+  salad | O | arugula, in Britain | vegetable:O"arugula, in Britain" |
+
+Shuttle | a |
+  craft | L | the space shuttle | vehicle | can:fly has:wings"shuttle wings" has:wing has:engine has:nose:S"the shuttle's nose"
+  bus | S | a shuttle bus | vehicle | has:wheels:S"a shuttle bus" has:seat:S"shuttle bus seats"
+  * | verb:S"to shuttle someone around"
+  badminton | O | a shuttlecock | object | has:feathers:S"a feathered shuttlecock"
+
+Tram | a |
+  vehicle | L | a tram | vehicle | has:wheels has:seat has:bell:A
+
+Trolley | a |
+  cart | L | a shopping trolley | object | has:wheels has:handle"a trolley handle" is:vehicle:A
+  tram | S | a trolley car | vehicle:S | has:engine:A"an electric motor" has:seat:S"trolley car seats"
+
+Buggy | a |
+  pram | L | a baby buggy | vehicle:A | has:wheels has:hood:A"most have hoods" has:handle has:seat
+
+Float | a |
+  parade | S | a parade float | vehicle:S"a parade float" | has:wheels:A
+  fishing | L | a fishing float | object |
+
+Helicopter | a |
+  aircraft | L | a helicopter | vehicle | can:fly has:blade"rotor blades" has:engine has:tail"a helicopter's tail" has:nose:S"the helicopter's nose" has:wings:N has:seat can:cut:A
+
+Ambulance | an |
+  vehicle | L | an ambulance | vehicle | has:wheels has:engine has:siren has:horn has:seat:A"seats inside"
+
+Skateboard | a |
+  board | L | a skateboard | toy:A"a toy or sports gear?", vehicle:A | has:wheels has:deck:S"the skateboard's deck" has:nose:S"the front, called the nose" has:tail:S"the back, called the tail"
+
+Ship | a |
+  boat | L | a ship | boat | has:deck"a ship's deck" has:bow has:horn:S"a ship's horn" has:bridge:S"the ship's bridge" has:engine:A has:sails:A"old ships" has:anchor has:wheel has:body:A has:nose:N has:mast:A
+
+Yacht | a |
+  boat | L | a yacht | boat | has:sails:A"many yachts have sails" has:deck has:mast:A
+
+Canoe | a |
+  boat | L | a canoe | boat | has:deck:N has:engine:N has:paddle
+
+Kayak | a |
+  boat | L | a kayak | boat | has:deck:A has:engine:N has:paddle
+
+Ferry | a |
+  boat | L | a ferry | boat | has:deck has:engine has:horn:S"a ferry's horn"
+  * | verb:S"to ferry someone around"
+
+Raft | a |
+  boat | L | a raft | boat | has:deck:A"a flat top" has:engine:N
+  lots | S | a raft of things | abstract |
+
+Barge | a |
+  boat | L | a barge | boat | has:deck has:engine:A
+  * | verb:n"barge into someone"
+
+Liner | a |
+  ship | L | an ocean liner | boat | has:deck has:engine has:horn:S
+  eye | S | eyeliner | object |
+  bin | S | a bin liner | object |
+
+Tug | a |
+  boat | L | a tugboat | boat | has:engine has:deck has:horn:S
+  pull | S | a pull | abstract |
+
+Junk | a | - mass
+  boat | S | a Chinese sailing boat | boat:S"a Chinese sailing boat" | has:sails"batten sails" has:deck:S
+  rubbish | L | rubbish | material |
+
+Ark | an |
+  boat | L | Noah's ark | boat | has:deck:A
+
+Dinghy | a |
+  boat | L | a dinghy | boat | has:engine:A"some have outboards" has:sails:A
+
+Gondola | a |
+  boat | L | a Venice gondola | boat | has:engine:N
+  lift | S | a ski lift cabin | vehicle:A |
+
+Box | a |
+  container | L | a box | container | has:lid:A"many boxes do" has:corners
+  sport | S | boxing | sport:A"boxing, the sport" |
+  * | verb:S"to box someone"
+
+Jar | a |
+  container | L | a jar | container | has:lid has:mouth:S"the jar's mouth" has:neck:A"some jars" has:lip:S"the jar's rim"
+  * | verb:n"jar someone, jolt them"
+
+Bottle | a |
+  container | L | a bottle | container | has:neck"a bottle neck" has:mouth:S"the bottle's opening" has:cap"a bottle cap" has:lid:A"a cap or a lid" has:lip:S"the bottle's lip" has:shoulder:O has:body:O"the bottle's body"
+  * | verb:A"bottle someone, slang"
+
+Can | a |
+  container | L | a tin can | container | has:lid:A"a ring-pull top" has:ring:S"the ring-pull" has:lip:n"the can's rim"
+
+Tin | a |
+  container | L | a tin | container | has:lid:A
+  metal | L | the metal tin | metal |
+
+Pot | a |
+  container | L | a cooking pot | container, kitchen-tool:A"cookware, but a tool?" | has:lid"a pot lid" has:handle"pot handles" has:mouth:O has:belly:O
+  plant | S | a plant pot | container |
+
+Bag | a |
+  container | L | a bag | container | has:handle"bag handles" has:strap:A has:zipper:A has:pocket:A
+
+Crate | a |
+  container | L | a crate | container | has:lid:A has:handle:A"many have hand-holds"
+
+Vase | a |
+  container | L | a vase | container | has:neck:S"a vase's neck" has:mouth:S"the vase's opening" has:lip:S"the vase's rim" has:lid:N
+
+Bucket | a |
+  container | L | a bucket | container | has:handle"a bucket handle" has:lid:A
+
+Basket | a |
+  container | L | a basket | container | has:handle:A"many baskets" has:lid:A
+
+Bowl | a |
+  container | L | a bowl | container, kitchen-tool:A | has:lip:S"the bowl's rim" has:lid:A is:dish:A"a dish? a bowl?"
+  * | verb:n"bowl someone over"
+
+Cup | a |
+  container | L | a cup | container | has:handle:A"teacups yes, others no" has:lip:S"the cup's lip" has:lid:A has:saucer:A
+  trophy | S | a sports cup | object |
+
+Mug | a |
+  container | L | a mug | container | has:handle"a mug handle" has:lip:S"the mug's lip" has:ear:O"a handle is an ear"
+  face | O | a face, slang | body-part:n"slang for face" |
+  * | verb:L"to mug someone"
+
+Jug | a |
+  container | L | a jug | container | has:handle"a jug handle" has:spout"a jug spout" has:lip:S"the jug's lip" has:mouth:S"the jug's opening" has:neck:A
+
+Pitcher | a |
+  jug | L | a water pitcher | container | has:handle"a pitcher handle" has:spout"a pitcher spout" has:lip:S"the pitcher's lip" has:mouth:S"the pitcher's mouth"
+  baseball | L | a baseball pitcher | person, baseball-equipment:n"a player, not equipment" |
+
+Barrel | a |
+  container | L | a barrel | container | has:lid:A has:hoops has:belly:O
+  gun | S | a gun barrel | object |
+
+Bin | a |
+  container | L | a rubbish bin | container | has:lid"a bin lid" has:wheels:A"wheelie bins"
+
+Tub | a |
+  container | L | a tub | container | has:lid:A has:plug:A"a bathtub plug"
+
+Urn | an |
+  container | L | an urn | container | has:lid:A has:handles:A has:neck:A
+
+Tube | a |
+  container | L | a tube | container | has:cap:A"toothpaste tubes" has:lid:A
+  train | O | the London Underground | vehicle:O"the London Underground" |
+
+Purse | a |
+  container | L | a purse | container | has:handle:A has:strap:A has:pocket:A
+
+Sack | a |
+  container | L | a sack | container |
+  * | verb:L"to sack someone"
+
+Caddy | a |
+  golf | L | a golf caddy | person, golf-equipment:n"a person, not equipment" |
+  tea | S | a tea caddy | container:S |
+
+Hamper | a |
+  basket | L | a picnic hamper | container | has:lid has:handle:A
+  * | verb:n"to hamper someone"
+
+Kettle | a |
+  appliance | L | a kettle | kitchen-tool:A"an appliance" | has:spout"a kettle spout" has:handle"a kettle handle" has:lid"a kettle lid" has:plug:A"electric kettles" has:whistle:A has:beak:n"a spout, not a beak" can:ring:N
+
+Teapot | a |
+  pot | L | a teapot | container, kitchen-tool:A | has:spout"a teapot spout" has:handle"a teapot handle" has:lid"a teapot lid"
+
+Flask | a |
+  container | L | a flask | container | has:neck"a flask's neck" has:cap"a flask cap" has:lid:A
+
+Safe | a |
+  box | L | a safe | container | has:lock has:locks:A has:dial has:door
+  * | verb:N
+
+Locker | a |
+  cupboard | L | a locker | container, furniture:A | has:lock has:locks:A has:door has:keys:N has:handle:S"the locker door's handle"
+
+Trunk | a |
+  box | L | a storage trunk | container | has:lid"a trunk lid" has:lock:A has:handles
+  car | S | a car trunk | object |
+  elephant | S | an elephant's trunk | body-part:S"an elephant's nose" |
+  tree | S | a tree trunk | abstract |
+
+Whisk | a |
+  kitchen | L | a whisk | kitchen-tool | has:handle"a whisk handle" has:wires
+  * | verb:n"to whisk someone away"
+
+Ladle | a |
+  kitchen | L | a ladle | kitchen-tool | has:handle"a long handle" has:bowl:S"the ladle's bowl"
+
+Spatula | a |
+  kitchen | L | a spatula | kitchen-tool | has:handle has:blade:A"a flat blade"
+
+Fork | a |
+  kitchen | L | a fork | kitchen-tool | has:prongs has:teeth:n"tines, not teeth" has:tooth:n has:handle:A"a handle end"
+  road | S | a fork in the road | place |
+
+Spoon | a |
+  kitchen | L | a spoon | kitchen-tool | has:bowl:S"the spoon's bowl" has:handle:A"a handle end" has:neck:O"the narrow part"
+  * | verb:n"spoon someone, cuddle"
+
+Knife | a |
+  kitchen | L | a knife | kitchen-tool, weapon:A | has:blade"a knife blade" has:handle has:tip can:cut has:edge
+  * | verb:A"to knife someone"
+
+Grater | a |
+  kitchen | L | a cheese grater | kitchen-tool | has:handle:A has:teeth:n"sharp holes, not teeth" has:holes
+
+Pan | a |
+  kitchen | L | a frying pan | kitchen-tool:A"cookware, but a tool?" | has:handle"a pan handle" has:lid:A has:base
+  * | verb:S"to pan someone, criticise"
+
+Sieve | a |
+  kitchen | L | a sieve | kitchen-tool | has:handle:A has:holes
+
+Tongs | - | plural
+  kitchen | L | tongs | kitchen-tool | has:arms:S"two arms"
+
+Peeler | a |
+  kitchen | L | a potato peeler | kitchen-tool | has:blade:S"a peeler's blade" has:handle
+
+Wok | a |
+  kitchen | L | a wok | kitchen-tool:A"cookware, but a tool?" | has:handle has:lid:A
+
+Toaster | a |
+  appliance | L | a toaster | kitchen-tool:A"an appliance" | has:plug has:slots has:lever
+
+Blender | a |
+  appliance | L | a blender | kitchen-tool:A"an appliance" | has:blade"blender blades" has:lid has:plug has:buttons:A
+
+Mixer | a |
+  appliance | L | a food mixer | kitchen-tool:A"an appliance" | has:plug has:arm:A
+  party | S | a party where people mingle | abstract |
+
+Grill | a |
+  cooker | L | a grill | kitchen-tool:A"an appliance" | has:bars has:lid:A has:plug:A
+  * | verb:S"to grill someone"
+
+Oven | an |
+  appliance | L | an oven | kitchen-tool:A"an appliance" | has:door has:plug:A has:dial:A has:mouth:O has:knobs
+
+Fridge | a |
+  appliance | L | a fridge | kitchen-tool:A"an appliance" | has:door has:plug has:light:S"a light inside"
+
+Ball | a |
+  toy | L | a ball | toy | can:bounce:A"most balls" has:seams:A
+  dance | S | a grand dance party | abstract |
+  baseball | L | a baseball | baseball-equipment, golf-equipment |
+  foot | O | the ball of your foot | body-part:O"the ball of your foot" |
+
+Doll | a |
+  toy | L | a doll | toy | has:face"a doll's face" has:head"a doll's head" has:hands"doll hands" has:hand"a doll's hand" has:legs"doll legs" has:arms"doll arms" has:eyes"doll eyes" has:eye has:mouth"a painted mouth" has:hair:A"many dolls have hair" has:ears:A has:nose:A has:feet has:foot:A has:neck:A has:brain:N has:body:A has:fingers:A has:teeth:A has:tongue:N has:lip:A has:heart:N has:pulse:N
+  * | verb:n"to doll someone up"
+
+Top | a |
+  toy | L | a spinning top | toy | has:tip"a spinning tip"
+  clothing | L | a top to wear | clothing | has:arms:A
+  lid | L | a lid | object |
+
+Puzzle | a |
+  toy | L | a puzzle | toy:A"a toy or a game" | has:pieces
+
+Robot | a |
+  machine | L | a robot | toy:A"a toy or a machine" | has:head:A"many robots" has:arms:A has:hands:A has:legs:A has:eyes:A has:brain:n"a computer brain" has:face:A can:walk:A can:see:A can:talk:A can:clap:A can:hug:A
+  dance | S | the robot dance | dance:S"the robot dance" |
+
+Marble | a |
+  toy | L | a glass marble | toy |
+  stone | L | the polished stone | material | has:veins:S"veins in the stone"
+
+Teddy | a |
+  toy | L | a teddy bear | toy | has:fur"soft fur" has:eyes"button eyes" has:eye has:ears"teddy ears" has:nose"a stitched nose" has:head has:arms has:legs has:paws has:brain:N has:mouth:A has:face"a teddy's face" has:heart:N has:tail:A has:hands:N has:pulse:N
+
+Rattle | a |
+  toy | L | a baby's rattle | toy | has:handle:A
+  sound | S | a rattling noise | sound |
+  * | verb:S"to rattle someone"
+
+Balloon | a |
+  toy | L | a party balloon | toy | can:fly:A"it floats up" has:string:A has:neck:S"the balloon's neck" has:mouth:O
+
+Puppet | a |
+  toy | L | a puppet | toy | has:strings:A"marionettes have strings" has:head has:face has:mouth:A"many puppets" has:hands:A has:arms:A has:legs:A has:eyes:A has:brain:N can:talk:A
+  person | S | someone controlled by others | person |
+
+Yoyo | a |
+  toy | L | a yo-yo | toy | has:string:A has:strings:n"one string"
+
+
+Chip | a |
+  computer | L | a computer chip | computer-part |
+  food | L | a potato chip | dish |
+  wood | S | a chip of wood | material |
+
+Drive | a |
+  computer | S | a computer drive | computer-part:S"a disk drive" |
+  road | L | a drive in a car | abstract |
+
+Port | a |
+  computer | S | a computer port | computer-part:S"a socket for cables" |
+  harbour | L | a harbour | place | is:body-of-water:A"a harbour holds water"
+
+Fan | a |
+  device | L | an electric fan | object | has:blade"fan blades" has:blades has:plug:A has:wings:n"blades, not wings" can:cut:A
+  person | L | a supporter | person |
+  computer | O | a computer fan | computer-part:O |
+  * | verb:n"to fan someone"
+
+Screen | a |
+  display | L | a display screen | computer-part:A"a monitor, or any screen" | has:screen
+  divider | S | a folding screen | furniture:A |
+  * | verb:S"to screen someone"
+
+Speaker | a |
+  device | L | a loudspeaker | computer-part:A"a sound device" | has:cone
+  person | L | someone who speaks | person |
+
+Printer | a |
+  machine | L | a printer | computer-part:A"a device for a computer" | has:paper has:buttons has:tray
+
+Laptop | a |
+  computer | L | a laptop | object | has:screen has:keys"laptop keys" has:lid"the laptop lid" has:keyboard has:buttons:A has:locks:N can:blink:N is:computer-part:n"a whole computer"
+
+Tablet | a |
+  computer | L | a tablet computer | object | has:screen has:buttons:A has:keys:N
+  pill | L | a pill | abstract |
+  stone | S | a stone tablet | object |
+
+Phone | a |
+  device | L | a phone | object | has:screen:A"most phones" has:buttons:A"few buttons now" can:ring has:keys:A has:camera has:lens:S"a camera lens" has:battery
+  * | verb:L"to phone someone"
+
+Camera | a |
+  device | L | a camera | object | has:lens has:buttons has:screen:A"most cameras" has:flash has:eye:O"a camera eye"
+
+Glasses | - | plural
+  specs | L | eyeglasses | object | has:lens"glasses lenses" has:lenses has:bridge:S"the bridge over the nose" has:arms:S"the arms over the ears" has:frame has:hinges
+
+Telescope | a |
+  device | L | a telescope | object | has:lens"a telescope lens" has:legs:A"tripod legs"
+
+Microscope | a |
+  device | L | a microscope | object | has:lens"microscope lenses" has:arm:S"the microscope's arm" has:stage
+
+Television | a |
+  device | L | a television | object | has:screen has:plug has:buttons:A has:remote can:watch:N
+
+Radio | a |
+  device | L | a radio | object | has:dial:A has:buttons:A has:aerial
+
+Remote | a |
+  control | L | a TV remote | object | has:buttons"remote buttons" has:battery
+
+Calculator | a |
+  device | L | a calculator | object | has:buttons"calculator buttons" has:keys:S"calculator keys" has:screen:S"a small screen" has:locks:N
+
+Elevator | an |
+  lift | L | an elevator | object | has:buttons"elevator buttons" has:door has:shaft
+
+Doorbell | a |
+  device | L | a doorbell | object | can:ring has:button
+
+Clock | a |
+  device | L | a clock | object | has:face"a clock face" has:hands"clock hands" has:hand:A"two or three hands" has:fingers:N can:clap:N has:teeth:n"gear teeth inside" has:tooth:n has:springs:A"wind-up clocks" can:ring:A"alarm clocks ring" has:numbers has:keys:n"a winding key" has:locks:N has:pendulum:A can:tick
+  * | verb:S"to clock someone"
+
+Watch | a |
+  device | L | a wristwatch | object | has:face"a watch face" has:hands"watch hands" has:hand:A has:fingers:N can:clap:N has:strap has:crown:O"the winding knob" has:springs:O"a mainspring" has:teeth:n"gear teeth inside" has:tooth:n has:screen:A"smartwatches" has:keys:n has:locks:N can:tick:A
+  guard | S | a lookout | abstract |
+  * | verb:L"to watch someone"
+
+Comb | a |
+  object | L | a comb | object | has:teeth"comb teeth" has:tooth"comb teeth" has:handle:A is:musical-instrument:n"comb and paper" is:tool:A
+  bird | S | a rooster's comb | body-part:S"a rooster's red crest" |
+  * | verb:A"comb someone's hair"
+
+Brush | a |
+  object | L | a brush | object | has:bristles has:handle:A has:hair:A"bristles, or hair" is:tool:A
+  * | verb:n"brush someone off"
+
+Needle | a |
+  sewing | L | a sewing needle | object | has:eye"the needle's eye" has:tip"a sharp point" is:tool:A can:sew:A has:eyes:N
+  pine | S | a pine needle | abstract |
+  * | verb:L"to needle someone"
+
+Pin | a |
+  object | L | a pin | object | has:head"a pin head" has:tip"a sharp point" is:tool:n
+  bowling | S | a bowling pin | toy:A | has:head:S"the pin's head" has:neck:S"a bowling pin's neck"
+  * | verb:L"to pin someone down"
+
+Button | a |
+  clothing | L | a shirt button | object | has:holes"buttonholes" has:hole-middle:A"two or four holes"
+  switch | L | a push button | object |
+
+Zipper | a |
+  fastener | L | a zipper | object | has:teeth"zipper teeth" has:tooth"zipper teeth" has:pull
+
+Key | a |
+  lock | L | a door key | object | has:teeth:O"a key's teeth" has:tooth:O has:head:O"the bow of a key" has:ring:A
+  music | S | a musical key | abstract |
+  map | S | a map key | abstract |
+  * | verb:n"key someone's car"
+
+Lock | a |
+  door | L | a door lock | object | has:keys:A"needs a key" has:keyhole
+  hair | S | a lock of hair | body-part:n"a curl, not a part" |
+
+Ring | a |
+  jewelry | L | a finger ring | jewelry | has:hole-middle"a hole for your finger" has:stone:A"some have gems" has:fingers:N
+  boxing | S | a boxing ring | place | has:ropes has:corners
+  sound | S | a phone's ring | sound |
+  * | verb:L"to ring someone"
+
+Chain | a |
+  links | L | a metal chain | object | is:jewelry:A"a neck chain"
+  shops | S | a chain of shops | abstract |
+  * | verb:S"to chain someone up"
+
+Rope | a |
+  cord | L | a rope | rope | has:knot:A"often knotted"
+  * | verb:n"rope someone in"
+
+Anchor | an |
+  ship | L | a ship's anchor | object | has:chain"an anchor chain" has:arms:S"the anchor's arms" has:crown:O"the anchor's crown" has:flukes
+  news | S | a news anchor | person |
+
+Compass | a |
+  device | L | a compass | object | has:needle"a compass needle" has:face:S"the compass face" has:dial:A
+  drawing | S | a drawing compass | object | has:needle:A"a sharp point" has:legs:S"two legs" has:arms:A
+
+Map | a |
+  paper | L | a map | object | has:key:S"the key explains the symbols" has:keys:n"one key, not keys" has:scale:S"the map scale" has:scales:n"a scale, not scales" has:legend:S is:tool:A
+
+Book | a |
+  pages | L | a book | object | has:spine:S"the back of a book" has:pages has:cover has:jacket:S"a dust jacket" has:leaves:O"pages, called leaves" has:bones:N has:body:O"the text"
+  * | verb:L"to book someone"
+
+Page | a |
+  paper | L | a page | object | has:foot:O"the foot of the page" has:head:O"the head of the page"
+  servant | S | a royal page | person |
+  * | verb:L"to page someone"
+
+Pen | a |
+  writing | L | a pen | object | has:cap"a pen cap" has:tip"a pen tip" has:ink has:clip has:nib:A has:hair:N has:spring:A has:springs:A"click pens"
+  animal | S | an animal pen | place |
+  * | verb:n"pen someone in"
+
+Pencil | a |
+  writing | L | a pencil | object | has:tip"a pencil tip" has:lead has:rubber:A"some have one" has:eraser:A
+
+Envelope | an |
+  paper | L | an envelope | object | has:flap has:stamp:A
+
+Stamp | a |
+  postage | L | a postage stamp | object |
+  * | verb:n"stamp on someone"
+
+Card | a |
+  paper | L | a greeting card | object |
+  playing | L | a playing card | object | has:face:O"the face of a card" has:back:S"the card's back"
+
+Dice | - | plural
+  game | L | dice | toy:A"a game piece, but a toy?" | has:spots"spots on each face" has:face:S"six faces" has:faces has:dots
+
+Candle | a |
+  light | L | a candle | object | has:wick has:light"it gives light" has:flame
+
+Lamp | a |
+  light | L | a lamp | object | has:bulb"a light bulb" has:light has:plug"a lamp plug" has:shade has:neck:A"bendy lamps" has:head:A"bendy lamps" has:arm:A
+
+Bulb | a |
+  light | L | a light bulb | object | has:light
+  plant | S | a flower bulb | plant |
+
+Torch | a |
+  light | L | a torch | object | has:bulb"a torch bulb" has:light has:battery has:lens:A
+
+Match | a |
+  stick | L | a matchstick | object | has:head"a match head" has:stem:O"the matchstick"
+  game | L | a sports match | sport:A"a game, not a sport" |
+  * | verb:n"match someone, equal them"
+
+Mirror | a |
+  glass | L | a mirror | object | has:glass is:furniture:A
+  * | verb:S"to mirror someone"
+
+Window | a |
+  glass | L | a window | object | has:pane has:frame has:sill has:latch
+
+Door | a |
+  entrance | L | a door | object | has:handle"a door handle" has:lock:A has:hinges has:knob has:locks:A has:keys:N has:bell:A
+
+Gate | a |
+  entrance | L | a gate | object | has:latch has:hinges has:lock:A
+
+Ladder | a |
+  steps | L | a ladder | object | has:rungs has:steps has:feet:A has:foot:S"the foot of the ladder" has:legs:A
+  tights | S | a run in tights | abstract |
+
+Bridge | a |
+  crossing | L | a bridge over a river | place | has:river:A"most cross water" has:arch:A
+  game | S | the card game | card-game:S"the card game" |
+  nose | S | the bridge of the nose | body-part:A"part of the nose" |
+
+Umbrella | an |
+  object | L | an umbrella | object | has:handle has:spokes has:ribs:S"umbrella ribs"
+
+Hook | a |
+  object | L | a hook | object |
+  * | verb:S"to hook someone"
+
+Hanger | a |
+  object | L | a coat hanger | object | has:hook"the hanger's hook" has:shoulders:O"the hanger's shoulders" has:neck:O
+
+Mop | a |
+  object | L | a mop | object | has:handle has:head"a mop head" has:hair:n"looks like hair" is:tool:A
+
+Broom | a |
+  object | L | a broom | object | has:handle has:bristles has:head:S"the broom head" is:tool:A
+
+Soap | a | - mass
+  bar | L | soap | object |
+
+Towel | a |
+  cloth | L | a towel | object |
+
+Pillow | a |
+  cushion | L | a pillow | object | has:feathers:A"some are stuffed with feathers" has:case
+
+Blanket | a |
+  cover | L | a blanket | object |
+
+Mattress | a |
+  bed | L | a mattress | furniture:A | has:springs:A"sprung mattresses"
+
+Trampoline | a |
+  toy | L | a trampoline | toy:A"play equipment, but a toy?" | has:springs"trampoline springs" has:legs"short legs" has:net:A can:jump:N
+
+Swing | a |
+  playground | L | a swing | toy:A"play equipment, but a toy?" | has:seat"a swing seat" has:chain:A"chains or ropes" has:chains:A can:sit:N
+  dance | S | swing dancing | dance:S"swing dancing" |
+  * | verb:n"swing someone round"
+
+Slide | a |
+  playground | L | a playground slide | toy:A"play equipment, but a toy?" | has:ladder has:steps
+  photo | S | a photo slide | object |
+
+Tent | a |
+  shelter | L | a tent | object | has:poles has:pegs has:door:A
+
+Flag | a |
+  cloth | L | a flag | object | has:pole:A has:stripes:A"many flags" has:stars:A
+
+Syringe | a |
+  medical | L | a syringe | object | has:needle"a syringe needle" can:sew:N has:plunger
+
+Thermometer | a |
+  device | L | a thermometer | object | has:bulb:S"the bulb at the bottom" has:screen:A"digital ones"
+
+Toilet | a |
+  fixture | L | a toilet | object | has:seat"a toilet seat" has:lid"a toilet lid" has:bowl:S"the toilet bowl" has:handle:A can:sit:N has:flush
+
+Bath | a |
+  tub | L | a bathtub | object | has:plug"a bath plug" has:taps:A
+
+Sink | a |
+  basin | L | a kitchen sink | object | has:plug"a sink plug" has:taps:A has:drain is:sink:L
+
+Tap | a |
+  faucet | L | a water tap | object | has:handle:A has:spout:S"the tap's spout"
+  dance | S | tap dancing | dance:S"tap dancing" |
+  knock | L | a light knock | sound |
+
+Plug | a |
+  electric | L | an electric plug | object | has:pins has:prongs
+  sink | L | a sink plug | object |
+
+Pipe | a |
+  tube | L | a water pipe | object | has:joint:A has:bends
+  smoking | S | a smoking pipe | object | has:bowl:S"the pipe's bowl" has:stem:O"the pipe's stem"
+  music | S | a musical pipe | musical-instrument:S |
+
+Hose | a |
+  tube | L | a garden hose | object | has:nozzle has:spout:n"a nozzle, not a spout"
+
+Iron | an |
+  appliance | L | a clothes iron | object | has:plug:A has:handle has:sole:O"the iron's soleplate"
+  metal | L | the metal iron | metal |
+  golf | S | a golf iron | golf-equipment | has:head:S"the club head" has:handle:A"a grip"
+  * | verb:n"iron someone out"
+
+Thread | a |
+  sewing | L | sewing thread | object |
+  chat | S | a thread of messages | abstract |
+
+Yarn | a | - mass
+  wool | L | knitting yarn | material |
+  story | S | a long story | abstract |
+
+Cork | a |
+  stopper | L | a bottle cork | object |
+  bark | S | cork bark | material | is:tree:n"cork comes from a tree"
+
+Brick | a |
+  block | L | a brick | material | has:holes:A
+  * | verb:n"brick someone in"
+
+Rock | a |
+  stone | L | a rock | material |
+  music | S | rock music | abstract |
+  * | verb:S"to rock someone"
+
+Shell | a |
+  seashell | L | a seashell | object | has:shell:A"it is a shell"
+  bomb | S | an artillery shell | weapon:A |
+  pasta | S | pasta shells | dish:S |
+
+Feather | a |
+  plume | L | a bird's feather | object | has:vane has:quill has:stem:O"the quill shaft"
+  * | verb:N
+
+Bone | a |
+  skeleton | L | a bone | body-part | has:marrow
+  * | verb:N
+
+Trophy | a |
+  award | L | a trophy | object | has:handles:A has:base has:cup:A has:ears:O"trophy handles"
+
+Medal | a |
+  award | L | a medal | object | has:ribbon has:face:A
+
+Badge | a |
+  pin | L | a badge | object | has:pin:A
+
+Mask | a |
+  cover | L | a mask | object | has:eyes:A"eye holes" has:eye:A has:face:A"a fake face" has:mouth:A
+
+Wig | a |
+  hair | L | a wig | object | has:hair"fake hair"
+
+Tee | a |
+  golf | L | a golf tee | golf-equipment | has:head:A has:tip:A
+  shirt | S | a T-shirt | clothing:S"a T-shirt" |
+
+Wood | a | - mass
+  timber | L | wood | material | has:knot:S"a knot in the wood" has:grain has:rings:S"growth rings"
+  golf | S | a golf wood | golf-equipment:S"a wooden-headed golf club" | has:head:S"the club head"
+  forest | S | a wood of trees | place |
+
+Driver | a |
+  person | L | someone who drives | person |
+  golf | S | the golf driver | golf-equipment:S"the longest golf club" | has:head:S"the club head"
+
+Putter | a |
+  golf | L | the golf putter | golf-equipment | has:head:S"the putter's head" has:handle:A"a grip"
+
+Base | a |
+  baseball | S | a baseball base | baseball-equipment:S"one of the bases" |
+  bottom | L | the bottom of something | abstract |
+  army | S | an army base | place |
+
+Mitt | a |
+  baseball | L | a baseball mitt | baseball-equipment, clothing:A | has:fingers:A"a mitt joins fingers" has:thumb
+
+Plate | a |
+  dish | L | a dinner plate | kitchen-tool:A"tableware" | has:rim has:lip:A
+  baseball | S | home plate | baseball-equipment:S"home plate" |
+  armour | O | a metal plate | object |
+
+
+Racket | a |
+  sport | L | a tennis racket | object | has:strings"racket strings" has:handle"a racket grip" has:head:S"the racket head" has:neck:O"the throat, between grip and head" has:frame
+  noise | S | a loud noise | sound |
+
+Net | a |
+  mesh | L | a net | object | has:holes"lots of holes"
+  * | verb:n"to net someone, catch them"
+
+Puck | a |
+  hockey | L | a hockey puck | toy:A"sports gear, not a toy" |
+
+Paddle | a |
+  oar | L | a canoe paddle | object | has:blade:S"the paddle's blade" has:handle has:shaft
+  * | verb:n"to paddle someone, spank"
+
+Oar | an |
+  boat | L | a rowing oar | object | has:blade:S"the oar's flat blade" has:handle has:shaft can:cut:N
+
+Ski | a |
+  sport | L | a ski | object | has:tip:S"the ski tip" has:tail:O"the back of a ski" is:footwear:A
+
+Hoop | a |
+  ring | L | a hoop | toy:A | has:hole-middle"it's a ring" has:net:A"a basketball hoop"
+
+Goal | a |
+  posts | L | a football goal | object | has:net"a goal net" has:posts has:crossbar
+  aim | L | an aim | abstract |
+
+Dart | a |
+  game | L | a dart | toy:A"a game piece" | has:tip"a sharp tip" has:feathers:A"flights, often feathers" has:tail:S"the dart's flights" can:fly:A
+
+Cue | a |
+  pool | L | a pool cue | object | has:tip"the cue tip"
+  signal | S | an actor's cue | abstract |
+
+Saddle | a |
+  horse | L | a horse saddle | object | has:seat:S"it's a seat" has:horn:S"the saddle horn" has:stirrups
+  * | verb:S"to saddle someone with a job"
+
+Surfboard | a |
+  board | L | a surfboard | toy:A"sports gear" | has:fins"surfboard fins" has:nose:S"the board's nose" has:tail:S"the board's tail" has:deck:S"the top, called the deck"
+
+Battery | a |
+  power | L | a battery | object | has:cells:S"battery cells"
+
+Magnet | a |
+  metal | L | a magnet | object | has:poles:S"north and south poles"
+
+Coin | a |
+  money | L | a coin | coin | has:head:S"heads, the face side" has:tail:S"tails, the back" has:face:S"the coin's face" has:edge has:hole-middle:A"some coins"

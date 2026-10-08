@@ -1,0 +1,427 @@
+# Objects, part 1: tools, weapons, musical instruments, clothing, footwear, hats.
+# Objects have no abilities unless stated (can:eat, can:see ... are N), so every 'Has X, can't Y' joke turns on has:X.
+
+Hammer | a |
+  tool | L | the tool | tool | has:head"a hammer head" has:handle has:claw:S"the nail-pulling claw" is:weapon:A
+  bone | O | the hammer bone in the ear | body-part:O"the hammer bone, in the ear" |
+  * | verb:L"to hammer someone"
+
+Saw | a |
+  tool | L | the tool | tool | has:teeth"saw teeth" has:tooth"saw teeth" has:blade"a saw blade" has:handle is:weapon:N can:cut
+  * | verb:A"to saw someone in half"
+
+Drill | a |
+  tool | L | the power drill | tool | has:handle:A"a pistol grip" has:engine:n"a motor, not an engine" has:tip:A"a drill bit"
+  practice | S | a practice exercise | abstract |
+  * | verb:S"to drill someone, train them"
+
+Wrench | a |
+  tool | L | the wrench | tool | has:jaws:S"adjustable jaws" has:handle
+
+Spanner | a |
+  tool | L | the spanner | tool | has:jaws:S"spanner jaws" has:handle
+
+Pliers | - | plural
+  tool | L | pliers | tool | has:jaws:S"plier jaws" has:handle:A"two handles" has:teeth:A"gripping ridges"
+
+File | a |
+  tool | L | a metal file | tool | has:teeth:A"tiny cutting ridges" has:handle:A
+  computer | L | a computer file | abstract |
+  folder | L | a paper file | container:A"a folder for papers" |
+
+Level | a |
+  tool | L | a spirit level | tool | has:bubble
+  stage | L | a game level | abstract |
+
+Plane | a |
+  aircraft | L | an aeroplane | vehicle | can:fly has:wings"plane wings" has:wing"a plane wing" has:tail:S"the plane's tail" has:nose:S"the plane's nose" has:engine has:wheels"landing wheels" has:seat:A"seats inside" has:seats has:body:A"the fuselage" has:belly:S"the plane's belly" has:windows has:horn:N
+  tool | S | a woodworking plane | tool:S | has:blade:S"a plane's blade"
+  tree | O | a plane tree | tree:O |
+
+Chisel | a |
+  tool | L | the chisel | tool | has:blade:S"a chisel's blade" has:handle has:tip:A
+
+Vice | a |
+  tool | L | a bench vice | tool | has:jaws:S"vice jaws" has:handle:A
+  bad | S | a bad habit | abstract |
+
+Clamp | a |
+  tool | L | the clamp | tool | has:jaws:A
+
+Rake | a |
+  tool | L | the garden rake | tool | has:teeth:S"rake teeth" has:tooth:S"rake teeth" has:handle"a long handle" has:head:A"the rake head" has:prongs
+
+Hoe | a |
+  tool | L | the garden hoe | tool | has:blade:S"a hoe's blade" has:handle
+
+Spade | a |
+  tool | L | the garden spade | tool | has:blade:S"a spade's blade" has:handle
+  suit | L | the card suit | card-suit |
+
+Shovel | a |
+  tool | L | the shovel | tool | has:blade:A"a shovel's scoop" has:handle
+
+Axe | an |
+  tool | L | the axe | tool, weapon:A | has:blade"an axe blade" has:handle has:head"an axe head" can:cut
+
+Trowel | a |
+  tool | L | the trowel | tool | has:blade:A"a trowel's flat blade" has:handle
+
+Ruler | a |
+  tool | L | a measuring ruler | tool | has:edge
+  king | S | a ruler of a country | person | has:crown:A"many rulers wear crowns" has:throne:A is:royal:A
+
+Jack | a |
+  tool | L | a car jack | tool | has:handle:A
+  card | L | the playing card | playing-card | has:face:O"a face card"
+  toy | O | a game of jacks | toy:O |
+  * | verb:n"to jack someone up"
+
+Mallet | a |
+  tool | L | the mallet | tool | has:head"a mallet head" has:handle
+
+Nail | a |
+  metal | L | a metal nail | object | has:head"a nail head" has:tip:A"a point" is:tool:n"a fastener, not a tool"
+  finger | L | a fingernail | body-part:S"the one on your finger" |
+  * | verb:L"to nail someone"
+
+Screw | a |
+  metal | L | a metal screw | object | has:head"a screw head" has:thread is:tool:n"a fastener, not a tool"
+
+Bolt | a |
+  metal | L | a metal bolt | object | has:head"a bolt head"
+  lightning | S | a lightning bolt | weather:A"lightning is weather, a bolt is part of it" |
+  lock | L | a door bolt | object |
+
+Nut | a |
+  food | L | a nut to eat | nut | has:shell
+  metal | S | a metal nut for a bolt | object | has:hole-middle:S"the hole for the bolt"
+  crazy | S | an eccentric person | person |
+
+Sword | a |
+  weapon | L | the sword | weapon | has:blade has:handle:A"a hilt" has:tip"a sword's point" can:cut
+
+Spear | a |
+  weapon | L | the spear | weapon | has:tip"a spear tip" has:head:S"a spearhead"
+  * | verb:A"to spear someone"
+
+Bow | a |
+  weapon | L | a bow and arrow | weapon | has:string"a bowstring" has:strings:n"one string"
+  violin | S | a violin bow | object | has:hair:S"horsehair" has:strings:n"hair, not strings"
+  ribbon | L | a ribbon bow | object |
+  ship | S | the front of a ship | object |
+
+Arrow | an |
+  weapon | L | the arrow | weapon | has:feathers:S"feathered fletching" has:tip"an arrowhead" has:head:S"an arrowhead" can:fly:A"it flies when shot"
+
+Dagger | a |
+  weapon | L | the dagger | weapon | has:blade has:handle:A"a hilt" has:tip
+
+Mace | a |
+  weapon | L | the spiked club | weapon | has:head"a spiked head" has:handle:A
+  spray | S | pepper spray | object | is:weapon:A"pepper spray"
+  * | verb:n"to mace someone, the spray"
+  spice | O | the spice mace | herb-spice:O |
+
+Lance | a |
+  weapon | L | the knight's lance | weapon | has:tip
+  * | verb:A"to lance someone's boil"
+
+Sling | a |
+  weapon | L | a sling for stones | weapon |
+  bandage | L | an arm sling | object |
+
+Cannon | a |
+  weapon | L | the cannon | weapon | has:wheels:A"many sit on wheels" has:mouth:O"the cannon's muzzle"
+
+Whip | a |
+  weapon | L | the whip | weapon:A"a tool or a weapon" | has:handle has:tail:O"the whip's tail" is:tool:A
+  * | verb:A"to whip someone"
+
+Staff | a |
+  stick | L | a walking staff | object | is:weapon:A"a fighting staff"
+  workers | L | the people who work somewhere | abstract |
+  music | S | the five lines of music | abstract |
+
+Shield | a |
+  armour | L | the shield | weapon:A"armour, not a weapon" | has:handle:A has:crest:O"a heraldic crest"
+
+Catapult | a | regional
+  weapon | L | the catapult | weapon | has:arm:S"the throwing arm" has:arms:A has:wheels:A"some roll on wheels"
+
+Organ | an |
+  music | L | the pipe organ | musical-instrument | has:keys"organ keys" has:pipes"organ pipes" has:pedals has:locks:N
+  body | L | a body organ | body-part |
+
+Horn | a |
+  music | L | the brass horn | musical-instrument | has:mouth:O"the bell of the horn" has:valves
+  animal | L | an animal's horn | body-part:S"part of an animal" |
+  car | L | a car horn | object |
+
+Drum | a |
+  music | L | the drum | musical-instrument | has:skin:S"a drumskin" has:head:S"a drumhead" has:body:A"a drum shell" has:shell:S"a drum's shell" has:bones:N
+  barrel | S | a metal drum barrel | container:S"a big barrel" |
+  ear | O | the eardrum | body-part:O"the eardrum" |
+
+Harp | a |
+  music | L | the harp | musical-instrument | has:strings"lots of strings" has:neck:S"the harp's curved neck"
+  * | verb:n"harp on at someone"
+
+Recorder | a |
+  music | L | the recorder | musical-instrument | has:holes has:mouth:O"a fipple, a mouth" has:lip:O
+  machine | S | a tape recorder | object | has:buttons"play and record buttons"
+
+Triangle | a |
+  music | L | the musical triangle | musical-instrument |
+  shape | L | the shape | shape | has:corners
+
+Bell | a |
+  object | L | a bell | object | can:ring has:tongue:S"the clapper" has:mouth:A"the bell's opening" has:lip:O"the bell's rim" has:waist:O has:shoulder:O has:crown:O"the top of a bell" is:musical-instrument:A
+  * | verb:A"bell someone (call them)"
+
+Keyboard | a |
+  computer | L | a computer keyboard | computer-part | has:keys has:buttons:A"keys, not buttons" has:locks:N
+  music | S | an electronic keyboard | musical-instrument:S"an electronic keyboard" | has:keys has:buttons:A has:screen:A
+
+Piano | a |
+  music | L | the piano | musical-instrument | has:keys has:strings:S"inside, hammers hit strings" has:legs"piano legs" has:lid has:pedals has:locks:N has:tail:O"a grand's tail" has:hammers can:walk:N
+  * | verb:N
+
+Guitar | a |
+  music | L | the guitar | musical-instrument | has:strings has:neck"a guitar neck" has:head:S"the headstock" has:body:S"the guitar's body" has:bridge:S"the guitar's bridge" has:frets has:waist:O has:keys:N
+
+Violin | a |
+  music | L | the violin | musical-instrument | has:strings has:neck"a violin neck" has:body:S"the violin's body" has:bridge:S"the violin's bridge" has:scroll has:waist:O has:head:O"the scroll"
+
+Fiddle | a |
+  music | L | a fiddle | musical-instrument | has:strings has:neck"the fiddle's neck" has:body:S"the fiddle's body" has:bridge:S"the fiddle's bridge"
+  * | verb:n"fiddle someone, cheat"
+
+Flute | a |
+  music | L | the flute | musical-instrument | has:keys:S"flute keys" has:holes has:mouth:O has:lip:O has:locks:N
+  glass | O | a champagne flute | container:O | has:stem:O"a flute's stem"
+
+Cello | a |
+  music | L | the cello | musical-instrument | has:strings has:neck"a cello neck" has:body:S has:bridge:S"the cello's bridge" has:spike
+
+Banjo | a |
+  music | L | the banjo | musical-instrument | has:strings has:neck"a banjo neck" has:head:S"the banjo's drumhead" has:skin:O
+
+Tuba | a |
+  music | L | the tuba | musical-instrument | has:valves has:mouth:O
+
+Trumpet | a |
+  music | L | the trumpet | musical-instrument | has:valves has:keys:n"valves, not keys" has:mouth:O
+  elephant | O | an elephant's call | sound |
+
+Harmonica | a |
+  music | L | the harmonica | musical-instrument | has:holes
+
+Saxophone | a |
+  music | L | the saxophone | musical-instrument | has:keys:S"saxophone keys" has:neck:S"the sax's neck" has:mouth:O has:locks:N
+
+Clarinet | a |
+  music | L | the clarinet | musical-instrument | has:keys:S"clarinet keys" has:locks:N
+
+Gong | a |
+  music | L | the gong | musical-instrument | can:ring:A"it booms"
+
+Whistle | a |
+  object | L | a whistle | musical-instrument:A"a signal, more than an instrument" | has:mouth:O
+  * | verb:n"whistle at someone"
+
+Ukulele | a |
+  music | L | the ukulele | musical-instrument | has:strings has:neck"a ukulele neck" has:bridge:S"the ukulele's bridge" has:body:S
+
+Accordion | an |
+  music | L | the accordion | musical-instrument | has:keys has:buttons has:locks:N
+
+Tambourine | a |
+  music | L | the tambourine | musical-instrument | has:skin:S"a drumskin" has:bells
+
+Xylophone | a |
+  music | L | the xylophone | musical-instrument | has:keys:S"wooden bars called keys" has:locks:N has:legs:A
+
+Kazoo | a |
+  music | L | the kazoo | musical-instrument | has:mouth:A
+
+Suit | a |
+  clothing | L | a suit | clothing | has:jacket has:buttons has:collar:A"the jacket's collar" has:pocket"suit pockets" has:pockets"suit pockets" has:lapels has:legs:S"trouser legs" has:arms:A"sleeves"
+  cards | L | a card suit | card-suit:A"the four suits" |
+  law | S | a lawsuit | abstract |
+
+Tie | a |
+  clothing | L | a necktie | clothing | has:knot"a tie knot" has:tail:O"the narrow end" has:neck:N
+  draw | S | a draw in a game | abstract |
+  * | verb:n"tie someone up"
+
+Cap | a |
+  clothing | L | a baseball cap | hat, baseball-equipment:A"a team cap" | has:bill:S"the cap's bill" has:crown:O"the top of a cap" has:peak
+  lid | L | a bottle cap | object | has:hair:N
+  tooth | O | a tooth cap | object |
+
+Boot | a |
+  footwear | L | a boot | footwear | has:laces:A"some lace up" has:tongue:S"the boot's tongue" has:heel"a boot heel" has:sole"a boot sole" has:toe:S"a steel toe" can:walk:N can:run:N
+  car | S | a car boot | object |
+  * | verb:A"to boot someone out"
+
+Jumper | a |
+  clothing | L | a jumper | clothing:A"a sweater in Britain, a dress in America" | has:arms:A"sleeves" has:neck:A"a neckline"
+  person | S | someone who jumps | person |
+
+Sweater | a |
+  clothing | L | a sweater | clothing | has:arms:A"sleeves" has:neck:A"a neckline" has:collar:A
+  person | O | someone who sweats | person |
+
+Coat | a |
+  clothing | L | a coat | clothing | has:buttons:A"most coats" has:collar"a coat collar" has:pockets has:pocket has:hood:A"some coats" has:arms:A"sleeves"
+  paint | S | a coat of paint | material |
+  fur | S | an animal's coat | abstract |
+
+Jacket | a |
+  clothing | L | a jacket | clothing | has:buttons:A"zips or buttons" has:collar"a jacket collar" has:pockets has:pocket has:hood:A"some jackets" has:zipper:A has:arms:A"sleeves"
+  book | S | a book jacket | object |
+
+Scarf | a |
+  clothing | L | a scarf | clothing |
+  * | verb:N
+
+Glove | a |
+  clothing | L | a glove | clothing | has:fingers:S"glove fingers" has:thumb has:hand:A"it is a hand shape" has:hands:N can:clap:N
+  baseball | L | a baseball glove | baseball-equipment | has:fingers:S"glove fingers"
+
+Sock | a |
+  clothing | L | a sock | clothing | has:heel:S"a sock heel" has:toe:S"a sock toe" has:foot:S"the sock's foot" has:sole:A has:hole-middle:N
+  punch | S | a punch | abstract |
+  * | verb:S"to sock someone"
+
+Belt | a |
+  clothing | L | a belt | clothing | has:buckle has:tongue:O"the buckle's prong" has:holes
+  * | verb:S"to belt someone"
+
+Vest | a |
+  clothing | L | a vest | clothing | has:buttons:A"US vests do" has:pockets:A
+
+Robe | a |
+  clothing | L | a robe | clothing | has:belt:S"a robe's belt" has:pockets:A has:hood:A
+
+Gown | a |
+  clothing | L | a gown | clothing |
+
+Dress | a |
+  clothing | L | a dress | clothing | has:buttons:A has:pockets:A has:collar:A has:waist:S"a dress's waist"
+
+Skirt | a |
+  clothing | L | a skirt | clothing | has:waist:S"the waistband" has:pockets:A
+
+Hood | a |
+  clothing | L | a hood | clothing | has:drawstring
+  car | S | a car hood | object |
+
+Slip | a |
+  clothing | L | a slip, worn under clothes | clothing:A"underwear, really" |
+  fall | S | a slip and a fall | abstract |
+  paper | S | a slip of paper | object |
+
+Cape | a |
+  clothing | L | a cape | clothing | has:collar:A has:hood:A
+  land | S | a cape of land | place |
+
+Poncho | a |
+  clothing | L | a poncho | clothing | has:hood:A has:hole-middle:S"a hole for your head"
+
+Cardigan | a |
+  clothing | L | a cardigan | clothing | has:buttons"cardigan buttons" has:pockets:A has:collar:A has:arms:A"sleeves"
+
+Hoodie | a |
+  clothing | L | a hoodie | clothing | has:hood"a hoodie's hood" has:pocket"the front pouch" has:pockets:A has:arms:A"sleeves" has:pouch:A"a front pocket"
+
+Kilt | a |
+  clothing | L | a kilt | clothing | has:pleats has:pockets:N
+
+Blazer | a |
+  clothing | L | a blazer | clothing | has:buttons"blazer buttons" has:collar"a blazer collar" has:pockets has:pocket has:badge:A has:arms:A"sleeves"
+
+Shirt | a |
+  clothing | L | a shirt | clothing | has:buttons:A"most shirts" has:collar"a shirt collar" has:pocket:A has:tail:O"a shirttail" has:arms:A"sleeves" has:neck:A"a neckline"
+
+Blouse | a |
+  clothing | L | a blouse | clothing | has:buttons:A has:collar:A has:arms:A
+
+Apron | an |
+  clothing | L | an apron | clothing | has:pocket:A has:strings:S"apron strings"
+
+Bib | a |
+  clothing | L | a baby's bib | clothing |
+
+Sandal | a |
+  footwear | L | a sandal | footwear | has:laces:N has:heel:A has:toe:N has:tongue:N has:straps
+
+Slipper | a |
+  footwear | L | a slipper | footwear | has:laces:N has:heel:A has:tongue:N
+
+Clog | a |
+  footwear | L | a clog | footwear | has:laces:N has:heel:A has:tongue:N
+  * | verb:N
+
+Pump | a |
+  machine | L | a pump | object | has:handle:A has:hose:A
+  shoe | S | a court shoe | footwear:S | has:laces:N has:tongue:N
+  * | verb:S"to pump someone for answers"
+
+Trainer | a |
+  shoe | S | a running shoe, in Britain | footwear:S"a running shoe, in Britain" | has:laces"trainer laces" has:tongue"a trainer's tongue"
+  coach | L | a sports coach | person |
+
+Sneaker | a |
+  shoe | L | a sneaker | footwear | has:laces"sneaker laces" has:tongue"a sneaker's tongue"
+  person | O | someone who sneaks | person |
+
+Loafer | a |
+  shoe | L | a slip-on shoe | footwear | has:laces:N has:tongue:A has:heel
+  idler | S | a lazy person | person |
+
+Wedge | a |
+  shoe | S | a wedge-heeled shoe | footwear:S | has:heel"a wedge heel" has:laces:A
+  block | L | a wedge of wood | object | has:tip:A
+  golf | S | a golf wedge | golf-equipment:S"a golf club" | has:head:S"the club head"
+
+Moccasin | a |
+  shoe | L | a soft leather shoe | footwear | has:laces:A has:tongue:A
+  snake | O | the water moccasin | snake:O | lays-eggs:N
+
+Beret | a |
+  hat | L | a beret | hat |
+
+Helmet | a |
+  hat | L | a helmet | hat:A"protective gear, a hat?" | has:crest:O"a plumed crest" has:visor:A has:strap
+
+Bonnet | a |
+  hat | L | a bonnet | hat | has:ribbons
+  car | S | a car bonnet | object |
+
+Bowler | a |
+  hat | S | a bowler hat | hat:S"a bowler hat" | has:crown:O"the hat's crown" has:brim
+  cricket | L | a cricket bowler | person |
+
+Derby | a |
+  hat | S | a derby hat | hat:S"a derby hat" | has:crown:O has:brim
+  race | L | a big race or match | sport:A"an event, not a sport" |
+
+Crown | a |
+  royal | L | a king's crown | hat:A"worn on the head, but a hat?" | is:jewelry:A"jewelled headwear" has:jewels
+  tooth | S | a tooth crown | object |
+  coin | O | an old British coin | coin:O |
+  * | verb:L"to crown someone"
+
+Turban | a |
+  hat | L | a turban | hat |
+
+Sombrero | a |
+  hat | L | a sombrero | hat | has:brim"a huge brim" has:crown:O
+
+Beanie | a |
+  hat | L | a beanie | hat |
+
+Fedora | a |
+  hat | L | a fedora | hat | has:brim has:crown:O

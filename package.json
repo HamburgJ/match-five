@@ -36,8 +36,20 @@
     "generate-game-data": "node scripts/generateGameData.js",
     "test:data": "node scripts/generateGameData.test.js",
     "test:analytics": "node scripts/validateAnalytics.test.js",
-    "postinstall": "npm run test:data && npm run test:analytics && npm run test:persist",
-    "test:persist": "node scripts/persistMigration.test.js"
+    "test:persist": "node scripts/persistMigration.test.js",
+    "test:daily:schema": "node scripts/daily/verify-boards.test.js --schema --quiet",
+    "test:daily": "node scripts/daily/verify-boards.test.js && node scripts/daily/mutation.test.mjs",
+    "test:daily:full": "node scripts/daily/verify-boards.test.js --full",
+    "test": "npm run test:data && npm run test:analytics && npm run test:persist && npm run test:daily",
+    "daily:key": "node scripts/daily/build-key.mjs",
+    "daily:recall": "node scripts/daily/wordnet/recall.mjs",
+    "daily:pool": "node scripts/daily/pool.mjs",
+    "daily:calendar": "node scripts/daily/calendar.mjs",
+    "daily:publish": "node scripts/daily/publish.mjs",
+    "daily:golden": "node scripts/daily/build-golden.mjs",
+    "daily:judge": "node scripts/daily/judge/run.mjs",
+    "daily:review": "node scripts/daily/review/build-review.mjs",
+    "postinstall": "npm run test:data && npm run test:analytics && npm run test:persist && npm run test:daily:schema"
   },
   "eslintConfig": {
     "extends": [
