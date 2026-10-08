@@ -1,0 +1,2382 @@
+{
+ "about": "Heading pools for Match Five Daily (dossier v2 7.2). Drafted by the M1 content lane for Josh to cut and rewrite: every heading is status 'draft' until Josh approves it. def is the membership rule, evaluated per word sense by build-key.mjs: {is: class} for anchors, {p: predicate} for properties, {has: predicate, not: predicate} for 'Has X, can't Y' jokes (combined per sense in code, never judged as a negation), {verb: 'someone'} for the verb heading, {rule: name} for computed headings. negative is the reveal's predicate: 'by our key, a taco has no head'. For compound headings, {has, not} gives one per half.",
+ "anchors": [
+  {
+   "id": "bird",
+   "label": "Bird",
+   "def": {
+    "is": "bird"
+   },
+   "negative": "isn't a bird"
+  },
+  {
+   "id": "fish",
+   "label": "Fish",
+   "def": {
+    "is": "fish"
+   },
+   "negative": "isn't a fish"
+  },
+  {
+   "id": "mammal",
+   "label": "Mammal",
+   "def": {
+    "is": "mammal"
+   },
+   "negative": "isn't a mammal"
+  },
+  {
+   "id": "insect",
+   "label": "Insect",
+   "def": {
+    "is": "insect"
+   },
+   "negative": "isn't an insect"
+  },
+  {
+   "id": "reptile",
+   "label": "Reptile",
+   "def": {
+    "is": "reptile"
+   },
+   "negative": "isn't a reptile"
+  },
+  {
+   "id": "snake",
+   "label": "Snake",
+   "def": {
+    "is": "snake"
+   },
+   "negative": "isn't a snake"
+  },
+  {
+   "id": "fruit",
+   "label": "Fruit",
+   "def": {
+    "is": "fruit"
+   },
+   "negative": "isn't a fruit",
+   "note": "kitchen sense; botanical-only fruits (tomato) are A"
+  },
+  {
+   "id": "vegetable",
+   "label": "Vegetable",
+   "def": {
+    "is": "vegetable"
+   },
+   "negative": "isn't a vegetable"
+  },
+  {
+   "id": "tree",
+   "label": "Tree",
+   "def": {
+    "is": "tree"
+   },
+   "negative": "isn't a tree"
+  },
+  {
+   "id": "flower",
+   "label": "Flower",
+   "def": {
+    "is": "flower"
+   },
+   "negative": "isn't a flower"
+  },
+  {
+   "id": "nut",
+   "label": "Nut",
+   "def": {
+    "is": "nut"
+   },
+   "negative": "isn't a nut"
+  },
+  {
+   "id": "herb-or-spice",
+   "label": "Herb or spice",
+   "def": {
+    "is": "herb-spice"
+   },
+   "negative": "isn't a herb or a spice"
+  },
+  {
+   "id": "drink",
+   "label": "Drink",
+   "def": {
+    "is": "drink"
+   },
+   "negative": "isn't a drink"
+  },
+  {
+   "id": "dessert",
+   "label": "Dessert",
+   "def": {
+    "is": "dessert"
+   },
+   "negative": "isn't a dessert"
+  },
+  {
+   "id": "bread",
+   "label": "Bread",
+   "def": {
+    "is": "bread"
+   },
+   "negative": "isn't bread"
+  },
+  {
+   "id": "sandwich",
+   "label": "Sandwich",
+   "def": {
+    "is": "sandwich"
+   },
+   "negative": "isn't a sandwich"
+  },
+  {
+   "id": "tool",
+   "label": "Tool",
+   "def": {
+    "is": "tool"
+   },
+   "negative": "isn't a tool"
+  },
+  {
+   "id": "weapon",
+   "label": "Weapon",
+   "def": {
+    "is": "weapon"
+   },
+   "negative": "isn't a weapon"
+  },
+  {
+   "id": "musical-instrument",
+   "label": "Musical instrument",
+   "def": {
+    "is": "musical-instrument"
+   },
+   "negative": "isn't a musical instrument"
+  },
+  {
+   "id": "body-part",
+   "label": "Body part",
+   "def": {
+    "is": "body-part"
+   },
+   "negative": "isn't a body part"
+  },
+  {
+   "id": "gemstone",
+   "label": "Gemstone",
+   "def": {
+    "is": "gem"
+   },
+   "negative": "isn't a gemstone"
+  },
+  {
+   "id": "metal",
+   "label": "Metal",
+   "def": {
+    "is": "metal"
+   },
+   "negative": "isn't a metal"
+  },
+  {
+   "id": "coin",
+   "label": "Coin",
+   "def": {
+    "is": "coin"
+   },
+   "negative": "isn't a coin"
+  },
+  {
+   "id": "clothing",
+   "label": "Clothing",
+   "def": {
+    "is": "clothing"
+   },
+   "negative": "isn't clothing"
+  },
+  {
+   "id": "footwear",
+   "label": "Footwear",
+   "def": {
+    "is": "footwear"
+   },
+   "negative": "isn't footwear"
+  },
+  {
+   "id": "hat",
+   "label": "Hat",
+   "def": {
+    "is": "hat"
+   },
+   "negative": "isn't a hat"
+  },
+  {
+   "id": "furniture",
+   "label": "Furniture",
+   "def": {
+    "is": "furniture"
+   },
+   "negative": "isn't furniture"
+  },
+  {
+   "id": "vehicle",
+   "label": "Vehicle",
+   "def": {
+    "is": "vehicle"
+   },
+   "negative": "isn't a vehicle"
+  },
+  {
+   "id": "boat",
+   "label": "Boat",
+   "def": {
+    "is": "boat"
+   },
+   "negative": "isn't a boat"
+  },
+  {
+   "id": "container",
+   "label": "Container",
+   "def": {
+    "is": "container"
+   },
+   "negative": "isn't a container"
+  },
+  {
+   "id": "kitchen-tool",
+   "label": "Kitchen tool",
+   "def": {
+    "is": "kitchen-tool"
+   },
+   "negative": "isn't a kitchen tool"
+  },
+  {
+   "id": "toy",
+   "label": "Toy",
+   "def": {
+    "is": "toy"
+   },
+   "negative": "isn't a toy"
+  },
+  {
+   "id": "computer-part",
+   "label": "Computer part",
+   "def": {
+    "is": "computer-part"
+   },
+   "negative": "isn't a computer part"
+  },
+  {
+   "id": "weather",
+   "label": "Weather",
+   "def": {
+    "is": "weather"
+   },
+   "negative": "isn't weather"
+  },
+  {
+   "id": "body-of-water",
+   "label": "Body of water",
+   "def": {
+    "is": "body-of-water"
+   },
+   "negative": "isn't a body of water"
+  },
+  {
+   "id": "sport",
+   "label": "Sport",
+   "def": {
+    "is": "sport"
+   },
+   "negative": "isn't a sport"
+  },
+  {
+   "id": "dance",
+   "label": "Dance",
+   "def": {
+    "is": "dance"
+   },
+   "negative": "isn't a dance"
+  },
+  {
+   "id": "card-game",
+   "label": "Card game",
+   "def": {
+    "is": "card-game"
+   },
+   "negative": "isn't a card game"
+  },
+  {
+   "id": "shape",
+   "label": "Shape",
+   "def": {
+    "is": "shape"
+   },
+   "negative": "isn't a shape"
+  },
+  {
+   "id": "unit-of-length",
+   "label": "Unit of length",
+   "def": {
+    "is": "unit-length"
+   },
+   "negative": "isn't a unit of length"
+  },
+  {
+   "id": "unit-of-weight",
+   "label": "Unit of weight",
+   "def": {
+    "is": "unit-weight"
+   },
+   "negative": "isn't a unit of weight"
+  },
+  {
+   "id": "unit-of-time",
+   "label": "Unit of time",
+   "def": {
+    "is": "unit-time"
+   },
+   "negative": "isn't a unit of time"
+  },
+  {
+   "id": "dog-breed",
+   "label": "Dog breed",
+   "def": {
+    "is": "dog-breed"
+   },
+   "negative": "isn't a dog breed"
+  },
+  {
+   "id": "bird-of-prey",
+   "label": "Bird of prey",
+   "def": {
+    "is": "bird-of-prey"
+   },
+   "negative": "isn't a bird of prey"
+  },
+  {
+   "id": "golf-equipment",
+   "label": "Golf equipment",
+   "def": {
+    "is": "golf-equipment"
+   },
+   "negative": "isn't golf equipment"
+  },
+  {
+   "id": "baseball-equipment",
+   "label": "Baseball equipment",
+   "def": {
+    "is": "baseball-equipment"
+   },
+   "negative": "isn't baseball equipment"
+  },
+  {
+   "id": "card-suit",
+   "label": "Card suit",
+   "def": {
+    "is": "card-suit"
+   },
+   "negative": "isn't a card suit",
+   "closedSet": "card-suit"
+  },
+  {
+   "id": "chess-piece",
+   "label": "Chess piece",
+   "def": {
+    "is": "chess-piece"
+   },
+   "negative": "isn't a chess piece",
+   "closedSet": "chess-piece"
+  },
+  {
+   "id": "playing-card",
+   "label": "Playing card",
+   "def": {
+    "is": "playing-card"
+   },
+   "negative": "isn't a playing card",
+   "closedSet": "playing-card",
+   "note": "the court cards and the ace: king, queen, jack, ace, joker"
+  },
+  {
+   "id": "planet",
+   "label": "Planet",
+   "def": {
+    "is": "planet"
+   },
+   "negative": "isn't a planet",
+   "closedSet": "planet"
+  },
+  {
+   "id": "month",
+   "label": "Month",
+   "def": {
+    "is": "month"
+   },
+   "negative": "isn't a month",
+   "closedSet": "month"
+  },
+  {
+   "id": "farm-animal",
+   "label": "Farm animal",
+   "def": {
+    "list": "farm-animal"
+   },
+   "negative": "isn't a farm animal"
+  },
+  {
+   "id": "baby-animal",
+   "label": "Baby animal",
+   "def": {
+    "list": "baby-animal"
+   },
+   "negative": "isn't a baby animal"
+  },
+  {
+   "id": "male-animal",
+   "label": "Male animal",
+   "def": {
+    "list": "male-animal"
+   },
+   "negative": "isn't a male animal"
+  },
+  {
+   "id": "big-cat",
+   "label": "Big cat",
+   "def": {
+    "list": "big-cat"
+   },
+   "negative": "isn't a big cat"
+  },
+  {
+   "id": "shellfish",
+   "label": "Shellfish",
+   "def": {
+    "list": "shellfish"
+   },
+   "negative": "isn't shellfish"
+  },
+  {
+   "id": "rodent",
+   "label": "Rodent",
+   "def": {
+    "list": "rodent"
+   },
+   "negative": "isn't a rodent"
+  },
+  {
+   "id": "part-of-a-car",
+   "label": "Part of a car",
+   "def": {
+    "list": "part-of-a-car"
+   },
+   "negative": "isn't part of a car"
+  },
+  {
+   "id": "part-of-a-shoe",
+   "label": "Part of a shoe",
+   "def": {
+    "list": "part-of-a-shoe"
+   },
+   "negative": "isn't part of a shoe"
+  },
+  {
+   "id": "kitchen-appliance",
+   "label": "Kitchen appliance",
+   "def": {
+    "list": "kitchen-appliance"
+   },
+   "negative": "isn't a kitchen appliance"
+  },
+  {
+   "id": "garden-tool",
+   "label": "Garden tool",
+   "def": {
+    "list": "garden-tool"
+   },
+   "negative": "isn't a garden tool"
+  },
+  {
+   "id": "breakfast-food",
+   "label": "Breakfast food",
+   "def": {
+    "list": "breakfast-food"
+   },
+   "negative": "isn't a breakfast food"
+  },
+  {
+   "id": "citrus-fruit",
+   "label": "Citrus fruit",
+   "def": {
+    "list": "citrus-fruit"
+   },
+   "negative": "isn't a citrus fruit",
+   "closedSet": "citrus-fruit"
+  },
+  {
+   "id": "colour",
+   "label": "Colour",
+   "def": {
+    "list": "colour"
+   },
+   "negative": "isn't a colour",
+   "note": "a colour-name anchor (Plum, Salmon, Jade); not the banned colour-of-produce kind, but cut it if you read it that way"
+  },
+  {
+   "id": "pet",
+   "label": "Pet",
+   "def": {
+    "p": "is:pet"
+   },
+   "negative": "isn't a pet"
+  }
+ ],
+ "properties": [
+  {
+   "id": "lays-eggs",
+   "label": "Lays eggs",
+   "def": {
+    "p": "lays-eggs"
+   },
+   "negative": "doesn't lay eggs"
+  },
+  {
+   "id": "can-fly",
+   "label": "Can fly",
+   "def": {
+    "p": "can:fly"
+   },
+   "negative": "can't fly"
+  },
+  {
+   "id": "can-sting",
+   "label": "Can sting",
+   "def": {
+    "p": "can:sting"
+   },
+   "negative": "can't sting"
+  },
+  {
+   "id": "can-ring",
+   "label": "Can ring",
+   "def": {
+    "p": "can:ring"
+   },
+   "negative": "can't ring"
+  },
+  {
+   "id": "has-a-shell",
+   "label": "Has a shell",
+   "def": {
+    "p": "has:shell"
+   },
+   "negative": "has no shell"
+  },
+  {
+   "id": "has-a-pit",
+   "label": "Has a pit",
+   "def": {
+    "p": "has:pit"
+   },
+   "negative": "has no pit"
+  },
+  {
+   "id": "grows-on-trees",
+   "label": "Grows on trees",
+   "def": {
+    "p": "grows-on-trees"
+   },
+   "negative": "doesn't grow on trees"
+  },
+  {
+   "id": "grows-under-the-soil",
+   "label": "Grows under the soil",
+   "def": {
+    "p": "grows-under-the-soil"
+   },
+   "negative": "doesn't grow under the soil"
+  },
+  {
+   "id": "grows-on-a-vine",
+   "label": "Grows on a vine",
+   "def": {
+    "p": "grows-on-vine"
+   },
+   "negative": "doesn't grow on a vine"
+  },
+  {
+   "id": "has-wings",
+   "label": "Has wings",
+   "def": {
+    "p": "has:wings"
+   },
+   "negative": "has no wings"
+  },
+  {
+   "id": "has-feathers",
+   "label": "Has feathers",
+   "def": {
+    "p": "has:feathers"
+   },
+   "negative": "has no feathers"
+  },
+  {
+   "id": "has-scales",
+   "label": "Has scales",
+   "def": {
+    "p": "has:scales"
+   },
+   "negative": "has no scales"
+  },
+  {
+   "id": "has-fur",
+   "label": "Has fur",
+   "def": {
+    "p": "has:fur"
+   },
+   "negative": "has no fur"
+  },
+  {
+   "id": "has-a-tail",
+   "label": "Has a tail",
+   "def": {
+    "p": "has:tail"
+   },
+   "negative": "has no tail"
+  },
+  {
+   "id": "has-horns",
+   "label": "Has horns",
+   "def": {
+    "p": "has:horns"
+   },
+   "negative": "has no horns"
+  },
+  {
+   "id": "has-antlers",
+   "label": "Has antlers",
+   "def": {
+    "p": "has:antlers"
+   },
+   "negative": "has no antlers"
+  },
+  {
+   "id": "has-a-beak",
+   "label": "Has a beak",
+   "def": {
+    "p": "has:beak"
+   },
+   "negative": "has no beak"
+  },
+  {
+   "id": "has-a-trunk",
+   "label": "Has a trunk",
+   "def": {
+    "p": "has:trunk"
+   },
+   "negative": "has no trunk"
+  },
+  {
+   "id": "has-a-mane",
+   "label": "Has a mane",
+   "def": {
+    "p": "has:mane"
+   },
+   "negative": "has no mane"
+  },
+  {
+   "id": "has-a-pouch",
+   "label": "Has a pouch",
+   "def": {
+    "p": "has:pouch"
+   },
+   "negative": "has no pouch"
+  },
+  {
+   "id": "has-hooves",
+   "label": "Has hooves",
+   "def": {
+    "p": "has:hooves"
+   },
+   "negative": "has no hooves"
+  },
+  {
+   "id": "has-claws",
+   "label": "Has claws",
+   "def": {
+    "p": "has:claws"
+   },
+   "negative": "has no claws"
+  },
+  {
+   "id": "has-whiskers",
+   "label": "Has whiskers",
+   "def": {
+    "p": "has:whiskers"
+   },
+   "negative": "has no whiskers"
+  },
+  {
+   "id": "has-fins",
+   "label": "Has fins",
+   "def": {
+    "p": "has:fins"
+   },
+   "negative": "has no fins"
+  },
+  {
+   "id": "has-six-legs",
+   "label": "Has six legs",
+   "def": {
+    "p": "has:six-legs"
+   },
+   "negative": "doesn't have six legs"
+  },
+  {
+   "id": "has-eight-legs",
+   "label": "Has eight legs",
+   "def": {
+    "p": "has:eight-legs"
+   },
+   "negative": "doesn't have eight legs"
+  },
+  {
+   "id": "has-stripes",
+   "label": "Has stripes",
+   "def": {
+    "p": "has:stripes"
+   },
+   "negative": "has no stripes"
+  },
+  {
+   "id": "has-spots",
+   "label": "Has spots",
+   "def": {
+    "p": "has:spots"
+   },
+   "negative": "has no spots"
+  },
+  {
+   "id": "lives-in-the-sea",
+   "label": "Lives in the sea",
+   "def": {
+    "p": "lives-in-sea"
+   },
+   "negative": "doesn't live in the sea"
+  },
+  {
+   "id": "has-thorns",
+   "label": "Has thorns",
+   "def": {
+    "p": "has:thorns"
+   },
+   "negative": "has no thorns"
+  },
+  {
+   "id": "has-petals",
+   "label": "Has petals",
+   "def": {
+    "p": "has:petals"
+   },
+   "negative": "has no petals"
+  },
+  {
+   "id": "has-a-handle",
+   "label": "Has a handle",
+   "def": {
+    "p": "has:handle"
+   },
+   "negative": "has no handle"
+  },
+  {
+   "id": "has-a-blade",
+   "label": "Has a blade",
+   "def": {
+    "p": "has:blade"
+   },
+   "negative": "has no blade"
+  },
+  {
+   "id": "has-a-lid",
+   "label": "Has a lid",
+   "def": {
+    "p": "has:lid"
+   },
+   "negative": "has no lid"
+  },
+  {
+   "id": "has-strings",
+   "label": "Has strings",
+   "def": {
+    "p": "has:strings"
+   },
+   "negative": "has no strings"
+  },
+  {
+   "id": "has-keys",
+   "label": "Has keys",
+   "def": {
+    "p": "has:keys"
+   },
+   "negative": "has no keys"
+  },
+  {
+   "id": "has-wheels",
+   "label": "Has wheels",
+   "def": {
+    "p": "has:wheels"
+   },
+   "negative": "has no wheels"
+  },
+  {
+   "id": "has-buttons",
+   "label": "Has buttons",
+   "def": {
+    "p": "has:buttons"
+   },
+   "negative": "has no buttons"
+  },
+  {
+   "id": "has-pages",
+   "label": "Has pages",
+   "def": {
+    "p": "has:pages"
+   },
+   "negative": "has no pages"
+  },
+  {
+   "id": "has-a-screen",
+   "label": "Has a screen",
+   "def": {
+    "p": "has:screen"
+   },
+   "negative": "has no screen"
+  },
+  {
+   "id": "has-a-lens",
+   "label": "Has a lens",
+   "def": {
+    "p": "has:lens"
+   },
+   "negative": "has no lens"
+  },
+  {
+   "id": "has-a-hole-in-the-middle",
+   "label": "Has a hole in the middle",
+   "def": {
+    "p": "has:hole-middle"
+   },
+   "negative": "has no hole in the middle"
+  },
+  {
+   "id": "has-sails",
+   "label": "Has sails",
+   "def": {
+    "p": "has:sails"
+   },
+   "negative": "has no sails"
+  },
+  {
+   "id": "has-an-engine",
+   "label": "Has an engine",
+   "def": {
+    "p": "has:engine"
+   },
+   "negative": "has no engine"
+  },
+  {
+   "id": "has-laces",
+   "label": "Has laces",
+   "def": {
+    "p": "has:laces"
+   },
+   "negative": "has no laces"
+  },
+  {
+   "id": "has-a-needle",
+   "label": "Has a needle",
+   "def": {
+    "p": "has:needle"
+   },
+   "negative": "has no needle"
+  },
+  {
+   "id": "has-a-crown",
+   "label": "Has a crown",
+   "def": {
+    "p": "has:crown"
+   },
+   "negative": "has no crown"
+  },
+  {
+   "id": "has-roots",
+   "label": "Has roots",
+   "def": {
+    "p": "has:roots"
+   },
+   "negative": "has no roots"
+  },
+  {
+   "id": "has-a-collar",
+   "label": "Has a collar",
+   "def": {
+    "p": "has:collar"
+   },
+   "negative": "has no collar"
+  },
+  {
+   "id": "has-a-spout",
+   "label": "Has a spout",
+   "def": {
+    "p": "has:spout"
+   },
+   "negative": "has no spout"
+  },
+  {
+   "id": "has-a-tongue",
+   "label": "Has a tongue",
+   "def": {
+    "p": "has:tongue"
+   },
+   "negative": "has no tongue"
+  },
+  {
+   "id": "has-a-neck",
+   "label": "Has a neck",
+   "def": {
+    "p": "has:neck"
+   },
+   "negative": "has no neck"
+  },
+  {
+   "id": "has-a-mouth",
+   "label": "Has a mouth",
+   "def": {
+    "p": "has:mouth"
+   },
+   "negative": "has no mouth",
+   "status": "rejected",
+   "note": "pilot review: every animal and every person-word fits, so answers come out dull or through a person sense"
+  },
+  {
+   "id": "has-a-head",
+   "label": "Has a head",
+   "def": {
+    "p": "has:head"
+   },
+   "negative": "has no head",
+   "status": "rejected",
+   "note": "pilot review: every animal and every person-word fits, so answers come out dull or through a person sense"
+  },
+  {
+   "id": "has-teeth",
+   "label": "Has teeth",
+   "def": {
+    "p": "has:teeth"
+   },
+   "negative": "has no teeth",
+   "status": "rejected",
+   "note": "pilot review: every animal and every person-word fits, so answers come out dull or through a person sense"
+  },
+  {
+   "id": "has-eyes",
+   "label": "Has eyes",
+   "def": {
+    "p": "has:eyes"
+   },
+   "negative": "has no eyes",
+   "status": "rejected",
+   "note": "pilot review: every animal and every person-word fits, so answers come out dull or through a person sense"
+  },
+  {
+   "id": "has-arms",
+   "label": "Has arms",
+   "def": {
+    "p": "has:arms"
+   },
+   "negative": "has no arms"
+  },
+  {
+   "id": "has-legs",
+   "label": "Has legs",
+   "def": {
+    "p": "has:legs"
+   },
+   "negative": "has no legs",
+   "status": "rejected",
+   "note": "pilot review: every animal and every person-word fits, so answers come out dull or through a person sense"
+  },
+  {
+   "id": "has-a-face",
+   "label": "Has a face",
+   "def": {
+    "p": "has:face"
+   },
+   "negative": "has no face",
+   "status": "rejected",
+   "note": "pilot review: every animal and every person-word fits, so answers come out dull or through a person sense"
+  },
+  {
+   "id": "has-a-seat",
+   "label": "Has a seat",
+   "def": {
+    "p": "has:seat"
+   },
+   "negative": "has no seat"
+  },
+  {
+   "id": "has-pedals",
+   "label": "Has pedals",
+   "def": {
+    "p": "has:pedals"
+   },
+   "negative": "has no pedals"
+  },
+  {
+   "id": "has-a-hood",
+   "label": "Has a hood",
+   "def": {
+    "p": "has:hood"
+   },
+   "negative": "has no hood"
+  },
+  {
+   "id": "has-a-bill",
+   "label": "Has a bill",
+   "def": {
+    "p": "has:bill"
+   },
+   "negative": "has no bill"
+  },
+  {
+   "id": "has-skin",
+   "label": "Has skin",
+   "def": {
+    "p": "has:skin"
+   },
+   "negative": "has no skin",
+   "status": "rejected",
+   "note": "pilot review: every animal and every person-word fits, so answers come out dull or through a person sense"
+  },
+  {
+   "id": "has-a-crust",
+   "label": "Has a crust",
+   "def": {
+    "p": "has:crust"
+   },
+   "negative": "has no crust"
+  },
+  {
+   "id": "has-a-cap",
+   "label": "Has a cap",
+   "def": {
+    "p": "has:cap"
+   },
+   "negative": "has no cap"
+  },
+  {
+   "id": "has-a-heel",
+   "label": "Has a heel",
+   "def": {
+    "p": "has:heel"
+   },
+   "negative": "has no heel"
+  },
+  {
+   "id": "has-a-sole",
+   "label": "Has a sole",
+   "def": {
+    "p": "has:sole"
+   },
+   "negative": "has no sole"
+  }
+ ],
+ "jokes": [
+  {
+   "id": "has-a-mouth-can-t-eat",
+   "label": "Has a mouth, can't eat",
+   "def": {
+    "has": "has:mouth",
+    "not": "can:eat"
+   },
+   "negative": {
+    "has": "has no mouth",
+    "not": "can eat"
+   }
+  },
+  {
+   "id": "has-a-mouth-no-teeth",
+   "label": "Has a mouth, no teeth",
+   "def": {
+    "has": "has:mouth",
+    "not": "has:teeth"
+   },
+   "negative": {
+    "has": "has no mouth",
+    "not": "has teeth"
+   },
+   "status": "rejected",
+   "note": "pilot review: duplicates the takers of \"Has a mouth, can't eat\", and animals make it a minefield (crabs have stomach teeth)"
+  },
+  {
+   "id": "has-teeth-can-t-bite",
+   "label": "Has teeth, can't bite",
+   "def": {
+    "has": "has:teeth",
+    "not": "can:bite"
+   },
+   "negative": {
+    "has": "has no teeth",
+    "not": "can bite"
+   }
+  },
+  {
+   "id": "has-teeth-no-mouth",
+   "label": "Has teeth, no mouth",
+   "def": {
+    "has": "has:teeth",
+    "not": "has:mouth"
+   },
+   "negative": {
+    "has": "has no teeth",
+    "not": "has a mouth"
+   },
+   "status": "rejected",
+   "note": "pilot review: duplicates \"Has teeth, can't bite\""
+  },
+  {
+   "id": "has-a-head-no-brain",
+   "label": "Has a head, no brain",
+   "def": {
+    "has": "has:head",
+    "not": "has:brain"
+   },
+   "negative": {
+    "has": "has no head",
+    "not": "has a brain"
+   }
+  },
+  {
+   "id": "has-an-eye-can-t-see",
+   "label": "Has an eye, can't see",
+   "def": {
+    "has": "has:eye",
+    "not": "can:see"
+   },
+   "negative": {
+    "has": "has no eye",
+    "not": "can see"
+   }
+  },
+  {
+   "id": "has-eyes-can-t-see",
+   "label": "Has eyes, can't see",
+   "def": {
+    "has": "has:eyes",
+    "not": "can:see"
+   },
+   "negative": {
+    "has": "has no eyes",
+    "not": "can see"
+   }
+  },
+  {
+   "id": "has-ears-can-t-hear",
+   "label": "Has ears, can't hear",
+   "def": {
+    "has": "has:ears",
+    "not": "can:hear"
+   },
+   "negative": {
+    "has": "has no ears",
+    "not": "can hear"
+   }
+  },
+  {
+   "id": "has-a-tongue-can-t-taste",
+   "label": "Has a tongue, can't taste",
+   "def": {
+    "has": "has:tongue",
+    "not": "can:taste"
+   },
+   "negative": {
+    "has": "has no tongue",
+    "not": "can taste"
+   },
+   "status": "r10",
+   "note": "fails R10 at 360 px (\"Has a tongue,\" and \"Has branches,\" are each wider than one line of a card); needs a rewrite that keeps one reading"
+  },
+  {
+   "id": "has-a-tongue-can-t-talk",
+   "label": "Has a tongue, can't talk",
+   "def": {
+    "has": "has:tongue",
+    "not": "can:talk"
+   },
+   "negative": {
+    "has": "has no tongue",
+    "not": "can talk"
+   },
+   "status": "r10",
+   "note": "fails R10 at 360 px (\"Has a tongue,\" and \"Has branches,\" are each wider than one line of a card); needs a rewrite that keeps one reading"
+  },
+  {
+   "id": "has-a-neck-can-t-swallow",
+   "label": "Has a neck, can't swallow",
+   "def": {
+    "has": "has:neck",
+    "not": "can:swallow"
+   },
+   "negative": {
+    "has": "has no neck",
+    "not": "can swallow"
+   }
+  },
+  {
+   "id": "has-hands-can-t-clap",
+   "label": "Has hands, can't clap",
+   "def": {
+    "has": "has:hands",
+    "not": "can:clap"
+   },
+   "negative": {
+    "has": "has no hands",
+    "not": "can clap"
+   }
+  },
+  {
+   "id": "has-a-face-isn-t-alive",
+   "label": "Has a face, isn't alive",
+   "def": {
+    "has": "has:face",
+    "not": "is:living"
+   },
+   "negative": {
+    "has": "has no face",
+    "not": "is alive"
+   }
+  },
+  {
+   "id": "has-legs-can-t-walk",
+   "label": "Has legs, can't walk",
+   "def": {
+    "has": "has:legs",
+    "not": "can:walk"
+   },
+   "negative": {
+    "has": "has no legs",
+    "not": "can walk"
+   }
+  },
+  {
+   "id": "has-arms-can-t-hug",
+   "label": "Has arms, can't hug",
+   "def": {
+    "has": "has:arms",
+    "not": "can:hug"
+   },
+   "negative": {
+    "has": "has no arms",
+    "not": "can hug"
+   }
+  },
+  {
+   "id": "has-arms-no-hands",
+   "label": "Has arms, no hands",
+   "def": {
+    "has": "has:arms",
+    "not": "has:hands"
+   },
+   "negative": {
+    "has": "has no arms",
+    "not": "has hands"
+   }
+  },
+  {
+   "id": "has-a-spine-no-bones",
+   "label": "Has a spine, no bones",
+   "def": {
+    "has": "has:spine",
+    "not": "has:bones"
+   },
+   "negative": {
+    "has": "has no spine",
+    "not": "has bones"
+   }
+  },
+  {
+   "id": "has-skin-no-bones",
+   "label": "Has skin, no bones",
+   "def": {
+    "has": "has:skin",
+    "not": "has:bones"
+   },
+   "negative": {
+    "has": "has no skin",
+    "not": "has bones"
+   }
+  },
+  {
+   "id": "has-a-bed-can-t-sleep",
+   "label": "Has a bed, can't sleep",
+   "def": {
+    "has": "has:bed",
+    "not": "can:sleep"
+   },
+   "negative": {
+    "has": "has no bed",
+    "not": "can sleep"
+   }
+  },
+  {
+   "id": "has-banks-no-money",
+   "label": "Has banks, no money",
+   "def": {
+    "has": "has:banks",
+    "not": "has:money"
+   },
+   "negative": {
+    "has": "has no banks",
+    "not": "has money"
+   }
+  },
+  {
+   "id": "has-a-crown-no-throne",
+   "label": "Has a crown, no throne",
+   "def": {
+    "has": "has:crown",
+    "not": "has:throne"
+   },
+   "negative": {
+    "has": "has no crown",
+    "not": "has a throne"
+   }
+  },
+  {
+   "id": "has-a-heart-no-pulse",
+   "label": "Has a heart, no pulse",
+   "def": {
+    "has": "has:heart",
+    "not": "has:pulse"
+   },
+   "negative": {
+    "has": "has no heart",
+    "not": "has a pulse"
+   }
+  },
+  {
+   "id": "has-wings-isn-t-a-bird",
+   "label": "Has wings, isn't a bird",
+   "def": {
+    "has": "has:wings",
+    "not": "is:bird"
+   },
+   "negative": {
+    "has": "has no wings",
+    "not": "is a bird"
+   }
+  },
+  {
+   "id": "has-feathers-can-t-fly",
+   "label": "Has feathers, can't fly",
+   "def": {
+    "has": "has:feathers",
+    "not": "can:fly"
+   },
+   "negative": {
+    "has": "has no feathers",
+    "not": "can fly"
+   }
+  },
+  {
+   "id": "has-a-tail-isn-t-alive",
+   "label": "Has a tail, isn't alive",
+   "def": {
+    "has": "has:tail",
+    "not": "is:living"
+   },
+   "negative": {
+    "has": "has no tail",
+    "not": "is alive"
+   }
+  },
+  {
+   "id": "has-a-bill-can-t-pay",
+   "label": "Has a bill, can't pay",
+   "def": {
+    "has": "has:bill",
+    "not": "can:pay"
+   },
+   "negative": {
+    "has": "has no bill",
+    "not": "can pay"
+   }
+  },
+  {
+   "id": "has-keys-no-locks",
+   "label": "Has keys, no locks",
+   "def": {
+    "has": "has:keys",
+    "not": "has:locks"
+   },
+   "negative": {
+    "has": "has no keys",
+    "not": "has locks"
+   }
+  },
+  {
+   "id": "has-a-cap-no-hair",
+   "label": "Has a cap, no hair",
+   "def": {
+    "has": "has:cap",
+    "not": "has:hair"
+   },
+   "negative": {
+    "has": "has no cap",
+    "not": "has hair"
+   }
+  },
+  {
+   "id": "has-a-foot-can-t-walk",
+   "label": "Has a foot, can't walk",
+   "def": {
+    "has": "has:foot",
+    "not": "can:walk"
+   },
+   "negative": {
+    "has": "has no foot",
+    "not": "can walk"
+   }
+  },
+  {
+   "id": "has-a-nose-can-t-smell",
+   "label": "Has a nose, can't smell",
+   "def": {
+    "has": "has:nose",
+    "not": "can:smell"
+   },
+   "negative": {
+    "has": "has no nose",
+    "not": "can smell"
+   }
+  },
+  {
+   "id": "has-a-lip-can-t-kiss",
+   "label": "Has a lip, can't kiss",
+   "def": {
+    "has": "has:lip",
+    "not": "can:kiss"
+   },
+   "negative": {
+    "has": "has no lip",
+    "not": "can kiss"
+   }
+  },
+  {
+   "id": "has-a-bridge-no-river",
+   "label": "Has a bridge, no river",
+   "def": {
+    "has": "has:bridge",
+    "not": "has:river"
+   },
+   "negative": {
+    "has": "has no bridge",
+    "not": "has a river"
+   }
+  },
+  {
+   "id": "has-veins-no-blood",
+   "label": "Has veins, no blood",
+   "def": {
+    "has": "has:veins",
+    "not": "has:blood"
+   },
+   "negative": {
+    "has": "has no veins",
+    "not": "has blood"
+   }
+  },
+  {
+   "id": "has-a-needle-can-t-sew",
+   "label": "Has a needle, can't sew",
+   "def": {
+    "has": "has:needle",
+    "not": "can:sew"
+   },
+   "negative": {
+    "has": "has no needle",
+    "not": "can sew"
+   }
+  },
+  {
+   "id": "has-springs-can-t-jump",
+   "label": "Has springs, can't jump",
+   "def": {
+    "has": "has:springs",
+    "not": "can:jump"
+   },
+   "negative": {
+    "has": "has no springs",
+    "not": "can jump"
+   }
+  },
+  {
+   "id": "has-rings-no-fingers",
+   "label": "Has rings, no fingers",
+   "def": {
+    "has": "has:rings",
+    "not": "has:fingers"
+   },
+   "negative": {
+    "has": "has no rings",
+    "not": "has fingers"
+   }
+  },
+  {
+   "id": "has-a-deck-isn-t-a-boat",
+   "label": "Has a deck, isn't a boat",
+   "def": {
+    "has": "has:deck",
+    "not": "is:boat"
+   },
+   "negative": {
+    "has": "has no deck",
+    "not": "is a boat"
+   }
+  },
+  {
+   "id": "has-a-comb-no-hair",
+   "label": "Has a comb, no hair",
+   "def": {
+    "has": "has:comb",
+    "not": "has:hair"
+   },
+   "negative": {
+    "has": "has no comb",
+    "not": "has hair"
+   }
+  },
+  {
+   "id": "has-a-beard-can-t-shave",
+   "label": "Has a beard, can't shave",
+   "def": {
+    "has": "has:beard",
+    "not": "can:shave"
+   },
+   "negative": {
+    "has": "has no beard",
+    "not": "can shave"
+   }
+  },
+  {
+   "id": "has-a-bulb-no-light",
+   "label": "Has a bulb, no light",
+   "def": {
+    "has": "has:bulb",
+    "not": "has:light"
+   },
+   "negative": {
+    "has": "has no bulb",
+    "not": "gives light"
+   }
+  },
+  {
+   "id": "has-branches-no-leaves",
+   "label": "Has branches, no leaves",
+   "def": {
+    "has": "has:branches",
+    "not": "has:leaves"
+   },
+   "negative": {
+    "has": "has no branches",
+    "not": "has leaves"
+   },
+   "status": "r10",
+   "note": "fails R10 at 360 px (\"Has a tongue,\" and \"Has branches,\" are each wider than one line of a card); needs a rewrite that keeps one reading"
+  },
+  {
+   "id": "has-a-trunk-no-branches",
+   "label": "Has a trunk, no branches",
+   "def": {
+    "has": "has:trunk",
+    "not": "has:branches"
+   },
+   "negative": {
+    "has": "has no trunk",
+    "not": "has branches"
+   }
+  },
+  {
+   "id": "has-a-seat-can-t-sit",
+   "label": "Has a seat, can't sit",
+   "def": {
+    "has": "has:seat",
+    "not": "can:sit"
+   },
+   "negative": {
+    "has": "has no seat",
+    "not": "can sit"
+   }
+  },
+  {
+   "id": "has-a-sole-can-t-walk",
+   "label": "Has a sole, can't walk",
+   "def": {
+    "has": "has:sole",
+    "not": "can:walk"
+   },
+   "negative": {
+    "has": "has no sole",
+    "not": "can walk"
+   }
+  },
+  {
+   "id": "has-scales-isn-t-a-fish",
+   "label": "Has scales, isn't a fish",
+   "def": {
+    "has": "has:scales",
+    "not": "is:fish"
+   },
+   "negative": {
+    "has": "has no scales",
+    "not": "is a fish"
+   }
+  },
+  {
+   "id": "has-fins-isn-t-a-fish",
+   "label": "Has fins, isn't a fish",
+   "def": {
+    "has": "has:fins",
+    "not": "is:fish"
+   },
+   "negative": {
+    "has": "has no fins",
+    "not": "is a fish"
+   }
+  },
+  {
+   "id": "has-a-shell-no-legs",
+   "label": "Has a shell, no legs",
+   "def": {
+    "has": "has:shell",
+    "not": "has:legs"
+   },
+   "negative": {
+    "has": "has no shell",
+    "not": "has legs"
+   }
+  },
+  {
+   "id": "has-a-spout-isn-t-a-whale",
+   "label": "Has a spout, isn't a whale",
+   "def": {
+    "has": "has:spout",
+    "not": "is:whale"
+   },
+   "negative": {
+    "has": "has no spout",
+    "not": "is a whale"
+   }
+  },
+  {
+   "id": "has-a-lens-can-t-see",
+   "label": "Has a lens, can't see",
+   "def": {
+    "has": "has:lens",
+    "not": "can:see"
+   },
+   "negative": {
+    "has": "has no lens",
+    "not": "can see"
+   }
+  },
+  {
+   "id": "has-a-hood-no-head",
+   "label": "Has a hood, no head",
+   "def": {
+    "has": "has:hood",
+    "not": "has:head"
+   },
+   "negative": {
+    "has": "has no hood",
+    "not": "has a head"
+   }
+  },
+  {
+   "id": "has-a-collar-isn-t-a-pet",
+   "label": "Has a collar, isn't a pet",
+   "def": {
+    "has": "has:collar",
+    "not": "is:pet"
+   },
+   "negative": {
+    "has": "has no collar",
+    "not": "is a pet"
+   }
+  },
+  {
+   "id": "has-buttons-isn-t-clothing",
+   "label": "Has buttons, isn't clothing",
+   "def": {
+    "has": "has:buttons",
+    "not": "is:clothing"
+   },
+   "negative": {
+    "has": "has no buttons",
+    "not": "is clothing"
+   }
+  },
+  {
+   "id": "has-a-blade-can-t-cut",
+   "label": "Has a blade, can't cut",
+   "def": {
+    "has": "has:blade",
+    "not": "can:cut"
+   },
+   "negative": {
+    "has": "has no blade",
+    "not": "can cut"
+   }
+  },
+  {
+   "id": "has-a-lid-can-t-blink",
+   "label": "Has a lid, can't blink",
+   "def": {
+    "has": "has:lid",
+    "not": "can:blink"
+   },
+   "negative": {
+    "has": "has no lid",
+    "not": "can blink"
+   }
+  },
+  {
+   "id": "has-a-knot-isn-t-rope",
+   "label": "Has a knot, isn't rope",
+   "def": {
+    "has": "has:knot",
+    "not": "is:rope"
+   },
+   "negative": {
+    "has": "has no knot",
+    "not": "is rope"
+   }
+  },
+  {
+   "id": "has-a-crust-isn-t-bread",
+   "label": "Has a crust, isn't bread",
+   "def": {
+    "has": "has:crust",
+    "not": "is:bread"
+   },
+   "negative": {
+    "has": "has no crust",
+    "not": "is bread"
+   }
+  },
+  {
+   "id": "has-a-beak-can-t-fly",
+   "label": "Has a beak, can't fly",
+   "def": {
+    "has": "has:beak",
+    "not": "can:fly"
+   },
+   "negative": {
+    "has": "has no beak",
+    "not": "can fly"
+   }
+  },
+  {
+   "id": "has-a-chain-isn-t-jewelry",
+   "label": "Has a chain, isn't jewelry",
+   "def": {
+    "has": "has:chain",
+    "not": "is:jewelry"
+   },
+   "negative": {
+    "has": "has no chain",
+    "not": "is jewelry"
+   }
+  },
+  {
+   "id": "has-a-bowl-isn-t-a-dish",
+   "label": "Has a bowl, isn't a dish",
+   "def": {
+    "has": "has:bowl",
+    "not": "is:dish"
+   },
+   "negative": {
+    "has": "has no bowl",
+    "not": "is a dish"
+   }
+  },
+  {
+   "id": "has-a-hook-isn-t-a-pirate",
+   "label": "Has a hook, isn't a pirate",
+   "def": {
+    "has": "has:hook",
+    "not": "is:pirate"
+   },
+   "negative": {
+    "has": "has no hook",
+    "not": "is a pirate"
+   }
+  },
+  {
+   "id": "has-a-stem-isn-t-a-flower",
+   "label": "Has a stem, isn't a flower",
+   "def": {
+    "has": "has:stem",
+    "not": "is:flower"
+   },
+   "negative": {
+    "has": "has no stem",
+    "not": "is a flower"
+   }
+  },
+  {
+   "id": "has-a-crest-isn-t-a-bird",
+   "label": "Has a crest, isn't a bird",
+   "def": {
+    "has": "has:crest",
+    "not": "is:bird"
+   },
+   "negative": {
+    "has": "has no crest",
+    "not": "is a bird"
+   }
+  },
+  {
+   "id": "has-a-body-no-blood",
+   "label": "Has a body, no blood",
+   "def": {
+    "has": "has:body",
+    "not": "has:blood"
+   },
+   "negative": {
+    "has": "has no body",
+    "not": "has blood"
+   }
+  },
+  {
+   "id": "has-a-horn-isn-t-alive",
+   "label": "Has a horn, isn't alive",
+   "def": {
+    "has": "has:horn",
+    "not": "is:living"
+   },
+   "negative": {
+    "has": "has no horn",
+    "not": "is alive"
+   }
+  },
+  {
+   "id": "can-fly-isn-t-a-bird",
+   "label": "Can fly, isn't a bird",
+   "def": {
+    "has": "can:fly",
+    "not": "is:bird"
+   },
+   "negative": {
+    "has": "can't fly",
+    "not": "is a bird"
+   }
+  },
+  {
+   "id": "can-sting-isn-t-an-insect",
+   "label": "Can sting, isn't an insect",
+   "def": {
+    "has": "can:sting",
+    "not": "is:insect"
+   },
+   "negative": {
+    "has": "can't sting",
+    "not": "is an insect"
+   }
+  },
+  {
+   "id": "lays-eggs-isn-t-a-bird",
+   "label": "Lays eggs, isn't a bird",
+   "def": {
+    "has": "lays-eggs",
+    "not": "is:bird"
+   },
+   "negative": {
+    "has": "doesn't lay eggs",
+    "not": "is a bird"
+   }
+  },
+  {
+   "id": "has-a-trunk-isn-t-a-tree",
+   "label": "Has a trunk, isn't a tree",
+   "def": {
+    "has": "has:trunk",
+    "not": "is:tree"
+   },
+   "negative": {
+    "has": "has no trunk",
+    "not": "is a tree"
+   }
+  },
+  {
+   "id": "has-a-tail-no-legs",
+   "label": "Has a tail, no legs",
+   "def": {
+    "has": "has:tail",
+    "not": "has:legs"
+   },
+   "negative": {
+    "has": "has no tail",
+    "not": "has legs"
+   }
+  },
+  {
+   "id": "has-horns-isn-t-a-cow",
+   "label": "Has horns, isn't a cow",
+   "def": {
+    "has": "has:horns",
+    "not": "is:cow"
+   },
+   "negative": {
+    "has": "has no horns",
+    "not": "is a cow"
+   }
+  },
+  {
+   "id": "has-a-pouch-no-pockets",
+   "label": "Has a pouch, no pockets",
+   "def": {
+    "has": "has:pouch",
+    "not": "has:pockets"
+   },
+   "negative": {
+    "has": "has no pouch",
+    "not": "has pockets"
+   }
+  },
+  {
+   "id": "has-a-mane-isn-t-a-horse",
+   "label": "Has a mane, isn't a horse",
+   "def": {
+    "has": "has:mane",
+    "not": "is:horse"
+   },
+   "negative": {
+    "has": "has no mane",
+    "not": "is a horse"
+   }
+  },
+  {
+   "id": "has-a-shell-can-t-swim",
+   "label": "Has a shell, can't swim",
+   "def": {
+    "has": "has:shell",
+    "not": "can:swim"
+   },
+   "negative": {
+    "has": "has no shell",
+    "not": "can swim"
+   }
+  },
+  {
+   "id": "has-a-skin-can-t-sweat",
+   "label": "Has a skin, can't sweat",
+   "def": {
+    "has": "has:skin",
+    "not": "can:sweat"
+   },
+   "negative": {
+    "has": "has no skin",
+    "not": "can sweat"
+   },
+   "status": "rejected",
+   "note": "pilot review: every bird, reptile and fish has skin and can't sweat: it turns into a not-a-mammal test"
+  },
+  {
+   "id": "has-a-pit-isn-t-a-fruit",
+   "label": "Has a pit, isn't a fruit",
+   "def": {
+    "has": "has:pit",
+    "not": "is:fruit"
+   },
+   "negative": {
+    "has": "has no pit",
+    "not": "is a fruit"
+   },
+   "status": "rejected",
+   "note": "no fair takers in the vocabulary"
+  },
+  {
+   "id": "has-a-belt-isn-t-clothing",
+   "label": "Has a belt, isn't clothing",
+   "def": {
+    "has": "has:belt",
+    "not": "is:clothing"
+   },
+   "negative": {
+    "has": "has no belt",
+    "not": "is clothing"
+   },
+   "status": "rejected",
+   "note": "no fair takers in the vocabulary"
+  },
+  {
+   "id": "has-a-screen-can-t-watch",
+   "label": "Has a screen, can't watch",
+   "def": {
+    "has": "has:screen",
+    "not": "can:watch"
+   },
+   "negative": {
+    "has": "has no screen",
+    "not": "can watch"
+   }
+  },
+  {
+   "id": "has-a-pupil-can-t-learn",
+   "label": "Has a pupil, can't learn",
+   "def": {
+    "has": "has:pupil",
+    "not": "can:learn"
+   },
+   "negative": {
+    "has": "has no pupil",
+    "not": "can learn"
+   },
+   "status": "rejected",
+   "note": "one taker (Eye)"
+  },
+  {
+   "id": "has-a-tip-no-fingers",
+   "label": "Has a tip, no fingers",
+   "def": {
+    "has": "has:tip",
+    "not": "has:fingers"
+   },
+   "negative": {
+    "has": "has no tip",
+    "not": "has fingers"
+   }
+  },
+  {
+   "id": "has-a-hide-can-t-hide",
+   "label": "Has a hide, can't hide",
+   "def": {
+    "has": "has:hide",
+    "not": "can:hide"
+   },
+   "negative": {
+    "has": "has no hide",
+    "not": "can hide"
+   },
+   "status": "rejected",
+   "note": "puns in the heading break R9; kept as a record of why"
+  },
+  {
+   "id": "has-a-wing-isn-t-alive",
+   "label": "Has a wing, isn't alive",
+   "def": {
+    "has": "has:wing",
+    "not": "is:living"
+   },
+   "negative": {
+    "has": "has no wing",
+    "not": "is alive"
+   }
+  },
+  {
+   "id": "has-a-net-can-t-fish",
+   "label": "Has a net, can't fish",
+   "def": {
+    "has": "has:net",
+    "not": "can:fish"
+   },
+   "negative": {
+    "has": "has no net",
+    "not": "can fish"
+   }
+  },
+  {
+   "id": "has-a-pocket-isn-t-clothing",
+   "label": "Has a pocket, isn't clothing",
+   "def": {
+    "has": "has:pocket",
+    "not": "is:clothing"
+   },
+   "negative": {
+    "has": "has no pocket",
+    "not": "is clothing"
+   }
+  },
+  {
+   "id": "has-a-spine-can-t-stand",
+   "label": "Has a spine, can't stand",
+   "def": {
+    "has": "has:spine",
+    "not": "can:stand"
+   },
+   "negative": {
+    "has": "has no spine",
+    "not": "can stand"
+   },
+   "status": "rejected",
+   "note": "a book can stand on a shelf and a cactus stands: arguable for every taker"
+  },
+  {
+   "id": "has-a-back-no-front",
+   "label": "Has a back, no front",
+   "def": {
+    "has": "has:back",
+    "not": "has:front"
+   },
+   "negative": {
+    "has": "has no back",
+    "not": "has a front"
+   },
+   "status": "rejected",
+   "note": "every object with a back has a front: no fair takers"
+  },
+  {
+   "id": "has-a-crown-isn-t-royal",
+   "label": "Has a crown, isn't royal",
+   "def": {
+    "has": "has:crown",
+    "not": "is:royal"
+   },
+   "negative": {
+    "has": "has no crown",
+    "not": "is royal"
+   },
+   "status": "rejected",
+   "note": "pilot review: duplicates \"Has a crown, no throne\" with fewer takers"
+  },
+  {
+   "id": "has-a-heel-can-t-run",
+   "label": "Has a heel, can't run",
+   "def": {
+    "has": "has:heel",
+    "not": "can:run"
+   },
+   "negative": {
+    "has": "has no heel",
+    "not": "can run"
+   },
+   "status": "rejected",
+   "note": "pilot review: duplicates \"Has a sole, can't walk\""
+  },
+  {
+   "id": "has-a-toe-can-t-wiggle-it",
+   "label": "Has a toe, can't wiggle it",
+   "def": {
+    "has": "has:toe",
+    "not": "can:wiggle"
+   },
+   "negative": {
+    "has": "has no toe",
+    "not": "can wiggle it"
+   },
+   "status": "rejected",
+   "note": "every sock and shoe toe sits next to a foot: arguable for all takers"
+  },
+  {
+   "id": "has-a-plug-isn-t-a-sink",
+   "label": "Has a plug, isn't a sink",
+   "def": {
+    "has": "has:plug",
+    "not": "is:sink"
+   },
+   "negative": {
+    "has": "has no plug",
+    "not": "is a sink"
+   }
+  },
+  {
+   "id": "has-a-hand-isn-t-a-person",
+   "label": "Has a hand, isn't a person",
+   "def": {
+    "has": "has:hand",
+    "not": "is:person"
+   },
+   "negative": {
+    "has": "has no hand",
+    "not": "is a person"
+   },
+   "status": "rejected",
+   "note": "pilot review: the joke wants Clock, which has hands, not a hand; apes are the literal takers"
+  },
+  {
+   "id": "has-a-tooth-isn-t-alive",
+   "label": "Has a tooth, isn't alive",
+   "def": {
+    "has": "has:tooth",
+    "not": "is:living"
+   },
+   "negative": {
+    "has": "has no tooth",
+    "not": "is alive"
+   },
+   "status": "rejected",
+   "note": "pilot review: duplicates \"Has teeth, can't bite\""
+  },
+  {
+   "id": "has-a-cell-isn-t-a-jail",
+   "label": "Has a cell, isn't a jail",
+   "def": {
+    "has": "has:cell",
+    "not": "is:jail"
+   },
+   "negative": {
+    "has": "has no cell",
+    "not": "is a jail"
+   },
+   "status": "rejected",
+   "note": "every living thing has cells: A everywhere"
+  },
+  {
+   "id": "has-a-sting-no-wings",
+   "label": "Has a sting, no wings",
+   "def": {
+    "has": "can:sting",
+    "not": "has:wings"
+   },
+   "negative": {
+    "has": "can't sting",
+    "not": "has wings"
+   }
+  }
+ ],
+ "verb": [
+  {
+   "id": "you-can-someone",
+   "label": "You can ___ someone",
+   "spoken": "You can blank someone",
+   "def": {
+    "verb": "someone"
+   },
+   "negative": "you can't {word} someone",
+   "note": "membership from WordNet verb frame 9 'Somebody ----s somebody' plus the editor (dossier 3.9); tone list for Josh (9.14)"
+  }
+ ],
+ "computed": [
+  {
+   "id": "three-letters",
+   "label": "Three letters",
+   "def": {
+    "rule": "letters-3"
+   },
+   "negative": "{spelled} has {count} letters"
+  },
+  {
+   "id": "four-letters",
+   "label": "Four letters",
+   "def": {
+    "rule": "letters-4"
+   },
+   "negative": "{spelled} has {count} letters"
+  },
+  {
+   "id": "five-letters",
+   "label": "Five letters",
+   "def": {
+    "rule": "letters-5"
+   },
+   "negative": "{spelled} has {count} letters"
+  },
+  {
+   "id": "six-letters",
+   "label": "Six letters",
+   "def": {
+    "rule": "letters-6"
+   },
+   "negative": "{spelled} has {count} letters"
+  },
+  {
+   "id": "seven-letters",
+   "label": "Seven letters",
+   "def": {
+    "rule": "letters-7"
+   },
+   "negative": "{spelled} has {count} letters"
+  },
+  {
+   "id": "same-letter-twice-in-a-row",
+   "label": "Same letter twice in a row",
+   "def": {
+    "rule": "double-adjacent"
+   },
+   "negative": "{spelled} has no letter twice in a row"
+  },
+  {
+   "id": "first-letter-is-the-last-letter",
+   "label": "First letter is the last letter",
+   "def": {
+    "rule": "first-last-same"
+   },
+   "negative": "{spelled} starts and ends with different letters"
+  },
+  {
+   "id": "starts-with-a-vowel",
+   "label": "Starts with a vowel",
+   "def": {
+    "rule": "starts-vowel"
+   },
+   "negative": "{spelled} starts with a consonant"
+  },
+  {
+   "id": "ends-with-a-vowel",
+   "label": "Ends with a vowel",
+   "def": {
+    "rule": "ends-vowel"
+   },
+   "negative": "{spelled} ends with a consonant"
+  },
+  {
+   "id": "starts-with-b",
+   "label": "Starts with B",
+   "def": {
+    "rule": "starts-b"
+   },
+   "negative": "{spelled} doesn't start with B"
+  },
+  {
+   "id": "starts-with-c",
+   "label": "Starts with C",
+   "def": {
+    "rule": "starts-c"
+   },
+   "negative": "{spelled} doesn't start with C"
+  },
+  {
+   "id": "starts-with-p",
+   "label": "Starts with P",
+   "def": {
+    "rule": "starts-p"
+   },
+   "negative": "{spelled} doesn't start with P"
+  },
+  {
+   "id": "starts-with-s",
+   "label": "Starts with S",
+   "def": {
+    "rule": "starts-s"
+   },
+   "negative": "{spelled} doesn't start with S"
+  },
+  {
+   "id": "starts-with-t",
+   "label": "Starts with T",
+   "def": {
+    "rule": "starts-t"
+   },
+   "negative": "{spelled} doesn't start with T"
+  },
+  {
+   "id": "starts-with-m",
+   "label": "Starts with M",
+   "def": {
+    "rule": "starts-m"
+   },
+   "negative": "{spelled} doesn't start with M"
+  }
+ ]
+}

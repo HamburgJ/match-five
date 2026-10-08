@@ -1,0 +1,160 @@
+# Fish and other water animals. Fish defaults: lays eggs, scales, fins, tail, can swim, no legs or neck.
+
+Bass | a | engine | the low sound or the guitar comes first; the fish is the second life
+  fish | S | the fish | fish | lives-in-sea:A"sea bass and river bass"
+  guitar | S | a bass guitar | musical-instrument:S | has:strings has:neck"the guitar's neck" has:head:O"a bass guitar's headstock" has:body"the guitar's body" has:bridge:S"the bass guitar's bridge" has:keys:N
+  low | L | the low sound | sound |
+
+Sole | a |
+  fish | S | the flat fish | fish | lives-in-sea
+  foot | L | the bottom of a foot | body-part:S |
+  shoe | L | the bottom of a shoe | object |
+
+Pike | a |
+  fish | L | the river fish | fish | lives-in-sea:N has:teeth"sharp teeth" can:bite
+  spear | S | the long spear | weapon:S | has:blade:S"the spearhead"
+
+Perch | a |
+  fish | S | the river fish | fish | lives-in-sea:N
+  roost | L | where a bird sits | object |
+
+Ray | a |
+  fish | S | the flat sea fish | fish | lives-in-sea can:sting:A"stingrays sting; many rays don't" has:scales:n"rays have no real scales" has:tail"a long thin tail" has:wings:n"fins called wings"
+  beam | L | a beam of light | abstract |
+
+Skate | a |
+  fish | S | the flat sea fish | fish | lives-in-sea has:scales:n"skates have no real scales" has:wings:n"skate wings, the fins"
+  ice | L | an ice skate | object, footwear:A"a skate is a boot" | has:blade"the skate's blade" has:laces:A"most skates lace up" has:wheels:n"roller skates have wheels" has:sole:A has:heel:A has:toe:A
+
+Carp | a |
+  fish | L | the pond fish | fish | lives-in-sea:N has:whiskers:A"some have barbels"
+
+Flounder | a |
+  fish | S | the flat fish | fish | lives-in-sea
+
+Snapper | a |
+  fish | L | the sea fish | fish | lives-in-sea has:teeth"sharp teeth" can:bite
+
+Salmon | a |
+  fish | L | the fish | fish | lives-in-sea:A"sea and river"
+  colour | S | the pink-orange colour | abstract |
+
+Trout | a |
+  fish | L | the river fish | fish | lives-in-sea:A"sea trout exist" has:spots:A"many trout are spotted"
+
+Cod | a |
+  fish | L | the sea fish | fish | lives-in-sea
+
+Plaice | a |
+  fish | L | the flat sea fish | fish | lives-in-sea has:spots"orange spots"
+
+Tuna | a |
+  fish | L | the big sea fish | fish | lives-in-sea
+
+Shark | a |
+  fish | L | the big sea fish | fish | lives-in-sea has:teeth"rows of teeth" can:bite has:bones:A"cartilage, not bone" has:scales:A"tiny tooth-like scales" lays-eggs:A"many give birth"
+  cheat | S | a swindler | person |
+
+Eel | an |
+  fish | L | the snake-like fish | fish:S"yes, eels are fish" | lives-in-sea:A"sea and river" has:scales:A"tiny hidden scales" has:fins:A"thin hidden fins" is:snake:n"looks like a snake" has:teeth:A can:bite:A
+
+Herring | a |
+  fish | L | the sea fish | fish | lives-in-sea
+
+Sardine | a |
+  fish | L | the small sea fish | fish | lives-in-sea
+
+Anchovy | an |
+  fish | L | the small sea fish | fish | lives-in-sea
+
+Mackerel | a |
+  fish | L | the sea fish | fish | lives-in-sea has:stripes"wavy stripes"
+
+Halibut | a |
+  fish | L | the big flat fish | fish | lives-in-sea
+
+Minnow | a |
+  fish | L | the tiny river fish | fish | lives-in-sea:N
+
+Goldfish | a |
+  fish | L | the pet fish | fish | lives-in-sea:N is:pet
+
+Guppy | a |
+  fish | L | the pet fish | fish | lives-in-sea:N is:pet lays-eggs:n"most fish lay eggs; guppies don't"
+
+Catfish | a |
+  fish | L | the whiskered fish | fish | lives-in-sea:A has:whiskers:S"barbels like whiskers" is:pet:n"aquarium catfish" has:scales:n"no scales; most fish have them"
+
+Swordfish | a |
+  fish | L | the sea fish | fish | lives-in-sea has:blade:n"a sword-like bill"
+
+Clownfish | a |
+  fish | L | the striped sea fish | fish | lives-in-sea has:stripes"white stripes"
+
+Seahorse | a |
+  fish | L | the tiny sea fish | fish:S"yes, it's a fish" | lives-in-sea has:scales:N has:fins:S"tiny fins" lays-eggs:A"the father carries the eggs" has:neck:A has:mane:N is:horse:n"a horse in name only"
+
+Crab | a |
+  animal | L | the sea animal | crustacean | lives-in-sea:A"most do; some live on land" lays-eggs:S"crabs do" can:walk"sideways" is:pet:A"pet hermit crabs"
+  * | verb:n"to crab at someone, grumble" @has-teeth-can-t-bite:n"claws pinch" @has-claws:L
+
+Lobster | a |
+  animal | L | the sea animal | crustacean | lives-in-sea lays-eggs:S"lobsters do" has:tail"a meaty tail"
+
+Shrimp | a |
+  animal | L | the small sea animal | crustacean | lives-in-sea:A has:claws:A has:tail
+  small | S | a small person | person |
+
+Prawn | a |
+  animal | L | the small sea animal | crustacean | lives-in-sea:A has:claws:A has:tail
+
+Octopus | an |
+  animal | L | the eight-armed sea animal | soft-sea-animal | has:arms"eight arms" has:eight-legs:n"arms, not legs" has:legs:n"arms, not legs" has:hands:N has:brain"a big brain" has:head has:eyes has:eye can:see has:mouth has:beak:O"a hidden parrot-like beak" can:bite:A has:skin has:heart"three hearts" has:blood can:swim can:hug:A has:face:A has:teeth:N
+
+Squid | a |
+  animal | L | the sea animal | soft-sea-animal | has:arms"eight arms, two tentacles" has:legs:n has:hands:N has:brain has:head has:eyes has:eye can:see has:mouth has:beak:O"a hidden beak" has:skin has:heart has:blood can:swim has:fins:O"small side fins" has:teeth:N
+
+Jellyfish | a |
+  animal | L | the stinging sea animal | soft-sea-animal | can:sting has:brain:N has:head:N has:eyes:A"some kinds have eyes" has:eye:A is:fish:n"not actually a fish" has:skin:A has:heart:N has:blood:N has:bones:N has:mouth:A
+
+Starfish | a |
+  animal | L | the sea star | soft-sea-animal | has:arms"five arms" has:hands:N has:brain:N has:head:N has:eyes:O"an eye on each arm" has:eye:O is:fish:n"not actually a fish" has:mouth:S"a mouth underneath" has:legs:n"arms, not legs" can:walk:A"tube feet crawl" has:skin:A has:heart:N has:blood:N has:spine:n"spiny skin"
+
+Clam | a |
+  animal | L | the shellfish | mollusc | has:shell lives-in-sea:A"sea and fresh water" can:swim:A has:foot:O"a clam's digging foot"
+
+Oyster | an |
+  animal | L | the shellfish | mollusc | has:shell lives-in-sea has:bed:O"an oyster bed" can:swim:N
+
+Mussel | a |
+  animal | L | the shellfish | mollusc | has:shell lives-in-sea:A has:beard:S"the mussel's stringy beard" can:swim:N
+
+Snail | a |
+  animal | L | the garden snail | mollusc | has:shell has:eyes:S"eyes on stalks" has:eye:S"eyes on stalks" can:see:A has:head has:foot:O"a snail's muscular foot" lays-eggs has:teeth:A"thousands of tiny teeth" can:bite:A can:swim:N is:pet:A has:skin:A has:mouth:A has:tongue:O
+
+Slug | a |
+  animal | L | the garden slug | mollusc | has:shell:A"some have a tiny shell inside" has:skin"slimy skin" has:eyes:S"eyes on stalks" has:eye:S can:see:A has:head has:teeth:A can:bite:A
+  bullet | S | a bullet | object |
+  * | verb:S"to slug someone, punch"
+
+Worm | a |
+  animal | L | the earthworm | worm | has:skin has:bones:N
+  virus | S | a computer worm | abstract |
+
+Coral | a |
+  animal | L | the sea coral | soft-sea-animal | has:branches:S"branching coral" is:plant:n"looks like a plant" is:animal:S"tiny animals, really" has:head:N has:brain:N has:eyes:N has:eye:N has:mouth:A can:see:N can:taste:N can:smell:N can:eat:A can:swim:N can:hide:N can:sleep:A
+  colour | S | the pinkish colour | abstract |
+
+Sponge | a |
+  kitchen | L | the kitchen sponge | object | has:hole-middle:N
+  animal | S | the sea animal | soft-sea-animal:S | is:plant:n"looks like a plant" has:head:N has:brain:N has:eyes:N has:eye:N has:mouth:N can:see:N can:taste:N can:smell:N can:eat:A can:swim:N can:hide:N can:sleep:N has:skin:A
+  cake | S | a sponge cake | dessert:S |
+
+Frog | a |
+  animal | L | the frog | amphibian | can:jump has:tongue"a long sticky tongue" has:teeth:A"tiny upper teeth" has:tail:N has:neck:N
+
+Toad | a |
+  animal | L | the toad | amphibian | can:jump has:tongue"a long sticky tongue" has:teeth:N has:tail:N has:skin"warty skin" has:spots:A
+
+Newt | a |
+  animal | L | the small newt | amphibian | has:tail"a long tail" can:jump:N has:scales:n"looks scaly; isn't"

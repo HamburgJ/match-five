@@ -1,0 +1,31 @@
+# Members of list anchors (headings whose def is {list: id}). One heading per line:
+#   heading-id | Word, Word:T"text", ...     (T defaults to L; S and O need a gloss of 6 words or fewer)
+# Every vocabulary word not listed is N for that heading, so each list was drafted by scanning the whole
+# vocabulary, conservatively: anything a reasonable player could argue is A or n.
+# Pilot judgments by the M1 lane (model in the loop), 2026-10-08.
+
+farm-animal | Cow, Pig, Sheep, Goat, Horse, Chicken, Hen, Rooster, Duck, Goose, Turkey, Donkey, Lamb, Calf, Ox, Bull, Mule, Hog, Ram, Colt, Kid:S"a young goat", Pony:A"farm or pet", Llama:A"some farms keep them", Rabbit:A"farm or pet", Buck:A"a male deer, rabbit or goat", Boar:A"wild, mostly", Yak:A"farmed in Asia", Buffalo:A"farmed in places", Camel:A"farmed in deserts", Bison:n"ranched, rarely", Quail:A"some farms keep them", Peacock:n"kept on estates", Dog:A"farms keep dogs", Cat:A"barn cats", Collie:A"a farm sheepdog", Mouse:n"lives on farms", Rat:n"lives on farms", Ostrich:A"ostrich farms exist", Emu:A"emu farms exist", Bee:A"bees are farmed", Pigeon:n, Fox:n"raids farms", Puppy:n, Kitten:n
+
+baby-animal | Calf, Cub, Fawn, Lamb, Puppy, Kitten, Colt:L"a young male horse", Kid:S"a young goat", Caterpillar:A"a young butterfly", Egg:A"an animal not yet hatched", Minnow:n"tiny, but grown", Shrimp:n"small, but grown", Pony:n"small, but grown", Sprout:n"a young plant"
+
+male-animal | Buck, Bull, Ram, Stag, Rooster, Boar, Colt:S"a young male horse", Peacock:S"the male peafowl", Hog:A"often a castrated male", Ox:A"a castrated bull", Jack:O"a male donkey"
+
+big-cat | Lion, Tiger, Leopard, Jaguar, Panther, Ounce:O"the snow leopard", Cat:n"a small cat", Kitten:n"a small cat", Cub:n"a lion cub, maybe"
+
+shellfish | Crab, Lobster, Shrimp, Prawn, Clam, Oyster, Mussel, Snail:A"a mollusc, sometimes eaten", Octopus:n"no shell", Squid:n"no shell", Starfish:n"not eaten as shellfish", Turtle:n"a shell, but a reptile", Tortoise:n"a shell, but a reptile", Shell:n"just the shell"
+
+rodent | Mouse, Rat, Hamster, Squirrel, Beaver, Porcupine, Mole:n"an insect eater, not a rodent", Hedgehog:n"not a rodent", Rabbit:n"a lagomorph, not a rodent", Hare:n"a lagomorph, not a rodent", Ferret:n"a weasel, not a rodent", Weasel:n"not a rodent", Mink:n"not a rodent", Skunk:n"not a rodent", Raccoon:n"not a rodent"
+
+part-of-a-car | Horn:S"a car horn", Hood:S"the car hood", Trunk:S"the car trunk", Boot:S"a car boot, in Britain", Bonnet:S"a car bonnet, in Britain", Door:S"a car door", Window:S"a car window", Mirror:S"a wing mirror", Battery:S"a car battery", Tank:S"the fuel tank", Belt:S"a seatbelt or fan belt", Fan:O"a radiator fan", Plug:O"a spark plug", Pump:O"the fuel pump", Jack:A"kept in the trunk", Key:n"you need one; not a part", Lock:A"a door lock", Glove:n"the glovebox", Drive:n"a car's drive train"
+
+part-of-a-shoe | Sole:S"the bottom of a shoe", Heel:S"a shoe's heel", Tongue:S"a shoe's tongue", Toe:S"the toe of a shoe", Wedge:A"a wedge heel"
+
+kitchen-appliance | Toaster, Blender, Mixer, Kettle, Oven, Fridge, Grill, Wok:n"a pan, not an appliance", Pan:n"a pan, not an appliance", Pot:n"a pot, not an appliance", Whisk:n"a hand tool", Sink:A"a fixture or an appliance?", Iron:n"an appliance, not for kitchens", Fan:n"an appliance, not for kitchens", Grater:n"a hand tool"
+
+garden-tool | Rake, Hoe, Spade, Shovel, Trowel, Fork:S"a garden fork", Hose:S"a garden hose", Saw:A"pruning saws", Axe:A"a tool, but for gardens?", Bucket:n"a container", Broom:n"a cleaning tool", Ladder:n"used in gardens"
+
+breakfast-food | Toast, Egg, Bacon, Pancake, Waffle, Muffin, Bagel, Croissant, Omelette, Crumpet, Quiche:n"brunch, at least", Sausage:A"breakfast and dinner", Jam:A"a spread at breakfast", Honey:A"a spread at breakfast", Juice:A"a drink, not food", Coffee:A"a drink, not food", Tea:A"a drink, not food", Milk:A"a drink, not food", Scone:A"breakfast or tea", Donut:A"breakfast or a snack", Roll:A"breakfast or lunch", Bun:A"breakfast or lunch", Banana:n"eaten at breakfast", Mushroom:n"in a fried breakfast", Apple:n"eaten at breakfast", Popcorn:n, Pudding:n"black pudding, in Britain"
+
+citrus-fruit | Orange, Lime, Lemon
+
+colour | Orange, Violet, Lilac, Amber, Gold, Silver, Lime:S"lime green", Plum:S"a dark purple", Cherry:S"cherry red", Salmon:S"salmon pink", Rose:S"a pink colour", Copper:S"a reddish brown", Olive:S"olive green", Peach:S"a pale orange", Mustard:S"mustard yellow", Saffron:S"an orange yellow", Chestnut:S"chestnut brown", Fawn:S"a pale brown", Jade:S"jade green", Ruby:S"ruby red", Emerald:S"emerald green", Coral:S"coral pink", Sapphire:A"sapphire blue?", Lemon:A"lemon yellow?", Mint:A"mint green?", Ginger:A"ginger hair?", Pearl:A"pearl white?", Honey:A"honey-coloured?", Steel:n"steel grey", Brass:n"brassy yellow", Raspberry:n"raspberry pink", Strawberry:n"strawberry blond", Banana:n"banana yellow", Pumpkin:n"pumpkin orange", Cocoa:n"cocoa brown", Coffee:n"coffee brown", Canary:O"canary yellow", Raven:O"raven black", Cardinal:O"cardinal red", Peacock:O"peacock blue", Garnet:S"a deep red", Flamingo:n"flamingo pink", Iris:n"a purple blue", Pine:n"pine green"
