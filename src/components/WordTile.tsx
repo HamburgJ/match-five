@@ -1,22 +1,29 @@
 import React, { useState } from 'react';
-import gameData from '../data/gameData.json';
+import { emWidth, fitStyle } from '../utils/fitText';
+
+// A word tile is the word and nothing else. Tiles used to carry an emoji, and
+// the emoji picked one meaning of words whose second meaning is the puzzle
+// (Kiwi drawn as the fruit when the answer is the bird). The look lives in
+// App.css (.mf-tile) so it can respond to the width it is given.
 
 interface WordTileProps {
   word: string;
-  hint?: string;
+  /** A tile in running text or an example: not draggable, no grab cursor. */
   disableHover?: boolean;
   className?: string;
   selected?: boolean;
+  /** Shrink to fit a narrow slot column instead of breaking the word (utils/fitText.ts). */
+  fit?: boolean;
   onDragStart?: (e: React.DragEvent<HTMLDivElement>) => void;
   onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
 const WordTile: React.FC<WordTileProps> = ({
   word,
-  hint,
   disableHover = false,
   className = 'word-tile',
   selected = false,
+  fit = false,
   onDragStart,
   onClick
 }) => {
@@ -31,43 +38,26 @@ const WordTile: React.FC<WordTileProps> = ({
     setIsDragging(false);
   };
 
-  const emoji = gameData.wordEmojis[word];
+  const classes = [
+    'mf-tile',
+    className,
+    disableHover ? 'mf-tile-static' : '',
+    isDragging ? 'dragging' : '',
+    selected ? 'selected' : '',
+  ].filter(Boolean).join(' ');
 
   return (
     <div
-      className={`${className} ${isDragging ? 'dragging' : ''} ${selected ? 'selected' : ''}`}
+      className={classes}
       draggable={!disableHover}
-      onDragStart={handleDragStart}
-      onDragEnd={handleDragEnd}
+      onDragStart={disableHover ? undefined : handleDragStart}
+      onDragEnd={disableHover ? undefined : handleDragEnd}
       onClick={onClick}
-      style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        padding: '0.25rem 0.5rem',
-        margin: '0 0.25rem',
-        borderRadius: '0.25rem',
-        background: selected ? 'var(--primary-variant)' : 'var(--primary)',
-        color: 'var(--on-primary)',
-        fontSize: '0.95rem',
-        boxShadow: selected ? '0 0 0 3px rgba(33, 150, 243, 0.6), var(--elevation-2)' : 'var(--elevation-1)',
-        verticalAlign: 'middle',
-        gap: '0.25rem',
-        cursor: disableHover ? 'default' : 'grab',
-        userSelect: 'none',
-      }}
+      style={fit ? fitStyle(emWidth(word, 'word')) : undefined}
     >
       {word}
-      {emoji && (
-        <span 
-          className="word-emoji" 
-          role="img" 
-          aria-label={`${word} emoji`}
-        >
-          {emoji}
-        </span>
-      )}
     </div>
   );
 };
 
-export default WordTile; 
+export default WordTile;

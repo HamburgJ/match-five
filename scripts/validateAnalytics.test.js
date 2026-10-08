@@ -28,7 +28,7 @@ const compiledAnalytics = ts.transpileModule(analyticsSource, {
   fileName: 'analytics.ts',
 }).outputText;
 
-function loadAnalytics(measurementId) {
+function loadAnalytics(measurementId, { hostname = 'burgerfun.ca', webdriver = false } = {}) {
   const calls = { event: [], initialize: [], send: [] };
   const reactGa = {
     event: (...args) => calls.event.push(args),
@@ -48,7 +48,8 @@ function loadAnalytics(measurementId) {
       if (request === 'react-ga4') return { __esModule: true, default: reactGa };
       throw new Error(`Unexpected analytics dependency: ${request}`);
     },
-    window: { location: { pathname: '/match-five/' } },
+    navigator: { webdriver },
+    window: { location: { hostname, pathname: '/match-five/' } },
   }, { filename: 'analytics.js' });
 
   return { analytics: module.exports, calls };
@@ -101,4 +102,42 @@ assert.equal(
 assert.equal(fallback.calls.send.length, 1, 'the fallback build must send its initial page view');
 assert.equal(fallback.calls.event.length, 1, 'the fallback build must emit game events');
 
-console.log('Verified one Match Five page view, no duplicate bootstrap, and the no-env-var fallback id.');
+// GA starts only on burgerfun.ca and never under automation (navigator.webdriver),
+// so local dev, preview deploys, a copy on another host and Playwright runs
+// never report into the production property. Every logger is a no-op until GA
+// has started.
+const offHosts = [
+  ['localhost', 'local dev'],
+  ['127.0.0.1', 'local dev by address'],
+  ['hamburgj.github.io', 'the old GitHub Pages copy'],
+  ['abc123.burgerfun.pages.dev', 'a Cloudflare preview deploy'],
+  ['www.burgerfun.ca', 'any host but the apex'],
+  ['burgerfun.ca.evil.example', 'a lookalike host'],
+];
+for (const [hostname, why] of offHosts) {
+  const off = loadAnalytics(undefined, { hostname });
+  off.analytics.initGA();
+  off.analytics.logMatchFiveStart('home');
+  off.analytics.logMatchFiveShare('copy');
+  off.analytics.logMatchFiveLevelSolved(1, false);
+  off.analytics.logPageView('/match-five/');
+  off.analytics.logGameEvent('test');
+  assert.equal(off.calls.initialize.length, 0, `GA must not start on ${hostname} (${why})`);
+  assert.equal(off.calls.send.length + off.calls.event.length, 0, `nothing may be sent from ${hostname} (${why})`);
+  assert.equal(off.analytics.isAnalyticsActive(), false);
+}
+
+const automated = loadAnalytics(undefined, { webdriver: true });
+automated.analytics.initGA();
+automated.analytics.logMatchFiveStart('home');
+assert.equal(automated.calls.initialize.length, 0, 'GA must not start under navigator.webdriver, even on burgerfun.ca');
+assert.equal(automated.calls.send.length + automated.calls.event.length, 0, 'an automated visit must send nothing');
+
+const twice = loadAnalytics();
+twice.analytics.initGA();
+twice.analytics.initGA();
+assert.equal(twice.calls.initialize.length, 1, 'a second initGA call must not initialize GA again');
+assert.equal(twice.calls.send.length, 1, 'a second initGA call must not send a second page view');
+assert.equal(twice.analytics.isAnalyticsActive(), true);
+
+console.log('Verified one Match Five page view, no duplicate bootstrap, the no-env-var fallback id, and GA only on burgerfun.ca outside automation.');

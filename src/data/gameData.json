@@ -1,139 +1,4 @@
 {
-  "wordEmojis": {
-    "Air": "💨",
-    "Above": "⬆️",
-    "Answer": "✅",
-    "Apple": "🍎",
-    "Average": "📊",
-    "Ball": "⚽",
-    "Banana": "🍌",
-    "Bark": "🌳",
-    "Bat": "🦇",
-    "Bean": "🫘",
-    "Bear": "🐻",
-    "Below": "⬇️",
-    "Blackberry": "🫐",
-    "Blood": "🩸",
-    "Blueberry": "🫐",
-    "Book": "📚",
-    "Brain": "🧠",
-    "Broccoli": "🥦",
-    "Cat": "🐱",
-    "Cardinal": "🐦",
-    "Carrot": "🥕",
-    "Cave": "🕳️",
-    "Center": "⚪",
-    "Cherry": "🍒",
-    "Chocolate": "🍫",
-    "Circle": "⭕",
-    "Cloud": "☁️",
-    "Coal": "🪨",
-    "Coffee": "☕",
-    "Corn": "🌽",
-    "Crane": "🏗️",
-    "Daisy": "🌼",
-    "Dance": "💃",
-    "Date": "📅",
-    "Diamond": "💎",
-    "Dog": "🐕",
-    "Down": "⬇️",
-    "Drum": "🥁",
-    "Duck": "🦆",
-    "Earth": "🌍",
-    "Eggplant": "🍆",
-    "Eye": "👁️",
-    "Fact": "📝",
-    "Fall": "🍂",
-    "Feather": "🪶",
-    "Fig": "🪪",
-    "Fire": "🔥",
-    "Fish": "🐟",
-    "Five": "5️⃣",
-    "Flute": "🎵",
-    "Garlic": "🧄",
-    "Glue": "🫠",
-    "Gold": "🥇",
-    "Grape": "🍇",
-    "Grass": "🌱",
-    "Guitar": "🎸",
-    "Heart": "❤️",
-    "High": "⬆️",
-    "Ice": "🧊",
-    "Ink": "🖋️",
-    "Iris": "🌸",
-    "Kiwi": "🥝",
-    "Leaf": "🍃",
-    "Left": "⬅️",
-    "Lemon": "🍋",
-    "Lettuce": "🥬",
-    "Light": "💡",
-    "Lime": "🟢",
-    "Low": "⬇️",
-    "Love": "❤️",
-    "Metal": "🔩",
-    "Middle": "⏺️",
-    "Mirror": "🪞",
-    "Money": "💰",
-    "Moon": "🌙",
-    "Mountain": "⛰️",
-    "Mouse": "🐁",
-    "Mud": "🟫",
-    "Music": "🎵",
-    "Night": "🌙",
-    "Ocean": "🌊",
-    "Orange": "🍊",
-    "Pea": "🟢",
-    "Pear": "🍐",
-    "Penguin": "🐧",
-    "Pepper": "🌶️",
-    "Piano": "🎹",
-    "Pig": "🐷",
-    "Plum": "🟣",
-    "Potato": "🥔",
-    "Pumpkin": "🎃",
-    "Puzzle Game": "🧩",
-    "Racecar": "🏎️",
-    "Rage": "😠",
-    "Right": "➡️",
-    "River": "🌊",
-    "Rock": "🪨",
-    "Rope": "➰",
-    "Rose": "🌹",
-    "Rude": "😤",
-    "Sadness": "😢",
-    "Salmon": "🐟",
-    "Salt": "🧂",
-    "Saxophone": "🎷",
-    "Science": "🧪",
-    "Score": "💯",
-    "Seal": "🦭",
-    "Seed": "🌱",
-    "Shadow": "👥",
-    "Sky": "🌤️",
-    "Snake": "🐍",
-    "Snow": "❄️",
-    "Spring": "🌸",
-    "Star": "⭐",
-    "Stone": "🪨",
-    "Strawberry": "🍓",
-    "Stream": "💫",
-    "Student": "👨‍🎓",
-    "Summer": "☀️",
-    "Sun": "☀️",
-    "Swan": "🦢",
-    "Time": "⏰",
-    "Tomato": "🍅",
-    "Tower": "🗼",
-    "Traffic": "🚦",
-    "Tree": "🌳",
-    "Up": "⬆️",
-    "Violet": "🟣",
-    "Window": "🪟",
-    "Wine": "🍷",
-    "Winter": "⛄",
-    "Wrench": "🔧",
-    "Water": "💧"
-  },
   "hints": {
     "Red": {
       "accepts": [
@@ -337,9 +202,6 @@
         "Seal",
         "Bat",
         "Penguin",
-        "Bear",
-        "Fish",
-        "Snake",
         "Cat",
         "Student"
       ]
@@ -640,7 +502,6 @@
         "Fruit",
         "Vegetable",
         "Berry",
-        "Flower",
         "Plant",
         "Animal",
         "Bird",
@@ -654,6 +515,7 @@
       ]
     },
     "Even": {
+      "computed": true,
       "accepts": [
         "2",
         "4",
@@ -670,6 +532,7 @@
       ]
     },
     "Odd": {
+      "computed": true,
       "accepts": [
         "1",
         "3",
@@ -687,6 +550,7 @@
       ]
     },
     "Prime": {
+      "computed": true,
       "accepts": [
         "2",
         "3",
@@ -700,6 +564,7 @@
       ]
     },
     "Square": {
+      "computed": true,
       "accepts": [
         "1",
         "4",
@@ -709,13 +574,14 @@
       ]
     },
     "Cube": {
+      "computed": true,
       "accepts": [
         "1",
-        "8",
-        "27"
+        "8"
       ]
     },
     "Fibonacci": {
+      "computed": true,
       "accepts": [
         "1",
         "2",
@@ -736,7 +602,9 @@
       ]
     },
     "2 Digit": {
+      "computed": true,
       "accepts": [
+        "10",
         "11",
         "12",
         "13",
@@ -755,6 +623,7 @@
       ]
     },
     "1 Digit": {
+      "computed": true,
       "accepts": [
         "1",
         "2",
@@ -794,6 +663,7 @@
       ]
     },
     "Non-Prime": {
+      "computed": true,
       "accepts": [
         "1",
         "4",
@@ -814,6 +684,7 @@
       ]
     },
     "Palindrome": {
+      "computed": true,
       "accepts": [
         "1",
         "2",
@@ -826,213 +697,408 @@
         "9",
         "11",
         "22",
-        "Mirror",
         "Eye",
         "Racecar"
       ]
     },
     "2 Letter": {
+      "computed": true,
       "accepts": [
         "Up"
       ]
     },
     "3 Letters": {
+      "computed": true,
       "accepts": [
-        "Eye",
+        "Cat",
         "Dog",
+        "Eye",
+        "Pea",
         "Sky",
-        "Pea"
+        "Sun"
       ]
     },
     "4 Letters": {
+      "computed": true,
       "accepts": [
         "Bean",
-        "Bean",
-        "Kiwi",
+        "Bear",
+        "Cave",
         "Corn",
-        "Drum"
+        "Down",
+        "Drum",
+        "Duck",
+        "Fish",
+        "Kiwi",
+        "Left",
+        "Rage",
+        "Rock",
+        "Rose",
+        "Rude",
+        "Tree"
       ]
     },
     "5 Letters": {
+      "computed": true,
       "accepts": [
         "Apple",
-        "Apple",
-        "Grass",
+        "Daisy",
+        "Dance",
+        "Grape",
+        "Lemon",
+        "Money",
+        "Piano",
+        "Right",
+        "River",
+        "Snake",
         "Water"
       ]
     },
     "6 Letters": {
+      "computed": true,
       "accepts": [
         "Banana",
-        "Potato",
-        "Orange",
+        "Garlic",
         "Mirror",
-        "Answer"
+        "Orange",
+        "Potato",
+        "Tomato"
       ]
     },
     "Contains 'A'": {
+      "computed": true,
       "accepts": [
-        "Bean",
         "Apple",
+        "Average",
         "Banana",
+        "Bean",
+        "Bear",
+        "Blackberry",
+        "Cardinal",
+        "Cat",
+        "Cave",
+        "Chocolate",
+        "Daisy",
+        "Dance",
+        "Eggplant",
+        "Garlic",
+        "Grape",
+        "Orange",
+        "Pea",
+        "Piano",
         "Potato",
         "Racecar",
-        "Orange",
-        "Apple",
-        "Bean",
-        "Grass",
-        "Answer",
-        "Pea",
-        "Water",
-        "Chocolate",
-        "Strawberry"
+        "Rage",
+        "Sadness",
+        "Snake",
+        "Strawberry",
+        "Tomato",
+        "Traffic",
+        "Water"
       ]
     },
     "Contains 'E'": {
+      "computed": true,
       "accepts": [
-        "Eye",
-        "Bean",
         "Apple",
-        "Lettuce",
-        "Racecar",
-        "Orange",
+        "Average",
+        "Bean",
+        "Bear",
+        "Blackberry",
         "Blueberry",
-        "Apple",
-        "Bean",
-        "Answer",
-        "Pea",
-        "Water",
+        "Cave",
         "Chocolate",
-        "Strawberry"
+        "Dance",
+        "Eggplant",
+        "Eye",
+        "Grape",
+        "Left",
+        "Lemon",
+        "Lettuce",
+        "Money",
+        "Orange",
+        "Pea",
+        "Penguin",
+        "Racecar",
+        "Rage",
+        "River",
+        "Rose",
+        "Rude",
+        "Sadness",
+        "Snake",
+        "Strawberry",
+        "Student",
+        "Tree",
+        "Water"
       ]
     },
     "Contains 'I'": {
+      "computed": true,
       "accepts": [
+        "Broccoli",
+        "Cardinal",
+        "Daisy",
+        "Fish",
+        "Garlic",
+        "Kiwi",
         "Mirror",
-        "Kiwi"
+        "Penguin",
+        "Piano",
+        "Pumpkin",
+        "Right",
+        "River",
+        "Traffic"
       ]
     },
     "Contains 'O'": {
+      "computed": true,
       "accepts": [
-        "Potato",
-        "Orange",
-        "Mirror",
+        "Broccoli",
+        "Chocolate",
+        "Corn",
         "Dog",
-        "Corn"
+        "Down",
+        "Lemon",
+        "Mirror",
+        "Money",
+        "Orange",
+        "Piano",
+        "Potato",
+        "Rock",
+        "Rose",
+        "Tomato"
       ]
     },
     "Contains 'U'": {
+      "computed": true,
       "accepts": [
-        "Up",
-        "Lettuce",
         "Blueberry",
-        "Drum"
+        "Drum",
+        "Duck",
+        "Lettuce",
+        "Penguin",
+        "Pumpkin",
+        "Rude",
+        "Student",
+        "Sun",
+        "Up"
       ]
     },
     "No 'E'": {
+      "computed": true,
       "accepts": [
-        "Up",
         "Banana",
-        "Potato",
-        "Mirror",
-        "Grass",
-        "Dog",
-        "Kiwi",
+        "Broccoli",
+        "Cardinal",
+        "Cat",
         "Corn",
+        "Daisy",
+        "Dog",
+        "Down",
         "Drum",
-        "Sky"
+        "Duck",
+        "Fish",
+        "Garlic",
+        "Kiwi",
+        "Mirror",
+        "Piano",
+        "Potato",
+        "Pumpkin",
+        "Right",
+        "Rock",
+        "Sky",
+        "Sun",
+        "Tomato",
+        "Traffic",
+        "Up"
       ]
     },
     "No 'A'": {
+      "computed": true,
       "accepts": [
-        "Up",
-        "Eye",
-        "Lettuce",
         "Blueberry",
-        "Mirror",
-        "Dog",
-        "Kiwi",
+        "Broccoli",
         "Corn",
+        "Dog",
+        "Down",
         "Drum",
-        "Sky"
+        "Duck",
+        "Eye",
+        "Fish",
+        "Kiwi",
+        "Left",
+        "Lemon",
+        "Lettuce",
+        "Mirror",
+        "Money",
+        "Penguin",
+        "Pumpkin",
+        "Right",
+        "River",
+        "Rock",
+        "Rose",
+        "Rude",
+        "Sky",
+        "Student",
+        "Sun",
+        "Tree",
+        "Up"
       ]
     },
     "No 'I'": {
+      "computed": true,
       "accepts": [
-        "Up",
-        "Eye",
-        "Bean",
         "Apple",
+        "Average",
         "Banana",
-        "Potato",
-        "Lettuce",
-        "Racecar",
-        "Orange",
-        "Blueberry",
-        "Apple",
         "Bean",
-        "Grass",
-        "Answer",
-        "Dog",
+        "Bear",
+        "Blackberry",
+        "Blueberry",
+        "Cat",
+        "Cave",
+        "Chocolate",
         "Corn",
+        "Dance",
+        "Dog",
+        "Down",
         "Drum",
-        "Sky",
+        "Duck",
+        "Eggplant",
+        "Eye",
+        "Grape",
+        "Left",
+        "Lemon",
+        "Lettuce",
+        "Money",
+        "Orange",
         "Pea",
-        "Strawberry"
+        "Potato",
+        "Racecar",
+        "Rage",
+        "Rock",
+        "Rose",
+        "Rude",
+        "Sadness",
+        "Sky",
+        "Snake",
+        "Strawberry",
+        "Student",
+        "Sun",
+        "Tomato",
+        "Tree",
+        "Up",
+        "Water"
       ]
     },
     "No 'O'": {
+      "computed": true,
       "accepts": [
-        "Up",
-        "Eye",
-        "Bean",
         "Apple",
+        "Average",
         "Banana",
-        "Lettuce",
-        "Racecar",
-        "Blueberry",
-        "Apple",
         "Bean",
-        "Grass",
-        "Answer",
-        "Kiwi",
+        "Bear",
+        "Blackberry",
+        "Blueberry",
+        "Cardinal",
+        "Cat",
+        "Cave",
+        "Daisy",
+        "Dance",
         "Drum",
-        "Sky",
+        "Duck",
+        "Eggplant",
+        "Eye",
+        "Fish",
+        "Garlic",
+        "Grape",
+        "Kiwi",
+        "Left",
+        "Lettuce",
         "Pea",
-        "Strawberry"
+        "Penguin",
+        "Pumpkin",
+        "Racecar",
+        "Rage",
+        "Right",
+        "River",
+        "Rude",
+        "Sadness",
+        "Sky",
+        "Snake",
+        "Strawberry",
+        "Student",
+        "Sun",
+        "Traffic",
+        "Tree",
+        "Up",
+        "Water"
       ]
     },
     "No 'U'": {
+      "computed": true,
       "accepts": [
-        "Eye",
-        "Bean",
         "Apple",
+        "Average",
         "Banana",
+        "Bean",
+        "Bear",
+        "Blackberry",
+        "Broccoli",
+        "Cardinal",
+        "Cat",
+        "Cave",
+        "Chocolate",
+        "Corn",
+        "Daisy",
+        "Dance",
+        "Dog",
+        "Down",
+        "Eggplant",
+        "Eye",
+        "Fish",
+        "Garlic",
+        "Grape",
+        "Kiwi",
+        "Left",
+        "Lemon",
+        "Mirror",
+        "Money",
+        "Orange",
+        "Pea",
+        "Piano",
         "Potato",
         "Racecar",
-        "Orange",
-        "Mirror",
-        "Apple",
-        "Bean",
-        "Grass",
-        "Answer",
-        "Dog",
-        "Kiwi",
-        "Corn",
+        "Rage",
+        "Right",
+        "River",
+        "Rock",
+        "Rose",
+        "Sadness",
         "Sky",
-        "Pea",
-        "Strawberry"
+        "Snake",
+        "Strawberry",
+        "Tomato",
+        "Traffic",
+        "Tree",
+        "Water"
       ]
     },
     "Double Letter": {
+      "computed": true,
       "accepts": [
         "Apple",
-        "Lettuce",
+        "Blackberry",
         "Blueberry",
+        "Broccoli",
+        "Eggplant",
+        "Lettuce",
         "Mirror",
-        "Apple",
-        "Grass",
-        "Strawberry"
+        "Sadness",
+        "Strawberry",
+        "Traffic",
+        "Tree"
       ]
     },
     "1 Syllable": {
@@ -1075,6 +1141,7 @@
       ]
     },
     "Vowel": {
+      "computed": true,
       "accepts": [
         "A",
         "E",
@@ -1085,10 +1152,10 @@
       ]
     },
     "Consonant": {
+      "computed": true,
       "accepts": [
         "B",
         "C",
-        "D",
         "F",
         "G",
         "H",
@@ -1105,35 +1172,37 @@
         "V",
         "W",
         "X",
-        "Y",
-        "Z"
+        "Y"
       ]
     },
     "Letter in 'SUN'": {
+      "computed": true,
       "accepts": [
+        "N",
         "S",
-        "U",
-        "N"
+        "U"
       ]
     },
     "Letter in 'MOON'": {
+      "computed": true,
       "accepts": [
         "M",
-        "O",
-        "N"
+        "N",
+        "O"
       ]
     },
     "Letter in 'CAT'": {
+      "computed": true,
       "accepts": [
-        "C",
         "A",
+        "C",
         "T"
       ]
     },
     "Not in 'CAT'": {
+      "computed": true,
       "accepts": [
         "B",
-        "D",
         "E",
         "F",
         "G",
@@ -1153,48 +1222,49 @@
         "V",
         "W",
         "X",
-        "Y",
-        "Z"
+        "Y"
       ]
     },
     "Letter in 'RAIN'": {
+      "computed": true,
       "accepts": [
-        "R",
         "A",
         "I",
-        "N"
+        "N",
+        "R"
       ]
     },
     "Letter in 'WIND'": {
+      "computed": true,
       "accepts": [
-        "W",
         "I",
         "N",
-        "D"
+        "W"
       ]
     },
     "Letter in 'LEAF'": {
+      "computed": true,
       "accepts": [
-        "L",
-        "E",
         "A",
-        "F"
+        "E",
+        "F",
+        "L"
       ]
     },
     "Letter in 'TREE'": {
+      "computed": true,
       "accepts": [
-        "T",
-        "R",
         "E",
-        "E"
+        "R",
+        "T"
       ]
     },
     "Not in 'MOON'": {
+      "computed": true,
       "accepts": [
         "A",
         "B",
         "C",
-        "D",
         "E",
         "F",
         "G",
@@ -1208,82 +1278,89 @@
         "R",
         "S",
         "T",
+        "U",
         "V",
         "W",
         "X",
-        "Y",
-        "Z"
+        "Y"
       ]
     },
     "Letter in 'APPLE'": {
+      "computed": true,
       "accepts": [
         "A",
-        "P",
+        "E",
         "L",
-        "E"
+        "P"
       ]
     },
     "Letter in 'BANANA'": {
+      "computed": true,
       "accepts": [
-        "B",
         "A",
+        "B",
         "N"
       ]
     },
     "Letter in 'PEA'": {
+      "computed": true,
       "accepts": [
-        "P",
+        "A",
         "E",
-        "A"
+        "P"
       ]
     },
     "Letter in 'WATER'": {
+      "computed": true,
       "accepts": [
-        "W",
         "A",
-        "T",
         "E",
-        "R"
+        "R",
+        "T",
+        "W"
       ]
     },
     "Letter in 'STRAWBERRY'": {
+      "computed": true,
       "accepts": [
-        "S",
-        "T",
-        "R",
         "A",
-        "W",
         "B",
         "E",
+        "R",
+        "S",
+        "T",
+        "W",
         "Y"
       ]
     },
     "Letter in 'CHOCOLATE'": {
+      "computed": true,
       "accepts": [
-        "C",
-        "H",
-        "O",
-        "L",
         "A",
-        "T",
-        "E"
+        "C",
+        "E",
+        "H",
+        "L",
+        "O",
+        "T"
       ]
     },
     "Letter in 'FLOWER'": {
+      "computed": true,
       "accepts": [
+        "E",
         "F",
         "L",
         "O",
-        "W",
-        "E",
-        "R"
+        "R",
+        "W"
       ]
     },
     "Not in 'RAIN'": {
+      "computed": true,
       "accepts": [
         "B",
         "C",
-        "D",
         "E",
         "F",
         "G",
@@ -1295,22 +1372,20 @@
         "O",
         "P",
         "Q",
-        "R",
         "S",
         "T",
         "U",
         "V",
         "W",
         "X",
-        "Y",
-        "Z"
+        "Y"
       ]
     },
     "Letter in 'DOG'": {
+      "computed": true,
       "accepts": [
-        "D",
-        "O",
-        "G"
+        "G",
+        "O"
       ]
     },
     "Meow": {
@@ -1319,6 +1394,7 @@
       ]
     },
     "Not in 'DOG'": {
+      "computed": true,
       "accepts": [
         "A",
         "B",
@@ -1341,16 +1417,15 @@
         "V",
         "W",
         "X",
-        "Y",
-        "Z"
+        "Y"
       ]
     },
     "Not in 'SUN'": {
+      "computed": true,
       "accepts": [
         "A",
         "B",
         "C",
-        "D",
         "E",
         "F",
         "G",
@@ -1368,8 +1443,7 @@
         "V",
         "W",
         "X",
-        "Y",
-        "Z"
+        "Y"
       ]
     }
   },

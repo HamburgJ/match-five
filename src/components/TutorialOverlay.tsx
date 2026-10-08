@@ -105,7 +105,7 @@ const TutorialOverlay: React.FC<TutorialOverlayProps> = ({
           borderRadius: '8px',
           maxWidth: '300px',
           boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
-          zIndex: 10001,
+          zIndex: 9989,
         }}
       >
         <p style={{ margin: '0 0 16px 0' }}>

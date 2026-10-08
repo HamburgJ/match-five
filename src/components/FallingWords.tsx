@@ -1,5 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
 import gameData from '../data/gameData.json';
+import { prefersReducedMotion } from '../utils/motion';
+
+// The words that drift behind the home card are the game's own words: every
+// word tile in the eight levels, without the number and letter tiles. Plain
+// text on the same charcoal chip the board uses.
+const DRIFT_WORDS: string[] = Array.from(new Set(
+  gameData.levels.flatMap(level => level.sections.flatMap(section => section.words.map(word => word.text)))
+)).filter(text => /^[A-Za-z]{2,}$/.test(text));
 
 // Animation configuration constants
 const ANIMATION_CONFIG = {
@@ -16,7 +24,6 @@ const ANIMATION_CONFIG = {
 interface FallingWord {
   id: number;
   text: string;
-  emoji: string;
   x: number;
   y: number;
   speed: number;
@@ -29,20 +36,13 @@ const FallingWords: React.FC = () => {
   const lastTimeRef = useRef<number>(0);
   const animationFrameRef = useRef<number>();
 
-  // Get a random word and its emoji from the game data
-  const getRandomWord = () => {
-    const wordList = Object.entries(gameData.wordEmojis);
-    const [text, emoji] = wordList[Math.floor(Math.random() * wordList.length)];
-    return { text, emoji };
-  };
+  const getRandomWord = () => DRIFT_WORDS[Math.floor(Math.random() * DRIFT_WORDS.length)];
 
   // Create a new falling word with random position and speed
   const createFallingWord = (id: number, isInitial: boolean = false): FallingWord => {
-    const { text, emoji } = getRandomWord();
     return {
       id,
-      text,
-      emoji,
+      text: getRandomWord(),
       x: Math.random() * dimensions.width,
       // If initial placement, distribute across screen height, otherwise start from top
       y: isInitial ? Math.random() * dimensions.height : ANIMATION_CONFIG.VERTICAL_OFFSET,
@@ -83,8 +83,10 @@ const FallingWords: React.FC = () => {
     lastTimeRef.current = performance.now();
   }, []);
 
-  // Animate words using delta time
+  // Animate words using delta time. Under reduced motion they stay where they
+  // were scattered.
   useEffect(() => {
+    if (prefersReducedMotion()) return;
     const animate = (currentTime: number) => {
       const deltaTime = currentTime - lastTimeRef.current;
       lastTimeRef.current = currentTime;
@@ -119,8 +121,9 @@ const FallingWords: React.FC = () => {
     };
   }, [dimensions.height]);
 
+  // Decoration only: screen readers skip the drifting words.
   return (
-    <div style={{
+    <div aria-hidden="true" style={{
       position: 'fixed',
       top: 0,
       left: 0,
@@ -148,16 +151,15 @@ const FallingWords: React.FC = () => {
             borderRadius: '0.25rem',
             fontSize: '0.8rem',
             boxShadow: 'var(--elevation-1)',
+            fontFamily: "'Roboto', sans-serif",
+            fontWeight: 500,
+            letterSpacing: '0.01em',
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '0.5rem',
             width: 'fit-content',
           }}
         >
           {word.text}
-          <span className="word-emoji" role="img" aria-label={`${word.text} emoji`}>
-            {word.emoji}
-          </span>
         </div>
       ))}
     </div>

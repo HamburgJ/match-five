@@ -36,7 +36,8 @@
     "generate-game-data": "node scripts/generateGameData.js",
     "test:data": "node scripts/generateGameData.test.js",
     "test:analytics": "node scripts/validateAnalytics.test.js",
-    "postinstall": "npm run test:data && npm run test:analytics"
+    "postinstall": "npm run test:data && npm run test:analytics && npm run test:persist",
+    "test:persist": "node scripts/persistMigration.test.js"
   },
   "eslintConfig": {
     "extends": [
