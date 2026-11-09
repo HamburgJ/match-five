@@ -8,6 +8,22 @@ import { Word, Slot, Section, Hint, HintDictionary, GameProgress } from '../stor
 import { GAME_PROGRESS_KEY, DEVELOPER_MODE } from '../constants/storage';
 import TutorialOverlay from './TutorialOverlay';
 import '../styles/GameBoard.css';
+
+// The word a drop carries, or null for anything that is not one of our tiles.
+// Text dragged in from the page or another tab (a selected word such as
+// "Fruit") arrives as plain text; JSON.parse threw on it, once per drop.
+const readDroppedWord = (data: DataTransfer): Word | null => {
+  for (const raw of [data.getData('word'), data.getData('text/plain')]) {
+    if (!raw) continue;
+    try {
+      const value = JSON.parse(raw) as Partial<Word> | null;
+      if (value && typeof value === 'object' && typeof value.id === 'string') return value as Word;
+    } catch {
+      // Not a tile; try the next type.
+    }
+  }
+  return null;
+};
 import WordTile from './WordTile';
 import { logMatchFiveLevelSolved, logMatchFiveRetry, logMatchFiveShare, logMatchFiveStart } from '../utils/analytics';
 import { canWebShare, webShareText } from '../utils/webShare';
@@ -308,7 +324,6 @@ const GameBoard: React.FC = () => {
 
     const wordData = JSON.stringify(word);
     e.dataTransfer.setData('text/plain', wordData);
-    e.dataTransfer.setData('text/plain', wordData);
     e.dataTransfer.setData('word', wordData);
     e.dataTransfer.setData('sourceLevelId', levelId);
     
@@ -340,10 +355,8 @@ const GameBoard: React.FC = () => {
     e.preventDefault();
     e.currentTarget.classList.remove('drag-over');
     
-    const wordData = e.dataTransfer.getData('word') || e.dataTransfer.getData('text/plain');
-    if (!wordData) return;
-
-    const word = JSON.parse(wordData) as Word;
+    const word = readDroppedWord(e.dataTransfer);
+    if (!word) return;
     const sourceLevelId = e.dataTransfer.getData('sourceLevelId');
     const sourceSectionId = e.dataTransfer.getData('sourceSectionId');
     const sourceSlotId = e.dataTransfer.getData('sourceSlotId');
@@ -409,12 +422,8 @@ const GameBoard: React.FC = () => {
     e.preventDefault();
     e.currentTarget.classList.remove('drag-over');
 
-    const wordData = e.dataTransfer.getData('word') || e.dataTransfer.getData('text/plain');
-    if (!wordData) {
-      return;
-    }
-
-    const word = JSON.parse(wordData) as Word;
+    const word = readDroppedWord(e.dataTransfer);
+    if (!word) return;
     const sourceLevelId = e.dataTransfer.getData('sourceLevelId');
     const sourceSectionId = e.dataTransfer.getData('sourceSectionId');
 
