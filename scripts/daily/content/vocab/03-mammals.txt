@@ -1,0 +1,321 @@
+# Mammals. Mammal defaults: fur, hair, teeth, can bite, ears, nose, legs, can walk, neck, no eggs.
+
+Bat | a |
+  animal | L | the flying mammal | mammal | has:wings"leathery wings" has:wing can:fly is:bird:N has:claws:S"a claw on each wing" has:tail:A
+  club | L | a baseball bat | baseball-equipment | has:handle:A"a grip, not a handle" is:weapon:A is:tool:n
+  * | verb:A"bat someone away"
+
+Seal | a |
+  animal | L | the sea animal | mammal | lives-in-sea:A"sea and shore" can:swim has:whiskers has:fins:A"flippers" has:legs:A"flippers" can:walk:A has:ears:A"tiny ear holes" can:clap:A has:tail:A
+  stamp | L | a wax seal | object |
+  * | verb:n"to seal someone in"
+
+Mole | a |
+  animal | L | the burrowing animal | mammal | can:see:A"nearly blind" has:eyes:A"tiny hidden eyes" has:eye:A has:claws"digging claws" has:tail:A
+  spot | S | a dark spot on skin | abstract | is:body-part:n"a spot, not a part"
+  spy | S | a spy | person |
+
+Mouse | a |
+  animal | L | the small rodent | mammal | has:tail"a long tail" has:whiskers is:pet:A
+  computer | L | a computer mouse | computer-part | has:buttons"mouse buttons" has:tail:n"the cord" has:wheels:n"a scroll wheel"
+
+Ram | a |
+  animal | L | the male sheep | mammal | has:horns"curly horns" has:horn has:hooves has:fur:S"woolly fleece"
+  memory | S | computer memory | computer-part:S |
+  weapon | S | a battering ram | weapon:S |
+  * | verb:A"to ram into someone"
+
+Badger | a |
+  animal | L | the striped burrower | mammal | has:stripes"a striped face" has:claws has:tail:A
+  * | verb:L"to badger someone"
+
+Ferret | a |
+  animal | L | the ferret | mammal | is:pet:A has:tail has:whiskers
+  * | verb:n"ferret someone out"
+
+Buffalo | a |
+  animal | L | the buffalo | mammal | has:horns has:horn has:hooves is:cow:A"cattle family" has:tail
+  * | verb:O"to buffalo someone, bully"
+
+Kid | a |
+  child | L | a child | person |
+  goat | S | a young goat | mammal | has:hooves has:horns:A"young goats may not" has:beard:A has:tail has:fur:A"hair or fur?"
+  * | verb:L"to kid someone, tease"
+
+Buck | a |
+  deer | L | a male deer | mammal | has:antlers has:hooves has:tail has:horns:n"antlers, not horns"
+  dollar | S | a dollar | abstract | is:coin:n"a dollar bill, usually"
+  * | verb:n"a horse bucks someone off"
+
+Bear | a |
+  animal | L | the bear | mammal | has:claws has:tail:A"a stubby tail" can:swim:A
+  * | verb:A"can't bear someone"
+
+Hog | a |
+  animal | L | a pig | mammal | has:tail has:hooves has:fur:A"bristly hair"
+  * | verb:n"hog someone's time"
+
+Sloth | a |
+  animal | L | the slow tree animal | mammal | has:claws"long claws" can:swim:O"surprisingly good swimmers"
+  laziness | S | laziness | abstract |
+
+Yak | a |
+  animal | L | the shaggy ox | mammal | has:horns has:horn has:hooves has:fur"long shaggy hair" is:cow:A"cattle family" has:tail
+
+Fox | a |
+  animal | L | the fox | mammal | has:tail"a bushy tail" has:whiskers has:claws:A
+  * | verb:O"to fox someone, baffle them"
+
+Ape | an |
+  animal | L | the ape | mammal | has:hands"hands like ours" has:hand has:arms has:fingers can:clap:A can:hug:A can:smile:A has:tail:N
+  * | verb:S"to ape someone, copy them"
+
+Mink | a |
+  animal | L | the mink | mammal | has:fur"prized fur" has:tail
+
+Weasel | a |
+  animal | L | the weasel | mammal | has:tail has:whiskers
+  sneak | S | a sneaky person | person |
+
+Zebra | a |
+  animal | L | the striped horse | mammal | has:stripes has:mane"a short mane" has:hooves has:tail is:horse:A"horse family" is:pet:N has:fur:A"hair or fur?"
+  crossing | S | a zebra crossing | place | has:stripes:S"a striped crossing"
+
+Hare | a |
+  animal | L | the hare | mammal | has:ears"long ears" has:whiskers can:jump has:tail
+
+Pig | a |
+  animal | L | the farm pig | mammal | has:tail"a curly tail" has:hooves has:fur:A"bristly hair" is:pet:A has:nose"a snout" has:spots:A"spotted pigs"
+  greedy | S | a greedy person | person |
+
+Horse | a |
+  animal | L | the horse | horse | has:collar:A has:spots:A"spotted horses"
+  gym | O | a vaulting horse | object | has:legs:O
+
+Cow | a |
+  animal | L | the farm cow | cow |
+
+Bull | a |
+  animal | L | the male cow | mammal | is:cow:A"male cattle" has:horns has:horn has:hooves has:tail has:fur:A"hair or fur?"
+  nonsense | S | nonsense | abstract |
+
+Goat | a |
+  animal | L | the goat | mammal | has:horns has:horn has:beard"a goat's beard" has:hooves has:tail is:cow:N can:shave:N has:fur:A"hair or fur?" is:pet:A"pet goats"
+
+Sheep | a |
+  animal | L | the sheep | mammal | has:fur:S"woolly fleece" has:horns:A"some sheep have horns" has:hooves has:tail:A
+
+Lamb | a |
+  animal | L | a young sheep | mammal | has:fur:S"woolly fleece" has:hooves has:tail is:pet:A"pet lambs"
+
+Dog | a |
+  animal | L | the dog | dog | has:collar:A has:spots:A"some dogs are spotted"
+  * | verb:S"to dog someone, follow"
+
+Cat | a |
+  animal | L | the cat | mammal | has:whiskers has:claws has:tail is:pet has:collar:A can:swim:A can:jump has:stripes:A"tabby cats" has:spots:A"some cats"
+
+Lion | a |
+  animal | L | the lion | mammal | has:mane has:claws has:tail has:whiskers is:pet:N
+
+Tiger | a |
+  animal | L | the tiger | mammal | has:stripes has:claws has:tail has:whiskers can:swim:A
+
+Leopard | a |
+  animal | L | the leopard | mammal | has:spots has:claws has:tail has:whiskers
+
+Jaguar | a | brand
+  animal | L | the big cat | mammal | has:spots"rosette spots" has:claws has:tail has:whiskers can:swim:A
+  * | @vehicle:n"the car brand"
+
+Panther | a |
+  animal | L | the black big cat | mammal | has:claws has:tail has:whiskers has:spots:O"faint spots under the black"
+
+Wolf | a |
+  animal | L | the wolf | mammal | has:tail has:claws:A
+  * | verb:n"wolf someone's food"
+
+Deer | a |
+  animal | L | the deer | mammal | has:antlers:A"only the males" has:hooves has:tail has:horns:n"antlers, not horns" has:spots:A
+
+Moose | a |
+  animal | L | the moose | mammal | has:antlers"huge antlers" has:hooves has:horns:n"antlers, not horns" has:tail:A has:mane:O"a short mane on the hump"
+
+Reindeer | a |
+  animal | L | the reindeer | mammal | has:antlers has:hooves has:horns:n"antlers, not horns" has:tail has:mane:O"a shaggy neck mane"
+
+Elk | an |
+  animal | L | the elk | mammal | has:antlers has:hooves has:horns:n"antlers, not horns" has:tail has:mane:O"a shaggy neck mane"
+
+Camel | a | brand
+  animal | L | the camel | mammal | has:hooves:A"padded feet" has:tail has:neck"a long neck" has:fur:A"hair or fur?"
+
+Llama | a |
+  animal | L | the llama | mammal | has:fur:S"woolly coat" has:neck"a long neck" has:hooves:A"padded toes" has:tail is:pet:A"some keep llamas"
+
+Kangaroo | a |
+  animal | L | the kangaroo | mammal | has:pouch has:tail"a strong tail" can:jump has:pockets:N
+
+Koala | a |
+  animal | L | the koala | mammal | has:pouch has:claws is:bear:n"called a bear; isn't one" has:tail:N has:pockets:N
+
+Panda | a |
+  animal | L | the giant panda | mammal | has:claws has:spots:A"black patches" has:tail
+
+Monkey | a |
+  animal | L | the monkey | mammal | has:tail has:hands has:hand has:arms has:fingers can:clap:A can:hug:A can:smile:A
+
+Gorilla | a |
+  animal | L | the gorilla | mammal | has:hands has:hand has:arms has:fingers can:clap:A can:hug:A can:smile:A has:tail:N
+
+Hippo | a |
+  animal | L | the hippo | mammal | has:teeth"huge teeth" can:swim:A"they walk underwater" has:fur:N has:hair:A has:tail lives-in-sea:N
+
+Rhino | a |
+  animal | L | the rhino | mammal | has:horns has:horn has:fur:N has:hair:A has:tail has:hooves:A"three-toed hooves"
+
+Hedgehog | a |
+  animal | L | the hedgehog | mammal | has:spines"prickly spines" has:fur:A"spines and fur" is:pet:A has:tail:A
+
+Porcupine | a |
+  animal | L | the porcupine | mammal | has:spines"sharp quills" has:fur:A has:tail has:needles:n"quills, not needles" has:needle:n
+
+Skunk | a |
+  animal | L | the skunk | mammal | has:stripes"a white stripe" has:tail"a bushy tail" has:whiskers
+
+Raccoon | a |
+  animal | L | the raccoon | mammal | has:stripes:A"a ringed tail" has:rings:A"rings on its tail" has:tail has:hands:A"paws like hands" has:fingers:A has:whiskers
+
+Platypus | a |
+  animal | L | the duck-billed mammal | mammal | lays-eggs"a mammal that lays eggs" has:bill"a duck-like bill" has:beak:n"a bill, not a beak" has:teeth:N can:bite:N has:fur has:tail can:swim can:sting:A"venom spurs, not a sting" has:nose:A
+
+Walrus | a |
+  animal | L | the walrus | mammal | has:whiskers"bristly whiskers" has:teeth:S"tusks are teeth" lives-in-sea:A has:fins:A"flippers" has:legs:A"flippers" can:walk:A can:swim has:fur:N has:tail:N
+
+Beaver | a |
+  animal | L | the beaver | mammal | has:teeth"big front teeth" has:tail"a flat tail" can:swim has:scales:O"a scaly tail"
+
+Otter | an |
+  animal | L | the otter | mammal | can:swim has:whiskers has:tail lives-in-sea:A"sea otters do"
+
+Squirrel | a |
+  animal | L | the squirrel | mammal | has:tail"a bushy tail" has:claws can:jump
+
+Rabbit | a |
+  animal | L | the rabbit | mammal | has:ears"long ears" has:tail has:whiskers can:jump is:pet
+
+Hamster | a |
+  animal | L | the pet hamster | mammal | has:pouch:S"cheek pouches" is:pet has:whiskers has:tail:A"a tiny tail" has:pockets:N
+
+Rat | a |
+  animal | L | the rat | mammal | has:tail"a long tail" has:whiskers is:pet:A
+  traitor | S | a traitor | person |
+  * | verb:n"rat someone out"
+
+Elephant | an |
+  animal | L | the elephant | mammal | has:trunk has:teeth:A"tusks are teeth" can:bite:A has:ears"huge ears" has:fur:A"a few bristles" has:hair:A has:tail can:swim:A has:nose:S"the trunk is its nose"
+
+Giraffe | a |
+  animal | L | the giraffe | mammal | has:neck"a very long neck" has:spots"patchy spots" has:mane:S"a short stiff mane" has:hooves has:horns:S"short furry horns" has:tail has:fur:A"hair or fur?"
+
+Whale | a |
+  animal | L | the whale | whale | has:spout:A"a blowhole spout"
+
+Dolphin | a |
+  animal | L | the dolphin | whale | is:whale:A"technically a small whale" has:teeth can:bite has:nose:A"a beak-like snout" can:smell:n"most think they can; they can't"
+
+Orca | an |
+  animal | L | the killer whale | whale | has:teeth can:bite
+
+Pony | a |
+  animal | L | the pony | horse | is:horse:A"a small horse" is:pet:A has:fur:A"hair or fur?"
+
+Donkey | a |
+  animal | L | the donkey | mammal | has:hooves has:ears"long ears" has:mane:S"a short mane" has:tail is:horse:A"horse family" has:fur:A"hair or fur?"
+
+Mule | a |
+  animal | L | the donkey-horse cross | mammal | has:hooves has:mane:S"a short mane" has:tail is:horse:A"half horse" has:fur:A"hair or fur?"
+  shoe | S | a backless shoe | footwear:S | has:heel:A has:laces:N
+
+Ox | an |
+  animal | L | the ox | mammal | has:horns has:horn has:hooves is:cow:A"cattle" has:tail has:fur:A"hair or fur?"
+
+Bison | a |
+  animal | L | the bison | mammal | has:horns has:horn has:hooves has:fur"shaggy fur" is:cow:A"cattle family" has:tail
+
+Boar | a |
+  animal | L | the wild pig | mammal | has:tusks has:hooves has:fur:A"bristles" has:tail has:teeth:S"tusks are teeth"
+
+Stag | a |
+  animal | L | a male deer | mammal | has:antlers has:hooves has:horns:n"antlers, not horns" has:tail has:mane:O"a rutting stag's neck mane"
+
+Doe | a |
+  animal | L | a female deer | mammal | has:antlers:N has:hooves has:tail has:spots:A
+
+Fawn | a |
+  animal | L | a baby deer | mammal | has:spots"white spots" has:hooves has:antlers:N has:tail
+  colour | S | a pale brown colour | abstract |
+
+Cub | a |
+  animal | L | a young lion or bear | mammal | has:claws has:tail:A
+  scout | S | a cub scout | person |
+
+Calf | a |
+  animal | L | a young cow | mammal | is:cow:A"a young cow" has:hooves has:tail has:fur:A"hair or fur?"
+  leg | S | the back of your leg | body-part:S |
+
+Colt | a | brand
+  animal | L | a young male horse | horse | is:horse:L has:fur:A"hair or fur?"
+
+Puppy | a |
+  animal | L | a young dog | dog | has:spots:A"some puppies are spotted"
+
+Kitten | a |
+  animal | L | a young cat | mammal | has:whiskers has:claws has:tail is:pet has:stripes:A"tabby kittens" has:spots:A"some kittens"
+
+Boxer | a |
+  fighter | L | a fighter | person |
+  dog | S | the dog breed | dog-breed:S |
+  shorts | O | boxer shorts | clothing:O |
+
+Pointer | a |
+  stick | L | a pointing stick or arrow | object | has:tip"a pointed tip"
+  dog | S | the hunting dog | dog-breed:S | has:spots:A"many pointers are spotted"
+
+Setter | a |
+  dog | L | the dog breed | dog-breed | has:spots:A"English setters are flecked"
+
+Lab | a |
+  room | L | a science lab | place |
+  dog | S | a labrador | dog-breed:S |
+
+Husky | a |
+  dog | L | the sled dog | dog-breed |
+
+Poodle | a |
+  dog | L | the curly dog | dog-breed |
+
+Collie | a |
+  dog | L | the sheepdog | dog-breed |
+
+Beagle | a |
+  dog | L | the beagle | dog-breed | has:spots:A
+
+Pug | a |
+  dog | L | the pug | dog-breed | has:nose:S"a squashed nose"
+
+Terrier | a |
+  dog | L | the terrier | dog-breed |
+
+Greyhound | a | brand
+  dog | L | the racing dog | dog-breed |
+  * | @vehicle:n"the bus company"
+
+Dalmatian | a |
+  dog | L | the spotted dog | dog-breed | has:spots
+
+Corgi | a |
+  dog | L | the corgi | dog-breed |
+
+Spaniel | a |
+  dog | L | the spaniel | dog-breed | has:ears"floppy ears"

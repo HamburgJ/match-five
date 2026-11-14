@@ -1,0 +1,18 @@
+{
+ "about": "Phone geometry from dossier v2 section 4.1 (measured by layout-probe-v2.mjs). R10 Fits is computed from these numbers and the advance tables. The daily's CSS must keep these values; if the CSS changes them, change them here and rerun the pipeline.",
+ "gutter": 16,
+ "columns": 3,
+ "gap": 10,
+ "cardBorder": 1,
+ "cardPadding": 4,
+ "wellBorder": 1,
+ "tilePaddingX": 6,
+ "trayBorder": 1,
+ "trayPaddingX": 4,
+ "labelLineHeight": 16,
+ "safetyPx": 0.5,
+ "checks": [
+  { "viewport": 360, "labelPx": 15, "labelMaxLines": 2, "wordPx": 17 },
+  { "viewport": 320, "labelPx": 14, "labelMaxLines": 3, "wordPx": 15 }
+ ]
+}

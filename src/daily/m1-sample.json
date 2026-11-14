@@ -1,0 +1,2532 @@
+{
+ "about": "Six pilot boards in lane M1 publish format (scripts/daily/lib/board.mjs publishedBoard), for the loader test. Pilot data, never served.",
+ "boards": [
+  {
+   "date": "2026-11-02",
+   "number": 1,
+   "band": "mon",
+   "harder": false,
+   "computed": false,
+   "compound": true,
+   "pilot": true,
+   "words": [
+    {
+     "id": "pump",
+     "text": "Pump",
+     "article": "a"
+    },
+    {
+     "id": "lash",
+     "text": "Lash",
+     "article": "a"
+    },
+    {
+     "id": "poodle",
+     "text": "Poodle",
+     "article": "a"
+    },
+    {
+     "id": "orca",
+     "text": "Orca",
+     "article": "an"
+    },
+    {
+     "id": "bear",
+     "text": "Bear",
+     "article": "a"
+    },
+    {
+     "id": "bee",
+     "text": "Bee",
+     "article": "a"
+    },
+    {
+     "id": "trainer",
+     "text": "Trainer",
+     "article": "a"
+    },
+    {
+     "id": "hood",
+     "text": "Hood",
+     "article": "a"
+    },
+    {
+     "id": "canal",
+     "text": "Canal",
+     "article": "a"
+    },
+    {
+     "id": "spade",
+     "text": "Spade",
+     "article": "a"
+    }
+   ],
+   "headings": [
+    {
+     "id": "lives-in-the-sea",
+     "label": "Lives in the sea",
+     "spoken": "Lives in the sea",
+     "family": "property",
+     "negative": "doesn't live in the sea"
+    },
+    {
+     "id": "body-part",
+     "label": "Body part",
+     "spoken": "Body part",
+     "family": "anchor",
+     "negative": "isn't a body part"
+    },
+    {
+     "id": "clothing",
+     "label": "Clothing",
+     "spoken": "Clothing",
+     "family": "anchor",
+     "negative": "isn't clothing"
+    },
+    {
+     "id": "has-fur",
+     "label": "Has fur",
+     "spoken": "Has fur",
+     "family": "property",
+     "negative": "has no fur"
+    },
+    {
+     "id": "has-legs",
+     "label": "Has legs",
+     "spoken": "Has legs",
+     "family": "property",
+     "negative": "has no legs"
+    },
+    {
+     "id": "card-suit",
+     "label": "Card suit",
+     "spoken": "Card suit",
+     "family": "anchor",
+     "negative": "isn't a card suit"
+    },
+    {
+     "id": "insect",
+     "label": "Insect",
+     "spoken": "Insect",
+     "family": "anchor",
+     "negative": "isn't an insect"
+    },
+    {
+     "id": "body-of-water",
+     "label": "Body of water",
+     "spoken": "Body of water",
+     "family": "anchor",
+     "negative": "isn't a body of water"
+    },
+    {
+     "id": "has-a-heel-can-t-run",
+     "label": "Has a heel, can't run",
+     "spoken": "Has a heel, can't run",
+     "family": "joke",
+     "negative": {
+      "has": "has no heel",
+      "not": "can run"
+     }
+    },
+    {
+     "id": "dog-breed",
+     "label": "Dog breed",
+     "spoken": "Dog breed",
+     "family": "anchor",
+     "negative": "isn't a dog breed"
+    }
+   ],
+   "cells": [
+    [
+     0,
+     1,
+     "O",
+     null,
+     "slang for the heart"
+    ],
+    [
+     0,
+     2,
+     "S",
+     "pump.shoe",
+     "a court shoe"
+    ],
+    [
+     0,
+     8,
+     "S",
+     "pump.shoe",
+     "a court shoe"
+    ],
+    [
+     1,
+     1,
+     "L",
+     "lash.body",
+     "an eyelash"
+    ],
+    [
+     2,
+     3,
+     "L",
+     "poodle.dog",
+     "the curly dog"
+    ],
+    [
+     2,
+     4,
+     "L",
+     "poodle.dog",
+     "the curly dog"
+    ],
+    [
+     2,
+     9,
+     "L",
+     "poodle.dog",
+     "the curly dog"
+    ],
+    [
+     3,
+     0,
+     "L",
+     "orca.animal",
+     "the killer whale"
+    ],
+    [
+     4,
+     3,
+     "L",
+     "bear.animal",
+     "the bear"
+    ],
+    [
+     4,
+     4,
+     "L",
+     "bear.animal",
+     "the bear"
+    ],
+    [
+     5,
+     4,
+     "L",
+     "bee.insect",
+     "the honeybee"
+    ],
+    [
+     5,
+     6,
+     "L",
+     "bee.insect",
+     "the honeybee"
+    ],
+    [
+     6,
+     2,
+     "L",
+     "trainer.shoe",
+     "a running shoe"
+    ],
+    [
+     6,
+     4,
+     "L",
+     "trainer.coach",
+     "a sports coach"
+    ],
+    [
+     6,
+     8,
+     "L",
+     "trainer.shoe",
+     "a running shoe"
+    ],
+    [
+     7,
+     1,
+     "O",
+     null,
+     "a cobra's hood"
+    ],
+    [
+     7,
+     2,
+     "L",
+     "hood.clothing",
+     "a hood"
+    ],
+    [
+     8,
+     1,
+     "O",
+     null,
+     "the ear canal"
+    ],
+    [
+     8,
+     7,
+     "L",
+     "canal.water",
+     "a canal"
+    ],
+    [
+     9,
+     5,
+     "L",
+     "spade.suit",
+     "the card suit"
+    ]
+   ],
+   "answer": [
+    8,
+    1,
+    9,
+    0,
+    3,
+    6,
+    4,
+    2,
+    7,
+    5
+   ],
+   "proofOrder": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    0,
+    7,
+    8,
+    1,
+    9
+   ],
+   "path": [
+    [
+     [
+      1,
+      1,
+      "word"
+     ],
+     [
+      2,
+      9,
+      "heading"
+     ],
+     [
+      3,
+      0,
+      "word"
+     ],
+     [
+      5,
+      6,
+      "heading"
+     ],
+     [
+      8,
+      7,
+      "heading"
+     ],
+     [
+      9,
+      5,
+      "word"
+     ]
+    ],
+    [
+     [
+      4,
+      3,
+      "heading"
+     ],
+     [
+      7,
+      2,
+      "word"
+     ]
+    ],
+    [
+     [
+      0,
+      8,
+      "word"
+     ],
+     [
+      6,
+      4,
+      "heading"
+     ]
+    ]
+   ],
+   "nudge": 0,
+   "exclusive": [
+    true,
+    false,
+    false,
+    false,
+    false,
+    true,
+    true,
+    true,
+    false,
+    true
+   ],
+   "bands": [
+    "mon"
+   ],
+   "players": {
+    "sims": 200,
+    "literal": {
+     "unbelieved": 1,
+     "w1": 0.135,
+     "w4": 1
+    },
+    "noaha": {
+     "unbelieved": 0,
+     "w1": 1,
+     "w4": 1
+    },
+    "capped": false
+   },
+   "stats": {
+    "s1Fillings": 2,
+    "literalMoves": [
+     3,
+     2
+    ],
+    "rounds": 3,
+    "meanDeg": 2,
+    "maxTakers": 4,
+    "sPairs": 1,
+    "aha": 0,
+    "oCells": 3,
+    "nCells": 0,
+    "leftover": false
+   },
+   "hash": "dc99adf3f1d9e88ca26bc0f2406f850192c49cca758cf4fac4dd8b1da0c254f4",
+   "textVersion": "fc6c09a653e4",
+   "bruteForce": {
+    "orders": 3628800,
+    "strict": 1,
+    "generous": 1
+   }
+  },
+  {
+   "date": "2026-11-03",
+   "number": 2,
+   "band": "tue",
+   "harder": false,
+   "computed": false,
+   "compound": true,
+   "pilot": true,
+   "words": [
+    {
+     "id": "bean",
+     "text": "Bean",
+     "article": "a"
+    },
+    {
+     "id": "tulip",
+     "text": "Tulip",
+     "article": "a"
+    },
+    {
+     "id": "parrot",
+     "text": "Parrot",
+     "article": "a"
+    },
+    {
+     "id": "banjo",
+     "text": "Banjo",
+     "article": "a"
+    },
+    {
+     "id": "bass",
+     "text": "Bass",
+     "article": "a"
+    },
+    {
+     "id": "tuba",
+     "text": "Tuba",
+     "article": "a"
+    },
+    {
+     "id": "pin",
+     "text": "Pin",
+     "article": "a"
+    },
+    {
+     "id": "emerald",
+     "text": "Emerald",
+     "article": "an"
+    },
+    {
+     "id": "dragonfly",
+     "text": "Dragonfly",
+     "article": "a"
+    },
+    {
+     "id": "onion",
+     "text": "Onion",
+     "article": "an"
+    }
+   ],
+   "headings": [
+    {
+     "id": "vegetable",
+     "label": "Vegetable",
+     "spoken": "Vegetable",
+     "family": "anchor",
+     "negative": "isn't a vegetable"
+    },
+    {
+     "id": "musical-instrument",
+     "label": "Musical instrument",
+     "spoken": "Musical instrument",
+     "family": "anchor",
+     "negative": "isn't a musical instrument"
+    },
+    {
+     "id": "has-a-bulb-no-light",
+     "label": "Has a bulb, no light",
+     "spoken": "Has a bulb, no light",
+     "family": "joke",
+     "negative": {
+      "has": "has no bulb",
+      "not": "gives light"
+     }
+    },
+    {
+     "id": "lays-eggs",
+     "label": "Lays eggs",
+     "spoken": "Lays eggs",
+     "family": "property",
+     "negative": "doesn't lay eggs"
+    },
+    {
+     "id": "has-a-neck",
+     "label": "Has a neck",
+     "spoken": "Has a neck",
+     "family": "property",
+     "negative": "has no neck"
+    },
+    {
+     "id": "you-can-someone",
+     "label": "You can ___ someone",
+     "spoken": "You can blank someone",
+     "family": "verb",
+     "negative": "you can't {word} someone"
+    },
+    {
+     "id": "gemstone",
+     "label": "Gemstone",
+     "spoken": "Gemstone",
+     "family": "anchor",
+     "negative": "isn't a gemstone"
+    },
+    {
+     "id": "fish",
+     "label": "Fish",
+     "spoken": "Fish",
+     "family": "anchor",
+     "negative": "isn't a fish"
+    },
+    {
+     "id": "flower",
+     "label": "Flower",
+     "spoken": "Flower",
+     "family": "anchor",
+     "negative": "isn't a flower"
+    },
+    {
+     "id": "bird",
+     "label": "Bird",
+     "spoken": "Bird",
+     "family": "anchor",
+     "negative": "isn't a bird"
+    }
+   ],
+   "cells": [
+    [
+     0,
+     0,
+     "L",
+     "bean.vegetable",
+     "the bean"
+    ],
+    [
+     0,
+     5,
+     "O",
+     null,
+     "to bean someone, hit their head"
+    ],
+    [
+     1,
+     2,
+     "S",
+     "tulip.flower",
+     "tulips grow from bulbs"
+    ],
+    [
+     1,
+     8,
+     "L",
+     "tulip.flower",
+     "the tulip"
+    ],
+    [
+     2,
+     3,
+     "L",
+     "parrot.bird",
+     "the talking bird"
+    ],
+    [
+     2,
+     4,
+     "L",
+     "parrot.bird",
+     "the talking bird"
+    ],
+    [
+     2,
+     5,
+     "S",
+     null,
+     "to parrot someone, copy them"
+    ],
+    [
+     2,
+     9,
+     "L",
+     "parrot.bird",
+     "the talking bird"
+    ],
+    [
+     3,
+     1,
+     "L",
+     "banjo.music",
+     "the banjo"
+    ],
+    [
+     3,
+     4,
+     "L",
+     "banjo.music",
+     "a banjo neck"
+    ],
+    [
+     4,
+     1,
+     "S",
+     "bass.guitar",
+     "a bass guitar"
+    ],
+    [
+     4,
+     3,
+     "S",
+     "bass.fish",
+     "the fish"
+    ],
+    [
+     4,
+     4,
+     "S",
+     "bass.guitar",
+     "the guitar's neck"
+    ],
+    [
+     4,
+     7,
+     "L",
+     "bass.fish",
+     "the fish"
+    ],
+    [
+     5,
+     1,
+     "L",
+     "tuba.music",
+     "the tuba"
+    ],
+    [
+     6,
+     4,
+     "S",
+     "pin.bowling",
+     "a bowling pin's neck"
+    ],
+    [
+     6,
+     5,
+     "L",
+     null,
+     "to pin someone down"
+    ],
+    [
+     7,
+     6,
+     "L",
+     "emerald.gem",
+     "the gem"
+    ],
+    [
+     8,
+     3,
+     "L",
+     "dragonfly.insect",
+     "the dragonfly"
+    ],
+    [
+     9,
+     0,
+     "L",
+     "onion.vegetable",
+     "the onion"
+    ],
+    [
+     9,
+     2,
+     "S",
+     "onion.vegetable",
+     "an onion is a bulb"
+    ]
+   ],
+   "answer": [
+    0,
+    8,
+    9,
+    4,
+    7,
+    1,
+    5,
+    6,
+    3,
+    2
+   ],
+   "proofOrder": [
+    1,
+    2,
+    4,
+    7,
+    8,
+    9,
+    0,
+    6,
+    3,
+    5
+   ],
+   "path": [
+    [
+     [
+      1,
+      8,
+      "heading"
+     ],
+     [
+      2,
+      9,
+      "heading"
+     ],
+     [
+      4,
+      7,
+      "heading"
+     ],
+     [
+      5,
+      1,
+      "word"
+     ],
+     [
+      7,
+      6,
+      "word"
+     ],
+     [
+      8,
+      3,
+      "word"
+     ]
+    ],
+    [
+     [
+      3,
+      4,
+      "word"
+     ],
+     [
+      9,
+      2,
+      "heading"
+     ]
+    ],
+    [
+     [
+      0,
+      0,
+      "heading"
+     ],
+     [
+      6,
+      5,
+      "word"
+     ]
+    ]
+   ],
+   "nudge": 9,
+   "exclusive": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    true,
+    true,
+    true,
+    true
+   ],
+   "bands": [
+    "tue"
+   ],
+   "players": {
+    "sims": 200,
+    "literal": {
+     "unbelieved": 1,
+     "w1": 0.485,
+     "w4": 1
+    },
+    "noaha": {
+     "unbelieved": 1,
+     "w1": 0.245,
+     "w4": 1
+    },
+    "capped": false
+   },
+   "stats": {
+    "s1Fillings": 3,
+    "literalMoves": [
+     4,
+     3,
+     4
+    ],
+    "rounds": 3,
+    "meanDeg": 2.1,
+    "maxTakers": 4,
+    "sPairs": 1,
+    "aha": 1,
+    "oCells": 1,
+    "nCells": 0,
+    "leftover": false
+   },
+   "hash": "9004d62a8d44c788a1d19e5940726157c4cc8bfd0d5b55be4962caba9340cd5b",
+   "textVersion": "59806fed032f",
+   "bruteForce": {
+    "orders": 3628800,
+    "strict": 1,
+    "generous": 1
+   }
+  },
+  {
+   "date": "2026-11-04",
+   "number": 3,
+   "band": "tue",
+   "harder": false,
+   "computed": false,
+   "compound": true,
+   "pilot": true,
+   "words": [
+    {
+     "id": "compass",
+     "text": "Compass",
+     "article": "a"
+    },
+    {
+     "id": "locust",
+     "text": "Locust",
+     "article": "a"
+    },
+    {
+     "id": "poker",
+     "text": "Poker",
+     "article": "a"
+    },
+    {
+     "id": "sole",
+     "text": "Sole",
+     "article": "a"
+    },
+    {
+     "id": "cuckoo",
+     "text": "Cuckoo",
+     "article": "a"
+    },
+    {
+     "id": "joker",
+     "text": "Joker",
+     "article": "a"
+    },
+    {
+     "id": "syringe",
+     "text": "Syringe",
+     "article": "a"
+    },
+    {
+     "id": "venus",
+     "text": "Venus",
+     "article": "a"
+    },
+    {
+     "id": "spruce",
+     "text": "Spruce",
+     "article": "a"
+    },
+    {
+     "id": "may",
+     "text": "May",
+     "article": "a"
+    }
+   ],
+   "headings": [
+    {
+     "id": "card-game",
+     "label": "Card game",
+     "spoken": "Card game",
+     "family": "anchor",
+     "negative": "isn't a card game"
+    },
+    {
+     "id": "can-fly",
+     "label": "Can fly",
+     "spoken": "Can fly",
+     "family": "property",
+     "negative": "can't fly"
+    },
+    {
+     "id": "has-eyes",
+     "label": "Has eyes",
+     "spoken": "Has eyes",
+     "family": "property",
+     "negative": "has no eyes"
+    },
+    {
+     "id": "part-of-a-shoe",
+     "label": "Part of a shoe",
+     "spoken": "Part of a shoe",
+     "family": "anchor",
+     "negative": "isn't part of a shoe"
+    },
+    {
+     "id": "has-a-needle",
+     "label": "Has a needle",
+     "spoken": "Has a needle",
+     "family": "property",
+     "negative": "has no needle"
+    },
+    {
+     "id": "month",
+     "label": "Month",
+     "spoken": "Month",
+     "family": "anchor",
+     "negative": "isn't a month"
+    },
+    {
+     "id": "tree",
+     "label": "Tree",
+     "spoken": "Tree",
+     "family": "anchor",
+     "negative": "isn't a tree"
+    },
+    {
+     "id": "has-a-face-isn-t-alive",
+     "label": "Has a face, isn't alive",
+     "spoken": "Has a face, isn't alive",
+     "family": "joke",
+     "negative": {
+      "has": "has no face",
+      "not": "is alive"
+     }
+    },
+    {
+     "id": "planet",
+     "label": "Planet",
+     "spoken": "Planet",
+     "family": "anchor",
+     "negative": "isn't a planet"
+    },
+    {
+     "id": "bird",
+     "label": "Bird",
+     "spoken": "Bird",
+     "family": "anchor",
+     "negative": "isn't a bird"
+    }
+   ],
+   "cells": [
+    [
+     0,
+     4,
+     "L",
+     "compass.device",
+     "a compass needle"
+    ],
+    [
+     0,
+     7,
+     "S",
+     "compass.device",
+     "the compass face"
+    ],
+    [
+     1,
+     1,
+     "L",
+     "locust.insect",
+     "the locust"
+    ],
+    [
+     1,
+     2,
+     "L",
+     "locust.insect",
+     "the locust"
+    ],
+    [
+     1,
+     6,
+     "O",
+     null,
+     "the locust tree"
+    ],
+    [
+     2,
+     0,
+     "L",
+     "poker.game",
+     "the card game"
+    ],
+    [
+     3,
+     2,
+     "S",
+     "sole.fish",
+     "the flat fish"
+    ],
+    [
+     3,
+     3,
+     "S",
+     null,
+     "the bottom of a shoe"
+    ],
+    [
+     4,
+     1,
+     "L",
+     "cuckoo.bird",
+     "the bird"
+    ],
+    [
+     4,
+     2,
+     "L",
+     "cuckoo.bird",
+     "the bird"
+    ],
+    [
+     4,
+     7,
+     "O",
+     "cuckoo.clock",
+     "a clock face"
+    ],
+    [
+     4,
+     9,
+     "L",
+     "cuckoo.bird",
+     "the bird"
+    ],
+    [
+     5,
+     2,
+     "L",
+     "joker.person",
+     "a joker"
+    ],
+    [
+     5,
+     7,
+     "O",
+     "joker.card",
+     "a face card"
+    ],
+    [
+     6,
+     4,
+     "L",
+     "syringe.medical",
+     "a syringe needle"
+    ],
+    [
+     7,
+     8,
+     "L",
+     "venus.planet",
+     "the planet"
+    ],
+    [
+     8,
+     4,
+     "L",
+     "spruce.tree",
+     "spruce needles"
+    ],
+    [
+     8,
+     6,
+     "L",
+     "spruce.tree",
+     "the spruce"
+    ],
+    [
+     9,
+     5,
+     "L",
+     "may.month",
+     "the month"
+    ],
+    [
+     9,
+     6,
+     "O",
+     "may.tree",
+     "the hawthorn"
+    ]
+   ],
+   "answer": [
+    7,
+    1,
+    0,
+    3,
+    9,
+    2,
+    4,
+    8,
+    6,
+    5
+   ],
+   "proofOrder": [
+    2,
+    3,
+    4,
+    1,
+    5,
+    0,
+    7,
+    9,
+    8,
+    6
+   ],
+   "path": [
+    [
+     [
+      2,
+      0,
+      "word"
+     ],
+     [
+      3,
+      3,
+      "heading"
+     ],
+     [
+      4,
+      9,
+      "heading"
+     ],
+     [
+      6,
+      4,
+      "word"
+     ],
+     [
+      7,
+      8,
+      "word"
+     ],
+     [
+      9,
+      5,
+      "heading"
+     ]
+    ],
+    [
+     [
+      0,
+      7,
+      "word"
+     ],
+     [
+      1,
+      1,
+      "heading"
+     ],
+     [
+      8,
+      6,
+      "word"
+     ]
+    ],
+    [
+     [
+      5,
+      2,
+      "word"
+     ]
+    ]
+   ],
+   "nudge": 0,
+   "exclusive": [
+    true,
+    false,
+    false,
+    true,
+    false,
+    true,
+    false,
+    false,
+    true,
+    true
+   ],
+   "bands": [
+    "tue"
+   ],
+   "players": {
+    "sims": 200,
+    "literal": {
+     "unbelieved": 2,
+     "w1": 0.255,
+     "w4": 1
+    },
+    "noaha": {
+     "unbelieved": 1,
+     "w1": 0.485,
+     "w4": 1
+    },
+    "capped": false
+   },
+   "stats": {
+    "s1Fillings": 2,
+    "literalMoves": [
+     2,
+     3
+    ],
+    "rounds": 3,
+    "meanDeg": 2,
+    "maxTakers": 4,
+    "sPairs": 2,
+    "aha": 1,
+    "oCells": 4,
+    "nCells": 0,
+    "leftover": false
+   },
+   "hash": "8f8f83162b7f86a5ba8c424c4d7931d55aa1574f574e73ab098c371c82e508fa",
+   "textVersion": "9c39a4b1a470",
+   "bruteForce": {
+    "orders": 3628800,
+    "strict": 1,
+    "generous": 1
+   }
+  },
+  {
+   "date": "2026-11-05",
+   "number": 4,
+   "band": "tue",
+   "harder": false,
+   "computed": false,
+   "compound": false,
+   "pilot": true,
+   "words": [
+    {
+     "id": "bus",
+     "text": "Bus",
+     "article": "a"
+    },
+    {
+     "id": "tank",
+     "text": "Tank",
+     "article": "a"
+    },
+    {
+     "id": "liner",
+     "text": "Liner",
+     "article": "a"
+    },
+    {
+     "id": "bucket",
+     "text": "Bucket",
+     "article": "a"
+    },
+    {
+     "id": "door",
+     "text": "Door",
+     "article": "a"
+    },
+    {
+     "id": "pot",
+     "text": "Pot",
+     "article": "a"
+    },
+    {
+     "id": "wagon",
+     "text": "Wagon",
+     "article": "a"
+    },
+    {
+     "id": "racket",
+     "text": "Racket",
+     "article": "a"
+    },
+    {
+     "id": "puppy",
+     "text": "Puppy",
+     "article": "a"
+    },
+    {
+     "id": "slipper",
+     "text": "Slipper",
+     "article": "a"
+    }
+   ],
+   "headings": [
+    {
+     "id": "part-of-a-car",
+     "label": "Part of a car",
+     "spoken": "Part of a car",
+     "family": "anchor",
+     "negative": "isn't part of a car"
+    },
+    {
+     "id": "container",
+     "label": "Container",
+     "spoken": "Container",
+     "family": "anchor",
+     "negative": "isn't a container"
+    },
+    {
+     "id": "has-an-engine",
+     "label": "Has an engine",
+     "spoken": "Has an engine",
+     "family": "property",
+     "negative": "has no engine"
+    },
+    {
+     "id": "vehicle",
+     "label": "Vehicle",
+     "spoken": "Vehicle",
+     "family": "anchor",
+     "negative": "isn't a vehicle"
+    },
+    {
+     "id": "has-a-handle",
+     "label": "Has a handle",
+     "spoken": "Has a handle",
+     "family": "property",
+     "negative": "has no handle"
+    },
+    {
+     "id": "has-a-seat",
+     "label": "Has a seat",
+     "spoken": "Has a seat",
+     "family": "property",
+     "negative": "has no seat"
+    },
+    {
+     "id": "baby-animal",
+     "label": "Baby animal",
+     "spoken": "Baby animal",
+     "family": "anchor",
+     "negative": "isn't a baby animal"
+    },
+    {
+     "id": "footwear",
+     "label": "Footwear",
+     "spoken": "Footwear",
+     "family": "anchor",
+     "negative": "isn't footwear"
+    },
+    {
+     "id": "boat",
+     "label": "Boat",
+     "spoken": "Boat",
+     "family": "anchor",
+     "negative": "isn't a boat"
+    },
+    {
+     "id": "kitchen-tool",
+     "label": "Kitchen tool",
+     "spoken": "Kitchen tool",
+     "family": "anchor",
+     "negative": "isn't a kitchen tool"
+    }
+   ],
+   "cells": [
+    [
+     0,
+     1,
+     "n",
+     null,
+     "it carries people"
+    ],
+    [
+     0,
+     2,
+     "L",
+     "bus.vehicle",
+     "a bus"
+    ],
+    [
+     0,
+     3,
+     "L",
+     "bus.vehicle",
+     "a bus"
+    ],
+    [
+     0,
+     5,
+     "L",
+     "bus.vehicle",
+     "bus seats"
+    ],
+    [
+     1,
+     0,
+     "S",
+     null,
+     "the fuel tank"
+    ],
+    [
+     1,
+     1,
+     "L",
+     "tank.fish",
+     "a fish tank"
+    ],
+    [
+     1,
+     2,
+     "L",
+     "tank.army",
+     "an army tank"
+    ],
+    [
+     1,
+     3,
+     "L",
+     "tank.army",
+     "an army tank"
+    ],
+    [
+     2,
+     2,
+     "L",
+     "liner.ship",
+     "an ocean liner"
+    ],
+    [
+     2,
+     3,
+     "L",
+     "liner.ship",
+     "an ocean liner"
+    ],
+    [
+     2,
+     8,
+     "L",
+     "liner.ship",
+     "an ocean liner"
+    ],
+    [
+     3,
+     1,
+     "L",
+     "bucket.container",
+     "a bucket"
+    ],
+    [
+     3,
+     4,
+     "L",
+     "bucket.container",
+     "a bucket handle"
+    ],
+    [
+     4,
+     0,
+     "S",
+     null,
+     "a car door"
+    ],
+    [
+     4,
+     4,
+     "L",
+     "door.entrance",
+     "a door handle"
+    ],
+    [
+     5,
+     1,
+     "L",
+     "pot.container",
+     "a cooking pot"
+    ],
+    [
+     5,
+     4,
+     "L",
+     "pot.container",
+     "pot handles"
+    ],
+    [
+     5,
+     9,
+     "L",
+     "pot.container",
+     "a cooking pot"
+    ],
+    [
+     6,
+     1,
+     "n",
+     null,
+     "it carries loads"
+    ],
+    [
+     6,
+     3,
+     "L",
+     "wagon.vehicle",
+     "a wagon"
+    ],
+    [
+     7,
+     4,
+     "L",
+     "racket.sport",
+     "a racket grip"
+    ],
+    [
+     8,
+     6,
+     "L",
+     null,
+     null
+    ],
+    [
+     9,
+     7,
+     "L",
+     "slipper.footwear",
+     "a slipper"
+    ]
+   ],
+   "answer": [
+    5,
+    2,
+    8,
+    1,
+    0,
+    9,
+    3,
+    4,
+    6,
+    7
+   ],
+   "proofOrder": [
+    0,
+    2,
+    1,
+    4,
+    5,
+    3,
+    6,
+    7,
+    8,
+    9
+   ],
+   "path": [
+    [
+     [
+      0,
+      5,
+      "heading"
+     ],
+     [
+      2,
+      8,
+      "heading"
+     ],
+     [
+      5,
+      9,
+      "heading"
+     ],
+     [
+      6,
+      3,
+      "word"
+     ],
+     [
+      7,
+      4,
+      "word"
+     ],
+     [
+      8,
+      6,
+      "word"
+     ],
+     [
+      9,
+      7,
+      "word"
+     ]
+    ],
+    [
+     [
+      1,
+      2,
+      "heading"
+     ],
+     [
+      3,
+      1,
+      "word"
+     ],
+     [
+      4,
+      0,
+      "word"
+     ]
+    ]
+   ],
+   "nudge": 4,
+   "exclusive": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "bands": [
+    "tue"
+   ],
+   "players": {
+    "sims": 200,
+    "literal": {
+     "unbelieved": 1,
+     "w1": 0.515,
+     "w4": 1
+    },
+    "noaha": {
+     "unbelieved": 1,
+     "w1": 0.12,
+     "w4": 1
+    },
+    "capped": false
+   },
+   "stats": {
+    "s1Fillings": 4,
+    "literalMoves": [
+     4,
+     4,
+     4,
+     4
+    ],
+    "rounds": 2,
+    "meanDeg": 2.1,
+    "maxTakers": 4,
+    "sPairs": 1,
+    "aha": 1,
+    "oCells": 0,
+    "nCells": 2,
+    "leftover": false
+   },
+   "hash": "41b2a7cab9e88bf57a89e346eecab213ae2a718089ddd515f9e9237a0ac3f05e",
+   "textVersion": "daaf7d4ed09e",
+   "bruteForce": {
+    "orders": 3628800,
+    "strict": 1,
+    "generous": 1
+   }
+  },
+  {
+   "date": "2026-11-06",
+   "number": 5,
+   "band": "tue",
+   "harder": false,
+   "computed": true,
+   "compound": true,
+   "pilot": true,
+   "words": [
+    {
+     "id": "nut",
+     "text": "Nut",
+     "article": "a"
+    },
+    {
+     "id": "peanut",
+     "text": "Peanut",
+     "article": "a"
+    },
+    {
+     "id": "tart",
+     "text": "Tart",
+     "article": "a"
+    },
+    {
+     "id": "turtle",
+     "text": "Turtle",
+     "article": "a"
+    },
+    {
+     "id": "quiche",
+     "text": "Quiche",
+     "article": "a"
+    },
+    {
+     "id": "trowel",
+     "text": "Trowel",
+     "article": "a"
+    },
+    {
+     "id": "viper",
+     "text": "Viper",
+     "article": "a"
+    },
+    {
+     "id": "toast",
+     "text": "Toast",
+     "article": ""
+    },
+    {
+     "id": "hazelnut",
+     "text": "Hazelnut",
+     "article": "a"
+    },
+    {
+     "id": "ring",
+     "text": "Ring",
+     "article": "a"
+    }
+   ],
+   "headings": [
+    {
+     "id": "six-letters",
+     "label": "Six letters",
+     "spoken": "Six letters",
+     "family": "computed",
+     "negative": "{spelled} has {count} letters"
+    },
+    {
+     "id": "has-skin",
+     "label": "Has skin",
+     "spoken": "Has skin",
+     "family": "property",
+     "negative": "has no skin"
+    },
+    {
+     "id": "has-a-crust-isn-t-bread",
+     "label": "Has a crust, isn't bread",
+     "spoken": "Has a crust, isn't bread",
+     "family": "joke",
+     "negative": {
+      "has": "has no crust",
+      "not": "is bread"
+     }
+    },
+    {
+     "id": "nut",
+     "label": "Nut",
+     "spoken": "Nut",
+     "family": "anchor",
+     "negative": "isn't a nut"
+    },
+    {
+     "id": "dessert",
+     "label": "Dessert",
+     "spoken": "Dessert",
+     "family": "anchor",
+     "negative": "isn't a dessert"
+    },
+    {
+     "id": "has-a-hole-in-the-middle",
+     "label": "Has a hole in the middle",
+     "spoken": "Has a hole in the middle",
+     "family": "property",
+     "negative": "has no hole in the middle"
+    },
+    {
+     "id": "grows-under-the-soil",
+     "label": "Grows under the soil",
+     "spoken": "Grows under the soil",
+     "family": "property",
+     "negative": "doesn't grow under the soil"
+    },
+    {
+     "id": "breakfast-food",
+     "label": "Breakfast food",
+     "spoken": "Breakfast food",
+     "family": "anchor",
+     "negative": "isn't a breakfast food"
+    },
+    {
+     "id": "reptile",
+     "label": "Reptile",
+     "spoken": "Reptile",
+     "family": "anchor",
+     "negative": "isn't a reptile"
+    },
+    {
+     "id": "garden-tool",
+     "label": "Garden tool",
+     "spoken": "Garden tool",
+     "family": "anchor",
+     "negative": "isn't a garden tool"
+    }
+   ],
+   "cells": [
+    [
+     0,
+     1,
+     "S",
+     "nut.crazy",
+     "an eccentric person"
+    ],
+    [
+     0,
+     3,
+     "L",
+     "nut.food",
+     "a nut to eat"
+    ],
+    [
+     0,
+     5,
+     "S",
+     "nut.metal",
+     "the hole for the bolt"
+    ],
+    [
+     1,
+     0,
+     "L",
+     null,
+     "has exactly six letters"
+    ],
+    [
+     1,
+     3,
+     "L",
+     "peanut.nut",
+     "the peanut"
+    ],
+    [
+     1,
+     6,
+     "S",
+     "peanut.nut",
+     "peanuts grow underground"
+    ],
+    [
+     2,
+     2,
+     "L",
+     "tart.dessert",
+     "a pastry crust"
+    ],
+    [
+     2,
+     4,
+     "L",
+     "tart.dessert",
+     "the tart"
+    ],
+    [
+     3,
+     0,
+     "L",
+     null,
+     "has exactly six letters"
+    ],
+    [
+     3,
+     1,
+     "L",
+     "turtle.animal",
+     "the turtle"
+    ],
+    [
+     3,
+     8,
+     "L",
+     "turtle.animal",
+     "the turtle"
+    ],
+    [
+     4,
+     0,
+     "L",
+     null,
+     "has exactly six letters"
+    ],
+    [
+     4,
+     2,
+     "L",
+     "quiche.food",
+     "a pastry crust"
+    ],
+    [
+     5,
+     0,
+     "L",
+     null,
+     "has exactly six letters"
+    ],
+    [
+     5,
+     9,
+     "L",
+     null,
+     null
+    ],
+    [
+     6,
+     1,
+     "L",
+     "viper.animal",
+     "the viper"
+    ],
+    [
+     6,
+     8,
+     "L",
+     "viper.animal",
+     "the viper"
+    ],
+    [
+     7,
+     7,
+     "L",
+     null,
+     null
+    ],
+    [
+     8,
+     3,
+     "L",
+     "hazelnut.nut",
+     "the hazelnut"
+    ],
+    [
+     9,
+     5,
+     "L",
+     "ring.jewelry",
+     "a hole for your finger"
+    ]
+   ],
+   "answer": [
+    1,
+    6,
+    4,
+    0,
+    2,
+    9,
+    8,
+    7,
+    3,
+    5
+   ],
+   "proofOrder": [
+    1,
+    2,
+    4,
+    5,
+    3,
+    6,
+    0,
+    7,
+    8,
+    9
+   ],
+   "path": [
+    [
+     [
+      1,
+      6,
+      "heading"
+     ],
+     [
+      2,
+      4,
+      "heading"
+     ],
+     [
+      5,
+      9,
+      "heading"
+     ],
+     [
+      7,
+      7,
+      "word"
+     ],
+     [
+      8,
+      3,
+      "word"
+     ],
+     [
+      9,
+      5,
+      "word"
+     ]
+    ],
+    [
+     [
+      0,
+      1,
+      "word"
+     ],
+     [
+      4,
+      2,
+      "heading"
+     ]
+    ],
+    [
+     [
+      3,
+      0,
+      "heading"
+     ],
+     [
+      6,
+      8,
+      "word"
+     ]
+    ]
+   ],
+   "nudge": 0,
+   "exclusive": [
+    false,
+    false,
+    false,
+    false,
+    true,
+    false,
+    true,
+    true,
+    false,
+    true
+   ],
+   "bands": [
+    "tue"
+   ],
+   "players": {
+    "sims": 200,
+    "literal": {
+     "unbelieved": 2,
+     "w1": 0,
+     "w4": 0.97
+    },
+    "noaha": {
+     "unbelieved": 2,
+     "w1": 0,
+     "w4": 0.935
+    },
+    "capped": false
+   },
+   "stats": {
+    "s1Fillings": 2,
+    "literalMoves": [
+     3
+    ],
+    "rounds": 3,
+    "meanDeg": 2,
+    "maxTakers": 4,
+    "sPairs": 2,
+    "aha": 2,
+    "oCells": 0,
+    "nCells": 0,
+    "leftover": true
+   },
+   "hash": "397d6a261f09cb371959024b3caac6695c5dedece4cfea509772979b899ab34d",
+   "textVersion": "bbe597080dec",
+   "bruteForce": {
+    "orders": 3628800,
+    "strict": 1,
+    "generous": 1
+   }
+  },
+  {
+   "date": "2026-11-07",
+   "number": 6,
+   "band": "tue",
+   "harder": false,
+   "computed": true,
+   "compound": true,
+   "pilot": true,
+   "words": [
+    {
+     "id": "parsley",
+     "text": "Parsley",
+     "article": ""
+    },
+    {
+     "id": "shrimp",
+     "text": "Shrimp",
+     "article": "a"
+    },
+    {
+     "id": "cardinal",
+     "text": "Cardinal",
+     "article": "a"
+    },
+    {
+     "id": "saffron",
+     "text": "Saffron",
+     "article": ""
+    },
+    {
+     "id": "ukulele",
+     "text": "Ukulele",
+     "article": "a"
+    },
+    {
+     "id": "cat",
+     "text": "Cat",
+     "article": "a"
+    },
+    {
+     "id": "drum",
+     "text": "Drum",
+     "article": "a"
+    },
+    {
+     "id": "cherry",
+     "text": "Cherry",
+     "article": "a"
+    },
+    {
+     "id": "fiddle",
+     "text": "Fiddle",
+     "article": "a"
+    },
+    {
+     "id": "swallow",
+     "text": "Swallow",
+     "article": "a"
+    }
+   ],
+   "headings": [
+    {
+     "id": "musical-instrument",
+     "label": "Musical instrument",
+     "spoken": "Musical instrument",
+     "family": "anchor",
+     "negative": "isn't a musical instrument"
+    },
+    {
+     "id": "has-a-beak",
+     "label": "Has a beak",
+     "spoken": "Has a beak",
+     "family": "property",
+     "negative": "has no beak"
+    },
+    {
+     "id": "herb-or-spice",
+     "label": "Herb or spice",
+     "spoken": "Herb or spice",
+     "family": "anchor",
+     "negative": "isn't a herb or a spice"
+    },
+    {
+     "id": "has-a-tongue",
+     "label": "Has a tongue",
+     "spoken": "Has a tongue",
+     "family": "property",
+     "negative": "has no tongue"
+    },
+    {
+     "id": "seven-letters",
+     "label": "Seven letters",
+     "spoken": "Seven letters",
+     "family": "computed",
+     "negative": "{spelled} has {count} letters"
+    },
+    {
+     "id": "has-a-neck-can-t-swallow",
+     "label": "Has a neck, can't swallow",
+     "spoken": "Has a neck, can't swallow",
+     "family": "joke",
+     "negative": {
+      "has": "has no neck",
+      "not": "can swallow"
+     }
+    },
+    {
+     "id": "colour",
+     "label": "Colour",
+     "spoken": "Colour",
+     "family": "anchor",
+     "negative": "isn't a colour"
+    },
+    {
+     "id": "shellfish",
+     "label": "Shellfish",
+     "spoken": "Shellfish",
+     "family": "anchor",
+     "negative": "isn't shellfish"
+    },
+    {
+     "id": "has-a-heel",
+     "label": "Has a heel",
+     "spoken": "Has a heel",
+     "family": "property",
+     "negative": "has no heel"
+    },
+    {
+     "id": "fruit",
+     "label": "Fruit",
+     "spoken": "Fruit",
+     "family": "anchor",
+     "negative": "isn't a fruit"
+    }
+   ],
+   "cells": [
+    [
+     0,
+     2,
+     "L",
+     "parsley.herb",
+     "the herb"
+    ],
+    [
+     0,
+     4,
+     "L",
+     null,
+     "has exactly seven letters"
+    ],
+    [
+     1,
+     3,
+     "S",
+     "shrimp.small",
+     "a small person"
+    ],
+    [
+     1,
+     7,
+     "L",
+     null,
+     null
+    ],
+    [
+     1,
+     8,
+     "S",
+     "shrimp.small",
+     "a small person"
+    ],
+    [
+     2,
+     1,
+     "L",
+     "cardinal.bird",
+     "the red songbird"
+    ],
+    [
+     2,
+     3,
+     "S",
+     "cardinal.priest",
+     "the church official"
+    ],
+    [
+     2,
+     6,
+     "O",
+     null,
+     "cardinal red"
+    ],
+    [
+     2,
+     8,
+     "S",
+     "cardinal.priest",
+     "the church official"
+    ],
+    [
+     3,
+     2,
+     "L",
+     "saffron.spice",
+     "the spice"
+    ],
+    [
+     3,
+     4,
+     "L",
+     null,
+     "has exactly seven letters"
+    ],
+    [
+     3,
+     6,
+     "S",
+     null,
+     "an orange yellow"
+    ],
+    [
+     4,
+     0,
+     "L",
+     "ukulele.music",
+     "the ukulele"
+    ],
+    [
+     4,
+     4,
+     "L",
+     null,
+     "has exactly seven letters"
+    ],
+    [
+     4,
+     5,
+     "L",
+     "ukulele.music",
+     "a ukulele neck"
+    ],
+    [
+     5,
+     3,
+     "L",
+     "cat.animal",
+     "the cat"
+    ],
+    [
+     6,
+     0,
+     "L",
+     "drum.music",
+     "the drum"
+    ],
+    [
+     7,
+     6,
+     "S",
+     null,
+     "cherry red"
+    ],
+    [
+     7,
+     9,
+     "L",
+     "cherry.fruit",
+     "the fruit"
+    ],
+    [
+     8,
+     0,
+     "L",
+     "fiddle.music",
+     "a fiddle"
+    ],
+    [
+     8,
+     5,
+     "L",
+     "fiddle.music",
+     "the fiddle's neck"
+    ],
+    [
+     9,
+     1,
+     "L",
+     "swallow.bird",
+     "the bird"
+    ],
+    [
+     9,
+     3,
+     "O",
+     "swallow.bird",
+     "birds have tongues"
+    ],
+    [
+     9,
+     4,
+     "L",
+     null,
+     "has exactly seven letters"
+    ]
+   ],
+   "answer": [
+    2,
+    7,
+    8,
+    6,
+    4,
+    3,
+    0,
+    9,
+    5,
+    1
+   ],
+   "proofOrder": [
+    1,
+    2,
+    7,
+    3,
+    0,
+    9,
+    4,
+    5,
+    8,
+    6
+   ],
+   "path": [
+    [
+     [
+      1,
+      7,
+      "heading"
+     ],
+     [
+      5,
+      3,
+      "word"
+     ],
+     [
+      6,
+      0,
+      "word"
+     ],
+     [
+      7,
+      9,
+      "heading"
+     ]
+    ],
+    [
+     [
+      2,
+      8,
+      "heading"
+     ],
+     [
+      8,
+      5,
+      "word"
+     ]
+    ],
+    [
+     [
+      3,
+      6,
+      "heading"
+     ],
+     [
+      4,
+      4,
+      "word"
+     ],
+     [
+      9,
+      1,
+      "heading"
+     ]
+    ],
+    [
+     [
+      0,
+      2,
+      "word"
+     ]
+    ]
+   ],
+   "nudge": 2,
+   "exclusive": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    true,
+    false,
+    true
+   ],
+   "bands": [
+    "tue"
+   ],
+   "players": {
+    "sims": 200,
+    "literal": {
+     "unbelieved": 2,
+     "w1": 0.02,
+     "w4": 0.995
+    },
+    "noaha": {
+     "unbelieved": 2,
+     "w1": 0,
+     "w4": 0.89
+    },
+    "capped": false
+   },
+   "stats": {
+    "s1Fillings": 2,
+    "literalMoves": [
+     4,
+     5
+    ],
+    "rounds": 4,
+    "meanDeg": 2.4,
+    "maxTakers": 4,
+    "sPairs": 2,
+    "aha": 2,
+    "oCells": 2,
+    "nCells": 0,
+    "leftover": true
+   },
+   "hash": "b0c6dc1b58ce8ea5797cd77fa0d306bc1896c6cfdc6ab9d14fdf48751a19dc6d",
+   "textVersion": "d7e3c502ea45",
+   "bruteForce": {
+    "orders": 3628800,
+    "strict": 1,
+    "generous": 1
+   }
+  }
+ ]
+}

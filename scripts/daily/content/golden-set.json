@@ -1,0 +1,4258 @@
+{
+ "about": "The golden set (dossier v2 7.3): 300 cells for Josh to rule on with y (yes, a fair answer), n (no), a (arguable: could go either way) or o (true but obscure). Fill `ruling` on each cell; add a `note` when the cell needs a reason. The judge's thresholds are fitted to these rulings (judge/fit.mjs); the cells with category `obvious` are the kill line. `pilot` is the M1 lane's pilot judgment, for comparison only.",
+ "keyVersion": "5281773e517d",
+ "counts": {
+  "second-sense": 41,
+  "joke": 56,
+  "obscure": 30,
+  "arguable": 42,
+  "soft-no": 37,
+  "person": 5,
+  "regional": 6,
+  "brand": 3,
+  "list": 5,
+  "colour": 5,
+  "recall": 10,
+  "obvious": 60
+ },
+ "cells": [
+  {
+   "word": "bass",
+   "heading": "lays-eggs",
+   "wordText": "Bass",
+   "label": "Lays eggs",
+   "category": "second-sense",
+   "predicates": [
+    "lays-eggs"
+   ],
+   "pilot": "S",
+   "pilotText": "the fish",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "calf",
+   "heading": "body-part",
+   "wordText": "Calf",
+   "label": "Body part",
+   "category": "second-sense",
+   "predicates": [
+    "is:body-part"
+   ],
+   "pilot": "S",
+   "pilotText": "the back of your leg",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bay",
+   "heading": "herb-or-spice",
+   "wordText": "Bay",
+   "label": "Herb or spice",
+   "category": "second-sense",
+   "predicates": [
+    "is:herb-spice"
+   ],
+   "pilot": "S",
+   "pilotText": "a bay leaf",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "club",
+   "heading": "has-a-head-no-brain",
+   "wordText": "Club",
+   "label": "Has a head, no brain",
+   "category": "joke",
+   "predicates": [
+    "has:head",
+    "has:brain"
+   ],
+   "pilot": "S",
+   "pilotText": "the club head",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "crane",
+   "heading": "can-fly",
+   "wordText": "Crane",
+   "label": "Can fly",
+   "category": "second-sense",
+   "predicates": [
+    "can:fly"
+   ],
+   "pilot": "S",
+   "pilotText": "the wading bird",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "kiwi",
+   "heading": "bird",
+   "wordText": "Kiwi",
+   "label": "Bird",
+   "category": "second-sense",
+   "predicates": [
+    "is:bird"
+   ],
+   "pilot": "S",
+   "pilotText": "the New Zealand bird",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "palm",
+   "heading": "has-a-trunk",
+   "wordText": "Palm",
+   "label": "Has a trunk",
+   "category": "second-sense",
+   "predicates": [
+    "has:trunk"
+   ],
+   "pilot": "S",
+   "pilotText": "a palm tree",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "iris",
+   "heading": "body-part",
+   "wordText": "Iris",
+   "label": "Body part",
+   "category": "second-sense",
+   "predicates": [
+    "is:body-part"
+   ],
+   "pilot": "S",
+   "pilotText": "part of your eye",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "pump",
+   "heading": "footwear",
+   "wordText": "Pump",
+   "label": "Footwear",
+   "category": "second-sense",
+   "predicates": [
+    "is:footwear"
+   ],
+   "pilot": "S",
+   "pilotText": "a court shoe",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "boa",
+   "heading": "has-feathers",
+   "wordText": "Boa",
+   "label": "Has feathers",
+   "category": "second-sense",
+   "predicates": [
+    "has:feathers"
+   ],
+   "pilot": "S",
+   "pilotText": "a feathery scarf",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "monitor",
+   "heading": "reptile",
+   "wordText": "Monitor",
+   "label": "Reptile",
+   "category": "second-sense",
+   "predicates": [
+    "is:reptile"
+   ],
+   "pilot": "S",
+   "pilotText": "the monitor lizard",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "sole",
+   "heading": "fish",
+   "wordText": "Sole",
+   "label": "Fish",
+   "category": "second-sense",
+   "predicates": [
+    "is:fish"
+   ],
+   "pilot": "L",
+   "pilotText": "the flat fish",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "hammer",
+   "heading": "body-part",
+   "wordText": "Hammer",
+   "label": "Body part",
+   "category": "obscure",
+   "predicates": [
+    "is:body-part"
+   ],
+   "pilot": "O",
+   "pilotText": "the hammer bone, in the ear",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "kite",
+   "heading": "bird",
+   "wordText": "Kite",
+   "label": "Bird",
+   "category": "obscure",
+   "predicates": [
+    "is:bird"
+   ],
+   "pilot": "O",
+   "pilotText": "a bird of prey",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "turtle",
+   "heading": "bird",
+   "wordText": "Turtle",
+   "label": "Bird",
+   "category": "obscure",
+   "predicates": [
+    "is:bird"
+   ],
+   "pilot": "O",
+   "pilotText": "old word for a turtledove",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bass",
+   "heading": "has-a-head-no-brain",
+   "wordText": "Bass",
+   "label": "Has a head, no brain",
+   "category": "obscure",
+   "predicates": [
+    "has:head",
+    "has:brain"
+   ],
+   "pilot": "O",
+   "pilotText": "a bass guitar's headstock",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "snail",
+   "heading": "has-horns",
+   "wordText": "Snail",
+   "label": "Has horns",
+   "category": "obscure",
+   "predicates": [
+    "has:horns"
+   ],
+   "pilot": "O",
+   "pilotText": "its feelers are called horns",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "dolphin",
+   "heading": "has-a-beak",
+   "wordText": "Dolphin",
+   "label": "Has a beak",
+   "category": "obscure",
+   "predicates": [
+    "has:beak"
+   ],
+   "pilot": "O",
+   "pilotText": "the dolphin's snout",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "queen",
+   "heading": "lays-eggs",
+   "wordText": "Queen",
+   "label": "Lays eggs",
+   "category": "obscure",
+   "predicates": [
+    "lays-eggs"
+   ],
+   "pilot": "O",
+   "pilotText": "the queen bee lays eggs",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "harp",
+   "heading": "has-pedals",
+   "wordText": "Harp",
+   "label": "Has pedals",
+   "category": "obscure",
+   "predicates": [
+    "has:pedals"
+   ],
+   "pilot": "O",
+   "pilotText": "concert harps have pedals",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "tomato",
+   "heading": "fruit",
+   "wordText": "Tomato",
+   "label": "Fruit",
+   "category": "arguable",
+   "predicates": [
+    "is:fruit"
+   ],
+   "pilot": "A",
+   "pilotText": "a fruit to botanists",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "horse",
+   "heading": "has-fur",
+   "wordText": "Horse",
+   "label": "Has fur",
+   "category": "arguable",
+   "predicates": [
+    "has:fur"
+   ],
+   "pilot": "A",
+   "pilotText": "hair or fur?",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "sock",
+   "heading": "footwear",
+   "wordText": "Sock",
+   "label": "Footwear",
+   "category": "arguable",
+   "predicates": [
+    "is:footwear"
+   ],
+   "pilot": "A",
+   "pilotText": "worn on the feet, but footwear?",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "boot",
+   "heading": "clothing",
+   "wordText": "Boot",
+   "label": "Clothing",
+   "category": "arguable",
+   "predicates": [
+    "is:clothing"
+   ],
+   "pilot": "A",
+   "pilotText": "footwear, but clothing?",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "coral",
+   "heading": "gemstone",
+   "wordText": "Coral",
+   "label": "Gemstone",
+   "category": "arguable",
+   "predicates": [
+    "is:gem"
+   ],
+   "pilot": "A",
+   "pilotText": "coral is used as a gem",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "banana",
+   "heading": "grows-on-trees",
+   "wordText": "Banana",
+   "label": "Grows on trees",
+   "category": "arguable",
+   "predicates": [
+    "grows-on-trees"
+   ],
+   "pilot": "A",
+   "pilotText": "a banana plant isn't a tree",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "turkey",
+   "heading": "can-fly",
+   "wordText": "Turkey",
+   "label": "Can fly",
+   "category": "arguable",
+   "predicates": [
+    "can:fly"
+   ],
+   "pilot": "A",
+   "pilotText": "wild turkeys fly",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "viper",
+   "heading": "lays-eggs",
+   "wordText": "Viper",
+   "label": "Lays eggs",
+   "category": "arguable",
+   "predicates": [
+    "lays-eggs"
+   ],
+   "pilot": "A",
+   "pilotText": "many vipers give birth to live young",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "ship",
+   "heading": "vehicle",
+   "wordText": "Ship",
+   "label": "Vehicle",
+   "category": "arguable",
+   "predicates": [
+    "is:vehicle"
+   ],
+   "pilot": "A",
+   "pilotText": "a boat, but a vehicle?",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "trampoline",
+   "heading": "toy",
+   "wordText": "Trampoline",
+   "label": "Toy",
+   "category": "arguable",
+   "predicates": [
+    "is:toy"
+   ],
+   "pilot": "A",
+   "pilotText": "play equipment, but a toy?",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "butterfly",
+   "heading": "sport",
+   "wordText": "Butterfly",
+   "label": "Sport",
+   "category": "arguable",
+   "predicates": [
+    "is:sport"
+   ],
+   "pilot": "n",
+   "pilotText": "a stroke, not a sport",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "pot",
+   "heading": "kitchen-tool",
+   "wordText": "Pot",
+   "label": "Kitchen tool",
+   "category": "arguable",
+   "predicates": [
+    "is:kitchen-tool"
+   ],
+   "pilot": "A",
+   "pilotText": "cookware, but a tool?",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bat",
+   "heading": "bird",
+   "wordText": "Bat",
+   "label": "Bird",
+   "category": "soft-no",
+   "predicates": [
+    "is:bird"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "dog",
+   "heading": "dog-breed",
+   "wordText": "Dog",
+   "label": "Dog breed",
+   "category": "soft-no",
+   "predicates": [
+    "is:dog-breed"
+   ],
+   "pilot": "n",
+   "pilotText": "a dog, not a breed",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "guppy",
+   "heading": "lays-eggs",
+   "wordText": "Guppy",
+   "label": "Lays eggs",
+   "category": "soft-no",
+   "predicates": [
+    "lays-eggs"
+   ],
+   "pilot": "n",
+   "pilotText": "most fish lay eggs; guppies don't",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "rabbit",
+   "heading": "rodent",
+   "wordText": "Rabbit",
+   "label": "Rodent",
+   "category": "soft-no",
+   "predicates": [],
+   "pilot": "n",
+   "pilotText": "a lagomorph, not a rodent",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "mole",
+   "heading": "rodent",
+   "wordText": "Mole",
+   "label": "Rodent",
+   "category": "soft-no",
+   "predicates": [],
+   "pilot": "n",
+   "pilotText": "an insect eater, not a rodent",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "plum",
+   "heading": "tree",
+   "wordText": "Plum",
+   "label": "Tree",
+   "category": "soft-no",
+   "predicates": [
+    "is:tree"
+   ],
+   "pilot": "n",
+   "pilotText": "the tree it grows on",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "scorpion",
+   "heading": "lays-eggs",
+   "wordText": "Scorpion",
+   "label": "Lays eggs",
+   "category": "soft-no",
+   "predicates": [
+    "lays-eggs"
+   ],
+   "pilot": "n",
+   "pilotText": "scorpions give birth to live young",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "eel",
+   "heading": "snake",
+   "wordText": "Eel",
+   "label": "Snake",
+   "category": "soft-no",
+   "predicates": [
+    "is:snake"
+   ],
+   "pilot": "n",
+   "pilotText": "looks like a snake",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "frog",
+   "heading": "reptile",
+   "wordText": "Frog",
+   "label": "Reptile",
+   "category": "soft-no",
+   "predicates": [
+    "is:reptile"
+   ],
+   "pilot": "n",
+   "pilotText": "an amphibian, not a reptile",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "whale",
+   "heading": "fish",
+   "wordText": "Whale",
+   "label": "Fish",
+   "category": "soft-no",
+   "predicates": [
+    "is:fish"
+   ],
+   "pilot": "n",
+   "pilotText": "lives like a fish; isn't one",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "kiwi",
+   "heading": "can-fly",
+   "wordText": "Kiwi",
+   "label": "Can fly",
+   "category": "soft-no",
+   "predicates": [
+    "can:fly"
+   ],
+   "pilot": "n",
+   "pilotText": "some think kiwis fly",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "peach",
+   "heading": "has-fur",
+   "wordText": "Peach",
+   "label": "Has fur",
+   "category": "soft-no",
+   "predicates": [
+    "has:fur"
+   ],
+   "pilot": "n",
+   "pilotText": "fuzzy skin",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bat",
+   "heading": "has-wings-isn-t-a-bird",
+   "wordText": "Bat",
+   "label": "Has wings, isn't a bird",
+   "category": "joke",
+   "predicates": [
+    "has:wings",
+    "is:bird"
+   ],
+   "pilot": "L",
+   "pilotText": "leathery wings",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "doll",
+   "heading": "has-a-mouth-can-t-eat",
+   "wordText": "Doll",
+   "label": "Has a mouth, can't eat",
+   "category": "joke",
+   "predicates": [
+    "has:mouth",
+    "can:eat"
+   ],
+   "pilot": "L",
+   "pilotText": "a painted mouth",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "piano",
+   "heading": "has-keys-no-locks",
+   "wordText": "Piano",
+   "label": "Has keys, no locks",
+   "category": "joke",
+   "predicates": [
+    "has:keys",
+    "has:locks"
+   ],
+   "pilot": "L",
+   "pilotText": "the piano",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "scorpion",
+   "heading": "can-sting-isn-t-an-insect",
+   "wordText": "Scorpion",
+   "label": "Can sting, isn't an insect",
+   "category": "joke",
+   "predicates": [
+    "can:sting",
+    "is:insect"
+   ],
+   "pilot": "S",
+   "pilotText": "not an insect: eight legs",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "jar",
+   "heading": "has-a-mouth-can-t-eat",
+   "wordText": "Jar",
+   "label": "Has a mouth, can't eat",
+   "category": "joke",
+   "predicates": [
+    "has:mouth",
+    "can:eat"
+   ],
+   "pilot": "S",
+   "pilotText": "the jar's mouth",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "comb",
+   "heading": "has-teeth-can-t-bite",
+   "wordText": "Comb",
+   "label": "Has teeth, can't bite",
+   "category": "joke",
+   "predicates": [
+    "has:teeth",
+    "can:bite"
+   ],
+   "pilot": "L",
+   "pilotText": "comb teeth",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "crab",
+   "heading": "has-teeth-can-t-bite",
+   "wordText": "Crab",
+   "label": "Has teeth, can't bite",
+   "category": "joke",
+   "predicates": [
+    "has:teeth",
+    "can:bite"
+   ],
+   "pilot": "n",
+   "pilotText": "claws pinch",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "elephant",
+   "heading": "has-teeth-can-t-bite",
+   "wordText": "Elephant",
+   "label": "Has teeth, can't bite",
+   "category": "joke",
+   "predicates": [
+    "has:teeth",
+    "can:bite"
+   ],
+   "pilot": "A",
+   "pilotText": "arguable: can bite",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "river",
+   "heading": "has-a-bed-can-t-sleep",
+   "wordText": "River",
+   "label": "Has a bed, can't sleep",
+   "category": "joke",
+   "predicates": [
+    "has:bed",
+    "can:sleep"
+   ],
+   "pilot": "S",
+   "pilotText": "a river bed",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bottle",
+   "heading": "has-a-neck-can-t-swallow",
+   "wordText": "Bottle",
+   "label": "Has a neck, can't swallow",
+   "category": "joke",
+   "predicates": [
+    "has:neck",
+    "can:swallow"
+   ],
+   "pilot": "L",
+   "pilotText": "a bottle neck",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "clock",
+   "heading": "has-hands-can-t-clap",
+   "wordText": "Clock",
+   "label": "Has hands, can't clap",
+   "category": "joke",
+   "predicates": [
+    "has:hands",
+    "can:clap"
+   ],
+   "pilot": "L",
+   "pilotText": "clock hands",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "ape",
+   "heading": "has-hands-can-t-clap",
+   "wordText": "Ape",
+   "label": "Has hands, can't clap",
+   "category": "joke",
+   "predicates": [
+    "has:hands",
+    "can:clap"
+   ],
+   "pilot": "A",
+   "pilotText": "arguable: can clap",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "needle",
+   "heading": "has-an-eye-can-t-see",
+   "wordText": "Needle",
+   "label": "Has an eye, can't see",
+   "category": "joke",
+   "predicates": [
+    "has:eye",
+    "can:see"
+   ],
+   "pilot": "L",
+   "pilotText": "the needle's eye",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "storm",
+   "heading": "has-an-eye-can-t-see",
+   "wordText": "Storm",
+   "label": "Has an eye, can't see",
+   "category": "joke",
+   "predicates": [
+    "has:eye",
+    "can:see"
+   ],
+   "pilot": "S",
+   "pilotText": "the eye of a storm",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "potato",
+   "heading": "has-eyes-can-t-see",
+   "wordText": "Potato",
+   "label": "Has eyes, can't see",
+   "category": "joke",
+   "predicates": [
+    "has:eyes",
+    "can:see"
+   ],
+   "pilot": "L",
+   "pilotText": "potato eyes",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "corn",
+   "heading": "has-ears-can-t-hear",
+   "wordText": "Corn",
+   "label": "Has ears, can't hear",
+   "category": "joke",
+   "predicates": [
+    "has:ears",
+    "can:hear"
+   ],
+   "pilot": "L",
+   "pilotText": "ears of corn",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "penguin",
+   "heading": "has-feathers-can-t-fly",
+   "wordText": "Penguin",
+   "label": "Has feathers, can't fly",
+   "category": "joke",
+   "predicates": [
+    "has:feathers",
+    "can:fly"
+   ],
+   "pilot": "L",
+   "pilotText": "the bird",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "kiwi",
+   "heading": "has-feathers-can-t-fly",
+   "wordText": "Kiwi",
+   "label": "Has feathers, can't fly",
+   "category": "joke",
+   "predicates": [
+    "has:feathers",
+    "can:fly"
+   ],
+   "pilot": "S",
+   "pilotText": "the New Zealand bird",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "dolphin",
+   "heading": "has-fins-isn-t-a-fish",
+   "wordText": "Dolphin",
+   "label": "Has fins, isn't a fish",
+   "category": "joke",
+   "predicates": [
+    "has:fins",
+    "is:fish"
+   ],
+   "pilot": "L",
+   "pilotText": "the dolphin",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "coin",
+   "heading": "has-a-face-isn-t-alive",
+   "wordText": "Coin",
+   "label": "Has a face, isn't alive",
+   "category": "joke",
+   "predicates": [
+    "has:face",
+    "is:living"
+   ],
+   "pilot": "S",
+   "pilotText": "the coin's face",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "ruler",
+   "heading": "has-a-heel",
+   "wordText": "Ruler",
+   "label": "Has a heel",
+   "category": "person",
+   "predicates": [
+    "has:heel"
+   ],
+   "pilot": "O",
+   "pilotText": "a ruler of a country",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "fan",
+   "heading": "has-a-neck",
+   "wordText": "Fan",
+   "label": "Has a neck",
+   "category": "person",
+   "predicates": [
+    "has:neck"
+   ],
+   "pilot": "O",
+   "pilotText": "a supporter",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "king",
+   "heading": "has-a-crown",
+   "wordText": "King",
+   "label": "Has a crown",
+   "category": "person",
+   "predicates": [
+    "has:crown"
+   ],
+   "pilot": "L",
+   "pilotText": "a king",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "knight",
+   "heading": "mammal",
+   "wordText": "Knight",
+   "label": "Mammal",
+   "category": "person",
+   "predicates": [
+    "is:mammal"
+   ],
+   "pilot": "A",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "shark",
+   "heading": "mammal",
+   "wordText": "Shark",
+   "label": "Mammal",
+   "category": "person",
+   "predicates": [
+    "is:mammal"
+   ],
+   "pilot": "n",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "boot",
+   "heading": "part-of-a-car",
+   "wordText": "Boot",
+   "label": "Part of a car",
+   "category": "regional",
+   "predicates": [],
+   "pilot": "S",
+   "pilotText": "a car boot, in Britain",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bonnet",
+   "heading": "part-of-a-car",
+   "wordText": "Bonnet",
+   "label": "Part of a car",
+   "category": "regional",
+   "predicates": [],
+   "pilot": "S",
+   "pilotText": "a car bonnet, in Britain",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "jaguar",
+   "heading": "vehicle",
+   "wordText": "Jaguar",
+   "label": "Vehicle",
+   "category": "brand",
+   "predicates": [
+    "is:vehicle"
+   ],
+   "pilot": "n",
+   "pilotText": "the car brand",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "penguin",
+   "heading": "has-a-spine-no-bones",
+   "wordText": "Penguin",
+   "label": "Has a spine, no bones",
+   "category": "brand",
+   "predicates": [
+    "has:spine",
+    "has:bones"
+   ],
+   "pilot": "n",
+   "pilotText": "Penguin paperbacks (a brand)",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "apple",
+   "heading": "computer-part",
+   "wordText": "Apple",
+   "label": "Computer part",
+   "category": "brand",
+   "predicates": [
+    "is:computer-part"
+   ],
+   "pilot": "n",
+   "pilotText": "the computer brand",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "catapult",
+   "heading": "toy",
+   "wordText": "Catapult",
+   "label": "Toy",
+   "category": "regional",
+   "predicates": [
+    "is:toy"
+   ],
+   "pilot": "O",
+   "pilotText": "a slingshot, in Britain",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "jumper",
+   "heading": "clothing",
+   "wordText": "Jumper",
+   "label": "Clothing",
+   "category": "regional",
+   "predicates": [
+    "is:clothing"
+   ],
+   "pilot": "A",
+   "pilotText": "a sweater in Britain, a dress in America",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "jelly",
+   "heading": "dessert",
+   "wordText": "Jelly",
+   "label": "Dessert",
+   "category": "regional",
+   "predicates": [
+    "is:dessert"
+   ],
+   "pilot": "A",
+   "pilotText": "a dessert in Britain, jam in America",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "squash",
+   "heading": "drink",
+   "wordText": "Squash",
+   "label": "Drink",
+   "category": "regional",
+   "predicates": [
+    "is:drink"
+   ],
+   "pilot": "O",
+   "pilotText": "a fruit cordial, in Britain",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "colt",
+   "heading": "male-animal",
+   "wordText": "Colt",
+   "label": "Male animal",
+   "category": "list",
+   "predicates": [],
+   "pilot": "S",
+   "pilotText": "a young male horse",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "peacock",
+   "heading": "male-animal",
+   "wordText": "Peacock",
+   "label": "Male animal",
+   "category": "list",
+   "predicates": [],
+   "pilot": "S",
+   "pilotText": "the male peafowl",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "egg",
+   "heading": "baby-animal",
+   "wordText": "Egg",
+   "label": "Baby animal",
+   "category": "list",
+   "predicates": [],
+   "pilot": "A",
+   "pilotText": "an animal not yet hatched",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "hog",
+   "heading": "male-animal",
+   "wordText": "Hog",
+   "label": "Male animal",
+   "category": "list",
+   "predicates": [],
+   "pilot": "A",
+   "pilotText": "often a castrated male",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "snail",
+   "heading": "shellfish",
+   "wordText": "Snail",
+   "label": "Shellfish",
+   "category": "list",
+   "predicates": [],
+   "pilot": "A",
+   "pilotText": "a mollusc, sometimes eaten",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "plum",
+   "heading": "colour",
+   "wordText": "Plum",
+   "label": "Colour",
+   "category": "colour",
+   "predicates": [],
+   "pilot": "S",
+   "pilotText": "a dark purple",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "salmon",
+   "heading": "colour",
+   "wordText": "Salmon",
+   "label": "Colour",
+   "category": "colour",
+   "predicates": [],
+   "pilot": "S",
+   "pilotText": "salmon pink",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "lemon",
+   "heading": "colour",
+   "wordText": "Lemon",
+   "label": "Colour",
+   "category": "colour",
+   "predicates": [],
+   "pilot": "A",
+   "pilotText": "lemon yellow?",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "steel",
+   "heading": "colour",
+   "wordText": "Steel",
+   "label": "Colour",
+   "category": "colour",
+   "predicates": [],
+   "pilot": "n",
+   "pilotText": "steel grey",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "coral",
+   "heading": "colour",
+   "wordText": "Coral",
+   "label": "Colour",
+   "category": "colour",
+   "predicates": [],
+   "pilot": "S",
+   "pilotText": "coral pink",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "car",
+   "heading": "container",
+   "wordText": "Car",
+   "label": "Container",
+   "category": "recall",
+   "predicates": [
+    "is:container"
+   ],
+   "pilot": "n",
+   "pilotText": "it carries people",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "slug",
+   "heading": "weapon",
+   "wordText": "Slug",
+   "label": "Weapon",
+   "category": "recall",
+   "predicates": [
+    "is:weapon"
+   ],
+   "pilot": "n",
+   "pilotText": "a bullet, not a weapon",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "horse",
+   "heading": "chess-piece",
+   "wordText": "Horse",
+   "label": "Chess piece",
+   "category": "recall",
+   "predicates": [
+    "is:chess-piece"
+   ],
+   "pilot": "A",
+   "pilotText": "children call the knight a horse",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "clove",
+   "heading": "flower",
+   "wordText": "Clove",
+   "label": "Flower",
+   "category": "recall",
+   "predicates": [
+    "is:flower"
+   ],
+   "pilot": "O",
+   "pilotText": "a dried flower bud",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "nutmeg",
+   "heading": "grows-on-trees",
+   "wordText": "Nutmeg",
+   "label": "Grows on trees",
+   "category": "recall",
+   "predicates": [
+    "grows-on-trees"
+   ],
+   "pilot": "S",
+   "pilotText": "the nutmeg tree's seed",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "rattlesnake",
+   "heading": "lays-eggs",
+   "wordText": "Rattlesnake",
+   "label": "Lays eggs",
+   "category": "recall",
+   "predicates": [
+    "lays-eggs"
+   ],
+   "pilot": "n",
+   "pilotText": "rattlesnakes give birth to live young",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "swordfish",
+   "heading": "has-scales",
+   "wordText": "Swordfish",
+   "label": "Has scales",
+   "category": "recall",
+   "predicates": [
+    "has:scales"
+   ],
+   "pilot": "n",
+   "pilotText": "adults have no scales",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "crab",
+   "heading": "has-eight-legs",
+   "wordText": "Crab",
+   "label": "Has eight legs",
+   "category": "recall",
+   "predicates": [
+    "has:eight-legs"
+   ],
+   "pilot": "A",
+   "pilotText": "eight legs plus two claws",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "car",
+   "heading": "has-pedals",
+   "wordText": "Car",
+   "label": "Has pedals",
+   "category": "recall",
+   "predicates": [
+    "has:pedals"
+   ],
+   "pilot": "S",
+   "pilotText": "brake and accelerator pedals",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "ball",
+   "heading": "dance",
+   "wordText": "Ball",
+   "label": "Dance",
+   "category": "recall",
+   "predicates": [
+    "is:dance"
+   ],
+   "pilot": "A",
+   "pilotText": "a formal dance party",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "knuckle",
+   "heading": "body-part",
+   "wordText": "Knuckle",
+   "label": "Body part",
+   "category": "obvious",
+   "predicates": [
+    "is:body-part"
+   ],
+   "pilot": "L",
+   "pilotText": "your knuckle",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "spinach",
+   "heading": "vegetable",
+   "wordText": "Spinach",
+   "label": "Vegetable",
+   "category": "obvious",
+   "predicates": [
+    "is:vegetable"
+   ],
+   "pilot": "L",
+   "pilotText": "the spinach",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "falcon",
+   "heading": "can-fly",
+   "wordText": "Falcon",
+   "label": "Can fly",
+   "category": "obvious",
+   "predicates": [
+    "can:fly"
+   ],
+   "pilot": "L",
+   "pilotText": "the bird of prey",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bun",
+   "heading": "has-a-crust",
+   "wordText": "Bun",
+   "label": "Has a crust",
+   "category": "obvious",
+   "predicates": [
+    "has:crust"
+   ],
+   "pilot": "L",
+   "pilotText": "a bread bun",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "pike",
+   "heading": "has-scales",
+   "wordText": "Pike",
+   "label": "Has scales",
+   "category": "obvious",
+   "predicates": [
+    "has:scales"
+   ],
+   "pilot": "L",
+   "pilotText": "the river fish",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bee",
+   "heading": "has-stripes",
+   "wordText": "Bee",
+   "label": "Has stripes",
+   "category": "obvious",
+   "predicates": [
+    "has:stripes"
+   ],
+   "pilot": "L",
+   "pilotText": "black and yellow stripes",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bat",
+   "heading": "has-fur",
+   "wordText": "Bat",
+   "label": "Has fur",
+   "category": "obvious",
+   "predicates": [
+    "has:fur"
+   ],
+   "pilot": "L",
+   "pilotText": "the flying mammal",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "glove",
+   "heading": "clothing",
+   "wordText": "Glove",
+   "label": "Clothing",
+   "category": "obvious",
+   "predicates": [
+    "is:clothing"
+   ],
+   "pilot": "L",
+   "pilotText": "a glove",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "chameleon",
+   "heading": "has-scales",
+   "wordText": "Chameleon",
+   "label": "Has scales",
+   "category": "obvious",
+   "predicates": [
+    "has:scales"
+   ],
+   "pilot": "L",
+   "pilotText": "the colour-changing lizard",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "turkey",
+   "heading": "has-a-beak",
+   "wordText": "Turkey",
+   "label": "Has a beak",
+   "category": "obvious",
+   "predicates": [
+    "has:beak"
+   ],
+   "pilot": "L",
+   "pilotText": "the bird",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "loaf",
+   "heading": "has-a-crust",
+   "wordText": "Loaf",
+   "label": "Has a crust",
+   "category": "obvious",
+   "predicates": [
+    "has:crust"
+   ],
+   "pilot": "L",
+   "pilotText": "a loaf of bread",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "ash",
+   "heading": "has-roots",
+   "wordText": "Ash",
+   "label": "Has roots",
+   "category": "obvious",
+   "predicates": [
+    "has:roots"
+   ],
+   "pilot": "L",
+   "pilotText": "the ash tree",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "guppy",
+   "heading": "has-fins",
+   "wordText": "Guppy",
+   "label": "Has fins",
+   "category": "obvious",
+   "predicates": [
+    "has:fins"
+   ],
+   "pilot": "L",
+   "pilotText": "the pet fish",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "peacock",
+   "heading": "bird",
+   "wordText": "Peacock",
+   "label": "Bird",
+   "category": "obvious",
+   "predicates": [
+    "is:bird"
+   ],
+   "pilot": "L",
+   "pilotText": "the bird",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "iguana",
+   "heading": "has-scales",
+   "wordText": "Iguana",
+   "label": "Has scales",
+   "category": "obvious",
+   "predicates": [
+    "has:scales"
+   ],
+   "pilot": "L",
+   "pilotText": "the iguana",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "toucan",
+   "heading": "has-a-neck",
+   "wordText": "Toucan",
+   "label": "Has a neck",
+   "category": "obvious",
+   "predicates": [
+    "has:neck"
+   ],
+   "pilot": "L",
+   "pilotText": "the big-billed bird",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "violin",
+   "heading": "has-a-neck",
+   "wordText": "Violin",
+   "label": "Has a neck",
+   "category": "obvious",
+   "predicates": [
+    "has:neck"
+   ],
+   "pilot": "L",
+   "pilotText": "a violin neck",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "century",
+   "heading": "unit-of-time",
+   "wordText": "Century",
+   "label": "Unit of time",
+   "category": "obvious",
+   "predicates": [
+    "is:unit-time"
+   ],
+   "pilot": "L",
+   "pilotText": "a century",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "pitcher",
+   "heading": "has-a-handle",
+   "wordText": "Pitcher",
+   "label": "Has a handle",
+   "category": "obvious",
+   "predicates": [
+    "has:handle"
+   ],
+   "pilot": "L",
+   "pilotText": "a pitcher handle",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "tiger",
+   "heading": "has-fur",
+   "wordText": "Tiger",
+   "label": "Has fur",
+   "category": "obvious",
+   "predicates": [
+    "has:fur"
+   ],
+   "pilot": "L",
+   "pilotText": "the tiger",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "peacock",
+   "heading": "has-wings",
+   "wordText": "Peacock",
+   "label": "Has wings",
+   "category": "obvious",
+   "predicates": [
+    "has:wings"
+   ],
+   "pilot": "L",
+   "pilotText": "the bird",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "skate",
+   "heading": "has-a-blade",
+   "wordText": "Skate",
+   "label": "Has a blade",
+   "category": "obvious",
+   "predicates": [
+    "has:blade"
+   ],
+   "pilot": "L",
+   "pilotText": "the skate's blade",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "pike",
+   "heading": "has-a-tail",
+   "wordText": "Pike",
+   "label": "Has a tail",
+   "category": "obvious",
+   "predicates": [
+    "has:tail"
+   ],
+   "pilot": "L",
+   "pilotText": "the river fish",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "hare",
+   "heading": "has-a-tail",
+   "wordText": "Hare",
+   "label": "Has a tail",
+   "category": "obvious",
+   "predicates": [
+    "has:tail"
+   ],
+   "pilot": "L",
+   "pilotText": "the hare",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "sombrero",
+   "heading": "hat",
+   "wordText": "Sombrero",
+   "label": "Hat",
+   "category": "obvious",
+   "predicates": [
+    "is:hat"
+   ],
+   "pilot": "L",
+   "pilotText": "a sombrero",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "setter",
+   "heading": "mammal",
+   "wordText": "Setter",
+   "label": "Mammal",
+   "category": "obvious",
+   "predicates": [
+    "is:mammal"
+   ],
+   "pilot": "L",
+   "pilotText": "the dog breed",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "broom",
+   "heading": "has-a-handle",
+   "wordText": "Broom",
+   "label": "Has a handle",
+   "category": "obvious",
+   "predicates": [
+    "has:handle"
+   ],
+   "pilot": "L",
+   "pilotText": "a broom",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "sage",
+   "heading": "herb-or-spice",
+   "wordText": "Sage",
+   "label": "Herb or spice",
+   "category": "obvious",
+   "predicates": [
+    "is:herb-spice"
+   ],
+   "pilot": "L",
+   "pilotText": "the herb",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "plaice",
+   "heading": "has-spots",
+   "wordText": "Plaice",
+   "label": "Has spots",
+   "category": "obvious",
+   "predicates": [
+    "has:spots"
+   ],
+   "pilot": "L",
+   "pilotText": "orange spots",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "toucan",
+   "heading": "has-feathers",
+   "wordText": "Toucan",
+   "label": "Has feathers",
+   "category": "obvious",
+   "predicates": [
+    "has:feathers"
+   ],
+   "pilot": "L",
+   "pilotText": "the big-billed bird",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "temple",
+   "heading": "baby-animal",
+   "wordText": "Temple",
+   "label": "Baby animal",
+   "category": "obvious",
+   "predicates": [],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "panda",
+   "heading": "has-springs-can-t-jump",
+   "wordText": "Panda",
+   "label": "Has springs, can't jump",
+   "category": "obvious",
+   "predicates": [
+    "has:springs",
+    "can:jump"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "giraffe",
+   "heading": "part-of-a-shoe",
+   "wordText": "Giraffe",
+   "label": "Part of a shoe",
+   "category": "obvious",
+   "predicates": [],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "yoyo",
+   "heading": "has-a-bulb-no-light",
+   "wordText": "Yoyo",
+   "label": "Has a bulb, no light",
+   "category": "obvious",
+   "predicates": [
+    "has:bulb",
+    "has:light"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "spatula",
+   "heading": "has-horns-isn-t-a-cow",
+   "wordText": "Spatula",
+   "label": "Has horns, isn't a cow",
+   "category": "obvious",
+   "predicates": [
+    "has:horns",
+    "is:cow"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "tart",
+   "heading": "has-a-shell-can-t-swim",
+   "wordText": "Tart",
+   "label": "Has a shell, can't swim",
+   "category": "obvious",
+   "predicates": [
+    "has:shell",
+    "can:swim"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "penguin",
+   "heading": "vegetable",
+   "wordText": "Penguin",
+   "label": "Vegetable",
+   "category": "obvious",
+   "predicates": [
+    "is:vegetable"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "banjo",
+   "heading": "herb-or-spice",
+   "wordText": "Banjo",
+   "label": "Herb or spice",
+   "category": "obvious",
+   "predicates": [
+    "is:herb-spice"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bucket",
+   "heading": "has-whiskers",
+   "wordText": "Bucket",
+   "label": "Has whiskers",
+   "category": "obvious",
+   "predicates": [
+    "has:whiskers"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bag",
+   "heading": "farm-animal",
+   "wordText": "Bag",
+   "label": "Farm animal",
+   "category": "obvious",
+   "predicates": [],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "toilet",
+   "heading": "drink",
+   "wordText": "Toilet",
+   "label": "Drink",
+   "category": "obvious",
+   "predicates": [
+    "is:drink"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "milk",
+   "heading": "has-antlers",
+   "wordText": "Milk",
+   "label": "Has antlers",
+   "category": "obvious",
+   "predicates": [
+    "has:antlers"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "fridge",
+   "heading": "has-a-crown-no-throne",
+   "wordText": "Fridge",
+   "label": "Has a crown, no throne",
+   "category": "obvious",
+   "predicates": [
+    "has:crown",
+    "has:throne"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "sneaker",
+   "heading": "hat",
+   "wordText": "Sneaker",
+   "label": "Hat",
+   "category": "obvious",
+   "predicates": [
+    "is:hat"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "catfish",
+   "heading": "can-fly",
+   "wordText": "Catfish",
+   "label": "Can fly",
+   "category": "obvious",
+   "predicates": [
+    "can:fly"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "battery",
+   "heading": "weapon",
+   "wordText": "Battery",
+   "label": "Weapon",
+   "category": "obvious",
+   "predicates": [
+    "is:weapon"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "urn",
+   "heading": "tool",
+   "wordText": "Urn",
+   "label": "Tool",
+   "category": "obvious",
+   "predicates": [
+    "is:tool"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "wrist",
+   "heading": "has-arms",
+   "wordText": "Wrist",
+   "label": "Has arms",
+   "category": "obvious",
+   "predicates": [
+    "has:arms"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "salsa",
+   "heading": "has-a-beard-can-t-shave",
+   "wordText": "Salsa",
+   "label": "Has a beard, can't shave",
+   "category": "obvious",
+   "predicates": [
+    "has:beard",
+    "can:shave"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bowling",
+   "heading": "has-a-crest-isn-t-a-bird",
+   "wordText": "Bowling",
+   "label": "Has a crest, isn't a bird",
+   "category": "obvious",
+   "predicates": [
+    "has:crest",
+    "is:bird"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bay",
+   "heading": "grows-under-the-soil",
+   "wordText": "Bay",
+   "label": "Grows under the soil",
+   "category": "obvious",
+   "predicates": [
+    "grows-under-the-soil"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "jacket",
+   "heading": "has-a-horn-isn-t-alive",
+   "wordText": "Jacket",
+   "label": "Has a horn, isn't alive",
+   "category": "obvious",
+   "predicates": [
+    "has:horn",
+    "is:living"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "dove",
+   "heading": "has-a-stem-isn-t-a-flower",
+   "wordText": "Dove",
+   "label": "Has a stem, isn't a flower",
+   "category": "obvious",
+   "predicates": [
+    "has:stem",
+    "is:flower"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "orange",
+   "heading": "lays-eggs-isn-t-a-bird",
+   "wordText": "Orange",
+   "label": "Lays eggs, isn't a bird",
+   "category": "obvious",
+   "predicates": [
+    "lays-eggs",
+    "is:bird"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "barrel",
+   "heading": "has-skin-no-bones",
+   "wordText": "Barrel",
+   "label": "Has skin, no bones",
+   "category": "obvious",
+   "predicates": [
+    "has:skin",
+    "has:bones"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "hare",
+   "heading": "has-a-beard-can-t-shave",
+   "wordText": "Hare",
+   "label": "Has a beard, can't shave",
+   "category": "obvious",
+   "predicates": [
+    "has:beard",
+    "can:shave"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "kitten",
+   "heading": "chess-piece",
+   "wordText": "Kitten",
+   "label": "Chess piece",
+   "category": "obvious",
+   "predicates": [
+    "is:chess-piece"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "calf",
+   "heading": "sport",
+   "wordText": "Calf",
+   "label": "Sport",
+   "category": "obvious",
+   "predicates": [
+    "is:sport"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "orange",
+   "heading": "can-ring",
+   "wordText": "Orange",
+   "label": "Can ring",
+   "category": "obvious",
+   "predicates": [
+    "can:ring"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "stag",
+   "heading": "has-a-bowl-isn-t-a-dish",
+   "wordText": "Stag",
+   "label": "Has a bowl, isn't a dish",
+   "category": "obvious",
+   "predicates": [
+    "has:bowl",
+    "is:dish"
+   ],
+   "pilot": "N",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bus",
+   "heading": "has-pedals",
+   "wordText": "Bus",
+   "label": "Has pedals",
+   "category": "second-sense",
+   "predicates": [
+    "has:pedals"
+   ],
+   "pilot": "S",
+   "pilotText": "brake and accelerator pedals",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "crane",
+   "heading": "has-feathers",
+   "wordText": "Crane",
+   "label": "Has feathers",
+   "category": "second-sense",
+   "predicates": [
+    "has:feathers"
+   ],
+   "pilot": "S",
+   "pilotText": "the wading bird",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "catfish",
+   "heading": "has-whiskers",
+   "wordText": "Catfish",
+   "label": "Has whiskers",
+   "category": "second-sense",
+   "predicates": [
+    "has:whiskers"
+   ],
+   "pilot": "S",
+   "pilotText": "barbels like whiskers",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "rook",
+   "heading": "can-fly",
+   "wordText": "Rook",
+   "label": "Can fly",
+   "category": "second-sense",
+   "predicates": [
+    "can:fly"
+   ],
+   "pilot": "S",
+   "pilotText": "the crow-like bird",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "beetle",
+   "heading": "has-wings",
+   "wordText": "Beetle",
+   "label": "Has wings",
+   "category": "second-sense",
+   "predicates": [
+    "has:wings"
+   ],
+   "pilot": "S",
+   "pilotText": "wings under hard covers",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "pointer",
+   "heading": "dog-breed",
+   "wordText": "Pointer",
+   "label": "Dog breed",
+   "category": "second-sense",
+   "predicates": [
+    "is:dog-breed"
+   ],
+   "pilot": "S",
+   "pilotText": "the hunting dog",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "seahorse",
+   "heading": "has-fins",
+   "wordText": "Seahorse",
+   "label": "Has fins",
+   "category": "second-sense",
+   "predicates": [
+    "has:fins"
+   ],
+   "pilot": "S",
+   "pilotText": "tiny fins",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "sub",
+   "heading": "has-an-engine",
+   "wordText": "Sub",
+   "label": "Has an engine",
+   "category": "second-sense",
+   "predicates": [
+    "has:engine"
+   ],
+   "pilot": "S",
+   "pilotText": "a submarine's engine",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "kid",
+   "heading": "has-hooves",
+   "wordText": "Kid",
+   "label": "Has hooves",
+   "category": "second-sense",
+   "predicates": [
+    "has:hooves"
+   ],
+   "pilot": "S",
+   "pilotText": "a young goat",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "boxer",
+   "heading": "has-a-tongue",
+   "wordText": "Boxer",
+   "label": "Has a tongue",
+   "category": "second-sense",
+   "predicates": [
+    "has:tongue"
+   ],
+   "pilot": "S",
+   "pilotText": "the dog breed",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bowler",
+   "heading": "hat",
+   "wordText": "Bowler",
+   "label": "Hat",
+   "category": "second-sense",
+   "predicates": [
+    "is:hat"
+   ],
+   "pilot": "S",
+   "pilotText": "a bowler hat",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "giraffe",
+   "heading": "has-horns",
+   "wordText": "Giraffe",
+   "label": "Has horns",
+   "category": "second-sense",
+   "predicates": [
+    "has:horns"
+   ],
+   "pilot": "S",
+   "pilotText": "short furry horns",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "drum",
+   "heading": "has-a-shell",
+   "wordText": "Drum",
+   "label": "Has a shell",
+   "category": "second-sense",
+   "predicates": [
+    "has:shell"
+   ],
+   "pilot": "S",
+   "pilotText": "a drum's shell",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "port",
+   "heading": "computer-part",
+   "wordText": "Port",
+   "label": "Computer part",
+   "category": "second-sense",
+   "predicates": [
+    "is:computer-part"
+   ],
+   "pilot": "S",
+   "pilotText": "a socket for cables",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "peanut",
+   "heading": "grows-under-the-soil",
+   "wordText": "Peanut",
+   "label": "Grows under the soil",
+   "category": "second-sense",
+   "predicates": [
+    "grows-under-the-soil"
+   ],
+   "pilot": "S",
+   "pilotText": "peanuts grow underground",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "mustard",
+   "heading": "colour",
+   "wordText": "Mustard",
+   "label": "Colour",
+   "category": "second-sense",
+   "predicates": [],
+   "pilot": "S",
+   "pilotText": "mustard yellow",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "wedge",
+   "heading": "footwear",
+   "wordText": "Wedge",
+   "label": "Footwear",
+   "category": "second-sense",
+   "predicates": [
+    "is:footwear"
+   ],
+   "pilot": "S",
+   "pilotText": "a wedge-heeled shoe",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "kite",
+   "heading": "has-a-tail",
+   "wordText": "Kite",
+   "label": "Has a tail",
+   "category": "second-sense",
+   "predicates": [
+    "has:tail"
+   ],
+   "pilot": "S",
+   "pilotText": "a kite's tail",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "trainer",
+   "heading": "footwear",
+   "wordText": "Trainer",
+   "label": "Footwear",
+   "category": "second-sense",
+   "predicates": [
+    "is:footwear"
+   ],
+   "pilot": "S",
+   "pilotText": "a running shoe, in Britain",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "floss",
+   "heading": "dance",
+   "wordText": "Floss",
+   "label": "Dance",
+   "category": "second-sense",
+   "predicates": [
+    "is:dance"
+   ],
+   "pilot": "S",
+   "pilotText": "the arm-swinging dance",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "pike",
+   "heading": "weapon",
+   "wordText": "Pike",
+   "label": "Weapon",
+   "category": "second-sense",
+   "predicates": [
+    "is:weapon"
+   ],
+   "pilot": "S",
+   "pilotText": "the long spear",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "taxi",
+   "heading": "has-a-hood",
+   "wordText": "Taxi",
+   "label": "Has a hood",
+   "category": "second-sense",
+   "predicates": [
+    "has:hood"
+   ],
+   "pilot": "S",
+   "pilotText": "the taxi's hood",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "puffin",
+   "heading": "has-claws",
+   "wordText": "Puffin",
+   "label": "Has claws",
+   "category": "second-sense",
+   "predicates": [
+    "has:claws"
+   ],
+   "pilot": "S",
+   "pilotText": "claws on its toes",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "heel",
+   "heading": "part-of-a-shoe",
+   "wordText": "Heel",
+   "label": "Part of a shoe",
+   "category": "second-sense",
+   "predicates": [],
+   "pilot": "S",
+   "pilotText": "a shoe's heel",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "flounder",
+   "heading": "lives-in-the-sea",
+   "wordText": "Flounder",
+   "label": "Lives in the sea",
+   "category": "second-sense",
+   "predicates": [
+    "lives-in-sea"
+   ],
+   "pilot": "S",
+   "pilotText": "the flat fish",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "lab",
+   "heading": "pet",
+   "wordText": "Lab",
+   "label": "Pet",
+   "category": "second-sense",
+   "predicates": [
+    "is:pet"
+   ],
+   "pilot": "S",
+   "pilotText": "a labrador",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "pointer",
+   "heading": "pet",
+   "wordText": "Pointer",
+   "label": "Pet",
+   "category": "second-sense",
+   "predicates": [
+    "is:pet"
+   ],
+   "pilot": "S",
+   "pilotText": "the hunting dog",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "taxi",
+   "heading": "has-pedals",
+   "wordText": "Taxi",
+   "label": "Has pedals",
+   "category": "second-sense",
+   "predicates": [
+    "has:pedals"
+   ],
+   "pilot": "S",
+   "pilotText": "brake and accelerator pedals",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "oar",
+   "heading": "has-a-blade",
+   "wordText": "Oar",
+   "label": "Has a blade",
+   "category": "second-sense",
+   "predicates": [
+    "has:blade"
+   ],
+   "pilot": "S",
+   "pilotText": "the oar's flat blade",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "giraffe",
+   "heading": "has-a-mane",
+   "wordText": "Giraffe",
+   "label": "Has a mane",
+   "category": "second-sense",
+   "predicates": [
+    "has:mane"
+   ],
+   "pilot": "S",
+   "pilotText": "a short stiff mane",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bowler",
+   "heading": "has-a-crown",
+   "wordText": "Bowler",
+   "label": "Has a crown",
+   "category": "obscure",
+   "predicates": [
+    "has:crown"
+   ],
+   "pilot": "O",
+   "pilotText": "the hat's crown",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "pitcher",
+   "heading": "has-a-crown-no-throne",
+   "wordText": "Pitcher",
+   "label": "Has a crown, no throne",
+   "category": "obscure",
+   "predicates": [
+    "has:crown",
+    "has:throne"
+   ],
+   "pilot": "O",
+   "pilotText": "the crown of the head",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "perch",
+   "heading": "has-a-tongue",
+   "wordText": "Perch",
+   "label": "Has a tongue",
+   "category": "obscure",
+   "predicates": [
+    "has:tongue"
+   ],
+   "pilot": "O",
+   "pilotText": "a bony tongue",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "buzzard",
+   "heading": "has-a-tongue",
+   "wordText": "Buzzard",
+   "label": "Has a tongue",
+   "category": "obscure",
+   "predicates": [
+    "has:tongue"
+   ],
+   "pilot": "O",
+   "pilotText": "birds have tongues",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "fedora",
+   "heading": "has-a-crown",
+   "wordText": "Fedora",
+   "label": "Has a crown",
+   "category": "obscure",
+   "predicates": [
+    "has:crown"
+   ],
+   "pilot": "O",
+   "pilotText": "a fedora",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "parrot",
+   "heading": "has-a-bill-can-t-pay",
+   "wordText": "Parrot",
+   "label": "Has a bill, can't pay",
+   "category": "obscure",
+   "predicates": [
+    "has:bill",
+    "can:pay"
+   ],
+   "pilot": "O",
+   "pilotText": "a beak is also a bill",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "lance",
+   "heading": "tool",
+   "wordText": "Lance",
+   "label": "Tool",
+   "category": "obscure",
+   "predicates": [
+    "is:tool"
+   ],
+   "pilot": "O",
+   "pilotText": "a surgeon's lancet",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "kiwi",
+   "heading": "has-a-tongue-can-t-talk",
+   "wordText": "Kiwi",
+   "label": "Has a tongue, can't talk",
+   "category": "obscure",
+   "predicates": [
+    "has:tongue",
+    "can:talk"
+   ],
+   "pilot": "O",
+   "pilotText": "birds have tongues",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "loafer",
+   "heading": "has-a-collar-isn-t-a-pet",
+   "wordText": "Loafer",
+   "label": "Has a collar, isn't a pet",
+   "category": "obscure",
+   "predicates": [
+    "has:collar",
+    "is:pet"
+   ],
+   "pilot": "O",
+   "pilotText": "a shoe's padded collar",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "kettle",
+   "heading": "musical-instrument",
+   "wordText": "Kettle",
+   "label": "Musical instrument",
+   "category": "obscure",
+   "predicates": [
+    "is:musical-instrument"
+   ],
+   "pilot": "O",
+   "pilotText": "a kettledrum",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bay",
+   "heading": "tree",
+   "wordText": "Bay",
+   "label": "Tree",
+   "category": "obscure",
+   "predicates": [
+    "is:tree"
+   ],
+   "pilot": "O",
+   "pilotText": "the bay tree",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "trainer",
+   "heading": "has-a-crown-no-throne",
+   "wordText": "Trainer",
+   "label": "Has a crown, no throne",
+   "category": "obscure",
+   "predicates": [
+    "has:crown",
+    "has:throne"
+   ],
+   "pilot": "O",
+   "pilotText": "the crown of the head",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "vulture",
+   "heading": "has-a-crown-no-throne",
+   "wordText": "Vulture",
+   "label": "Has a crown, no throne",
+   "category": "obscure",
+   "predicates": [
+    "has:crown",
+    "has:throne"
+   ],
+   "pilot": "O",
+   "pilotText": "the crown of the head",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "barrel",
+   "heading": "has-a-lip-can-t-kiss",
+   "wordText": "Barrel",
+   "label": "Has a lip, can't kiss",
+   "category": "obscure",
+   "predicates": [
+    "has:lip",
+    "can:kiss"
+   ],
+   "pilot": "O",
+   "pilotText": "the barrel's rim",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "vulture",
+   "heading": "has-a-bill-can-t-pay",
+   "wordText": "Vulture",
+   "label": "Has a bill, can't pay",
+   "category": "obscure",
+   "predicates": [
+    "has:bill",
+    "can:pay"
+   ],
+   "pilot": "O",
+   "pilotText": "a beak is also a bill",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "turtle",
+   "heading": "clothing",
+   "wordText": "Turtle",
+   "label": "Clothing",
+   "category": "obscure",
+   "predicates": [
+    "is:clothing"
+   ],
+   "pilot": "O",
+   "pilotText": "a turtleneck",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "herring",
+   "heading": "has-a-tongue-can-t-talk",
+   "wordText": "Herring",
+   "label": "Has a tongue, can't talk",
+   "category": "obscure",
+   "predicates": [
+    "has:tongue",
+    "can:talk"
+   ],
+   "pilot": "O",
+   "pilotText": "a bony tongue",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "ace",
+   "heading": "has-a-heel",
+   "wordText": "Ace",
+   "label": "Has a heel",
+   "category": "obscure",
+   "predicates": [
+    "has:heel"
+   ],
+   "pilot": "O",
+   "pilotText": "an expert",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "whip",
+   "heading": "has-a-tail",
+   "wordText": "Whip",
+   "label": "Has a tail",
+   "category": "obscure",
+   "predicates": [
+    "has:tail"
+   ],
+   "pilot": "O",
+   "pilotText": "the whip's tail",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "belt",
+   "heading": "has-a-tongue-can-t-talk",
+   "wordText": "Belt",
+   "label": "Has a tongue, can't talk",
+   "category": "obscure",
+   "predicates": [
+    "has:tongue",
+    "can:talk"
+   ],
+   "pilot": "O",
+   "pilotText": "the buckle's prong",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "wren",
+   "heading": "has-scales-isn-t-a-fish",
+   "wordText": "Wren",
+   "label": "Has scales, isn't a fish",
+   "category": "obscure",
+   "predicates": [
+    "has:scales",
+    "is:fish"
+   ],
+   "pilot": "O",
+   "pilotText": "scaly legs",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "chicken",
+   "heading": "has-scales",
+   "wordText": "Chicken",
+   "label": "Has scales",
+   "category": "obscure",
+   "predicates": [
+    "has:scales"
+   ],
+   "pilot": "O",
+   "pilotText": "scaly legs",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "marrow",
+   "heading": "grows-on-a-vine",
+   "wordText": "Marrow",
+   "label": "Grows on a vine",
+   "category": "arguable",
+   "predicates": [
+    "grows-on-vine"
+   ],
+   "pilot": "A",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "peacock",
+   "heading": "lays-eggs",
+   "wordText": "Peacock",
+   "label": "Lays eggs",
+   "category": "arguable",
+   "predicates": [
+    "lays-eggs"
+   ],
+   "pilot": "A",
+   "pilotText": "peahens lay them",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "nugget",
+   "heading": "metal",
+   "wordText": "Nugget",
+   "label": "Metal",
+   "category": "arguable",
+   "predicates": [
+    "is:metal"
+   ],
+   "pilot": "A",
+   "pilotText": "a lump of gold",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "dress",
+   "heading": "has-a-neck-can-t-swallow",
+   "wordText": "Dress",
+   "label": "Has a neck, can't swallow",
+   "category": "arguable",
+   "predicates": [
+    "has:neck",
+    "can:swallow"
+   ],
+   "pilot": "A",
+   "pilotText": "a neckline",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "snail",
+   "heading": "has-a-tongue-can-t-taste",
+   "wordText": "Snail",
+   "label": "Has a tongue, can't taste",
+   "category": "arguable",
+   "predicates": [
+    "has:tongue",
+    "can:taste"
+   ],
+   "pilot": "A",
+   "pilotText": "arguable: can taste",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "jack",
+   "heading": "has-a-handle",
+   "wordText": "Jack",
+   "label": "Has a handle",
+   "category": "arguable",
+   "predicates": [
+    "has:handle"
+   ],
+   "pilot": "A",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "dragon",
+   "heading": "has-scales",
+   "wordText": "Dragon",
+   "label": "Has scales",
+   "category": "arguable",
+   "predicates": [
+    "has:scales"
+   ],
+   "pilot": "A",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "mole",
+   "heading": "has-whiskers",
+   "wordText": "Mole",
+   "label": "Has whiskers",
+   "category": "arguable",
+   "predicates": [
+    "has:whiskers"
+   ],
+   "pilot": "A",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "tuna",
+   "heading": "has-teeth-can-t-bite",
+   "wordText": "Tuna",
+   "label": "Has teeth, can't bite",
+   "category": "arguable",
+   "predicates": [
+    "has:teeth",
+    "can:bite"
+   ],
+   "pilot": "A",
+   "pilotText": "arguable: can bite",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "chair",
+   "heading": "has-arms-can-t-hug",
+   "wordText": "Chair",
+   "label": "Has arms, can't hug",
+   "category": "arguable",
+   "predicates": [
+    "has:arms",
+    "can:hug"
+   ],
+   "pilot": "A",
+   "pilotText": "armchairs do",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "caterpillar",
+   "heading": "has-a-sting-no-wings",
+   "wordText": "Caterpillar",
+   "label": "Has a sting, no wings",
+   "category": "arguable",
+   "predicates": [
+    "can:sting",
+    "has:wings"
+   ],
+   "pilot": "A",
+   "pilotText": "some caterpillars sting",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "ladle",
+   "heading": "tool",
+   "wordText": "Ladle",
+   "label": "Tool",
+   "category": "arguable",
+   "predicates": [
+    "is:tool"
+   ],
+   "pilot": "A",
+   "pilotText": "a kitchen tool, but a tool?",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "sheep",
+   "heading": "has-a-lip-can-t-kiss",
+   "wordText": "Sheep",
+   "label": "Has a lip, can't kiss",
+   "category": "arguable",
+   "predicates": [
+    "has:lip",
+    "can:kiss"
+   ],
+   "pilot": "A",
+   "pilotText": "arguable: can kiss",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "trolley",
+   "heading": "has-an-engine",
+   "wordText": "Trolley",
+   "label": "Has an engine",
+   "category": "arguable",
+   "predicates": [
+    "has:engine"
+   ],
+   "pilot": "A",
+   "pilotText": "an electric motor",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "flamingo",
+   "heading": "has-a-bill",
+   "wordText": "Flamingo",
+   "label": "Has a bill",
+   "category": "arguable",
+   "predicates": [
+    "has:bill"
+   ],
+   "pilot": "A",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "kid",
+   "heading": "has-horns-isn-t-a-cow",
+   "wordText": "Kid",
+   "label": "Has horns, isn't a cow",
+   "category": "arguable",
+   "predicates": [
+    "has:horns",
+    "is:cow"
+   ],
+   "pilot": "A",
+   "pilotText": "young goats may not",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "mule",
+   "heading": "has-a-mane-isn-t-a-horse",
+   "wordText": "Mule",
+   "label": "Has a mane, isn't a horse",
+   "category": "arguable",
+   "predicates": [
+    "has:mane",
+    "is:horse"
+   ],
+   "pilot": "A",
+   "pilotText": "arguable: is horse",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "mantis",
+   "heading": "has-wings",
+   "wordText": "Mantis",
+   "label": "Has wings",
+   "category": "arguable",
+   "predicates": [
+    "has:wings"
+   ],
+   "pilot": "A",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "clownfish",
+   "heading": "has-a-lip-can-t-kiss",
+   "wordText": "Clownfish",
+   "label": "Has a lip, can't kiss",
+   "category": "arguable",
+   "predicates": [
+    "has:lip",
+    "can:kiss"
+   ],
+   "pilot": "A",
+   "pilotText": "arguable: can kiss",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "loafer",
+   "heading": "has-a-tongue-can-t-taste",
+   "wordText": "Loafer",
+   "label": "Has a tongue, can't taste",
+   "category": "arguable",
+   "predicates": [
+    "has:tongue",
+    "can:taste"
+   ],
+   "pilot": "A",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "eel",
+   "heading": "lives-in-the-sea",
+   "wordText": "Eel",
+   "label": "Lives in the sea",
+   "category": "arguable",
+   "predicates": [
+    "lives-in-sea"
+   ],
+   "pilot": "A",
+   "pilotText": "sea and river",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "camel",
+   "heading": "farm-animal",
+   "wordText": "Camel",
+   "label": "Farm animal",
+   "category": "arguable",
+   "predicates": [],
+   "pilot": "A",
+   "pilotText": "farmed in deserts",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "ball",
+   "heading": "can-fly-isn-t-a-bird",
+   "wordText": "Ball",
+   "label": "Can fly, isn't a bird",
+   "category": "arguable",
+   "predicates": [
+    "can:fly",
+    "is:bird"
+   ],
+   "pilot": "A",
+   "pilotText": "it flies when thrown",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "camera",
+   "heading": "has-a-screen",
+   "wordText": "Camera",
+   "label": "Has a screen",
+   "category": "arguable",
+   "predicates": [
+    "has:screen"
+   ],
+   "pilot": "A",
+   "pilotText": "most cameras",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "pliers",
+   "heading": "has-a-handle",
+   "wordText": "Pliers",
+   "label": "Has a handle",
+   "category": "arguable",
+   "predicates": [
+    "has:handle"
+   ],
+   "pilot": "A",
+   "pilotText": "two handles",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "watermelon",
+   "heading": "has-stripes",
+   "wordText": "Watermelon",
+   "label": "Has stripes",
+   "category": "arguable",
+   "predicates": [
+    "has:stripes"
+   ],
+   "pilot": "A",
+   "pilotText": "many are striped",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "coffee",
+   "heading": "grows-on-trees",
+   "wordText": "Coffee",
+   "label": "Grows on trees",
+   "category": "arguable",
+   "predicates": [
+    "grows-on-trees"
+   ],
+   "pilot": "A",
+   "pilotText": "coffee shrubs or trees",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "goose",
+   "heading": "has-a-bill-can-t-pay",
+   "wordText": "Goose",
+   "label": "Has a bill, can't pay",
+   "category": "arguable",
+   "predicates": [
+    "has:bill",
+    "can:pay"
+   ],
+   "pilot": "A",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "sink",
+   "heading": "container",
+   "wordText": "Sink",
+   "label": "Container",
+   "category": "arguable",
+   "predicates": [
+    "is:container"
+   ],
+   "pilot": "A",
+   "pilotText": "it holds water",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "comb",
+   "heading": "has-a-handle",
+   "wordText": "Comb",
+   "label": "Has a handle",
+   "category": "arguable",
+   "predicates": [
+    "has:handle"
+   ],
+   "pilot": "A",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "prawn",
+   "heading": "fish",
+   "wordText": "Prawn",
+   "label": "Fish",
+   "category": "soft-no",
+   "predicates": [
+    "is:fish"
+   ],
+   "pilot": "n",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bow",
+   "heading": "has-strings",
+   "wordText": "Bow",
+   "label": "Has strings",
+   "category": "soft-no",
+   "predicates": [
+    "has:strings"
+   ],
+   "pilot": "n",
+   "pilotText": "one string",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "reindeer",
+   "heading": "has-horns",
+   "wordText": "Reindeer",
+   "label": "Has horns",
+   "category": "soft-no",
+   "predicates": [
+    "has:horns"
+   ],
+   "pilot": "n",
+   "pilotText": "antlers, not horns",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "flamingo",
+   "heading": "colour",
+   "wordText": "Flamingo",
+   "label": "Colour",
+   "category": "soft-no",
+   "predicates": [],
+   "pilot": "n",
+   "pilotText": "flamingo pink",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "plane",
+   "heading": "shape",
+   "wordText": "Plane",
+   "label": "Shape",
+   "category": "soft-no",
+   "predicates": [
+    "is:shape"
+   ],
+   "pilot": "n",
+   "pilotText": "a flat surface, not a shape",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "fox",
+   "heading": "farm-animal",
+   "wordText": "Fox",
+   "label": "Farm animal",
+   "category": "soft-no",
+   "predicates": [],
+   "pilot": "n",
+   "pilotText": "raids farms",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "pot",
+   "heading": "body-part",
+   "wordText": "Pot",
+   "label": "Body part",
+   "category": "soft-no",
+   "predicates": [
+    "is:body-part"
+   ],
+   "pilot": "n",
+   "pilotText": "slang for a belly",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "cub",
+   "heading": "big-cat",
+   "wordText": "Cub",
+   "label": "Big cat",
+   "category": "soft-no",
+   "predicates": [],
+   "pilot": "n",
+   "pilotText": "a lion cub, maybe",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "pan",
+   "heading": "kitchen-appliance",
+   "wordText": "Pan",
+   "label": "Kitchen appliance",
+   "category": "soft-no",
+   "predicates": [],
+   "pilot": "n",
+   "pilotText": "a pan, not an appliance",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "anchor",
+   "heading": "has-whiskers",
+   "wordText": "Anchor",
+   "label": "Has whiskers",
+   "category": "soft-no",
+   "predicates": [
+    "has:whiskers"
+   ],
+   "pilot": "n",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "spoon",
+   "heading": "container",
+   "wordText": "Spoon",
+   "label": "Container",
+   "category": "soft-no",
+   "predicates": [
+    "is:container"
+   ],
+   "pilot": "n",
+   "pilotText": "it holds soup, briefly",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "key",
+   "heading": "computer-part",
+   "wordText": "Key",
+   "label": "Computer part",
+   "category": "soft-no",
+   "predicates": [
+    "is:computer-part"
+   ],
+   "pilot": "n",
+   "pilotText": "a keyboard key",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "ambulance",
+   "heading": "has-horns",
+   "wordText": "Ambulance",
+   "label": "Has horns",
+   "category": "soft-no",
+   "predicates": [
+    "has:horns"
+   ],
+   "pilot": "n",
+   "pilotText": "one horn, not horns",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "cocoa",
+   "heading": "colour",
+   "wordText": "Cocoa",
+   "label": "Colour",
+   "category": "soft-no",
+   "predicates": [],
+   "pilot": "n",
+   "pilotText": "cocoa brown",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "shrimp",
+   "heading": "mammal",
+   "wordText": "Shrimp",
+   "label": "Mammal",
+   "category": "soft-no",
+   "predicates": [
+    "is:mammal"
+   ],
+   "pilot": "n",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "mule",
+   "heading": "clothing",
+   "wordText": "Mule",
+   "label": "Clothing",
+   "category": "soft-no",
+   "predicates": [
+    "is:clothing"
+   ],
+   "pilot": "n",
+   "pilotText": "footwear, but clothing?",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "cardinal",
+   "heading": "has-whiskers",
+   "wordText": "Cardinal",
+   "label": "Has whiskers",
+   "category": "soft-no",
+   "predicates": [
+    "has:whiskers"
+   ],
+   "pilot": "n",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "squash",
+   "heading": "fruit",
+   "wordText": "Squash",
+   "label": "Fruit",
+   "category": "soft-no",
+   "predicates": [
+    "is:fruit"
+   ],
+   "pilot": "n",
+   "pilotText": "a fruit to botanists",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "bell",
+   "heading": "shape",
+   "wordText": "Bell",
+   "label": "Shape",
+   "category": "soft-no",
+   "predicates": [
+    "is:shape"
+   ],
+   "pilot": "n",
+   "pilotText": "a bell shape",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "box",
+   "heading": "shape",
+   "wordText": "Box",
+   "label": "Shape",
+   "category": "soft-no",
+   "predicates": [
+    "is:shape"
+   ],
+   "pilot": "n",
+   "pilotText": "a drawn box",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "quiche",
+   "heading": "breakfast-food",
+   "wordText": "Quiche",
+   "label": "Breakfast food",
+   "category": "soft-no",
+   "predicates": [],
+   "pilot": "n",
+   "pilotText": "brunch, at least",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "brownie",
+   "heading": "has-whiskers",
+   "wordText": "Brownie",
+   "label": "Has whiskers",
+   "category": "soft-no",
+   "predicates": [
+    "has:whiskers"
+   ],
+   "pilot": "n",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "kitten",
+   "heading": "farm-animal",
+   "wordText": "Kitten",
+   "label": "Farm animal",
+   "category": "soft-no",
+   "predicates": [],
+   "pilot": "n",
+   "pilotText": null,
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "pumpkin",
+   "heading": "fruit",
+   "wordText": "Pumpkin",
+   "label": "Fruit",
+   "category": "soft-no",
+   "predicates": [
+    "is:fruit"
+   ],
+   "pilot": "n",
+   "pilotText": "a fruit to botanists",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "starfish",
+   "heading": "shellfish",
+   "wordText": "Starfish",
+   "label": "Shellfish",
+   "category": "soft-no",
+   "predicates": [],
+   "pilot": "n",
+   "pilotText": "not eaten as shellfish",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "mallet",
+   "heading": "has-a-head-no-brain",
+   "wordText": "Mallet",
+   "label": "Has a head, no brain",
+   "category": "joke",
+   "predicates": [
+    "has:head",
+    "has:brain"
+   ],
+   "pilot": "L",
+   "pilotText": "a mallet head",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "swing",
+   "heading": "has-a-seat-can-t-sit",
+   "wordText": "Swing",
+   "label": "Has a seat, can't sit",
+   "category": "joke",
+   "predicates": [
+    "has:seat",
+    "can:sit"
+   ],
+   "pilot": "L",
+   "pilotText": "a swing seat",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "nail",
+   "heading": "has-a-head-no-brain",
+   "wordText": "Nail",
+   "label": "Has a head, no brain",
+   "category": "joke",
+   "predicates": [
+    "has:head",
+    "has:brain"
+   ],
+   "pilot": "L",
+   "pilotText": "a nail head",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "mouse",
+   "heading": "has-a-tongue-can-t-talk",
+   "wordText": "Mouse",
+   "label": "Has a tongue, can't talk",
+   "category": "joke",
+   "predicates": [
+    "has:tongue",
+    "can:talk"
+   ],
+   "pilot": "L",
+   "pilotText": "the small rodent",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "moose",
+   "heading": "has-a-tongue-can-t-talk",
+   "wordText": "Moose",
+   "label": "Has a tongue, can't talk",
+   "category": "joke",
+   "predicates": [
+    "has:tongue",
+    "can:talk"
+   ],
+   "pilot": "L",
+   "pilotText": "the moose",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "calculator",
+   "heading": "has-a-screen-can-t-watch",
+   "wordText": "Calculator",
+   "label": "Has a screen, can't watch",
+   "category": "joke",
+   "predicates": [
+    "has:screen",
+    "can:watch"
+   ],
+   "pilot": "S",
+   "pilotText": "a small screen",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "moth",
+   "heading": "has-wings-isn-t-a-bird",
+   "wordText": "Moth",
+   "label": "Has wings, isn't a bird",
+   "category": "joke",
+   "predicates": [
+    "has:wings",
+    "is:bird"
+   ],
+   "pilot": "L",
+   "pilotText": "the moth",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "orca",
+   "heading": "has-fins-isn-t-a-fish",
+   "wordText": "Orca",
+   "label": "Has fins, isn't a fish",
+   "category": "joke",
+   "predicates": [
+    "has:fins",
+    "is:fish"
+   ],
+   "pilot": "L",
+   "pilotText": "the killer whale",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "buggy",
+   "heading": "has-a-seat-can-t-sit",
+   "wordText": "Buggy",
+   "label": "Has a seat, can't sit",
+   "category": "joke",
+   "predicates": [
+    "has:seat",
+    "can:sit"
+   ],
+   "pilot": "L",
+   "pilotText": "a baby buggy",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "shuttle",
+   "heading": "has-a-wing-isn-t-alive",
+   "wordText": "Shuttle",
+   "label": "Has a wing, isn't alive",
+   "category": "joke",
+   "predicates": [
+    "has:wing",
+    "is:living"
+   ],
+   "pilot": "L",
+   "pilotText": "the space shuttle",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "pepper",
+   "heading": "has-a-stem-isn-t-a-flower",
+   "wordText": "Pepper",
+   "label": "Has a stem, isn't a flower",
+   "category": "joke",
+   "predicates": [
+    "has:stem",
+    "is:flower"
+   ],
+   "pilot": "L",
+   "pilotText": "the vegetable",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "desk",
+   "heading": "has-legs-can-t-walk",
+   "wordText": "Desk",
+   "label": "Has legs, can't walk",
+   "category": "joke",
+   "predicates": [
+    "has:legs",
+    "can:walk"
+   ],
+   "pilot": "L",
+   "pilotText": "desk legs",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "platypus",
+   "heading": "lays-eggs-isn-t-a-bird",
+   "wordText": "Platypus",
+   "label": "Lays eggs, isn't a bird",
+   "category": "joke",
+   "predicates": [
+    "lays-eggs",
+    "is:bird"
+   ],
+   "pilot": "L",
+   "pilotText": "a mammal that lays eggs",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "cat",
+   "heading": "has-a-tongue-can-t-talk",
+   "wordText": "Cat",
+   "label": "Has a tongue, can't talk",
+   "category": "joke",
+   "predicates": [
+    "has:tongue",
+    "can:talk"
+   ],
+   "pilot": "L",
+   "pilotText": "the cat",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "cobra",
+   "heading": "lays-eggs-isn-t-a-bird",
+   "wordText": "Cobra",
+   "label": "Lays eggs, isn't a bird",
+   "category": "joke",
+   "predicates": [
+    "lays-eggs",
+    "is:bird"
+   ],
+   "pilot": "L",
+   "pilotText": "the cobra",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "pen",
+   "heading": "has-a-cap-no-hair",
+   "wordText": "Pen",
+   "label": "Has a cap, no hair",
+   "category": "joke",
+   "predicates": [
+    "has:cap",
+    "has:hair"
+   ],
+   "pilot": "L",
+   "pilotText": "a pen cap",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "trout",
+   "heading": "has-a-tail-no-legs",
+   "wordText": "Trout",
+   "label": "Has a tail, no legs",
+   "category": "joke",
+   "predicates": [
+    "has:tail",
+    "has:legs"
+   ],
+   "pilot": "L",
+   "pilotText": "the river fish",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "shrimp",
+   "heading": "lays-eggs-isn-t-a-bird",
+   "wordText": "Shrimp",
+   "label": "Lays eggs, isn't a bird",
+   "category": "joke",
+   "predicates": [
+    "lays-eggs",
+    "is:bird"
+   ],
+   "pilot": "S",
+   "pilotText": "they lay eggs",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "donkey",
+   "heading": "has-a-tongue-can-t-talk",
+   "wordText": "Donkey",
+   "label": "Has a tongue, can't talk",
+   "category": "joke",
+   "predicates": [
+    "has:tongue",
+    "can:talk"
+   ],
+   "pilot": "L",
+   "pilotText": "the donkey",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "chameleon",
+   "heading": "lays-eggs-isn-t-a-bird",
+   "wordText": "Chameleon",
+   "label": "Lays eggs, isn't a bird",
+   "category": "joke",
+   "predicates": [
+    "lays-eggs",
+    "is:bird"
+   ],
+   "pilot": "L",
+   "pilotText": "the colour-changing lizard",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "boa",
+   "heading": "has-feathers-can-t-fly",
+   "wordText": "Boa",
+   "label": "Has feathers, can't fly",
+   "category": "joke",
+   "predicates": [
+    "has:feathers",
+    "can:fly"
+   ],
+   "pilot": "S",
+   "pilotText": "a feathery scarf",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "dart",
+   "heading": "has-a-tail-no-legs",
+   "wordText": "Dart",
+   "label": "Has a tail, no legs",
+   "category": "joke",
+   "predicates": [
+    "has:tail",
+    "has:legs"
+   ],
+   "pilot": "S",
+   "pilotText": "the dart's flights",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "hill",
+   "heading": "has-a-crest-isn-t-a-bird",
+   "wordText": "Hill",
+   "label": "Has a crest, isn't a bird",
+   "category": "joke",
+   "predicates": [
+    "has:crest",
+    "is:bird"
+   ],
+   "pilot": "S",
+   "pilotText": "the crest of a hill",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "mole",
+   "heading": "has-a-tongue-can-t-talk",
+   "wordText": "Mole",
+   "label": "Has a tongue, can't talk",
+   "category": "joke",
+   "predicates": [
+    "has:tongue",
+    "can:talk"
+   ],
+   "pilot": "L",
+   "pilotText": "the burrowing animal",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "cod",
+   "heading": "has-a-tail-no-legs",
+   "wordText": "Cod",
+   "label": "Has a tail, no legs",
+   "category": "joke",
+   "predicates": [
+    "has:tail",
+    "has:legs"
+   ],
+   "pilot": "L",
+   "pilotText": "the sea fish",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "alligator",
+   "heading": "has-a-tongue-can-t-talk",
+   "wordText": "Alligator",
+   "label": "Has a tongue, can't talk",
+   "category": "joke",
+   "predicates": [
+    "has:tongue",
+    "can:talk"
+   ],
+   "pilot": "L",
+   "pilotText": "the alligator",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "shuttle",
+   "heading": "has-a-seat-can-t-sit",
+   "wordText": "Shuttle",
+   "label": "Has a seat, can't sit",
+   "category": "joke",
+   "predicates": [
+    "has:seat",
+    "can:sit"
+   ],
+   "pilot": "S",
+   "pilotText": "shuttle bus seats",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "ferry",
+   "heading": "has-a-horn-isn-t-alive",
+   "wordText": "Ferry",
+   "label": "Has a horn, isn't alive",
+   "category": "joke",
+   "predicates": [
+    "has:horn",
+    "is:living"
+   ],
+   "pilot": "S",
+   "pilotText": "a ferry's horn",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "pie",
+   "heading": "has-a-crust-isn-t-bread",
+   "wordText": "Pie",
+   "label": "Has a crust, isn't bread",
+   "category": "joke",
+   "predicates": [
+    "has:crust",
+    "is:bread"
+   ],
+   "pilot": "L",
+   "pilotText": "a pie crust",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "tap",
+   "heading": "has-a-spout-isn-t-a-whale",
+   "wordText": "Tap",
+   "label": "Has a spout, isn't a whale",
+   "category": "joke",
+   "predicates": [
+    "has:spout",
+    "is:whale"
+   ],
+   "pilot": "S",
+   "pilotText": "the tap's spout",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "watch",
+   "heading": "has-a-face-isn-t-alive",
+   "wordText": "Watch",
+   "label": "Has a face, isn't alive",
+   "category": "joke",
+   "predicates": [
+    "has:face",
+    "is:living"
+   ],
+   "pilot": "L",
+   "pilotText": "a watch face",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "car",
+   "heading": "has-a-trunk-no-branches",
+   "wordText": "Car",
+   "label": "Has a trunk, no branches",
+   "category": "joke",
+   "predicates": [
+    "has:trunk",
+    "has:branches"
+   ],
+   "pilot": "S",
+   "pilotText": "the car trunk",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "watch",
+   "heading": "has-hands-can-t-clap",
+   "wordText": "Watch",
+   "label": "Has hands, can't clap",
+   "category": "joke",
+   "predicates": [
+    "has:hands",
+    "can:clap"
+   ],
+   "pilot": "L",
+   "pilotText": "watch hands",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "jellyfish",
+   "heading": "can-sting-isn-t-an-insect",
+   "wordText": "Jellyfish",
+   "label": "Can sting, isn't an insect",
+   "category": "joke",
+   "predicates": [
+    "can:sting",
+    "is:insect"
+   ],
+   "pilot": "L",
+   "pilotText": "the stinging sea animal",
+   "ruling": null,
+   "note": ""
+  },
+  {
+   "word": "wasp",
+   "heading": "lays-eggs-isn-t-a-bird",
+   "wordText": "Wasp",
+   "label": "Lays eggs, isn't a bird",
+   "category": "joke",
+   "predicates": [
+    "lays-eggs",
+    "is:bird"
+   ],
+   "pilot": "L",
+   "pilotText": "the wasp",
+   "ruling": null,
+   "note": ""
+  }
+ ]
+}

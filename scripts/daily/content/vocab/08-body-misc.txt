@@ -1,0 +1,687 @@
+# Body parts, places, weather, sports, dances, games, shapes, units, months, planets, gems, metals.
+
+Temple | a |
+  building | L | a temple | place |
+  head | S | the side of your head | body-part:S"the side of your head" |
+
+Arm | an |
+  body | L | your arm | body-part | has:elbow has:hand:A"attached, not part?" has:wrist
+  * | verb:L"to arm someone"
+
+Leg | a |
+  body | L | your leg | body-part | has:knee has:foot:A has:calf
+  stage | S | a leg of a journey | abstract |
+
+Foot | a |
+  body | L | your foot | body-part | has:toe"five toes" has:heel has:sole"the sole of your foot" has:arch has:ball:O can:walk:A"feet walk; well, you do" can:run:A
+  unit | L | twelve inches | unit-length |
+  bottom | S | the foot of something | abstract |
+
+Eye | an |
+  body | L | your eye | body-part | has:lid:S"an eyelid" has:pupil"the pupil" has:lens:S"a lens inside" has:iris can:see can:blink can:learn:N
+  needle | S | the eye of a needle | object |
+  storm | S | the eye of a storm | weather:A"part of a storm" |
+  * | verb:L"to eye someone"
+
+Ear | an |
+  body | L | your ear | body-part | has:drum:S"an eardrum" has:lobe can:hear
+  corn | S | an ear of corn | vegetable:A"part of the corn" |
+
+Lip | a |
+  body | L | your lip | body-part |
+  rim | S | the rim of a cup | abstract |
+
+Hip | a |
+  body | L | your hip | body-part | has:socket:S"a hip socket" has:joint
+  cool | S | cool, fashionable | abstract |
+
+Shin | a |
+  body | L | your shin | body-part | has:bone
+
+Heel | a |
+  body | L | your heel | body-part |
+  shoe | L | a shoe's heel | object |
+  dog | S | a dog command | abstract |
+
+Toe | a |
+  body | L | your toe | body-part | has:nail
+  * | verb:n"toe the line"
+
+Thumb | a |
+  body | L | your thumb | body-part | has:nail has:tip"a thumb tip"
+  * | verb:n"thumb a ride"
+
+Nose | a |
+  body | L | your nose | body-part | has:bridge:S"the bridge of your nose" has:tip"the tip of your nose" can:smell has:holes
+  plane | S | the front of a plane | abstract |
+  * | verb:n"nose around"
+
+Neck | a |
+  body | L | your neck | body-part |
+  bottle | S | the neck of a bottle | abstract |
+
+Back | a |
+  body | L | your back | body-part | has:spine"your spine"
+  rear | L | the back of something | abstract |
+  * | verb:S"to back someone, support them"
+
+Chin | a |
+  body | L | your chin | body-part |
+
+Cheek | a |
+  body | L | your cheek | body-part |
+  sass | S | rude talk | abstract |
+
+Brow | a |
+  body | L | your brow | body-part |
+  hill | S | the brow of a hill | place |
+
+Lash | a |
+  body | L | an eyelash | body-part | has:hair:A"it is a hair"
+  whip | S | a whip stroke | abstract |
+  * | verb:A"lash out at someone"
+
+Pupil | a |
+  eye | L | the pupil of the eye | body-part |
+  student | L | a student | person | can:learn
+  * | verb:N
+
+Hand | a |
+  body | L | your hand | body-part | has:fingers"five fingers" has:palm has:thumb has:nails has:heel:O"the heel of the hand" can:clap:A can:wave
+  clock | S | a clock hand | object |
+  cards | S | a hand of cards | abstract |
+  * | verb:n"hand someone something"
+
+Finger | a |
+  body | L | your finger | body-part | has:nail has:tip"a fingertip" has:knuckle
+  * | verb:S"to finger someone, point them out"
+
+Heart | a |
+  body | L | your heart | body-part | has:pulse:A"it makes the pulse"
+  shape | L | the heart shape | shape |
+  suit | L | the card suit | card-suit |
+  * | verb:n"'I heart you', slang"
+
+Liver | a |
+  body | L | your liver | body-part |
+
+Kidney | a |
+  body | L | your kidney | body-part | has:stone:O"kidney stones"
+  bean | S | a kidney bean | vegetable:A"a bean" |
+
+Lung | a |
+  body | L | your lung | body-part |
+
+Skull | a |
+  body | L | your skull | body-part | has:teeth:A"the jaw has teeth" has:eye:n"eye sockets" has:brain:A"holds a brain" has:face:A has:head:n"it's a head"
+
+Spine | a |
+  body | L | your backbone | body-part | has:bones"vertebrae"
+  book | S | the back of a book | abstract |
+  hedgehog | S | a prickle | abstract |
+
+Rib | a |
+  body | L | a rib | body-part |
+  * | verb:S"to rib someone, tease"
+
+Knee | a |
+  body | L | your knee | body-part | has:cap:S"a kneecap" has:hair:A has:joint
+  * | verb:A"to knee someone"
+
+Elbow | an |
+  body | L | your elbow | body-part | has:joint
+  * | verb:S"to elbow someone"
+
+Wrist | a |
+  body | L | your wrist | body-part | has:joint has:watch:A
+
+Ankle | an |
+  body | L | your ankle | body-part | has:joint
+
+Knuckle | a |
+  body | L | your knuckle | body-part | has:joint
+
+Gum | a |
+  mouth | L | your gum | body-part | has:teeth:A"it holds teeth"
+  chewing | L | chewing gum | dessert:A"a sweet, not a dessert" |
+
+Tongue | a |
+  body | L | your tongue | body-part | has:tip"the tip of the tongue" can:taste:A"you taste with it" has:taste:A
+  shoe | S | a shoe's tongue | object |
+  language | O | a language | abstract |
+
+Tooth | a |
+  body | L | your tooth | body-part | has:crown:S"the crown of a tooth" has:root:S"a tooth root" has:roots:S"tooth roots" has:cap:A"a dental cap" has:hair:N has:throne:N is:living:A can:bite:A has:enamel
+
+Mouth | a |
+  body | L | your mouth | body-part | has:teeth:A"usually" has:tongue has:lip
+  river | S | a river mouth | place |
+
+Throat | a |
+  body | L | your throat | body-part |
+
+Belly | a |
+  body | L | your belly | body-part | has:button:S"a belly button"
+
+Muscle | a |
+  body | L | a muscle | body-part | has:knot:O"a knot in a muscle"
+
+Skin | a | - mass
+  body | L | skin | body-part:A"an organ, not a part?" |
+  fruit | S | fruit skin | abstract |
+
+Hair | a | - mass
+  body | L | hair | body-part:A"it grows from the body" | has:roots:S"hair roots" has:root:S"hair roots"
+  * | verb:N
+
+Vein | a |
+  body | L | a vein | body-part | has:blood
+  rock | S | a vein of ore | material |
+
+Cliff | a |
+  rock | L | a cliff | place | has:face:S"a cliff face" has:edge has:foot:S"the foot of a cliff" has:lip:O"the cliff's edge"
+
+Mountain | a |
+  peak | L | a mountain | place | has:foot:S"the foot of a mountain" has:face:S"a mountain face" has:peak has:shoulder:O has:crest:O"the crest of a ridge" has:head:N
+
+Hill | a |
+  slope | L | a hill | place | has:crest:S"the crest of a hill" has:brow:S has:foot:S"the foot of the hill" has:face:N
+
+Volcano | a |
+  peak | L | a volcano | place | has:mouth:A"a crater, or a mouth?" has:crater has:vent
+
+Cave | a |
+  hole | L | a cave | place | has:mouth:S"the cave's mouth" can:eat:N has:teeth:n"stalactites look like teeth"
+
+River | a |
+  water | L | a river | body-of-water | has:mouth"a river mouth" has:bed:S"a river bed" has:banks"river banks" has:bank"a river bank" has:fork:S has:head:A"the head of a river" has:money:N has:bridge:A"many have bridges" has:river:N has:brain:N can:sleep:N
+
+Stream | a |
+  water | L | a stream | body-of-water | has:bed:S"a stream bed" has:banks"stream banks" has:mouth:S"where it meets a river" has:money:N
+  video | S | a live stream | abstract |
+
+Canal | a |
+  water | L | a canal | body-of-water | has:banks"canal banks" has:bed:S"a canal bed" has:locks:S"canal locks" has:money:N
+
+Lake | a |
+  water | L | a lake | body-of-water | has:bed:A"a lake bed" has:banks:A"shores, more than banks" has:shore
+
+Sea | a |
+  water | L | the sea | body-of-water | has:bed:S"the seabed" has:waves
+
+Ocean | an |
+  water | L | an ocean | body-of-water | has:bed:A"the ocean floor" has:waves
+
+Pond | a |
+  water | L | a pond | body-of-water | has:banks:A has:bed:A
+
+Pool | a |
+  swimming | L | a swimming pool | place | is:body-of-water:A"a pool of water" has:deep-end
+  game | S | the game pool | sport:S"the cue game" |
+
+Gulf | a |
+  water | L | a gulf of the sea | body-of-water |
+  gap | S | a big gap | abstract |
+
+Sound | a |
+  noise | L | a sound | sound |
+  water | O | a sound of the sea | body-of-water:O |
+
+Channel | a |
+  water | L | a sea channel | body-of-water | has:banks:A has:bed:A
+  tv | L | a TV channel | abstract |
+  * | verb:n"to channel someone"
+
+Storm | a |
+  weather | L | a storm | weather | has:eye:S"the eye of a storm" can:see:N has:eyes:N
+  * | verb:n"to storm at someone"
+
+Hail | a | - mass
+  weather | L | hail | weather |
+  * | verb:L"to hail someone"
+
+Fog | a | - mass
+  weather | L | fog | weather | has:bank:O"a fog bank" has:banks:O"a fog bank"
+
+Rain | a | - mass
+  weather | L | rain | weather |
+
+Snow | a | - mass
+  weather | L | snow | weather | has:bank:O"a snowbank" has:crust:O"a frozen crust"
+  * | verb:n"to snow someone, fool them"
+
+Thunder | a | - mass
+  weather | L | thunder | weather:A"a sound in a storm" |
+
+Lightning | a | - mass
+  weather | L | lightning | weather:A"part of a storm" | has:bolt
+
+Frost | a | - mass
+  weather | L | frost | weather |
+
+Mist | a | - mass
+  weather | L | mist | weather |
+
+Wind | a |
+  weather | L | the wind | weather |
+
+Cloud | a |
+  weather | L | a cloud | weather:A"part of the weather" |
+  computer | S | cloud storage | abstract |
+
+Tornado | a |
+  weather | L | a tornado | weather | has:eye:A"some say a tornado has an eye" has:tail:A"a funnel tail"
+
+Hurricane | a |
+  weather | L | a hurricane | weather | has:eye"the eye of a hurricane" can:see:N has:eyes:N
+
+Twister | a |
+  weather | L | a twister | weather | has:eye:A
+  game | O | the game Twister | toy:O |
+
+Rainbow | a |
+  sky | L | a rainbow | weather:A"in the sky, but weather?" | has:stripes:S"bands of colour" has:colours
+
+Golf | a | - mass
+  sport | L | golf | sport |
+
+Tennis | a | - mass
+  sport | L | tennis | sport | has:net"a tennis net"
+
+Boxing | a | - mass
+  sport | L | boxing | sport | has:ring:S"a boxing ring" has:gloves
+
+Fencing | a | - mass
+  sport | L | the sport of fencing | sport | has:blade:A"a foil or a sword"
+  fence | S | a fence | object | has:posts
+
+Bowling | a | - mass
+  sport | L | bowling | sport | has:pins has:balls
+
+Polo | a | - mass
+  sport | L | the horse sport polo | sport |
+  shirt | S | a polo shirt | clothing:S"a polo shirt" | has:collar"a polo collar" has:buttons:S"a buttoned neck"
+
+Rugby | a | - mass
+  sport | L | rugby | sport |
+
+Hockey | a | - mass
+  sport | L | hockey | sport | has:puck has:sticks
+
+Curling | a | - mass
+  sport | L | the ice sport | sport | has:brooms has:stones
+  hair | S | curling hair | abstract |
+
+Darts | - | plural
+  sport | L | the game of darts | sport:A"a game or a sport" |
+
+Diving | a | - mass
+  sport | L | diving | sport |
+
+Archery | a | - mass
+  sport | L | archery | sport |
+
+Surfing | a | - mass
+  sport | L | surfing | sport |
+
+Skiing | a | - mass
+  sport | L | skiing | sport |
+
+Judo | a | - mass
+  sport | L | judo | sport |
+
+Rowing | a | - mass
+  sport | L | rowing | sport |
+  argument | O | a row, an argument | abstract |
+
+Waltz | a |
+  dance | L | the waltz | dance |
+
+Tango | a |
+  dance | L | the tango | dance |
+  letter | O | the letter T in radio | abstract |
+
+Salsa | a | - mass
+  dance | L | the salsa dance | dance |
+  sauce | L | the spicy sauce | dish |
+
+Twist | a |
+  dance | L | the twist | dance |
+  turn | L | a twist | abstract |
+
+Jig | a |
+  dance | L | a jig | dance |
+  tool | O | a woodworking jig | tool:O |
+
+Reel | a |
+  dance | S | a Scottish reel | dance:S"a Scottish reel" |
+  fishing | L | a fishing reel | object | has:handle has:line
+  * | verb:n"to reel someone in"
+
+Polka | a |
+  dance | L | the polka | dance |
+
+Disco | a |
+  dance | L | disco dancing | dance:A"a style or a dance" |
+
+Conga | a |
+  dance | L | the conga line | dance |
+  drum | S | a conga drum | musical-instrument:S"a conga drum" |
+
+Limbo | a |
+  dance | L | the limbo | dance | has:bar
+  waiting | S | waiting, undecided | abstract |
+
+Samba | a |
+  dance | L | the samba | dance |
+
+Hustle | a |
+  dance | S | the hustle | dance:S"the disco hustle" |
+  hurry | L | busy hurry | abstract |
+  * | verb:S"to hustle someone"
+
+Floss | a | - mass
+  dental | L | dental floss | object |
+  dance | S | the floss dance | dance:S"the arm-swinging dance" |
+
+Snap | a |
+  game | S | the card game snap | card-game:S"the card game" |
+  sound | L | a snapping sound | sound |
+  photo | S | a snapshot | object |
+  * | verb:S"to snap someone, photograph them"
+
+Poker | a |
+  game | L | the card game | card-game |
+  fire | S | a fire poker | tool:S"a fireplace tool" | has:tip
+  * | verb:N
+
+Rummy | a | - mass
+  game | L | the card game | card-game |
+
+War | a |
+  game | S | the card game war | card-game:S"the card game" |
+  fighting | L | a war | abstract |
+
+Patience | a | - mass
+  game | O | solitaire, in Britain | card-game:O"solitaire, in Britain" |
+  waiting | L | patience | abstract |
+
+Solitaire | a | - mass
+  game | L | the card game | card-game |
+  gem | O | a single diamond | jewelry:O |
+
+Spoons | - | plural
+  game | S | the card game spoons | card-game:S"the card game" |
+
+Cheat | a |
+  game | S | the card game cheat | card-game:S"the card game" |
+  person | L | a cheater | person |
+  * | verb:L"to cheat someone"
+
+Hearts | - | plural
+  game | S | the card game hearts | card-game:S"the card game" |
+
+
+Circle | a |
+  shape | L | the circle | shape |
+  group | S | a circle of friends | abstract |
+
+Square | a |
+  shape | L | the square | shape | has:corners
+  plaza | S | a town square | place |
+  tool | O | a carpenter's square | tool:O |
+
+Star | a |
+  sky | L | a star in the sky | place | has:points:A
+  shape | L | the star shape | shape | has:points
+  famous | S | a famous person | person |
+
+Diamond | a |
+  gem | L | the gem | gem |
+  shape | L | the diamond shape | shape |
+  suit | L | the card suit | card-suit |
+  baseball | S | a baseball diamond | place | is:baseball-equipment:n"the field, not equipment"
+
+Oval | an |
+  shape | L | the oval | shape |
+  track | O | a sports oval | place |
+
+Cross | a |
+  shape | L | a cross shape | shape |
+  angry | S | angry | abstract |
+  * | verb:S"to cross someone"
+
+Cube | a |
+  shape | L | the cube | shape | has:face:S"six faces" has:faces has:corners
+  ice | S | an ice cube | object |
+
+
+Inch | an |
+  unit | L | an inch | unit-length |
+  * | verb:N
+
+Yard | a |
+  unit | L | three feet | unit-length |
+  garden | L | a back yard | place |
+
+Mile | a |
+  unit | L | a mile | unit-length |
+
+Metre | a |
+  unit | L | a metre | unit-length |
+
+League | a |
+  unit | O | an old measure of distance | unit-length:O |
+  sport | L | a sports league | abstract |
+
+Pound | a |
+  weight | L | a pound in weight | unit-weight |
+  money | L | the British pound | coin:A"a coin and a currency" |
+  dogs | S | a dog pound | place |
+  * | verb:n"to pound someone"
+
+Ounce | an |
+  weight | L | an ounce | unit-weight |
+
+Ton | a |
+  weight | L | a ton | unit-weight |
+
+Gram | a |
+  weight | L | a gram | unit-weight |
+
+Stone | a |
+  rock | L | a stone | material |
+  weight | O | fourteen pounds, in Britain | unit-weight:O"fourteen pounds, in Britain" |
+  fruit | S | a fruit stone | abstract |
+  * | verb:A"to stone someone"
+
+Carat | a |
+  weight | L | a carat, for gems | unit-weight |
+
+Second | a |
+  time | L | a second | unit-time |
+  next | L | number two | abstract |
+  * | verb:S"to second someone, back them"
+
+Minute | a |
+  time | L | a minute | unit-time |
+
+Hour | an |
+  time | L | an hour | unit-time |
+
+Week | a |
+  time | L | a week | unit-time |
+
+Month | a |
+  time | L | a month | unit-time |
+
+Decade | a |
+  time | L | a decade | unit-time |
+
+Century | a |
+  time | L | a century | unit-time |
+  cricket | O | a hundred runs | abstract |
+
+Day | a |
+  time | L | a day | unit-time |
+
+March | a |
+  month | L | the month | month |
+  walk | L | a march | abstract |
+
+May | a |
+  month | L | the month | month |
+  tree | O | the hawthorn | tree:O |
+
+August | a |
+  month | L | the month | month |
+
+June | a |
+  month | L | the month | month |
+
+Mercury | a | - mass
+  planet | L | the planet | planet |
+  metal | S | the liquid metal | metal:S"the liquid metal" |
+
+Venus | a |
+  planet | L | the planet | planet |
+
+Earth | a | - mass
+  planet | L | the planet | planet | has:crust:S"the earth's crust" has:core
+  soil | L | soil | material |
+
+Mars | a |
+  planet | L | the planet | planet |
+
+Jupiter | a |
+  planet | L | the planet | planet | has:rings:O"faint rings" has:spot
+
+Saturn | a |
+  planet | L | the planet | planet | has:rings"Saturn's rings" has:fingers:N
+
+Neptune | a |
+  planet | L | the planet | planet | has:rings:O"faint rings"
+
+Pluto | a |
+  dwarf | L | the dwarf planet | planet:A"a dwarf planet since 2006" |
+  dog | S | the cartoon dog | abstract |
+
+Ruby | a |
+  gem | L | the gem | gem |
+  code | O | the programming language | abstract |
+
+Pearl | a |
+  gem | L | the pearl | gem:A"a gem, but not a stone" |
+
+Jade | a | - mass
+  gem | L | the green stone | gem |
+
+Emerald | an |
+  gem | L | the gem | gem |
+
+Opal | an |
+  gem | L | the gem | gem |
+
+Sapphire | a |
+  gem | L | the gem | gem |
+
+Topaz | a |
+  gem | L | the gem | gem |
+
+Amber | a | - mass
+  gem | L | fossil resin | gem:A"a gem, but not a stone" |
+  colour | L | the orange-yellow colour | abstract |
+  light | S | the amber traffic light | abstract |
+
+Garnet | a |
+  gem | L | the gem | gem |
+
+Crystal | a |
+  gem | L | a crystal | gem:A"a mineral, not always a gem" |
+
+Gold | a | - mass
+  metal | L | gold | metal |
+  colour | S | the colour gold | abstract |
+
+Silver | a | - mass
+  metal | L | silver | metal |
+  colour | S | the colour silver | abstract |
+
+Copper | a | - mass
+  metal | L | copper | metal |
+  police | O | a police officer | person |
+
+Lead | a | - mass
+  metal | L | the metal lead | metal |
+  pencil | S | pencil lead | object | is:metal:n"graphite, not lead"
+  dog | L | a dog lead | object |
+  * | verb:L"to lead someone"
+
+Nickel | a |
+  metal | L | the metal nickel | metal |
+  coin | L | a five-cent coin | coin |
+
+Zinc | a | - mass
+  metal | L | zinc | metal |
+
+Steel | a | - mass
+  metal | L | steel | metal:A"an alloy, not an element" |
+  * | verb:N
+
+Brass | a | - mass
+  metal | L | brass | metal:A"an alloy, not an element" |
+  music | S | the brass section | abstract |
+
+Penny | a |
+  coin | L | a penny | coin |
+
+Dime | a |
+  coin | L | a dime | coin |
+
+Quarter | a |
+  coin | L | a quarter | coin |
+  fraction | L | a quarter | abstract |
+  * | verb:n"to quarter someone, house them"
+
+Cent | a |
+  coin | L | a cent | coin |
+
+Dollar | a |
+  money | L | a dollar | coin:A"a coin or a bill" |
+
+Ace | an |
+  card | L | the ace | playing-card |
+  expert | S | an expert | person |
+  * | verb:n"to ace someone, beat them"
+
+Joker | a |
+  card | L | the joker card | playing-card |
+  person | L | a joker | person |
+
+King | a |
+  card | L | the king card | playing-card |
+  chess | L | the chess king | chess-piece |
+  ruler | L | a king | person | has:crown has:throne:A is:royal
+
+Queen | a |
+  card | L | the queen card | playing-card |
+  chess | L | the chess queen | chess-piece |
+  ruler | L | a queen | person | has:crown has:throne:A is:royal
+  bee | O | a queen bee | insect:O"a queen bee" | lays-eggs:O"the queen bee lays eggs"
+
+Knight | a |
+  chess | L | the chess knight | chess-piece | has:head:A"a horse's head" is:horse:n"shaped like a horse"
+  soldier | L | a medieval knight | person | has:armour
+  * | verb:S"to knight someone"
+
+Bishop | a |
+  chess | L | the chess bishop | chess-piece |
+  priest | L | a bishop | person | has:hat:A
+
+Pawn | a |
+  chess | L | the chess pawn | chess-piece |
+  * | verb:n"pawn someone off"
+
+Castle | a |
+  building | L | a castle | place | has:moat:A has:towers
+  chess | S | the rook | chess-piece:S"another name for the rook" |

@@ -1,0 +1,31 @@
+{
+ "schema": 1,
+ "pilot": true,
+ "note": "PILOT DATA: boards from a pilot key judged by a model standing in for the judge (dossier v2 7.3). Not reviewed by Josh. Not for launch.",
+ "keyVersion": "5281773e517d",
+ "launch": "2026-11-02",
+ "first": "2026-11-02",
+ "last": "2027-01-30",
+ "months": [
+  "2026-11",
+  "2026-12",
+  "2027-01"
+ ],
+ "batches": [
+  {
+   "id": "pilot-1",
+   "createdOn": "2026-10-08",
+   "first": "2026-11-02",
+   "last": "2027-01-30",
+   "days": 90,
+   "reserve": 30
+  }
+ ],
+ "reserve": {
+  "file": "reserve.json",
+  "count": 30,
+  "pick": "fnv1a32(date) mod count of boards with addedOn <= date - 2 days"
+ },
+ "ledger": "ledger.json",
+ "errata": "errata.json"
+}
